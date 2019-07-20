@@ -6,31 +6,40 @@
     <description>Recent content in Tags on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>3d</title>
-      <link>/tags/3d/</link>
-      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      <title>linear regression</title>
+      <link>/tags/linear-regression/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/3d/</guid>
+      <guid>/tags/linear-regression/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>4d</title>
-      <link>/tags/4d/</link>
-      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      <title>recurrent neural network</title>
+      <link>/tags/recurrent-neural-network/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/4d/</guid>
+      <guid>/tags/recurrent-neural-network/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Activation Function</title>
+      <title>rnn</title>
+      <link>/tags/rnn/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rnn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>activation function</title>
       <link>/tags/activation-function/</link>
       <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
       
@@ -39,16 +48,7 @@
     </item>
     
     <item>
-      <title>Agile</title>
-      <link>/tags/agile/</link>
-      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/agile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Alpha Beta Pruning</title>
+      <title>alpha beta pruning</title>
       <link>/tags/alpha-beta-pruning/</link>
       <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
       
@@ -57,43 +57,7 @@
     </item>
     
     <item>
-      <title>Ann</title>
-      <link>/tags/ann/</link>
-      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ann/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Backpropagation</title>
-      <link>/tags/backpropagation/</link>
-      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/backpropagation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Boruta Algorithm</title>
-      <link>/tags/boruta-algorithm/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/boruta-algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Clustering</title>
-      <link>/tags/clustering/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/clustering/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Convolutional Neural Network</title>
+      <title>convolutional neural network</title>
       <link>/tags/convolutional-neural-network/</link>
       <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
       
@@ -102,7 +66,142 @@
     </item>
     
     <item>
-      <title>Cox Proportional Hazards</title>
+      <title>l1 regularization</title>
+      <link>/tags/l1-regularization/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/l1-regularization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>l2 regularization</title>
+      <link>/tags/l2-regularization/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/l2-regularization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lasso regression</title>
+      <link>/tags/lasso-regression/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lasso-regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>loess</title>
+      <link>/tags/loess/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/loess/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lowess</title>
+      <link>/tags/lowess/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lowess/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ridge regression</title>
+      <link>/tags/ridge-regression/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ridge-regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backpropagation</title>
+      <link>/tags/backpropagation/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/backpropagation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>smote</title>
+      <link>/tags/smote/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/smote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hierarchical</title>
+      <link>/tags/hierarchical/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hierarchical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kmean</title>
+      <link>/tags/kmean/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/kmean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stochastic gradient descent</title>
+      <link>/tags/stochastic-gradient-descent/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/stochastic-gradient-descent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3D</title>
+      <link>/tags/3d/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4D</title>
+      <link>/tags/4d/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/4d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>standardization</title>
+      <link>/tags/standardization/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/standardization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ANN</title>
+      <link>/tags/ann/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ann/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cox proportional hazards</title>
       <link>/tags/cox-proportional-hazards/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       
@@ -111,43 +210,70 @@
     </item>
     
     <item>
-      <title>Data Science</title>
-      <link>/tags/data-science/</link>
-      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      <title>parametric regression</title>
+      <link>/tags/parametric-regression/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/data-science/</guid>
+      <guid>/tags/parametric-regression/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Event Processing</title>
-      <link>/tags/event-processing/</link>
-      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      <title>survival analysis</title>
+      <link>/tags/survival-analysis/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/event-processing/</guid>
+      <guid>/tags/survival-analysis/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Feature Selection</title>
-      <link>/tags/feature-selection/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <title>survival trees</title>
+      <link>/tags/survival-trees/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/feature-selection/</guid>
+      <guid>/tags/survival-trees/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Flexdashboard</title>
-      <link>/tags/flexdashboard/</link>
-      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
+      <title>time series analysis</title>
+      <link>/tags/time-series-analysis/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/flexdashboard/</guid>
+      <guid>/tags/time-series-analysis/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Forecasting</title>
+      <title>time series classification</title>
+      <link>/tags/time-series-classification/</link>
+      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/time-series-classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clustering</title>
+      <link>/tags/clustering/</link>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linear discriminant analysis</title>
+      <link>/tags/linear-discriminant-analysis/</link>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/linear-discriminant-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>forecasting</title>
       <link>/tags/forecasting/</link>
       <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       
@@ -156,65 +282,11 @@
     </item>
     
     <item>
-      <title>Fuzzy Matching</title>
-      <link>/tags/fuzzy-matching/</link>
-      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <title>support vector machine</title>
+      <link>/tags/support-vector-machine/</link>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/fuzzy-matching/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gams</title>
-      <link>/tags/gams/</link>
-      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/gams/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Generalized Addictive Models</title>
-      <link>/tags/generalized-addictive-models/</link>
-      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/generalized-addictive-models/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ggplot</title>
-      <link>/tags/ggplot/</link>
-      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ggplot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ggplotly</title>
-      <link>/tags/ggplotly/</link>
-      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ggplotly/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gradient Descent</title>
-      <link>/tags/gradient-descent/</link>
-      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/gradient-descent/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hierarchical</title>
-      <link>/tags/hierarchical/</link>
-      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/hierarchical/</guid>
+      <guid>/tags/support-vector-machine/</guid>
       <description></description>
     </item>
     
@@ -228,182 +300,38 @@
     </item>
     
     <item>
-      <title>Interactive Graph</title>
-      <link>/tags/interactive-graph/</link>
-      <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
+      <title>boruta algorithm</title>
+      <link>/tags/boruta-algorithm/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/interactive-graph/</guid>
+      <guid>/tags/boruta-algorithm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Interactive Tables</title>
-      <link>/tags/interactive-tables/</link>
-      <pubDate>Thu, 14 Mar 2019 00:00:00 +0000</pubDate>
+      <title>feature selection</title>
+      <link>/tags/feature-selection/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/interactive-tables/</guid>
+      <guid>/tags/feature-selection/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>K Nearest Neighbors</title>
-      <link>/tags/k-nearest-neighbors/</link>
-      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      <title>random forest</title>
+      <link>/tags/random-forest/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/k-nearest-neighbors/</guid>
+      <guid>/tags/random-forest/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Kmean</title>
-      <link>/tags/kmean/</link>
-      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/kmean/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>L1 Regularization</title>
-      <link>/tags/l1-regularization/</link>
-      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/l1-regularization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>L2 Regularization</title>
-      <link>/tags/l2-regularization/</link>
-      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/l2-regularization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lasso Regression</title>
-      <link>/tags/lasso-regression/</link>
-      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/lasso-regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linear Discriminant Analysis</title>
-      <link>/tags/linear-discriminant-analysis/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/linear-discriminant-analysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Loess</title>
-      <link>/tags/loess/</link>
-      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/loess/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Logistic Regression</title>
-      <link>/tags/logistic-regression/</link>
-      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/logistic-regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lowess</title>
-      <link>/tags/lowess/</link>
-      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/lowess/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Monte Carlo</title>
-      <link>/tags/monte-carlo/</link>
-      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/monte-carlo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Multicollinearity</title>
-      <link>/tags/multicollinearity/</link>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/multicollinearity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Naive Bayes</title>
-      <link>/tags/naive-bayes/</link>
-      <pubDate>Thu, 14 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/naive-bayes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Network</title>
-      <link>/tags/network/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Outliers</title>
-      <link>/tags/outliers/</link>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/outliers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Parametric Regression</title>
-      <link>/tags/parametric-regression/</link>
-      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/parametric-regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pca</title>
+      <title>PCA</title>
       <link>/tags/pca/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/pca/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plotly</title>
-      <link>/tags/plotly/</link>
-      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/plotly/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Polynomial Regression</title>
-      <link>/tags/polynomial-regression/</link>
-      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/polynomial-regression/</guid>
       <description></description>
     </item>
     
@@ -417,52 +345,43 @@
     </item>
     
     <item>
-      <title>Probability</title>
-      <link>/tags/probability/</link>
-      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      <title>flexdashboard</title>
+      <link>/tags/flexdashboard/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/probability/</guid>
+      <guid>/tags/flexdashboard/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Quantile Regression</title>
-      <link>/tags/quantile-regression/</link>
-      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      <title>ggplotly</title>
+      <link>/tags/ggplotly/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/quantile-regression/</guid>
+      <guid>/tags/ggplotly/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Random Forest</title>
-      <link>/tags/random-forest/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <title>plotly</title>
+      <link>/tags/plotly/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/random-forest/</guid>
+      <guid>/tags/plotly/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ridge Regression</title>
-      <link>/tags/ridge-regression/</link>
-      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      <title>polynomial regression</title>
+      <link>/tags/polynomial-regression/</link>
+      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ridge-regression/</guid>
+      <guid>/tags/polynomial-regression/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Rubust Regression</title>
-      <link>/tags/rubust-regression/</link>
-      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/rubust-regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shiny</title>
+      <title>shiny</title>
       <link>/tags/shiny/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -471,16 +390,7 @@
     </item>
     
     <item>
-      <title>Simulation</title>
-      <link>/tags/simulation/</link>
-      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/simulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Smoothing Splines</title>
+      <title>smoothing splines</title>
       <link>/tags/smoothing-splines/</link>
       <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -489,88 +399,187 @@
     </item>
     
     <item>
-      <title>Smote</title>
-      <link>/tags/smote/</link>
-      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      <title>fuzzy matching</title>
+      <link>/tags/fuzzy-matching/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/smote/</guid>
+      <guid>/tags/fuzzy-matching/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Standardization</title>
-      <link>/tags/standardization/</link>
-      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <title>gams</title>
+      <link>/tags/gams/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/standardization/</guid>
+      <guid>/tags/gams/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Stochastic Gradient Descent</title>
-      <link>/tags/stochastic-gradient-descent/</link>
-      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      <title>generalized addictive models</title>
+      <link>/tags/generalized-addictive-models/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/stochastic-gradient-descent/</guid>
+      <guid>/tags/generalized-addictive-models/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Suppor Vector Machine</title>
-      <link>/tags/suppor-vector-machine/</link>
-      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      <title>multicollinearity</title>
+      <link>/tags/multicollinearity/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/suppor-vector-machine/</guid>
+      <guid>/tags/multicollinearity/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Support Vector Machine</title>
-      <link>/tags/support-vector-machine/</link>
-      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      <title>outliers</title>
+      <link>/tags/outliers/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/support-vector-machine/</guid>
+      <guid>/tags/outliers/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Survival Analysis</title>
-      <link>/tags/survival-analysis/</link>
-      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <title>rubust regression</title>
+      <link>/tags/rubust-regression/</link>
+      <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/survival-analysis/</guid>
+      <guid>/tags/rubust-regression/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Survival Trees</title>
-      <link>/tags/survival-trees/</link>
-      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <title>quantile regression</title>
+      <link>/tags/quantile-regression/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/survival-trees/</guid>
+      <guid>/tags/quantile-regression/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Time Series Analysis</title>
-      <link>/tags/time-series-analysis/</link>
-      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      <title>interactive graph</title>
+      <link>/tags/interactive-graph/</link>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/time-series-analysis/</guid>
+      <guid>/tags/interactive-graph/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Time Series Classification</title>
-      <link>/tags/time-series-classification/</link>
-      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
+      <title>interactive tables</title>
+      <link>/tags/interactive-tables/</link>
+      <pubDate>Thu, 14 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/time-series-classification/</guid>
+      <guid>/tags/interactive-tables/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Visualization</title>
+      <title>naive bayes</title>
+      <link>/tags/naive-bayes/</link>
+      <pubDate>Thu, 14 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/naive-bayes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XGBoost</title>
+      <link>/tags/xgboost/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/xgboost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>/tags/network/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gradient descent</title>
+      <link>/tags/gradient-descent/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gradient-descent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>agile</title>
+      <link>/tags/agile/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data science</title>
+      <link>/tags/data-science/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>event processing</title>
+      <link>/tags/event-processing/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/event-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monte carlo</title>
+      <link>/tags/monte-carlo/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/monte-carlo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>probability</title>
+      <link>/tags/probability/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/probability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>simulation</title>
+      <link>/tags/simulation/</link>
+      <pubDate>Sun, 20 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/simulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot</title>
+      <link>/tags/ggplot/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ggplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualization</title>
       <link>/tags/visualization/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -579,11 +588,29 @@
     </item>
     
     <item>
-      <title>Xgboost</title>
-      <link>/tags/xgboost/</link>
-      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      <title>k nearest neighbors</title>
+      <link>/tags/k-nearest-neighbors/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/xgboost/</guid>
+      <guid>/tags/k-nearest-neighbors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logistic regression</title>
+      <link>/tags/logistic-regression/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/logistic-regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>suppor vector machine</title>
+      <link>/tags/suppor-vector-machine/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/suppor-vector-machine/</guid>
       <description></description>
     </item>
     

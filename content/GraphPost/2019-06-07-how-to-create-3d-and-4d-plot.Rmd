@@ -117,6 +117,7 @@ hist3D_fancy<- function(x, y, break.func = c("Sturges", "scott", "FD"), breaks =
 
 <center>
 ![](/img/histogram3d.gif){width=80%}
+
 </center>
 
 Looking at the graph above, we can have a comprehensive view of 4 characteristic of iris flowers in the same graph.

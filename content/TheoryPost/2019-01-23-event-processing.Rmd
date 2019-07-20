@@ -74,9 +74,15 @@ In the following example, we will look at the employees working in a hospital wh
 frequencies_of_resources <- resource_frequency(sepsis, level = "resource-activity")
 
 # See the result as a plot
-plot(frequencies_of_resources)
+# plot(frequencies_of_resources)
 
 ```
+
+<center>
+![](/img/eventprocessing.png){width=80%}
+
+</center>
+
 In the plot above, we can see which resources executed which activities, and how often.
 Resources F,G,I,M and O have the same task; they are responsible for the activity Admission NC. </br>
 Momreover, the most common combination was Resource B performing the Leucocytes activity. Let's see what this information tells us about the employees of the hospital. </br>

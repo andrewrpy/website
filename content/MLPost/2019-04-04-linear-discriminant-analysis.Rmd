@@ -49,7 +49,7 @@ linear
 
 ```
 From the resul above we have the **Coefficients of linear discriminants** for each of the four variables. </br>
-The first discriminant function  **LD1*+ is a linear combination of the four variables: 
+The first discriminant function  **LD1** is a linear combination of the four variables: 
 **(0.3629008 x Sepal.Length) + (2.2276982 x Sepal.Width) + (-1.7854533 x Petal.Length) + (-3.9745504 x Petal.Width)**. Note that Discriminant functions are scaled.
 We have aslo the **Proportion of trace**, the percentage separations archived by the first discriminant function **LD1** is **99.32%**.
 

@@ -6,10 +6,20 @@
     <description>Recent content in AIPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/aipost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recurrent Neural Network in Theory</title>
+      <link>/aipost/recurrent-neural-network-in-theory/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/recurrent-neural-network-in-theory/</guid>
+      <description>body {text-align: justify}RNN is a Supervised Deep Learning used for Time Series Analysis. Recurrent Neural Networks represent one of the most advanced algorithms that exist in the world of supervised deep learning. 
+Frontal lobe and RNN RNNs are like short-term memory. We will learn that they can remember things that just happen in a previous couple of observations and apply that knowledge in the going forward.</description>
+    </item>
     
     <item>
       <title>Alpha Beta Pruning</title>

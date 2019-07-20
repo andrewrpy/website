@@ -1,0 +1,22 @@
+---
+title: Recurrent Neural Network in Theory
+author: andrea perlato
+date: '2019-07-19'
+slug: recurrent-neural-network-in-theory
+categories:
+  - artificial intelligence
+tags:
+  - rnn
+  - recurrent neural network
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+RNN is a **Supervised Deep Learning** used for **Time Series Analysis**. </br>
+Recurrent Neural Networks represent one of the most advanced algorithms that exist in the world of supervised deep learning. </br>
+
+**Frontal lobe and RNN** </br>
+RNNs are like short-term memory. We will learn that they can remember things that just happen in a previous couple of observations and apply that knowledge in the going forward. For humans, short-term memory is one of the functions of the [**Frontal Lobe**](https://en.wikipedia.org/wiki/Frontal_lobe). </br>

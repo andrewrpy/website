@@ -16,7 +16,9 @@ tags:
 body {
 text-align: justify}
 </style>
-<p>A 3D plot is quite popular, in particular in business presentation, but it is almost always inappropriately used. In fact, it is rare to see a 3D plot that could not be improved by turning into a regular 2D figure. </br> Visualizations using 3D position scales can sometimes be appropriate, however. If the visualization is show it slowly rotation, rather than a static image from one prospective, will allow the viewer to discern where in 3D space different graphicla elements resides. The human brain is very good at reconstructing a 3D scene from a series of images taken from different angles, and the slow rotation of the graphic provides exactly these images. </br> We’ll use the <a href="https://en.wikipedia.org/wiki/Iris_flower_data_set"><strong>iris data set</strong></a> in the following examples.</p>
+<p>A 3D plot is quite popular, in particular in business presentation, but it is almost always inappropriately used. In fact, it is rare to see a 3D plot that could not be improved by turning into a regular 2D figure. </br>
+Visualizations using 3D position scales can sometimes be appropriate, however. If the visualization is show it slowly rotation, rather than a static image from one prospective, will allow the viewer to discern where in 3D space different graphicla elements resides. The human brain is very good at reconstructing a 3D scene from a series of images taken from different angles, and the slow rotation of the graphic provides exactly these images. </br>
+We’ll use the <a href="https://en.wikipedia.org/wiki/Iris_flower_data_set"><strong>iris data set</strong></a> in the following examples.</p>
 <pre class="r"><code># Load data
 data(iris)
 head(iris)</code></pre>
@@ -109,6 +111,9 @@ scatter3D_fancy(x, y, z, pch = 16,
 # Make the rgl version
 # plotrgl()</code></pre>
 <center>
-<img src="/img/histogram3d.gif" style="width:80.0%" />
+<p><img src="/img/histogram3d.gif" style="width:80.0%" /></p>
 </center>
-<p>Looking at the graph above, we can have a comprehensive view of 4 characteristic of iris flowers in the same graph. At the bottom, We have the relationship between iris sepal lenght and iris petal width as a function of the three differenc species (setosa=1, versicolor=2, virginica=3). </br> At the top of the graph, we can appreciate the counting of iris sepal lenght crossed with iris petal width (divided in bins). The slow animation helps to better understand all the dynamics involved.</p>
+<p>Looking at the graph above, we can have a comprehensive view of 4 characteristic of iris flowers in the same graph.
+At the bottom, We have the relationship between iris sepal lenght and iris petal width as a function of the three differenc species (setosa=1, versicolor=2, virginica=3). </br>
+At the top of the graph, we can appreciate the counting of iris sepal lenght crossed with iris petal width (divided in bins).
+The slow animation helps to better understand all the dynamics involved.</p>

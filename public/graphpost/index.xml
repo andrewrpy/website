@@ -17,7 +17,7 @@
       <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/graphpost/how-to-create-3d-and-4d-plot/</guid>
-      <description>body {text-align: justify}A 3D plot is quite popular, in particular in business presentation, but it is almost always inappropriately used. In fact, it is rare to see a 3D plot that could not be improved by turning into a regular 2D figure.  Visualizations using 3D position scales can sometimes be appropriate, however. If the visualization is show it slowly rotation, rather than a static image from one prospective, will allow the viewer to discern where in 3D space different graphicla elements resides.</description>
+      <description>body {text-align: justify}A 3D plot is quite popular, in particular in business presentation, but it is almost always inappropriately used. In fact, it is rare to see a 3D plot that could not be improved by turning into a regular 2D figure. Visualizations using 3D position scales can sometimes be appropriate, however. If the visualization is show it slowly rotation, rather than a static image from one prospective, will allow the viewer to discern where in 3D space different graphicla elements resides.</description>
     </item>
     
     <item>
@@ -74,7 +74,7 @@ INTERACTIVE GRAPH  The time series results should be presented interactively in 
       
       <guid>/graphpost/interactive-network/</guid>
       <description>body {text-align: justify}Interactive Network is incredibly useful for visualizing the connections and relatioship between individuals, locations, and other data sets.
-library(&amp;quot;tidyverse&amp;quot;)library(&amp;quot;leaflet&amp;quot;)library(&amp;quot;oidnChaRts&amp;quot;)transport_data &amp;lt;- read_csv(&amp;quot;C:/07 - R Website/dataset/Graph/transport_data.csv&amp;quot;)colnames(transport_data) &amp;lt;- colnames(transport_data) %&amp;gt;%gsub(&amp;quot;sender&amp;quot;, &amp;quot;start&amp;quot;, .) %&amp;gt;%gsub(&amp;quot;receiver&amp;quot;, &amp;quot;end&amp;quot;, .)transport_data &amp;lt;- transport_data %&amp;gt;%unite(start.location, c(start.country, start.city, start.state)) %&amp;gt;%unite(end.location, c(end.country, end.city, end.state))transport_data %&amp;gt;%geo_lines_plot(){&#34;</description>
+library(&amp;quot;tidyverse&amp;quot;)library(&amp;quot;leaflet&amp;quot;)# library(&amp;quot;oidnChaRts&amp;quot;)transport_data &amp;lt;- read_csv(&amp;quot;C:/07 - R Website/dataset/Graph/transport_data.csv&amp;quot;)colnames(transport_data) &amp;lt;- colnames(transport_data) %&amp;gt;%gsub(&amp;quot;sender&amp;quot;, &amp;quot;start&amp;quot;, .) %&amp;gt;%gsub(&amp;quot;receiver&amp;quot;, &amp;quot;end&amp;quot;, .)transport_data &amp;lt;- transport_data %&amp;gt;%unite(start.location, c(start.country, start.city, start.state)) %&amp;gt;%unite(end.location, c(end.country, end.city, end.state))# transport_data %&amp;gt;%# geo_lines_plot()The map above shows the number of locations on the globe with lines between them and there are both, start and end points.</description>
     </item>
     
     <item>

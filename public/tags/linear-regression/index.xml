@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linear regression on Andrea Perlato</title>
+    <link>/tags/linear-regression/</link>
+    <description>Recent content in linear regression on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/linear-regression/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Regression with Python</title>
+      <link>/theorypost/simple-regression-with-python/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/simple-regression-with-python/</guid>
+      <description>body { text-align: justify}  The reticulate package provides a comprehensive set of tools fot interoperability between Python and R.
+# Data Preprocessing Template # Importing the libraries import numpy as np import matplotlib.pyplot as plt import pandas as pd # print(r.df.head()) # Importing the dataset df = pd.read_csv(r&amp;quot;C:\07 - R Website\dataset\PY\Salary_Data.csv&amp;quot;) # load the data df.head(10) # show firt 10 observations # # Preprocessing Input data  ## YearsExperience Salary ## 0 1.</description>
+    </item>
+    
+  </channel>
+</rss>

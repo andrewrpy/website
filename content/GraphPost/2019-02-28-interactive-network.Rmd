@@ -19,7 +19,7 @@ Interactive Network is incredibly useful for visualizing the connections and rel
 ```{r, echo=TRUE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
 library("tidyverse")
 library("leaflet")
-library("oidnChaRts")
+# library("oidnChaRts")
 
 transport_data <- read_csv("C:/07 - R Website/dataset/Graph/transport_data.csv")
 
@@ -32,10 +32,14 @@ transport_data <- transport_data %>%
   unite(end.location, c(end.country, end.city, end.state))
 
 
-transport_data %>%
-  geo_lines_plot()
+# transport_data %>%
+#   geo_lines_plot()
 
 ```
+
+<center>
+![](/img/mapnet.png){width=80%}
+</center>
 
 The map above shows the number of locations on the globe with lines between them and there are both, start and end points. This represent the number of journeys between Europe and United States of America. Displaying the data in this way doesn't really provide us with a tangible understanding of which locations are linked with which. Be better understand this kind of data, we should re-represent the data as a graph and then a network visualization. This help us to understand the connectiveness of the data. </br>
 
@@ -73,6 +77,7 @@ visNetwork(nodes = map_nodes, edges = map_edges) %>%
   visEdges(arrows = "middle")
 
 ```
+
 
 The Network represented above is an initial representation of node and edges of the journeys between Europe and USA. We realize that we have not a fully connected network. It is not possible to move from any one location to any other location on the map. </br>
 Zooming inside the newtok is possible to see the name of the cities. Moreover, when we hover the node, the can see the nation related to that city. </br>

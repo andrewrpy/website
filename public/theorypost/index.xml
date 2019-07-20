@@ -6,10 +6,20 @@
     <description>Recent content in TheoryPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/theorypost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Simple Regression with Python</title>
+      <link>/theorypost/simple-regression-with-python/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/simple-regression-with-python/</guid>
+      <description>body { text-align: justify}  The reticulate package provides a comprehensive set of tools fot interoperability between Python and R.
+# Data Preprocessing Template # Importing the libraries import numpy as np import matplotlib.pyplot as plt import pandas as pd # print(r.df.head()) # Importing the dataset df = pd.read_csv(r&amp;quot;C:\07 - R Website\dataset\PY\Salary_Data.csv&amp;quot;) # load the data df.head(10) # show firt 10 observations # # Preprocessing Input data  ## YearsExperience Salary ## 0 1.</description>
+    </item>
     
     <item>
       <title>Fitting a curve to data LOWESS and LOESS</title>
@@ -73,7 +83,7 @@ WORK ON A DATA SCIENCE PROJECT  Typical project upfront requirements and we need
       <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/theorypost/event-processing/</guid>
-      <description>body {text-align: justify}Process Data  Event data consists of three basic components: the why, the what and the who.  Analysing event data is an iteractive process of three steps: extraction (from raw data to event log), processing (removing redundant details, enrich data by calculating variables) and analysis.  The analysis could be for instance which are the roles of different doctors and nurses organization and how they work together.</description>
+      <description>body {text-align: justify}Process Data Event data consists of three basic components: the why, the what and the who. Analysing event data is an iteractive process of three steps: extraction (from raw data to event log), processing (removing redundant details, enrich data by calculating variables) and analysis. The analysis could be for instance which are the roles of different doctors and nurses organization and how they work together.</description>
     </item>
     
     <item>

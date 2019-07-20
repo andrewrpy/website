@@ -6,58 +6,31 @@
     <description>Recent content in Categories on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Artificial Intelligence</title>
+      <title>artificial intelligence</title>
       <link>/categories/artificial-intelligence/</link>
-      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/artificial-intelligence/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Clustering</title>
-      <link>/categories/clustering/</link>
-      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      <title>theory</title>
+      <link>/categories/theory/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/clustering/</guid>
+      <guid>/categories/theory/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Graph</title>
-      <link>/categories/graph/</link>
-      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/graph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kaplan Meier</title>
-      <link>/categories/kaplan-meier/</link>
-      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/kaplan-meier/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Logrank Test</title>
-      <link>/categories/logrank-test/</link>
-      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/logrank-test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
+      <title>machine learning</title>
       <link>/categories/machine-learning/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
@@ -66,7 +39,25 @@
     </item>
     
     <item>
-      <title>Survival Analysis</title>
+      <title>clustering</title>
+      <link>/categories/clustering/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graph</title>
+      <link>/categories/graph/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/graph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>survival analysis</title>
       <link>/categories/survival-analysis/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       
@@ -75,16 +66,25 @@
     </item>
     
     <item>
-      <title>Theory</title>
-      <link>/categories/theory/</link>
-      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      <title>kaplan meier</title>
+      <link>/categories/kaplan-meier/</link>
+      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/theory/</guid>
+      <guid>/categories/kaplan-meier/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Time Series</title>
+      <title>logrank test</title>
+      <link>/categories/logrank-test/</link>
+      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/logrank-test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time series</title>
       <link>/categories/time-series/</link>
       <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
       

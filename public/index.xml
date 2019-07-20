@@ -12,6 +12,26 @@
     
     
     <item>
+      <title>Recurrent Neural Network in Theory</title>
+      <link>/aipost/recurrent-neural-network-in-theory/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/recurrent-neural-network-in-theory/</guid>
+      <description>body {text-align: justify}RNN is a Supervised Deep Learning used for Time Series Analysis. Recurrent Neural Networks represent one of the most advanced algorithms that exist in the world of supervised deep learning. 
+Frontal lobe and RNN RNNs are like short-term memory. We will learn that they can remember things that just happen in a previous couple of observations and apply that knowledge in the going forward.</description>
+    </item>
+    
+    <item>
+      <title>Simple Regression with Python</title>
+      <link>/theorypost/simple-regression-with-python/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/simple-regression-with-python/</guid>
+      <description>body { text-align: justify}  The reticulate package provides a comprehensive set of tools fot interoperability between Python and R.
+# Data Preprocessing Template # Importing the libraries import numpy as np import matplotlib.pyplot as plt import pandas as pd # print(r.df.head()) # Importing the dataset df = pd.read_csv(r&amp;quot;C:\07 - R Website\dataset\PY\Salary_Data.csv&amp;quot;) # load the data df.head(10) # show firt 10 observations # # Preprocessing Input data  ## YearsExperience Salary ## 0 1.</description>
+    </item>
+    
+    <item>
       <title>Alpha Beta Pruning</title>
       <link>/aipost/alpha-beta-pruning/</link>
       <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
@@ -100,7 +120,7 @@ Locally weighted regression scatterplot smoothing - LOWESS  The main idea to fit
       <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/graphpost/how-to-create-3d-and-4d-plot/</guid>
-      <description>body {text-align: justify}A 3D plot is quite popular, in particular in business presentation, but it is almost always inappropriately used. In fact, it is rare to see a 3D plot that could not be improved by turning into a regular 2D figure.  Visualizations using 3D position scales can sometimes be appropriate, however. If the visualization is show it slowly rotation, rather than a static image from one prospective, will allow the viewer to discern where in 3D space different graphicla elements resides.</description>
+      <description>body {text-align: justify}A 3D plot is quite popular, in particular in business presentation, but it is almost always inappropriately used. In fact, it is rare to see a 3D plot that could not be improved by turning into a regular 2D figure. Visualizations using 3D position scales can sometimes be appropriate, however. If the visualization is show it slowly rotation, rather than a static image from one prospective, will allow the viewer to discern where in 3D space different graphicla elements resides.</description>
     </item>
     
     <item>
@@ -174,7 +194,7 @@ data &amp;lt;- read.table(&amp;quot;C:/07 - R Website/dataset/TS/synthetic_contr
       <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/mlpost/linear-discriminant-analysis/</guid>
-      <description>body {text-align: justify}Linear Discriminant Analysis was originally developed by R.A. Fisher to classify subjects into one of the two clearly defined groups. It was later expanded to classify subjects inoto more than two groups. It helps to find linear combination of original variables that provide the best possible separation between the groups.  Linear Discriminant Analysis is focused on maximizing the separability among known categories. The problem is when 2 features are not sufficient to capture the most of variation.</description>
+      <description>body {text-align: justify}Linear Discriminant Analysis was originally developed by R.A. Fisher to classify subjects into one of the two clearly defined groups. It was later expanded to classify subjects inoto more than two groups. It helps to find linear combination of original variables that provide the best possible separation between the groups. Linear Discriminant Analysis is focused on maximizing the separability among known categories. The problem is when 2 features are not sufficient to capture the most of variation.</description>
     </item>
     
     <item>
@@ -360,7 +380,7 @@ An intuitive explanation for the Maximum A Posteriori Probability MAP is to thin
       
       <guid>/graphpost/interactive-network/</guid>
       <description>body {text-align: justify}Interactive Network is incredibly useful for visualizing the connections and relatioship between individuals, locations, and other data sets.
-library(&amp;quot;tidyverse&amp;quot;)library(&amp;quot;leaflet&amp;quot;)library(&amp;quot;oidnChaRts&amp;quot;)transport_data &amp;lt;- read_csv(&amp;quot;C:/07 - R Website/dataset/Graph/transport_data.csv&amp;quot;)colnames(transport_data) &amp;lt;- colnames(transport_data) %&amp;gt;%gsub(&amp;quot;sender&amp;quot;, &amp;quot;start&amp;quot;, .) %&amp;gt;%gsub(&amp;quot;receiver&amp;quot;, &amp;quot;end&amp;quot;, .)transport_data &amp;lt;- transport_data %&amp;gt;%unite(start.location, c(start.country, start.city, start.state)) %&amp;gt;%unite(end.location, c(end.country, end.city, end.state))transport_data %&amp;gt;%geo_lines_plot(){&#34;</description>
+library(&amp;quot;tidyverse&amp;quot;)library(&amp;quot;leaflet&amp;quot;)# library(&amp;quot;oidnChaRts&amp;quot;)transport_data &amp;lt;- read_csv(&amp;quot;C:/07 - R Website/dataset/Graph/transport_data.csv&amp;quot;)colnames(transport_data) &amp;lt;- colnames(transport_data) %&amp;gt;%gsub(&amp;quot;sender&amp;quot;, &amp;quot;start&amp;quot;, .) %&amp;gt;%gsub(&amp;quot;receiver&amp;quot;, &amp;quot;end&amp;quot;, .)transport_data &amp;lt;- transport_data %&amp;gt;%unite(start.location, c(start.country, start.city, start.state)) %&amp;gt;%unite(end.location, c(end.country, end.city, end.state))# transport_data %&amp;gt;%# geo_lines_plot()The map above shows the number of locations on the globe with lines between them and there are both, start and end points.</description>
     </item>
     
     <item>
@@ -436,7 +456,7 @@ Forecast Accuracy  It determine how much difference thare is between the actual 
       <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/theorypost/event-processing/</guid>
-      <description>body {text-align: justify}Process Data  Event data consists of three basic components: the why, the what and the who.  Analysing event data is an iteractive process of three steps: extraction (from raw data to event log), processing (removing redundant details, enrich data by calculating variables) and analysis.  The analysis could be for instance which are the roles of different doctors and nurses organization and how they work together.</description>
+      <description>body {text-align: justify}Process Data Event data consists of three basic components: the why, the what and the who. Analysing event data is an iteractive process of three steps: extraction (from raw data to event log), processing (removing redundant details, enrich data by calculating variables) and analysis. The analysis could be for instance which are the roles of different doctors and nurses organization and how they work together.</description>
     </item>
     
     <item>
@@ -502,7 +522,8 @@ All right, first, note that birthdays can be represented as numbers between 1 an
       <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/mlpost/estimate-the-sucess-of-a-new-product-with-logistic-regression/</guid>
-      <description>body {text-align: justify}These are a series of analysis to illustate the main classification algorithms and their advantages. The table shows the business clients of a company that has just launched a new product online. Some of the clients responded positively to the ads by buying the product and other responded negatively by not buying the product. The last column of the table tells for each user if the user bought the product or not.</description>
+      <description>body {text-align: justify}These are a series of analysis to illustate the main classification algorithms and their advantages.
+The table shows the business clients of a company that has just launched a new product online. Some of the clients responded positively to the ads by buying the product and other responded negatively by not buying the product. The last column of the table tells for each user if the user bought the product or not.</description>
     </item>
     
     <item>
@@ -511,7 +532,7 @@ All right, first, note that birthdays can be represented as numbers between 1 an
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
       <guid>/about/</guid>
-      <description>body { text-align: justify}  I started my caree as a Data Scientist more than 10 years ago in the field of Neuroscience at the University of Verona - School of Medicine, Italy. As point person in data analysis, I studied the single and multi-unit recordings from behaving non human primates. Moreover, I have been conducting psychophysic experiments on human subjects to investigate the brain plasticity in drug addicts.  Find out more.</description>
+      <description>body { text-align: justify}  I started my career as a Data Scientist for more than 10 years ago in the field of Neuroscience at the University of Verona - School of Medicine, Italy. As point person in data analysis, I studied the single and multi-unit recordings from behaving non human primates. Moreover, I have been conducting psychophysical experiments on human subjects to investigate the brain plasticity in drug addicts.</description>
     </item>
     
   </channel>

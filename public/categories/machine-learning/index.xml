@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Machine Learning on Andrea Perlato</title>
+    <title>machine learning on Andrea Perlato</title>
     <link>/categories/machine-learning/</link>
-    <description>Recent content in Machine Learning on Andrea Perlato</description>
+    <description>Recent content in machine learning on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
@@ -37,7 +37,7 @@ data &amp;lt;- read.table(&amp;quot;C:/07 - R Website/dataset/TS/synthetic_contr
       <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/mlpost/linear-discriminant-analysis/</guid>
-      <description>body {text-align: justify}Linear Discriminant Analysis was originally developed by R.A. Fisher to classify subjects into one of the two clearly defined groups. It was later expanded to classify subjects inoto more than two groups. It helps to find linear combination of original variables that provide the best possible separation between the groups.  Linear Discriminant Analysis is focused on maximizing the separability among known categories. The problem is when 2 features are not sufficient to capture the most of variation.</description>
+      <description>body {text-align: justify}Linear Discriminant Analysis was originally developed by R.A. Fisher to classify subjects into one of the two clearly defined groups. It was later expanded to classify subjects inoto more than two groups. It helps to find linear combination of original variables that provide the best possible separation between the groups. Linear Discriminant Analysis is focused on maximizing the separability among known categories. The problem is when 2 features are not sufficient to capture the most of variation.</description>
     </item>
     
     <item>
@@ -175,7 +175,8 @@ An intuitive explanation for the Maximum A Posteriori Probability MAP is to thin
       <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/mlpost/estimate-the-sucess-of-a-new-product-with-logistic-regression/</guid>
-      <description>body {text-align: justify}These are a series of analysis to illustate the main classification algorithms and their advantages. The table shows the business clients of a company that has just launched a new product online. Some of the clients responded positively to the ads by buying the product and other responded negatively by not buying the product. The last column of the table tells for each user if the user bought the product or not.</description>
+      <description>body {text-align: justify}These are a series of analysis to illustate the main classification algorithms and their advantages.
+The table shows the business clients of a company that has just launched a new product online. Some of the clients responded positively to the ads by buying the product and other responded negatively by not buying the product. The last column of the table tells for each user if the user bought the product or not.</description>
     </item>
     
   </channel>

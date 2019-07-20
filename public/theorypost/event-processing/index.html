@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <title>Event Processing - Andrea Perlato</title>
@@ -82,19 +82,36 @@
 body {
 text-align: justify}
 </style>
-<p><strong>Process Data</strong> </br> Event data consists of three basic components: the why, the what and the who. </br> Analysing event data is an iteractive process of three steps: extraction (from raw data to event log), processing (removing redundant details, enrich data by calculating variables) and analysis. </br> The analysis could be for instance which are the roles of different doctors and nurses <strong>organization</strong> and how they work together. There is also in the analysis the <strong>controll-flow prospective</strong> (e.g. what is the journey of a patient throughthe emergency rooms). Finally, the performance prospective, focus on the time and <strong>efficiency</strong> (e.g. how long does it take before a patient can leave the emergency rooms). </br></p>
-<p><strong>A first glimpse of the event log</strong> </br> Some initial question about event log are: </br> How many <strong>cases</strong> are described? </br> How many distinct <strong>activities</strong> are performed? </br> How many <strong>events</strong> are recorded? </br> What is the <strong>time period</strong> in which the data is recorded? </br></p>
-<p>To analys the process data, we use the <a href="https://www.bupar.net/index.html"><strong>bupaR package</strong></a>. In the following exercise we will have a look at a process data, which descries the journey of patients in a hospital.</p>
+<p><strong>Process Data</strong> </br>
+Event data consists of three basic components: the why, the what and the who. </br>
+Analysing event data is an iteractive process of three steps: extraction (from raw data to event log), processing (removing redundant details, enrich data by calculating variables) and analysis. </br>
+The analysis could be for instance which are the roles of different doctors and nurses <strong>organization</strong> and how they work together. There is also in the analysis the <strong>controll-flow prospective</strong> (e.g. what is the journey of a patient throughthe emergency rooms). Finally, the performance prospective, focus on the time and <strong>efficiency</strong> (e.g. how long does it take before a patient can leave the emergency rooms). </br></p>
+<p><strong>A first glimpse of the event log</strong> </br>
+Some initial question about event log are: </br>
+How many <strong>cases</strong> are described? </br>
+How many distinct <strong>activities</strong> are performed? </br>
+How many <strong>events</strong> are recorded? </br>
+What is the <strong>time period</strong> in which the data is recorded? </br></p>
+<p>To analys the process data, we use the <a href="https://www.bupar.net/index.html"><strong>bupaR package</strong></a>.
+In the following exercise we will have a look at a process data, which descries the journey of patients in a hospital.</p>
 <pre class="r"><code>library(bupaR)
 # n_cases(patients) # how many patients
 # summary(patients) 
 slice(patients, 1) # show the first patient</code></pre>
-<pre><code>Event log consisting of:
-12 events
-1 traces
-1 cases
-6 activities
-6 activity instances
+<pre><code>Log of 12 events consisting of:
+1 trace 
+1 case 
+6 instances of 6 activities 
+6 resources 
+Events occurred from 2017-01-02 11:41:53 until 2017-01-09 19:45:45 
+ 
+Variables were mapped as follows:
+Case identifier:        patient 
+Activity identifier:        handling 
+Resource identifier:        employee 
+Activity instance identifier:   handling_id 
+Timestamp:          time 
+Lifecycle transition:       registration_type 
 
 # A tibble: 12 x 7
    handling patient employee handling_id registration_ty~
@@ -125,29 +142,45 @@ slice(patients, 1) # show the first patient</code></pre>
 5 X-Ray                                261             0.0959
 6 Blood test                           237             0.0871
 7 MRI SCAN                             236             0.0867</code></pre>
-<p>The sequence of activities performed in relation to one case is called its <strong>trace</strong>, literally the trace that the process instance leaves in our data. The trace plot here below, shows two <strong>happy paths</strong> ( most frequebt sequences: 51.6% and 46.8% of cases). They start with registration and triage, then have one or more treatments, then end with discussion of results and check-out.</p>
+<p>The sequence of activities performed in relation to one case is called its <strong>trace</strong>, literally the trace that the process instance leaves in our data.
+The trace plot here below, shows two <strong>happy paths</strong> ( most frequebt sequences: 51.6% and 46.8% of cases). They start with registration and triage, then have one or more treatments, then end with discussion of results and check-out.</p>
 <pre class="r"><code>library(processmapR)
 trace_explorer(patients, coverage = 1)</code></pre>
 <p><img src="/TheoryPost/2019-01-23-event-processing_files/figure-html/unnamed-chunk-3-1.png" width="80%" style="display: block; margin: auto;" /></p>
-<p>Another way to visualize processes is by constructing a <strong>process map</strong>. </br> A process map is a <strong>directed graph</strong> that shows the <strong>activities</strong> of the process and the flows between them. The colors of the nodes and the thickness of the arrows indicate the most frequent activities and process flows.</p>
+<p>Another way to visualize processes is by constructing a <strong>process map</strong>. </br>
+A process map is a <strong>directed graph</strong> that shows the <strong>activities</strong> of the process and the flows between them. The colors of the nodes and the thickness of the arrows indicate the most frequent activities and process flows.</p>
 <pre class="r"><code>process_map(patients) # draw the process map</code></pre>
 <p><div id="htmlwidget-1" style="width:100%;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"digraph {\n\ngraph [layout = \"dot\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       rankdir = \"LR\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Blood test\n (237)\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"black\", color = \"grey\", tooltip = \"Blood test\n (237)\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fillcolor = \"#ECE7F2\"] \n  \"2\" [label = \"Check-out\n (492)\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"white\", color = \"grey\", tooltip = \"Check-out\n (492)\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fillcolor = \"#0570B0\"] \n  \"3\" [label = \"Discuss Results\n (495)\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"white\", color = \"grey\", tooltip = \"Discuss Results\n (495)\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fillcolor = \"#0570B0\"] \n  \"4\" [label = \"End\", shape = \"circle\", style = \"rounded,filled\", fontcolor = \"brown4\", color = \"brown4\", tooltip = \"End\n (500)\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fillcolor = \"#FFFFFF\"] \n  \"5\" [label = \"MRI SCAN\n (236)\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"black\", color = \"grey\", tooltip = \"MRI SCAN\n (236)\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fillcolor = \"#ECE7F2\"] \n  \"6\" [label = \"Registration\n (500)\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"white\", color = \"grey\", tooltip = \"Registration\n (500)\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fillcolor = \"#0570B0\"] \n  \"7\" [label = \"Start\", shape = \"circle\", style = \"rounded,filled\", fontcolor = \"chartreuse4\", color = \"chartreuse4\", tooltip = \"Start\n (500)\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fillcolor = \"#FFFFFF\"] \n  \"8\" [label = \"Triage and Assessment\n (500)\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"white\", color = \"grey\", tooltip = \"Triage and Assessment\n (500)\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fillcolor = \"#0570B0\"] \n  \"9\" [label = \"X-Ray\n (261)\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"black\", color = \"grey\", tooltip = \"X-Ray\n (261)\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fillcolor = \"#ECE7F2\"] \n\"1\"->\"4\" [label = \"1\", penwidth = \"1.008\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"1\"->\"5\" [label = \"236\", penwidth = \"2.888\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"2\"->\"4\" [label = \"492\", penwidth = \"4.936\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"3\"->\"2\" [label = \"492\", penwidth = \"4.936\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"3\"->\"4\" [label = \"3\", penwidth = \"1.024\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"5\"->\"3\" [label = \"236\", penwidth = \"2.888\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"6\"->\"8\" [label = \"500\", penwidth = \"5\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"7\"->\"6\" [label = \"500\", penwidth = \"5\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"8\"->\"1\" [label = \"237\", penwidth = \"2.896\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"8\"->\"4\" [label = \"2\", penwidth = \"1.016\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"8\"->\"9\" [label = \"261\", penwidth = \"3.088\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"9\"->\"3\" [label = \"259\", penwidth = \"3.072\", color = \"dodgerblue4\", fontname = \"Arial\"] \n\"9\"->\"4\" [label = \"2\", penwidth = \"1.016\", color = \"dodgerblue4\", fontname = \"Arial\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script> The process map is a great way to see which activities each happy path has in common. In this article, we discovered a methodology for analyzing process data, consisting of three stages: extraction, processing and analysis. There are the specific elements of process data which are required for analysis.</p>
-<p><strong>Resource activity matrix</strong> </br> The nest step is to look at the activities. In the resource activity matrix we put different resources on one dimention and the activities on the other dimension. </br> In the following example, we will look at the employees working in a hospital which are treating patients with <a href="https://en.wikipedia.org/wiki/Sepsis"><strong>Sepsis</strong></a>, a life-threatening condition caused by an infection. Treating these patients is of the utmost importance. Let’s see how tasks are divided.</p>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"digraph {\n\ngraph [layout = \"dot\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       rankdir = \"LR\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Blood test\n237\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"black\", color = \"grey\", tooltip = \"Blood test\n237\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fontsize = \"10\", fillcolor = \"#ECE7F2\"] \n  \"2\" [label = \"Check-out\n492\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"white\", color = \"grey\", tooltip = \"Check-out\n492\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fontsize = \"10\", fillcolor = \"#0570B0\"] \n  \"3\" [label = \"Discuss Results\n495\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"white\", color = \"grey\", tooltip = \"Discuss Results\n495\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fontsize = \"10\", fillcolor = \"#0570B0\"] \n  \"4\" [label = \"End\", shape = \"circle\", style = \"rounded,filled\", fontcolor = \"brown4\", color = \"brown4\", tooltip = \"End\n500\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fontsize = \"10\", fillcolor = \"#FFFFFF\"] \n  \"5\" [label = \"MRI SCAN\n236\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"black\", color = \"grey\", tooltip = \"MRI SCAN\n236\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fontsize = \"10\", fillcolor = \"#ECE7F2\"] \n  \"6\" [label = \"Registration\n500\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"white\", color = \"grey\", tooltip = \"Registration\n500\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fontsize = \"10\", fillcolor = \"#0570B0\"] \n  \"7\" [label = \"Start\", shape = \"circle\", style = \"rounded,filled\", fontcolor = \"chartreuse4\", color = \"chartreuse4\", tooltip = \"Start\n500\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fontsize = \"10\", fillcolor = \"#FFFFFF\"] \n  \"8\" [label = \"Triage and Assessment\n500\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"white\", color = \"grey\", tooltip = \"Triage and Assessment\n500\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fontsize = \"10\", fillcolor = \"#0570B0\"] \n  \"9\" [label = \"X-Ray\n261\", shape = \"rectangle\", style = \"rounded,filled\", fontcolor = \"black\", color = \"grey\", tooltip = \"X-Ray\n261\", penwidth = \"1.5\", fixedsize = \"FALSE\", fontname = \"Arial\", fontsize = \"10\", fillcolor = \"#ECE7F2\"] \n\"1\"->\"4\" [label = \"1\", penwidth = \"1.008\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"1\"->\"5\" [label = \"236\", penwidth = \"2.888\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"2\"->\"4\" [label = \"492\", penwidth = \"4.936\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"3\"->\"2\" [label = \"492\", penwidth = \"4.936\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"3\"->\"4\" [label = \"3\", penwidth = \"1.024\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"5\"->\"3\" [label = \"236\", penwidth = \"2.888\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"6\"->\"8\" [label = \"500\", penwidth = \"5\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"7\"->\"6\" [label = \"500\", penwidth = \"5\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"8\"->\"1\" [label = \"237\", penwidth = \"2.896\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"8\"->\"4\" [label = \"2\", penwidth = \"1.016\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"8\"->\"9\" [label = \"261\", penwidth = \"3.088\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"9\"->\"3\" [label = \"259\", penwidth = \"3.072\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n\"9\"->\"4\" [label = \"2\", penwidth = \"1.016\", color = \"dodgerblue4\", fontname = \"Arial\", fontsize = \"10\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+The process map is a great way to see which activities each happy path has in common.
+In this article, we discovered a methodology for analyzing process data, consisting of three stages: extraction, processing and analysis. There are the specific elements of process data which are required for analysis.</p>
+<p><strong>Resource activity matrix</strong> </br>
+The nest step is to look at the activities. In the resource activity matrix we put different resources on one dimention and the activities on the other dimension. </br>
+In the following example, we will look at the employees working in a hospital which are treating patients with <a href="https://en.wikipedia.org/wiki/Sepsis"><strong>Sepsis</strong></a>, a life-threatening condition caused by an infection. Treating these patients is of the utmost importance. Let’s see how tasks are divided.</p>
 <pre class="r"><code># Calculate frequency of resources
 frequencies_of_resources &lt;- resource_frequency(sepsis, level = &quot;resource-activity&quot;)
 
 # See the result as a plot
-plot(frequencies_of_resources)</code></pre>
-<p><img src="/TheoryPost/2019-01-23-event-processing_files/figure-html/unnamed-chunk-5-1.png" width="100%" style="display: block; margin: auto;" /> In the plot above, we can see which resources executed which activities, and how often. Resources F,G,I,M and O have the same task; they are responsible for the activity Admission NC. </br> Momreover, the most common combination was Resource B performing the Leucocytes activity. Let’s see what this information tells us about the employees of the hospital. </br> Another thing that can be measured is their <strong>involvement</strong>. </br> Involvement refers to the number of cases a resource works on, irrespective of his/her total workload.</p>
+# plot(frequencies_of_resources)</code></pre>
+<center>
+<p><img src="/img/eventprocessing.png" style="width:80.0%" /></p>
+</center>
+<p>In the plot above, we can see which resources executed which activities, and how often.
+Resources F,G,I,M and O have the same task; they are responsible for the activity Admission NC. </br>
+Momreover, the most common combination was Resource B performing the Leucocytes activity. Let’s see what this information tells us about the employees of the hospital. </br>
+Another thing that can be measured is their <strong>involvement</strong>. </br>
+Involvement refers to the number of cases a resource works on, irrespective of his/her total workload.</p>
 <pre class="r"><code># Calculate resource involvement
 involvement_of_resources &lt;- resource_involvement(sepsis, level = &quot;resource&quot;)
 
 # Show the result in a plot
 plot(involvement_of_resources)</code></pre>
 <p><img src="/TheoryPost/2019-01-23-event-processing_files/figure-html/unnamed-chunk-6-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><strong>Control Flow</strong> </br> It refers to the different successiones of activities. Each case can be expressed as a sequence of activities. Each unique sequence is called a trace (or process variant). There are several ways to look at a trace in a process. On the one hand, we have metrics (enty and exit poin, lengh of cases, presence of activities, rework). On the other hand, we have various tools to look at control-flow patterns (process map, trace explorer, precedence matrix).</p>
-<p><strong>Rework</strong> </br> When looking at the structure of a process, an interesting aspect to look at is rework. Rework happens when the same activity is repeated within a single case, which often points towards time and resources which are wasted, and typically a mistake which has to be rectified. </br> We can distinguish between two different types of rework: <strong>immediate rework</strong>, we are also known as self-loops of activities, and <strong>rework which surfaces later in the process</strong>, which we call repetitions.</p>
+<p><strong>Control Flow</strong> </br>
+It refers to the different successiones of activities. Each case can be expressed as a sequence of activities. Each unique sequence is called a trace (or process variant). There are several ways to look at a trace in a process. On the one hand, we have metrics (enty and exit poin, lengh of cases, presence of activities, rework). On the other hand, we have various tools to look at control-flow patterns (process map, trace explorer, precedence matrix).</p>
+<p><strong>Rework</strong> </br>
+When looking at the structure of a process, an interesting aspect to look at is rework. Rework happens when the same activity is repeated within a single case, which often points towards time and resources which are wasted, and typically a mistake which has to be rectified. </br>
+We can distinguish between two different types of rework: <strong>immediate rework</strong>, we are also known as self-loops of activities, and <strong>rework which surfaces later in the process</strong>, which we call repetitions.</p>
 <pre class="r"><code># Number of repetitions per activity
 n_reps_per_activity &lt;- number_of_repetitions(sepsis, level = &quot;activity&quot;) 
 
@@ -155,7 +188,12 @@ n_reps_per_activity &lt;- number_of_repetitions(sepsis, level = &quot;activity&q
 plot(n_reps_per_activity)</code></pre>
 <p><img src="/TheoryPost/2019-01-23-event-processing_files/figure-html/unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>The CRP activity was repeated more than any other activity type, followed by Leucocytes and Admission NC. </br></p>
-<p><strong>Performance Analysis</strong> </br> The performance process map is a special type of process map which does not show frequencies on the arcs and nodes, but <strong>duration</strong>, both of activities and the times between activities. </br> Another specific technique related to time is the <strong>Dotted Chart</strong>. </br> While the <strong>performance process map</strong> focusses n the duration of the activities, the <strong>dotted chart</strong> shows the ditribution of activities over time. The <strong>dotted chart</strong> is essentially a scaterplot of activity instances each occuring at a specific <strong>time</strong> (x-axis) and belong to a specific <strong>case</strong> (y-axis). Specific patterns can be observed.</p>
+<p><strong>Performance Analysis</strong> </br>
+The performance process map is a special type of process map which does not show frequencies on the arcs and nodes, but <strong>duration</strong>, both of activities and the times between activities. </br>
+Another specific technique related to time is the <strong>Dotted Chart</strong>. </br>
+While the <strong>performance process map</strong> focusses n the duration of the activities, the <strong>dotted chart</strong> shows the ditribution of activities over time.
+The <strong>dotted chart</strong> is essentially a scaterplot of activity instances each occuring at a specific <strong>time</strong> (x-axis) and belong to a specific <strong>case</strong> (y-axis).
+Specific patterns can be observed.</p>
 <center>
 <img src="/img/dottedchart.png" style="width:90.0%" />
 </center>
