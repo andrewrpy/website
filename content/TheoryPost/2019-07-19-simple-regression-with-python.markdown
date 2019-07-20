@@ -67,6 +67,9 @@ Y = df.iloc[:, 1]
 <img src="/TheoryPost/2019-07-19-simple-regression-with-python_files/figure-html/unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" />
 
  
+ 
+ 
+ 
 
 
 
