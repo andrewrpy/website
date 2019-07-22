@@ -27,7 +27,7 @@ Frontal lobe and RNN RNNs are like short-term memory. We will learn that they c
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/theorypost/simple-regression-with-python/</guid>
-      <description>body { text-align: justify}  The reticulate package provides a comprehensive set of tools fot interoperability between Python and R. A.
+      <description>body { text-align: justify}  The reticulate package provides a comprehensive set of tools fot interoperability between Python and R.
 # Data Preprocessing Template # Importing the libraries import numpy as np import matplotlib.pyplot as plt import pandas as pd # print(r.df.head()) # Importing the dataset df = pd.read_csv(r&amp;quot;C:\07 - R Website\dataset\PY\Salary_Data.csv&amp;quot;) # load the data df.head(10) # show firt 10 observations # # Preprocessing Input data  ## YearsExperience Salary ## 0 1.</description>
     </item>
     

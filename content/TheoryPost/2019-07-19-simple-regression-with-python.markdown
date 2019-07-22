@@ -14,7 +14,7 @@ body {
 text-align: justify}
 </style>
 
-The reticulate package provides a comprehensive set of tools fot interoperability between Python and R. A.   
+The reticulate package provides a comprehensive set of tools fot interoperability between Python and R. 
 
 
 
