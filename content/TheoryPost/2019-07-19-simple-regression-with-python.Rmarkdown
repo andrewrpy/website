@@ -14,7 +14,7 @@ body {
 text-align: justify}
 </style>
 
-The reticulate package provides a comprehensive set of tools fot interoperability between Python and R.   Andrea.
+The reticulate package provides a comprehensive set of tools fot interoperability between Python and R.
 
 ```{r setup, include=FALSE}
 # Sys.which("python") # check py path
