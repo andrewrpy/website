@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>CNN and Softmax - Andrea Perlato</title>
+<meta property="og:title" content="CNN and Softmax - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">CNN and Softmax</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>Convolutional neural network CNN is a <strong>Supervised Deep Learning</strong> used for <strong>Computer Vision</strong>. </br>
+The process of <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network"><strong>Convolutional Neural Networks</strong></a> is: <strong>Convolution</strong>, <strong>Max Pooling</strong>, <strong>Flattening</strong>, <strong>Full Connection</strong>.</p>
+<p><strong>Convolution</strong> </br>
+At the bases of Convolution there is a filter also called <strong>Feature Detector</strong> or <strong>Kernel</strong>. We basically multiply the portion of the image by the filter and we check the matching how many 1s have in common.</p>
+<center>
+<img src="/img/cnnfilter.png" style="width:50.0%" />
+</center>
+<p>The resulting image on the top right of the figure above is called <strong>Feature Map</strong>. That essentially is the number of convolved features. The result is a reduction of the input image information. When we have a 2 that means we reduce the image, but a 4 means that we reduce even more the original image, and that make the image easier to be processed. </br>
+The question is if the are losing information applying the filter Feature Detector. The higher the number we have in the Feature Map, the better is the filtering process and that means we are not losing much feature.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+
+    
+  </body>
+</html>
+

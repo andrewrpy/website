@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cnn on Andrea Perlato</title>
+    <link>/tags/cnn/</link>
+    <description>Recent content in cnn on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/cnn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CNN and Softmax</title>
+      <link>/aipost/cnn-and-softmax/</link>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/cnn-and-softmax/</guid>
+      <description>body {text-align: justify}Convolutional neural network CNN is a Supervised Deep Learning used for Computer Vision. The process of Convolutional Neural Networks is: Convolution, Max Pooling, Flattening, Full Connection.
+Convolution At the bases of Convolution there is a filter also called Feature Detector or Kernel. We basically multiply the portion of the image by the filter and we check the matching how many 1s have in common.</description>
+    </item>
+    
+  </channel>
+</rss>

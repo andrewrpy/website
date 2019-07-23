@@ -4,13 +4,42 @@
   
   <url>
     <loc>/aipost/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/aipost/cnn-and-softmax/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/artificial-intelligence/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cnn/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/softmax/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -25,19 +54,7 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/theorypost/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/artificial-intelligence/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

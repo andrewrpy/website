@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>CNN and Softmax</title>
+      <link>/aipost/cnn-and-softmax/</link>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/cnn-and-softmax/</guid>
+      <description>body {text-align: justify}Convolutional neural network CNN is a Supervised Deep Learning used for Computer Vision. The process of Convolutional Neural Networks is: Convolution, Max Pooling, Flattening, Full Connection.
+Convolution At the bases of Convolution there is a filter also called Feature Detector or Kernel. We basically multiply the portion of the image by the filter and we check the matching how many 1s have in common.</description>
+    </item>
+    
+    <item>
       <title>Recurrent Neural Network in Theory</title>
       <link>/aipost/recurrent-neural-network-in-theory/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>

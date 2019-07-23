@@ -1,0 +1,35 @@
+---
+title: CNN and Softmax
+author: andrea perlato
+date: '2019-07-23'
+slug: cnn-and-softmax
+categories:
+  - artificial intelligence
+tags:
+  - cnn
+  - softmax
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+Convolutional neural network CNN is a **Supervised Deep Learning** used for **Computer Vision**. </br>
+The process of [**Convolutional Neural Networks**](https://en.wikipedia.org/wiki/Convolutional_neural_network) is: **Convolution**,  **Max Pooling**, **Flattening**, **Full Connection**.
+
+**Convolution** </br>
+At the bases of Convolution there is a filter also called **Feature Detector** or **Kernel**. We basically multiply the portion of the image by the filter and we check the matching how many 1s have in common.
+
+<center>
+![](/img/cnnfilter.png){width=50%}
+</center>
+
+The resulting image on the top right of the figure above is called **Feature Map**. That essentially is the number of convolved features. The result is a reduction of the input image information. When we have a 2 that means we reduce the image, but a 4 means that we reduce even more the original image, and that make the image easier to be processed. </br>
+The question is if the are losing information applying the filter Feature Detector. The higher the number we have in the Feature Map, the better is the filtering process and that means we are not losing much feature. 
+
+
+
+
+
+
