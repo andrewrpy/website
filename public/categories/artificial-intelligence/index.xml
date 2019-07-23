@@ -22,6 +22,17 @@ STEP 1 - Convolution At the bases of Convolution there is a filter also called 
     </item>
     
     <item>
+      <title>Self Organizing Maps</title>
+      <link>/aipost/self-organizing-maps/</link>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/self-organizing-maps/</guid>
+      <description>body {text-align: justify}SOM is an Unsupervised Deep Learning used for Feature Detection. SOMs are great for dimensionality reduction.
+They take a multidimensional data set with lots of columns and end up with a map in a two-dimensional representation using an unsupervised algorithm.It is a similar approach like the K-Mean Clustering.
+How SOMs Learn: Best Matching Unit BMU The weights in SOMs are different.</description>
+    </item>
+    
+    <item>
       <title>Recurrent Neural Network in Theory</title>
       <link>/aipost/recurrent-neural-network-in-theory/</link>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>

@@ -1,0 +1,43 @@
+---
+title: Self Organizing Maps
+author: andrea perlato
+date: '2019-07-23'
+slug: self-organizing-maps
+categories:
+  - artificial intelligence
+tags:
+  - self organizaed maps
+---
+
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>SOM is an <strong>Unsupervised Deep Learning</strong> used for <strong>Feature Detection</strong>. </br>
+SOMs are great for dimensionality reduction.</p>
+<center>
+<img src="/img/som.png" style="width:50.0%" />
+</center>
+<p>They take a multidimensional data set with lots of columns and end up with a map in a two-dimensional representation using an unsupervised algorithm.
+It is a similar approach like the <a href="https://en.wikipedia.org/wiki/K-means_clustering"><strong>K-Mean Clustering</strong></a>.</p>
+<p><strong>How SOMs Learn: Best Matching Unit BMU</strong> </br>
+The weights in SOMs are different. In fact, in ANN weights are used to multiply the input with the weight and add it up to the output, and then we apply the activation function.</p>
+<center>
+<img src="/img/somweights.png" style="width:50.0%" />
+</center>
+<p>On the contrary, in SOMs there is not an Activation Function and the weights are the <strong>characteristics</strong> of the nodes itself, or better yet, they are the <strong>coordinates</strong> of the output node, like is represented in the figure above. Then, we continue by calculating the <strong>Euclidean Distance</strong> between <strong>node number i</strong> and <strong>row number i</strong>. From the figure above, we found that the closest is the <strong>node 3</strong>, which is called <strong>BMU Best Matching Unit</strong>. </br>
+Now, when we found the best node unit for the input values, the weights are updated for the BMU Best Matching Unit.</p>
+<center>
+<img src="/img/bmu.png" style="width:50.0%" />
+</center>
+<p>In practice, the SOM is coming closer to the BMU (colored in yellow), as represented in the figure above. Where we can see that the SOM is starting to be <strong>dragged (updated)</strong> to the BMU. We can see that not only the BMU in yellow is dragged to our input but also other nearby points of the BMU are being <strong>dragged (updated)</strong> closer to the input point for <strong>row 1</strong>.
+When we go on and we find the BMU for the <strong>row 2</strong>, the nearby are assigned by the closer they are to BMU for row1 or BMU for row 2, and so on. Slowly by slowly the SMOs becomes a sort of a mask over our original data (see the rightmost part of the figure below).</p>
+<p>What is important to remember of SOM is: </br>
+1 - SOMs retain topology of the input set. </br>
+2 - SOMs reveal correlations that are not easily identified. </br>
+3 - SOMs classify data without supervision. </br>
+4 - SOMs don’t require supervision, and so they don’t need backpropagation. </br></p>
+<p>Additional reading is:
+<a href="http://www.ai-junkie.com/ann/som/som1.html"><strong>Kohonen’s Self Organizing Feature Maps by Mat Buckland</strong></a>.</p>
