@@ -84,7 +84,31 @@ RNN is like <a href="https://en.wikipedia.org/wiki/Short-term_memory"><strong>Sh
 <center>
 <img src="/img/rnnonetomany.png" style="width:50.0%" />
 </center>
-<p>The circle in blue, that represent the hidden layer, is called the <strong>Temporal Loop</strong>,and they are connected through time. It is a sort of short term memory, able to remember what was in that neuron just previously. For example, when we have a lot of text, we need to gauge if it is a negative or a positive comment this RNN is called <strong>Many to One</strong>. </br></p>
+<p>The circle in blue, that represent the hidden layer, is called the <strong>Temporal Loop</strong>,and they are connected through time. It is a sort of short term memory, able to remember what was in that neuron just previously. For example, when we have a lot of text, we need to gauge if it is a negative or a positive comment this RNN is called <strong>Many to One</strong>. </br>
+Another example is <strong>Google Translator</strong> which is a very sophisticated deep learning. For example it is able to adapt the translation based on the gender. For example in english we can say: I am a boy/girl and I love to read. But the translation in Italian for a boy is: Sono <strong>un</strong> ragazz<strong>o</strong> e amo leggere. The translation for a girl is instead: Sono <strong>una</strong> ragazz<strong>a</strong> e amo leggere. This RNN is called <strong>Many to Many</strong>. </br>
+The concept here is that we need the memory of the content in order to solve this translation problem.</p>
+<p><strong>Vanishing Gradient</strong> </br>
+In the gradient descent we have to find the global minimum in order to have an optimal solution. In RNN when the information is traveling through the network there are lots of error to evaluate, and we have to remember that the blue nodes are not just neurons but a complete hidden layer. Now, every single neuron which participate in the calculation of the output should have its weight updated in order to minimize the error. The <strong>Weight Recurring Wrec</strong> in temporal loop have to be updated many times and they become <strong>small</strong>. </br>
+Now, the point is that when we multiply the weights, our value decreases very quickly, and <strong>Wrec</strong> become smaller.</p>
+<center>
+<img src="/img/vanishinggradient%20descent.png" style="width:50.0%" />
+</center>
+<p>As described by the green arrows at the bottom of the figure, when the gradient goes back through the network <strong>the lower the gradient is</strong>. The consequence is that the lower the gradient and the <strong>slower</strong> is the process to update the weights like a <strong>domino effect</strong>. </br>
+The solution is the <a href="https://en.wikipedia.org/wiki/Long_short-term_memory"><strong>Long short-Term Memory Network LSTMs</strong></a>.</p>
+<p><strong>Long short-Term Memory Network LSTMs</strong> </br>
+The faster solution to solve Vanishing Gradient is to give a value to the Weight Recurring Wrec a value less than one: <strong>Wrec &lt; 1</strong> or <strong>Wrec = 1</strong>. </br></p>
+<center>
+<img src="/img/lstms.png" style="width:50.0%" />
+</center>
+<p>The <strong>C</strong> stand for Memory of the Cell. The <strong>h</strong> is the output, and the <strong>X</strong> is the input. Any black line in the schema is a vector. The operators are the <strong>x</strong> or <strong>valve</strong> and like in plumbing we can open or close it, and when the <strong>valve</strong> is open the memory goes freely, and the memory is controlled by the <strong>sigmoid function</strong> represented by the <strong>sigma</strong> symbol in the graph above. For example, opening a <strong>valve</strong> can help to extract the gender in Google Translator. In other words is the best solution to <a href="https://en.wikipedia.org/wiki/Predictive_text"><strong>predict text</strong></a>. </br>
+The <strong>+</strong> symbol stands for the <strong>T-Shape joint</strong>, and it is used to add some additional memory in the flow. </br>
+The <strong>Hyperbolic Tangent Activation Function</strong> for short <strong>tanh</strong> operator goes between -1 and 1, allowing for increases and decreases in the state. </br>
+There are also some <strong>variations</strong> of the <strong>LSTM</strong>, for example the so called <a href="https://en.wikipedia.org/wiki/Gated_recurrent_unit"><strong>Gated Recurring Unit</strong></a> or <strong>GRUs</strong> for short. Here, the <strong>C</strong> memory cell is completely ignored, and it is replaced by the output <strong>h</strong>. </br></p>
+<center>
+<img src="/img/grus.png" style="width:50.0%" />
+</center>
+<p>Here the <strong>new hidden</strong> state in the <strong>previous hidden</strong> state is combined to form a vector. Than is goes through the tanh activation function Hyperbolic Tangent Activation Function. That helps to regulate flowing through the network, and it ensures that values remain between -1 and 1. Thanks to the tanh all the information are maintained, instead using the Sigmoid activation Function we can lose information because small values go close to zero and so they disappear.</p>
+<p>In short, <strong>Gated Recurrent Units GRUs</strong> have what is called an <strong>update gate</strong> and a <strong>reset gate</strong>. Using these two vectors, the model refines outputs by controlling the flow of information through the model. Gates are expressed by the Sigmoid Function: <strong>0 = do not update weight</strong>, <strong>1 = update weight</strong>.</p>
 
     </div>
   </article>
