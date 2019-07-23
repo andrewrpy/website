@@ -32,7 +32,7 @@ The question is if there are losing information applying the filter Feature Dete
 Essentially, we create multiple Feature Maps as many filter of Feature Detection we need (e.g. edge detect, blur detect, emboss detect).
 
 
-**STEP 2 - eLU Layer** </br>
+**STEP 2 - ReLU Layer** </br>
 This is the **Rectified Linear Unit** function, an additional step on top of Convolution. The reason why the ReLU is used is to increase the non-linearity. The reason we want to increase non-linearity is because images are highly non-linear, that is why we want to break up linearity.
 
 <center>

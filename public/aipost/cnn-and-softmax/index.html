@@ -83,7 +83,7 @@ At the bases of Convolution there is a filter also called <strong>Feature Detect
 <p>The resulting image on the top right of the figure above is called <strong>Feature Map</strong>. That essentially is the number of convolved features. The result is a reduction of the input image information. When we have a 2 that means we reduce the image, but a 4 means that we reduce even more the original image, and that make the image easier to be processed. </br>
 The question is if there are losing information applying the filter Feature Detector. The higher the number we have in the Feature Map, the better is the filtering process and that means we are not losing much feature.</p>
 <p>Essentially, we create multiple Feature Maps as many filter of Feature Detection we need (e.g. edge detect, blur detect, emboss detect).</p>
-<p><strong>STEP 2 - eLU Layer</strong> </br>
+<p><strong>STEP 2 - ReLU Layer</strong> </br>
 This is the <strong>Rectified Linear Unit</strong> function, an additional step on top of Convolution. The reason why the ReLU is used is to increase the non-linearity. The reason we want to increase non-linearity is because images are highly non-linear, that is why we want to break up linearity.</p>
 <center>
 <img src="/img/relu.png" style="width:80.0%" />
