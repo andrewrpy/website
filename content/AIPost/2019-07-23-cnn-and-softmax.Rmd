@@ -16,9 +16,10 @@ text-align: justify}
 </style>
 
 Convolutional neural network CNN is a **Supervised Deep Learning** used for **Computer Vision**. </br>
-The process of [**Convolutional Neural Networks**](https://en.wikipedia.org/wiki/Convolutional_neural_network) is: **Convolution**,  **Max Pooling**, **Flattening**, **Full Connection**.
+The process of [**Convolutional Neural Networks**](https://en.wikipedia.org/wiki/Convolutional_neural_network) can be devided in five steps: **Convolution**,  **Max Pooling**, **Flattening**, **Full Connection**.
 
-**Convolution** </br>
+
+**STEP 1 - Convolution** </br>
 At the bases of Convolution there is a filter also called **Feature Detector** or **Kernel**. We basically multiply the portion of the image by the filter and we check the matching how many 1s have in common.
 
 <center>
@@ -26,7 +27,115 @@ At the bases of Convolution there is a filter also called **Feature Detector** o
 </center>
 
 The resulting image on the top right of the figure above is called **Feature Map**. That essentially is the number of convolved features. The result is a reduction of the input image information. When we have a 2 that means we reduce the image, but a 4 means that we reduce even more the original image, and that make the image easier to be processed. </br>
-The question is if the are losing information applying the filter Feature Detector. The higher the number we have in the Feature Map, the better is the filtering process and that means we are not losing much feature. 
+The question is if there are losing information applying the filter Feature Detector. The higher the number we have in the Feature Map, the better is the filtering process and that means we are not losing much feature. 
+
+Essentially, we create multiple Feature Maps as many filter of Feature Detection we need (e.g. edge detect, blur detect, emboss detect).
+
+
+**STEP 2 - eLU Layer** </br>
+This is the **Rectified Linear Unit** function, an additional step on top of Convolution. The reason why the ReLU is used is to increase the non-linearity. The reason we want to increase non-linearity is because images are highly non-linear, that is why we want to break up linearity.
+
+<center>
+![](/img/relu.png){width=80%}
+</center>
+
+What the ReLU does for example in a black and white image, is to eliminate the linear component created by the shadows in an image. In fact, shadows are shown in a picture like linear progression of grey scale,and we can exclude using the ReLU this too detailed information.
+
+
+**STEP 3 - Max Pooling** </br>
+Typically, we can have a feature (e.g. a dog) of an image presented in many different positions or orientations. We have to be sure that our neural network has a property called **Spatial Invariance**. This means, it doesn’t care where the features are located in different environment, or if they are closer, or a bit further apart: our Neural Network need to have the flexibility to find out feature. To obtain that we use **Pooling**. </br>
+
+<center>
+![](/img/maxpooling.png){width=60%}
+</center>
+
+From the figure above, we used the **Max Pooling**. We take a **box of 2x2** pixel from the **Feature Map** previously created, we find the maximum value, and we report it in the **Pooled Feature Map**. We repeat this process moving the 2x2 box in the Feature Map. The result is that we are still preserving the features, and because we are taking the maximum of the pixels we are accounting for any distortions and possible spatial or textural or other kind of distortion. Moreover, another benefit of pooling is we are reducing the number of parameters, and so we are preventing overfitting. That is **like in humans**, because what is important for the vision is not to see exactly all the features that can be noisy, but humans disregarding the unnecessary information. </br>
+There are lots of types of pooling, and evaluating the type of pooling is crucial. There is a very important article about that which is called: [**Evaluation of Pooling operations in Convolutional Architectures for Object Recognition by Dominik Scherer**](http://ais.uni-bonn.de/papers/icann2010_maxpool.pdf).
+There is also a very useful online tool that we can use to have a better idea about what happen during the Convolution and Pooling process, and we can check the tool by clicking [**here**](http://scs.ryerson.ca/~aharley/vis/conv/flat.html). 
+
+
+**STEP 4 - Flattening** </br>
+The Flattening process simply means to reorder the Pooled Feature Map in a single column. We do that, because this **vector** now is ready to be used as an **input** of an ANN for further processing. </br>
+The entire process describe till now can be summarized by the figure below.
+
+<center>
+![](/img/flattening.png){width=60%}
+</center>
+
+
+**STEP 5 - Full Connection** </br>
+The Flattened vector that we described above, now is used as an input in a **Fully Connected ANN**. With fully connected we mean that the **hidden layer** is fully connected. This is by definition a CNN. The purpose of this is to combine our features into more attributes to predict the classes even better. In fact, combining more attributes (e.g. edge detect, blur detect, emboss detect) help to predict better the images. The figure below shows as an example the neurons activated for a Dog.
+
+<center>
+![](/img/fullyconnected.png){width=60%}
+</center>
+
+The links between neurons and output colored in violet for dog, and green for cat, tell us which are the important neurons for dog and cat respectively. The figure below, summarize all the steps till now considered.
+
+<center>
+![](/img/cnnallsteps.png){width=60%}
+</center>
+
+
+**Softmax and Cross Entropy** </br>
+From the figure about the detection of the dog, we found 0.95 Dog, and 0.05 Cat. </br>
+The question is how these two values add up to 1. That is possible only introducing the [**Softmax Function**](https://en.wikipedia.org/wiki/Softmax_function), the formula is the following:
+
+<center>
+![](/img/softmaxfunction.png){width=60%}
+</center>
+
+As described by the formula in the figure above, the Softmax Function is a generalization of the [**Logistic Function**](https://en.wikipedia.org/wiki/Logistic_function), and it makes sure that our prediction add up to 1. </br> 
+Most of the time the Softmax Function is related to the [**Cross Entropy Function**](https://en.wikipedia.org/wiki/Cross_entropy).
+In CNN, after the application of the Softmax Function, is to test the reliability of the model using as [**Loss Function**](https://en.wikipedia.org/wiki/Loss_function) the **Cross Entropy Function**, in order to maximize the performance of our neural network. There are several advantages to using the Cross Entropy Function. One of the best is that if for instance at the start of **backpropagation** the output value is much smaller than the actual value, the gradient descent will be very slow. Because Cross Entropy uses the logarithm, it helps the network to assess even large errors.
+
+
+**Occipital lobe and CNN** </br>
+It is common to link the [**Occipital Lobe**](https://en.wikipedia.org/wiki/Occipital_lobe) of the human brain to CNN. In fact, CNNs are responsible for computer vision, recognition of images and objects, which makes them a perfect link to the occipital lobe.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

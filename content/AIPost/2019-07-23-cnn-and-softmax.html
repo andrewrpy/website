@@ -17,11 +17,52 @@ body {
 text-align: justify}
 </style>
 <p>Convolutional neural network CNN is a <strong>Supervised Deep Learning</strong> used for <strong>Computer Vision</strong>. </br>
-The process of <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network"><strong>Convolutional Neural Networks</strong></a> is: <strong>Convolution</strong>, <strong>Max Pooling</strong>, <strong>Flattening</strong>, <strong>Full Connection</strong>.</p>
-<p><strong>Convolution</strong> </br>
+The process of <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network"><strong>Convolutional Neural Networks</strong></a> can be devided in five steps: <strong>Convolution</strong>, <strong>Max Pooling</strong>, <strong>Flattening</strong>, <strong>Full Connection</strong>.</p>
+<p><strong>STEP 1 - Convolution</strong> </br>
 At the bases of Convolution there is a filter also called <strong>Feature Detector</strong> or <strong>Kernel</strong>. We basically multiply the portion of the image by the filter and we check the matching how many 1s have in common.</p>
 <center>
 <img src="/img/cnnfilter.png" style="width:50.0%" />
 </center>
 <p>The resulting image on the top right of the figure above is called <strong>Feature Map</strong>. That essentially is the number of convolved features. The result is a reduction of the input image information. When we have a 2 that means we reduce the image, but a 4 means that we reduce even more the original image, and that make the image easier to be processed. </br>
-The question is if the are losing information applying the filter Feature Detector. The higher the number we have in the Feature Map, the better is the filtering process and that means we are not losing much feature.</p>
+The question is if there are losing information applying the filter Feature Detector. The higher the number we have in the Feature Map, the better is the filtering process and that means we are not losing much feature.</p>
+<p>Essentially, we create multiple Feature Maps as many filter of Feature Detection we need (e.g. edge detect, blur detect, emboss detect).</p>
+<p><strong>STEP 2 - eLU Layer</strong> </br>
+This is the <strong>Rectified Linear Unit</strong> function, an additional step on top of Convolution. The reason why the ReLU is used is to increase the non-linearity. The reason we want to increase non-linearity is because images are highly non-linear, that is why we want to break up linearity.</p>
+<center>
+<img src="/img/relu.png" style="width:80.0%" />
+</center>
+<p>What the ReLU does for example in a black and white image, is to eliminate the linear component created by the shadows in an image. In fact, shadows are shown in a picture like linear progression of grey scale,and we can exclude using the ReLU this too detailed information.</p>
+<p><strong>STEP 3 - Max Pooling</strong> </br>
+Typically, we can have a feature (e.g. a dog) of an image presented in many different positions or orientations. We have to be sure that our neural network has a property called <strong>Spatial Invariance</strong>. This means, it doesn’t care where the features are located in different environment, or if they are closer, or a bit further apart: our Neural Network need to have the flexibility to find out feature. To obtain that we use <strong>Pooling</strong>. </br></p>
+<center>
+<img src="/img/maxpooling.png" style="width:60.0%" />
+</center>
+<p>From the figure above, we used the <strong>Max Pooling</strong>. We take a <strong>box of 2x2</strong> pixel from the <strong>Feature Map</strong> previously created, we find the maximum value, and we report it in the <strong>Pooled Feature Map</strong>. We repeat this process moving the 2x2 box in the Feature Map. The result is that we are still preserving the features, and because we are taking the maximum of the pixels we are accounting for any distortions and possible spatial or textural or other kind of distortion. Moreover, another benefit of pooling is we are reducing the number of parameters, and so we are preventing overfitting. That is <strong>like in humans</strong>, because what is important for the vision is not to see exactly all the features that can be noisy, but humans disregarding the unnecessary information. </br>
+There are lots of types of pooling, and evaluating the type of pooling is crucial. There is a very important article about that which is called: <a href="http://ais.uni-bonn.de/papers/icann2010_maxpool.pdf"><strong>Evaluation of Pooling operations in Convolutional Architectures for Object Recognition by Dominik Scherer</strong></a>.
+There is also a very useful online tool that we can use to have a better idea about what happen during the Convolution and Pooling process, and we can check the tool by clicking <a href="http://scs.ryerson.ca/~aharley/vis/conv/flat.html"><strong>here</strong></a>.</p>
+<p><strong>STEP 4 - Flattening</strong> </br>
+The Flattening process simply means to reorder the Pooled Feature Map in a single column. We do that, because this <strong>vector</strong> now is ready to be used as an <strong>input</strong> of an ANN for further processing. </br>
+The entire process describe till now can be summarized by the figure below.</p>
+<center>
+<img src="/img/flattening.png" style="width:60.0%" />
+</center>
+<p><strong>STEP 5 - Full Connection</strong> </br>
+The Flattened vector that we described above, now is used as an input in a <strong>Fully Connected ANN</strong>. With fully connected we mean that the <strong>hidden layer</strong> is fully connected. This is by definition a CNN. The purpose of this is to combine our features into more attributes to predict the classes even better. In fact, combining more attributes (e.g. edge detect, blur detect, emboss detect) help to predict better the images. The figure below shows as an example the neurons activated for a Dog.</p>
+<center>
+<img src="/img/fullyconnected.png" style="width:60.0%" />
+</center>
+<p>The links between neurons and output colored in violet for dog, and green for cat, tell us which are the important neurons for dog and cat respectively. The figure below, summarize all the steps till now considered.</p>
+<center>
+<img src="/img/cnnallsteps.png" style="width:60.0%" />
+</center>
+<p><strong>Softmax and Cross Entropy</strong> </br>
+From the figure about the detection of the dog, we found 0.95 Dog, and 0.05 Cat. </br>
+The question is how these two values add up to 1. That is possible only introducing the <a href="https://en.wikipedia.org/wiki/Softmax_function"><strong>Softmax Function</strong></a>, the formula is the following:</p>
+<center>
+<img src="/img/softmaxfunction.png" style="width:60.0%" />
+</center>
+<p>As described by the formula in the figure above, the Softmax Function is a generalization of the <a href="https://en.wikipedia.org/wiki/Logistic_function"><strong>Logistic Function</strong></a>, and it makes sure that our prediction add up to 1. </br>
+Most of the time the Softmax Function is related to the <a href="https://en.wikipedia.org/wiki/Cross_entropy"><strong>Cross Entropy Function</strong></a>.
+In CNN, after the application of the Softmax Function, is to test the reliability of the model using as <a href="https://en.wikipedia.org/wiki/Loss_function"><strong>Loss Function</strong></a> the <strong>Cross Entropy Function</strong>, in order to maximize the performance of our neural network. There are several advantages to using the Cross Entropy Function. One of the best is that if for instance at the start of <strong>backpropagation</strong> the output value is much smaller than the actual value, the gradient descent will be very slow. Because Cross Entropy uses the logarithm, it helps the network to assess even large errors.</p>
+<p><strong>Occipital lobe and CNN</strong> </br>
+It is common to link the <a href="https://en.wikipedia.org/wiki/Occipital_lobe"><strong>Occipital Lobe</strong></a> of the human brain to CNN. In fact, CNNs are responsible for computer vision, recognition of images and objects, which makes them a perfect link to the occipital lobe.</p>
