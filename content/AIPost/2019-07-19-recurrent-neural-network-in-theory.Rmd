@@ -20,3 +20,41 @@ Recurrent Neural Networks represent one of the most advanced algorithms that exi
 
 **Frontal lobe and RNN** </br>
 RNNs are like short-term memory. We will learn that they can remember things that just happen in a previous couple of observations and apply that knowledge in the going forward. For humans, short-term memory is one of the functions of the [**Frontal Lobe**](https://en.wikipedia.org/wiki/Frontal_lobe). </br>
+
+**The idea behind RNN** </br> 
+The idea is that weights have [**Long Term Memory**](https://en.wikipedia.org/wiki/Long-term_memory) abbreviated as **LTM**. For example, in a classical ANN known the weights, and so whatever input, we put into the ANN, it will process it in the same way as it would yesterday.
+The weights can be located in the [**Temporal Lobe**](https://en.wikipedia.org/wiki/Temporal_lobe) of a human brain, because the Temporal Lobe is responsible for Long Term Memory LTM. </br>
+RNN is like [**Short Term Memory**](https://en.wikipedia.org/wiki/Short-term_memory), because it can remember things that are just happened in the previous couple of observations. The figure below is a representation of RNN.
+
+<center>
+![](/img/rnnonetomany.png){width=50%}
+</center>
+
+The circle in blue, that represent the hidden layer, is called the **Temporal Loop**,and they are connected through time. It is a sort of short term memory, able to remember what was in that neuron just previously. For example, when we have a lot of text, we need to gauge if it is a negative or a positive comment this RNN is called **Many to One**. </br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
