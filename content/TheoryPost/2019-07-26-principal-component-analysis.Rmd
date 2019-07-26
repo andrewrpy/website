@@ -22,7 +22,108 @@ Now, tha mice 1, 2, 3 have high value for Gene1 and mice 4, 5, 6 have low value 
 So, mice 1, 2, 3 are more similar to each other than they are to mice 4, 5, 6. </br>
 
 <center>
-![](/img/pcagene.png){width=30%}
+![](/img/pcagene.png){width=20%}
 </center>
 
 If we have more than 3 genes is quite difficult to use a four-dimensional graph to check where mice are allocated in that space. The Principal Component Analysis PCA, takes four or more-dimensional data and make a two-dimensional Principal Component Plot that is able to tell us which gene or variable is the most valuable for clustering the data. Now, let’s assume that we have only two genes and we just calculate two averages: one for gene1 and one for gene2. With this average we have now the **Centre Average** of the data, and we can shift the data so that the average is the origin of the graph.
+
+<center>
+![](/img/pcacentreaverage.png){width=30%}
+</center>
+
+Having the centre of data, allow us to start to draw a **Random Line** that goes through the origin that is the centre average. Then, we rotate the line until fits the data at best.
+
+<center>
+![](/img/pcarandomline.png){width=50%}
+</center>
+
+
+**How to decide the line with best fit?** </br>
+The Principal Component Analysis simply projects the data onto the fitting line depiced above, and find the line that minimize those distances. And we can call **D** the distance between the projected points and the origin. </br>
+The next step is to square all of them and we sum up the square distances: **Sum of the Square Distances SS Distance**.
+We repeat this procedure since we find the largest sum of square distances: this is called **Principal Component One**: which is also known as **Linear combination between variables**, in this example: gene1 and gene2.
+
+<center>
+![](/img/pcpythagorean.png){width=50%}
+</center>
+
+Now, from the distance on the x-axis and the distance from y-axis is possible to use the Pythagorean Theorem to find the hypotenuse of each observation and we **scale** it to a unit of one: this is called **Singular Vector** or **Eigenvector** for Principal Component One. This calculation that we make for all the observations is called [**Loading Scores**](http://www.statistics4u.com/fundstat_eng/cc_pca_loadscore.html). The square root of the eigenvector for PC1 is called the Singular Value for **PC1**.
+
+Now, let’s work on **PC2**: that is simple the **line** to the origin that is **perpendicular** to **PC1**, and from that line we can derive Eigenvector for PC2.
+
+Now, we have an estimation for PC1 and PC2. To draw the final Principal Components graph, we simply rotate since PC1 is horizontal, and we use the projected points that we found to find where the observations go in the PCA graph (see graph below).
+
+<center>
+![](/img/pc1pc2.png){width=30%}
+</center>
+
+Now, if we divide eigenvalues for PC1 and eigenvalues for PC2 by the number of observations minus one, we obtain the **Variation of PC1** and the **Variation of PC2**.
+
+<center>
+![](/img/pcavariation.png){width=50%}
+</center>
+
+We now can use the so-called [**Screen Plot**](https://en.wikipedia.org/wiki/Scree_plot) as a graphical representation of the percentages of variation that each Principal Components accounts for.
+
+**Note**: if the first two Principal Components would not create a very accurate representation of the data, in this case could be better to use an [**Ensamble**](https://en.wikipedia.org/wiki/Ensemble_learning) approach.
+
+Summarizing, the **Advantages** of PCA are: </br>
+1 - Useful for dimension reduction for high-dimensional data analysis. </br>
+2 - Help to reduce the number of predictor items using principal components. </br> 
+3 - Helps to make predictor items independent and avoid multicollinearity problem. </br> 
+4 - Allows interpretation of many variables using a **2-dimensional biplot**. </br>
+5 - Can be used for developing prediction models. </br>
+
+The **Disadvantages** of PCA are: </br> 
+1 - Only numeric variables can be used. For categoriacal variables is better to consider the [**Multiple Correspondence Analysis**](https://en.wikipedia.org/wiki/Multiple_correspondence_analysis). </br>
+2 - Prediction models are less interpretable. </br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

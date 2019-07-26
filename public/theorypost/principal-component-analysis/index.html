@@ -79,9 +79,44 @@ Imagine we are measuring the transcription of two genes: Gene1 and Gene2 that ar
 Now, tha mice 1, 2, 3 have high value for Gene1 and mice 4, 5, 6 have low value for Gene2. </br>
 So, mice 1, 2, 3 are more similar to each other than they are to mice 4, 5, 6. </br></p>
 <center>
-<img src="/img/pcagene.png" style="width:30.0%" />
+<img src="/img/pcagene.png" style="width:20.0%" />
 </center>
 <p>If we have more than 3 genes is quite difficult to use a four-dimensional graph to check where mice are allocated in that space. The Principal Component Analysis PCA, takes four or more-dimensional data and make a two-dimensional Principal Component Plot that is able to tell us which gene or variable is the most valuable for clustering the data. Now, let’s assume that we have only two genes and we just calculate two averages: one for gene1 and one for gene2. With this average we have now the <strong>Centre Average</strong> of the data, and we can shift the data so that the average is the origin of the graph.</p>
+<center>
+<img src="/img/pcacentreaverage.png" style="width:30.0%" />
+</center>
+<p>Having the centre of data, allow us to start to draw a <strong>Random Line</strong> that goes through the origin that is the centre average. Then, we rotate the line until fits the data at best.</p>
+<center>
+<img src="/img/pcarandomline.png" style="width:50.0%" />
+</center>
+<p><strong>How to decide the line with best fit?</strong> </br>
+The Principal Component Analysis simply projects the data onto the fitting line depiced above, and find the line that minimize those distances. And we can call <strong>D</strong> the distance between the projected points and the origin. </br>
+The next step is to square all of them and we sum up the square distances: <strong>Sum of the Square Distances SS Distance</strong>.
+We repeat this procedure since we find the largest sum of square distances: this is called <strong>Principal Component One</strong>: which is also known as <strong>Linear combination between variables</strong>, in this example: gene1 and gene2.</p>
+<center>
+<img src="/img/pcpythagorean.png" style="width:50.0%" />
+</center>
+<p>Now, from the distance on the x-axis and the distance from y-axis is possible to use the Pythagorean Theorem to find the hypotenuse of each observation and we <strong>scale</strong> it to a unit of one: this is called <strong>Singular Vector</strong> or <strong>Eigenvector</strong> for Principal Component One. This calculation that we make for all the observations is called <a href="http://www.statistics4u.com/fundstat_eng/cc_pca_loadscore.html"><strong>Loading Scores</strong></a>. The square root of the eigenvector for PC1 is called the Singular Value for <strong>PC1</strong>.</p>
+<p>Now, let’s work on <strong>PC2</strong>: that is simple the <strong>line</strong> to the origin that is <strong>perpendicular</strong> to <strong>PC1</strong>, and from that line we can derive Eigenvector for PC2.</p>
+<p>Now, we have an estimation for PC1 and PC2. To draw the final Principal Components graph, we simply rotate since PC1 is horizontal, and we use the projected points that we found to find where the observations go in the PCA graph (see graph below).</p>
+<center>
+<img src="/img/pc1pc2.png" style="width:30.0%" />
+</center>
+<p>Now, if we divide eigenvalues for PC1 and eigenvalues for PC2 by the number of observations minus one, we obtain the <strong>Variation of PC1</strong> and the <strong>Variation of PC2</strong>.</p>
+<center>
+<img src="/img/pcavariation.png" style="width:50.0%" />
+</center>
+<p>We now can use the so-called <a href="https://en.wikipedia.org/wiki/Scree_plot"><strong>Screen Plot</strong></a> as a graphical representation of the percentages of variation that each Principal Components accounts for.</p>
+<p><strong>Note</strong>: if the first two Principal Components would not create a very accurate representation of the data, in this case could be better to use an <a href="https://en.wikipedia.org/wiki/Ensemble_learning"><strong>Ensamble</strong></a> approach.</p>
+<p>Summarizing, the <strong>Advantages</strong> of PCA are: </br>
+1 - Useful for dimension reduction for high-dimensional data analysis. </br>
+2 - Help to reduce the number of predictor items using principal components. </br>
+3 - Helps to make predictor items independent and avoid multicollinearity problem. </br>
+4 - Allows interpretation of many variables using a <strong>2-dimensional biplot</strong>. </br>
+5 - Can be used for developing prediction models. </br></p>
+<p>The <strong>Disadvantages</strong> of PCA are: </br>
+1 - Only numeric variables can be used. For categoriacal variables is better to consider the <a href="https://en.wikipedia.org/wiki/Multiple_correspondence_analysis"><strong>Multiple Correspondence Analysis</strong></a>. </br>
+2 - Prediction models are less interpretable. </br></p>
 
     </div>
   </article>
