@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ensemble learning on Andrea Perlato</title>
+    <link>/tags/ensemble-learning/</link>
+    <description>Recent content in ensemble learning on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ensemble-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ensemble Learning</title>
+      <link>/theorypost/ensemble-learning/</link>
+      <pubDate>Fri, 26 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/ensemble-learning/</guid>
+      <description>body {text-align: justify}The Boosting and Ensemble Learning concepts can be applied to many Machine Learning models: it is a Meta Algorithm used to convert many weak learners into a strong learner in order to achieve good performance in supervised problems.
+Why Ensemble First of all, ensemble often have lower error than any individual method by themselves. It has also less overfitting leading us to a better performance in the test set.</description>
+    </item>
+    
+  </channel>
+</rss>

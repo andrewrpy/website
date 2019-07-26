@@ -9,6 +9,11 @@
   </url>
   
   <url>
+    <loc>/theorypost/ensemble-learning/</loc>
+    <lastmod>2019-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/pca/</loc>
     <lastmod>2019-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -27,6 +32,12 @@
   
   <url>
     <loc>/theorypost/</loc>
+    <lastmod>2019-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ensemble-learning/</loc>
     <lastmod>2019-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

@@ -1,0 +1,50 @@
+---
+title: Ensemble Learning
+author: andrea perlato
+date: '2019-07-26'
+slug: ensemble-learning
+categories:
+  - machine learning
+tags:
+  - ensemble learning
+---
+
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>The <a href="https://en.wikipedia.org/wiki/Boosting_(machine_learning)"><strong>Boosting</strong></a> and <a href="https://en.wikipedia.org/wiki/Ensemble_learning"><strong>Ensemble Learning</strong></a> concepts can be applied to many Machine Learning models: it is a <strong>Meta Algorithm</strong> used to convert many weak learners into a strong learner in order to achieve good performance in supervised problems.</p>
+<p><strong>Why Ensemble</strong> </br>
+First of all, ensemble often have lower error than any individual method by themselves. </br>
+It has also less overfitting leading us to a better performance in the test set. </br>
+Each kind of learners that we might use has a sort of bias. Combining all of them, can reduce this bias. </br></p>
+<p><strong>Boosting</strong> </br>
+Boosting trains the models by sequentially training a new simple model based on the error of the previous one. This procedure tends to discover the data points that are hard to predict. In the end, it sums all the models in a weighted combination, and this procedure is known as <strong>Scaling Up Complexity</strong>. Combining weak learner models that are not able to learn complex function, we can convert them in an overall much more complex classifier. So, the combination of several simple models produces an overall decision that is more complex. This process correspond to minimize the Loss Function (Cost Function). A classic example for boosting classification is the <strong>ADA Boost</strong>: Adaptive Boosting Algorithm.</p>
+<p><strong>Adaptive Boosting in Random Forest</strong>
+In a Forest of Trees made with ADA Boost the trees are usually just <strong>One Node with Two Leaves</strong> that are called <strong>Stump</strong>, so it is a <strong>Forest of Stump</strong>.
+A Stump is not good to make a classification, simply because it doesn’t take advantage of all the features available, Stumps are technically <strong>Weak Learners</strong>. In contrast, in Forest of Stumps made with Ada Boost, some Stumps get more importance in the final classification than other Stumps. Crucially, each Stump comes in a precise order, so, the error of the first Stump influence the error of the second Stump and so on. In other words: ADA Boost combine weak learners to make classification that learn from the mistakes made by the previous Stump.</p>
+<p>The procedure starts to <strong>give a weight</strong> to each observation. </br><br />
+1 - At the start, all observations get the same weight which is 1/total number of samples. That make the sample equally important. </br>
+2 - We start calculating the Stump separately for each feature. </br><br />
+3 - The Stump with <strong>Lower Gini Index</strong> will be the <strong>First Stump</strong> in the forest. </br><br />
+4 - Then, we use the <strong>Total Error of the Stumps</strong> to determine the amount of importance of the Stump. </br>
+5 - The <strong>Amount of Importance</strong>, aka <strong>Amount to Say</strong>, is calculated by: <strong>½ log (1-Total Error)/Total Error</strong>. </br></p>
+<center>
+<img src="/img/amounttosay.png" style="width:50.0%" />
+</center>
+<p>When a Stump is no better at classification than flipping a coin, the total error is equal to 50%. </br>
+When a Stump does a terrible job the error is close to 100%. </br>
+And, if a Stump makes a mistake, we have to emphasize the need for the <strong>Next Stump</strong> to correct this error of classification. We do that, increasing the weight of this Stump and at the same time we decrease the weight of the other stump.</p>
+<p>The blue line of the graph below is <strong>e^amount of say</strong>.
+When the amount of say is <strong>large</strong>, the Stump did a good job in classifying sample.</p>
+<center>
+<img src="/img/eamountofsay.png" style="width:50.0%" />
+</center>
+<p><strong>Drawback of Ensemble</strong> </br>
+1 - Time and computation expensive. </br>
+2 - Hard to implement in real time platform. </br>
+3 - Complexity of the classification increases. </br></p>
+<p><strong>Advantages of Ensemble</strong> </br>
+If the first two Principal Components of the PCA would not create a very accurate representation of the data, in this case could be better to use an Ensamble Approach.</p>
