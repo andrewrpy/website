@@ -59,7 +59,7 @@ When the amount of say is **large**, the Stump did a good job in classifying sam
 3 - Complexity of the classification increases. </br>
 
 **Advantages of Ensemble** </br>
-If the first two Principal Components of the PCA would not create a very accurate representation of the data, in this case could be better to use an Ensamble Approach.
+If the first two Principal Components of the PCA would not create a very accurate representation of the data, in this case could be better to use an Ensamble Approach. Prova.
 
 
 
