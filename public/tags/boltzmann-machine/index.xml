@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>boltzmann machine on Andrea Perlato</title>
+    <link>/tags/boltzmann-machine/</link>
+    <description>Recent content in boltzmann machine on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/boltzmann-machine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boltzmann Machine</title>
+      <link>/aipost/boltzmann-machine/</link>
+      <pubDate>Sun, 28 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/boltzmann-machine/</guid>
+      <description>body {text-align: justify}Boltzmann Machine is an Unsupervised Deep Learning used for Recommendation System. Boltzmann Machines are undirected models, they don’t have a direction in the connections as described in the figure below.
+From the figure above, we can see that there is not an output layer.</description>
+    </item>
+    
+  </channel>
+</rss>

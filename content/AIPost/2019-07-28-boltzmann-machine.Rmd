@@ -1,0 +1,25 @@
+---
+title: Boltzmann Machine
+author: andrea perlato
+date: '2019-07-28'
+slug: boltzmann-machine
+categories:
+  - artificial intelligence
+tags:
+  - boltzmann machine
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+Boltzmann Machine is an **Unsupervised Deep Learning** used for **Recommendation System**. </br>
+Boltzmann Machines are undirected models, they don’t have a direction in the connections as described in the figure below.
+
+<center>
+![](/img/boltzmannmachine.png){width=50%}
+</center>
+
+From the figure above, we can see that there is not an output layer. </br> 
+
