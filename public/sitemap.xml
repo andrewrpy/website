@@ -2,36 +2,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>**https://andreaperlato/com**/aipost/</loc>
+    <loc>"https://andreaperlato/com/"aipost/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>**https://andreaperlato/com**/aipost/boltzmann-machine/</loc>
+    <loc>"https://andreaperlato/com/"aipost/boltzmann-machine/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>**https://andreaperlato/com**/categories/</loc>
-    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>**https://andreaperlato/com**/tags/</loc>
+    <loc>"https://andreaperlato/com/"categories/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>**https://andreaperlato/com**/categories/artificial-intelligence/</loc>
+    <loc>"https://andreaperlato/com/"tags/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>**https://andreaperlato/com**/tags/boltzmann-machine/</loc>
+    <loc>"https://andreaperlato/com/"categories/artificial-intelligence/</loc>
+    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>"https://andreaperlato/com/"tags/boltzmann-machine/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
