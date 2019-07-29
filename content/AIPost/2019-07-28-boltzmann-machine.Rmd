@@ -42,6 +42,9 @@ For example, the gas molecules in a room are uniformly distributed, and the prob
 
 
 **Restricted Boltzmann Machine RBM** </br> 
+It is complicated to implement a complete Boltzmann Machine, because as we increase the number of nodes, the number of connections between them grows exponentially. That is why Restricted Boltzmann Machine RBM is preferred.
+
+
 
 
 
