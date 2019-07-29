@@ -1,0 +1,17 @@
+---
+title: Auto Encoder
+author: andrea perlato
+date: '2019-07-29'
+slug: auto-encoder
+categories:
+  - artificial intelligence
+tags:
+  - auto encoder
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+Auto Encoder is an

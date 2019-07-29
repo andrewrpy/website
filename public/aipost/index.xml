@@ -6,10 +6,19 @@
     <description>Recent content in AIPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/aipost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Auto Encoder</title>
+      <link>/aipost/auto-encoder/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/auto-encoder/</guid>
+      <description>body {text-align: justify}Auto Encoder is an</description>
+    </item>
     
     <item>
       <title>Boltzmann Machine</title>
