@@ -18,7 +18,7 @@
       
       <guid>/aipost/boltzmann-machine/</guid>
       <description>body {text-align: justify}Boltzmann Machine is an Unsupervised Deep Learning used for Recommendation System. Boltzmann Machines are undirected models, they don’t have a direction in the connections as described in the figure below.
-From the figure above, we can see that there is not an output layer.</description>
+From the figure above, we can see that there is not an output layer. This makes Boltzmann Machine fundamentally different to all other algorithms, and it doesn’t expect input data, but it generates information regardless of input nodes.</description>
     </item>
     
   </channel>

@@ -20,4 +20,18 @@ Boltzmann Machines are undirected models, they don’t have a direction in the c
 <center>
 <img src="/img/boltzmannmachine.png" style="width:50.0%" />
 </center>
-<p>From the figure above, we can see that there is not an output layer. </br></p>
+<p>From the figure above, we can see that there is not an output layer. </br>
+This makes Boltzmann Machine fundamentally different to all other algorithms, and it doesn’t expect input data, but it generates information regardless of input nodes. It is a <strong>system</strong>.
+This makes Boltzmann Machine not a deterministic deep learning model but a <strong>stochastic deep learning model</strong> also called <strong>generative deep learning model</strong>.</p>
+<p><strong>Energy Based Models EBM</strong> </br>
+The equation below is the <a href="https://en.wikipedia.org/wiki/Boltzmann_distribution"><strong>Boltzmann Distribution</strong></a>.</p>
+<p><span class="math display">\[
+p_{i}=\frac{e^{-\varepsilon_{i} / k T}}{\sum_{j=1}^{M} e^{-\varepsilon_{j} / k T}}
+\]</span>
+Now, image that our system is a <strong>nuclear power station</strong>. </br>
+On the left we have the <strong>probability of a certain state of our system pi</strong>, where <strong>i</strong> is the state and <strong>p</strong> the probability of state <strong>i</strong>. </br>
+The <strong>epsilon</strong> is the <strong>energy of the system</strong>. The <strong>k</strong>* is a constant and <strong>T</strong> is the <strong>temperature</strong> of our system. </br></p>
+<p>The <strong>numerator</strong> means that the higher the energy of a certain state is, the lower the probability is. </br>
+So, the probability <strong>pi</strong> is inversely related to the energy. </br>
+For example, the gas molecules in a room are uniformly distributed, and the probability to have all the molecules in a corner is low. In fact, in the case the molecules are in the corner the energy is very high. This example explains the equation above.</p>
+<p><strong>Restricted Boltzmann Machine RBM</strong> </br></p>

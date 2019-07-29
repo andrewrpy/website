@@ -22,4 +22,36 @@ Boltzmann Machines are undirected models, they don’t have a direction in the c
 </center>
 
 From the figure above, we can see that there is not an output layer. </br> 
+This makes Boltzmann Machine fundamentally different to all other algorithms, and it doesn’t expect input data, but it generates information regardless of input nodes. It is a **system**.
+This makes Boltzmann Machine not a deterministic deep learning model but a **stochastic deep learning model** also called **generative deep learning model**.
+
+**Energy Based Models EBM** </br> 
+The equation below is the [**Boltzmann Distribution**](https://en.wikipedia.org/wiki/Boltzmann_distribution).
+
+
+$$
+p_{i}=\frac{e^{-\varepsilon_{i} / k T}}{\sum_{j=1}^{M} e^{-\varepsilon_{j} / k T}}
+$$
+Now, image that our system is a **nuclear power station**. </br>
+On the left we have the **probability of a certain state of our system pi**, where **i** is the state and **p** the probability of state **i**. </br>
+The **epsilon** is the **energy of the system**. The **k*** is a constant and **T** is the **temperature** of our system. </br>
+
+The **numerator** means that the higher the energy of a certain state is, the lower the probability is. </br> 
+So, the probability **pi** is inversely related to the energy. </br> 
+For example, the gas molecules in a room are uniformly distributed, and the probability to have all the molecules in a corner is low. In fact, in the case the molecules are in the corner the energy is very high. This example explains the equation above.
+
+
+**Restricted Boltzmann Machine RBM** </br> 
+
+
+
+
+
+
+
+
+
+
+
+
 
