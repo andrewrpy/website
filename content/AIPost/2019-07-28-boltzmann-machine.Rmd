@@ -22,4 +22,3 @@ Boltzmann Machines are undirected models, they don’t have a direction in the c
 </center>
 
 From the figure above, we can see that there is not an output layer. </br> 
-Andrea Perlato.
