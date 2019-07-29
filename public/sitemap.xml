@@ -1,841 +1,842 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://andreaperlato/com/aipost/</loc>
+    <loc>/aipost/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/boltzmann-machine/</loc>
+    <loc>/aipost/boltzmann-machine/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/artificial-intelligence/</loc>
+    <loc>/categories/artificial-intelligence/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/boltzmann-machine/</loc>
+    <loc>/tags/boltzmann-machine/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/ensemble-learning/</loc>
+    <loc>/theorypost/ensemble-learning/</loc>
     <lastmod>2019-07-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/pca/</loc>
+    <loc>/tags/pca/</loc>
     <lastmod>2019-07-26T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/principal-component-analysis/</loc>
+    <loc>/theorypost/principal-component-analysis/</loc>
     <lastmod>2019-07-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/</loc>
+    <loc>/theorypost/</loc>
     <lastmod>2019-07-26T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/ensemble-learning/</loc>
+    <loc>/tags/ensemble-learning/</loc>
     <lastmod>2019-07-26T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/machine-learning/</loc>
+    <loc>/categories/machine-learning/</loc>
     <lastmod>2019-07-26T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/cnn-and-softmax/</loc>
+    <loc>/aipost/cnn-and-softmax/</loc>
     <lastmod>2019-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/self-organizing-maps/</loc>
+    <loc>/aipost/self-organizing-maps/</loc>
     <lastmod>2019-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/cnn/</loc>
+    <loc>/tags/cnn/</loc>
     <lastmod>2019-07-23T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/self-organizaed-maps/</loc>
+    <loc>/tags/self-organizaed-maps/</loc>
     <lastmod>2019-07-23T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/softmax/</loc>
+    <loc>/tags/softmax/</loc>
     <lastmod>2019-07-23T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/recurrent-neural-network-in-theory/</loc>
+    <loc>/aipost/recurrent-neural-network-in-theory/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/simple-regression-with-python/</loc>
+    <loc>/theorypost/simple-regression-with-python/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/linear-regression/</loc>
+    <loc>/tags/linear-regression/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/recurrent-neural-network/</loc>
+    <loc>/tags/recurrent-neural-network/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/rnn/</loc>
+    <loc>/tags/rnn/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/theory/</loc>
+    <loc>/categories/theory/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/alpha-beta-pruning/</loc>
+    <loc>/aipost/alpha-beta-pruning/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/the-activation-function/</loc>
+    <loc>/aipost/the-activation-function/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>**https://andreaperlato/com**/tags/activation-function/</loc>
+    <loc>/tags/activation-function/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/alpha-beta-pruning/</loc>
+    <loc>/tags/alpha-beta-pruning/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/fitting-a-curve-to-data-lowess-and-loess/</loc>
+    <loc>/theorypost/fitting-a-curve-to-data-lowess-and-loess/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/introduction-to-convolutional-neural-networks/</loc>
+    <loc>/aipost/introduction-to-convolutional-neural-networks/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/ridge-and-lasso-regression/</loc>
+    <loc>/theorypost/ridge-and-lasso-regression/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/convolutional-neural-network/</loc>
+    <loc>/tags/convolutional-neural-network/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/l1-regularization/</loc>
+    <loc>/tags/l1-regularization/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/l2-regularization/</loc>
+    <loc>/tags/l2-regularization/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/lasso-regression/</loc>
+    <loc>/tags/lasso-regression/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/loess/</loc>
+    <loc>/tags/loess/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/lowess/</loc>
+    <loc>/tags/lowess/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/ridge-regression/</loc>
+    <loc>/tags/ridge-regression/</loc>
     <lastmod>2019-06-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/backpropagation/</loc>
+    <loc>/aipost/backpropagation/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/synthetic-minority-oversampling-technique/</loc>
+    <loc>/theorypost/synthetic-minority-oversampling-technique/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/backpropagation/</loc>
+    <loc>/tags/backpropagation/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/smote/</loc>
+    <loc>/tags/smote/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/cluster-analysis-in-theory/</loc>
+    <loc>/theorypost/cluster-analysis-in-theory/</loc>
     <lastmod>2019-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/clustering/</loc>
+    <loc>/categories/clustering/</loc>
     <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/hierarchical/</loc>
+    <loc>/tags/hierarchical/</loc>
     <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/kmean/</loc>
+    <loc>/tags/kmean/</loc>
     <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/stochastic-gradient-descent/</loc>
+    <loc>/aipost/stochastic-gradient-descent/</loc>
     <lastmod>2019-06-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/stochastic-gradient-descent/</loc>
+    <loc>/tags/stochastic-gradient-descent/</loc>
     <lastmod>2019-06-11T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/3d/</loc>
+    <loc>/tags/3d/</loc>
     <lastmod>2019-06-07T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/4d/</loc>
+    <loc>/tags/4d/</loc>
     <lastmod>2019-06-07T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/graphpost/</loc>
+    <loc>/graphpost/</loc>
     <lastmod>2019-06-07T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/graphpost/how-to-create-3d-and-4d-plot/</loc>
+    <loc>/graphpost/how-to-create-3d-and-4d-plot/</loc>
     <lastmod>2019-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/graph/</loc>
+    <loc>/categories/graph/</loc>
     <lastmod>2019-06-07T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/graphpost/how-to-compare-data-at-different-scales/</loc>
+    <loc>/graphpost/how-to-compare-data-at-different-scales/</loc>
     <lastmod>2019-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/standardization/</loc>
+    <loc>/tags/standardization/</loc>
     <lastmod>2019-06-04T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/ann/</loc>
+    <loc>/tags/ann/</loc>
     <lastmod>2019-05-20T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/the-learning-process/</loc>
+    <loc>/aipost/the-learning-process/</loc>
     <lastmod>2019-05-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/cox-proportional-hazards-model/</loc>
+    <loc>/tspost/cox-proportional-hazards-model/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/parametric-regression-model-in-survival-analysis/</loc>
+    <loc>/tspost/parametric-regression-model-in-survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/survival-trees/</loc>
+    <loc>/tspost/survival-trees/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/</loc>
+    <loc>/tspost/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/cox-proportional-hazards/</loc>
+    <loc>/tags/cox-proportional-hazards/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/parametric-regression/</loc>
+    <loc>/tags/parametric-regression/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/survival-analysis/</loc>
+    <loc>/categories/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/survival-analysis/</loc>
+    <loc>/tags/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/survival-trees/</loc>
+    <loc>/tags/survival-trees/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/introduction-of-survival-analysis/</loc>
+    <loc>/tspost/introduction-of-survival-analysis/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/kaplan-meier/</loc>
+    <loc>/categories/kaplan-meier/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/logrank-test/</loc>
+    <loc>/categories/logrank-test/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/categories/time-series/</loc>
+    <loc>/categories/time-series/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/time-series-classification/</loc>
+    <loc>/tspost/time-series-classification/</loc>
     <lastmod>2019-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/time-series-analysis/</loc>
+    <loc>/tags/time-series-analysis/</loc>
     <lastmod>2019-04-05T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/time-series-classification/</loc>
+    <loc>/tags/time-series-classification/</loc>
     <lastmod>2019-04-05T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/linear-discriminant-analysis/</loc>
+    <loc>/mlpost/linear-discriminant-analysis/</loc>
     <lastmod>2019-04-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/</loc>
+    <loc>/mlpost/</loc>
     <lastmod>2019-04-04T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/time-series-clustering/</loc>
+    <loc>/tspost/time-series-clustering/</loc>
     <lastmod>2019-04-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/clustering/</loc>
+    <loc>/tags/clustering/</loc>
     <lastmod>2019-04-04T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/linear-discriminant-analysis/</loc>
+    <loc>/tags/linear-discriminant-analysis/</loc>
     <lastmod>2019-04-04T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/classification-and-prediction-with-support-vector-machine/</loc>
+    <loc>/mlpost/classification-and-prediction-with-support-vector-machine/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/graphpost/interactive-forecasting/</loc>
+    <loc>/graphpost/interactive-forecasting/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/forecasting/</loc>
+    <loc>/tags/forecasting/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/support-vector-machine/</loc>
+    <loc>/tags/support-vector-machine/</loc>
     <lastmod>2019-04-03T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/feature-selection-using-boruta-algorithm/</loc>
+    <loc>/mlpost/feature-selection-using-boruta-algorithm/</loc>
     <lastmod>2019-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/hyperparameters-tuning/</loc>
+    <loc>/tags/hyperparameters-tuning/</loc>
     <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/random-forest-hyperparameters-tuning/</loc>
+    <loc>/mlpost/random-forest-hyperparameters-tuning/</loc>
     <lastmod>2019-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/boruta-algorithm/</loc>
+    <loc>/tags/boruta-algorithm/</loc>
     <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/feature-selection/</loc>
+    <loc>/tags/feature-selection/</loc>
     <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/random-forest/</loc>
+    <loc>/tags/random-forest/</loc>
     <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/principal-component-analysis/</loc>
+    <loc>/tags/principal-component-analysis/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/principal-component-analysis/</loc>
+    <loc>/mlpost/principal-component-analysis/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/graphpost/interactive-dashboard/</loc>
+    <loc>/graphpost/interactive-dashboard/</loc>
     <lastmod>2019-03-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/polynomial-regression-smoothing-splines/</loc>
+    <loc>/mlpost/polynomial-regression-smoothing-splines/</loc>
     <lastmod>2019-03-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/flexdashboard/</loc>
+    <loc>/tags/flexdashboard/</loc>
     <lastmod>2019-03-27T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/ggplotly/</loc>
+    <loc>/tags/ggplotly/</loc>
     <lastmod>2019-03-27T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/plotly/</loc>
+    <loc>/tags/plotly/</loc>
     <lastmod>2019-03-27T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/polynomial-regression/</loc>
+    <loc>/tags/polynomial-regression/</loc>
     <lastmod>2019-03-27T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/shiny/</loc>
+    <loc>/tags/shiny/</loc>
     <lastmod>2019-03-27T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/smoothing-splines/</loc>
+    <loc>/tags/smoothing-splines/</loc>
     <lastmod>2019-03-27T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/fuzzy-matching-addresses-to-prevent-fraudulent-application/</loc>
+    <loc>/mlpost/fuzzy-matching-addresses-to-prevent-fraudulent-application/</loc>
     <lastmod>2019-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/fuzzy-matching/</loc>
+    <loc>/tags/fuzzy-matching/</loc>
     <lastmod>2019-03-25T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/generalized-addictive-models-gams/</loc>
+    <loc>/mlpost/generalized-addictive-models-gams/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/gams/</loc>
+    <loc>/tags/gams/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/generalized-addictive-models/</loc>
+    <loc>/tags/generalized-addictive-models/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/deal-multicollinearity-with-lasso-regression/</loc>
+    <loc>/mlpost/deal-multicollinearity-with-lasso-regression/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/deal-multicollinearity-with-ridge-regression/</loc>
+    <loc>/mlpost/deal-multicollinearity-with-ridge-regression/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/deal-outliers-with-robust-regression/</loc>
+    <loc>/mlpost/deal-outliers-with-robust-regression/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/multicollinearity/</loc>
+    <loc>/tags/multicollinearity/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/outliers/</loc>
+    <loc>/tags/outliers/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/rubust-regression/</loc>
+    <loc>/tags/rubust-regression/</loc>
     <lastmod>2019-03-21T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/quantile-regression-in-medical-expenditures/</loc>
+    <loc>/mlpost/quantile-regression-in-medical-expenditures/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/quantile-regression/</loc>
+    <loc>/tags/quantile-regression/</loc>
     <lastmod>2019-03-20T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/graphpost/interactive-graphs/</loc>
+    <loc>/graphpost/interactive-graphs/</loc>
     <lastmod>2019-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/interactive-graph/</loc>
+    <loc>/tags/interactive-graph/</loc>
     <lastmod>2019-03-15T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/graphpost/interactive-tables/</loc>
+    <loc>/graphpost/interactive-tables/</loc>
     <lastmod>2019-03-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/naive-bayes-classification/</loc>
+    <loc>/mlpost/naive-bayes-classification/</loc>
     <lastmod>2019-03-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/interactive-tables/</loc>
+    <loc>/tags/interactive-tables/</loc>
     <lastmod>2019-03-14T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/naive-bayes/</loc>
+    <loc>/tags/naive-bayes/</loc>
     <lastmod>2019-03-14T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/extreme-gradient-boosting-algorithm/</loc>
+    <loc>/mlpost/extreme-gradient-boosting-algorithm/</loc>
     <lastmod>2019-03-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/xgboost/</loc>
+    <loc>/tags/xgboost/</loc>
     <lastmod>2019-03-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/forecasting-product-demand/</loc>
+    <loc>/tspost/forecasting-product-demand/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/graphpost/interactive-network/</loc>
+    <loc>/graphpost/interactive-network/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/network/</loc>
+    <loc>/tags/network/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/applied-time-series-and-forecasting/</loc>
+    <loc>/tspost/applied-time-series-and-forecasting/</loc>
     <lastmod>2019-02-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/neural-nets-and-interactive-graphs/</loc>
+    <loc>/tspost/neural-nets-and-interactive-graphs/</loc>
     <lastmod>2019-02-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/supply-chain-foundations/</loc>
+    <loc>/tspost/supply-chain-foundations/</loc>
     <lastmod>2019-02-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/gradient-descent-step-by-step/</loc>
+    <loc>/theorypost/gradient-descent-step-by-step/</loc>
     <lastmod>2019-02-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/gradient-descent/</loc>
+    <loc>/tags/gradient-descent/</loc>
     <lastmod>2019-02-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/data-science-using-agile-methodology/</loc>
+    <loc>/theorypost/data-science-using-agile-methodology/</loc>
     <lastmod>2019-02-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/agile/</loc>
+    <loc>/tags/agile/</loc>
     <lastmod>2019-02-11T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/data-science/</loc>
+    <loc>/tags/data-science/</loc>
     <lastmod>2019-02-11T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tspost/statistica-background-for-time-series/</loc>
+    <loc>/tspost/statistica-background-for-time-series/</loc>
     <lastmod>2019-02-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/distinguish-benign-and-malign-tumor-via-ann/</loc>
+    <loc>/aipost/distinguish-benign-and-malign-tumor-via-ann/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/event-processing/</loc>
+    <loc>/theorypost/event-processing/</loc>
     <lastmod>2019-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/event-processing/</loc>
+    <loc>/tags/event-processing/</loc>
     <lastmod>2019-01-23T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/continuous-probability/</loc>
+    <loc>/theorypost/continuous-probability/</loc>
     <lastmod>2019-01-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/monte-carlo/</loc>
+    <loc>/tags/monte-carlo/</loc>
     <lastmod>2019-01-22T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>**https://andreaperlato/com**/tags/probability/</loc>
+    <loc>/tags/probability/</loc>
     <lastmod>2019-01-22T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/how-many-monte-carlo-are-enough/</loc>
+    <loc>/theorypost/how-many-monte-carlo-are-enough/</loc>
     <lastmod>2019-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/theorypost/the-monty-hall-problem/</loc>
+    <loc>/theorypost/the-monty-hall-problem/</loc>
     <lastmod>2019-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/simulation/</loc>
+    <loc>/tags/simulation/</loc>
     <lastmod>2019-01-20T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/graphpost/automotive-multivariate-visualization/</loc>
+    <loc>/graphpost/automotive-multivariate-visualization/</loc>
     <lastmod>2019-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/ggplot/</loc>
+    <loc>/tags/ggplot/</loc>
     <lastmod>2019-01-19T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/visualization/</loc>
+    <loc>/tags/visualization/</loc>
     <lastmod>2019-01-19T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/aipost/how-neural-network-learn/</loc>
+    <loc>/aipost/how-neural-network-learn/</loc>
     <lastmod>2019-01-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/customer-segmentation/</loc>
+    <loc>/mlpost/customer-segmentation/</loc>
     <lastmod>2019-01-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/mlpost/estimate-the-sucess-of-a-new-product-with-logistic-regression/</loc>
+    <loc>/mlpost/estimate-the-sucess-of-a-new-product-with-logistic-regression/</loc>
     <lastmod>2019-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/k-nearest-neighbors/</loc>
+    <loc>/tags/k-nearest-neighbors/</loc>
     <lastmod>2019-01-10T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/logistic-regression/</loc>
+    <loc>/tags/logistic-regression/</loc>
     <lastmod>2019-01-10T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/tags/suppor-vector-machine/</loc>
+    <loc>/tags/suppor-vector-machine/</loc>
     <lastmod>2019-01-10T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://andreaperlato/com/</loc>
+    <loc>/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
   
