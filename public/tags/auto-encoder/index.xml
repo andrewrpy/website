@@ -17,7 +17,8 @@
       <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/aipost/auto-encoder/</guid>
-      <description>body {text-align: justify}Auto Encoder is an</description>
+      <description>body {text-align: justify}It encodes itself using Visible Input Nodes, and the Visible Output Nodes are decoded using Hidden Nodes, in order to be identical to the Input Nodes. It is not a pure Unsupervised Deep Learning algorithm, but it is a Self-Supervised Deep Learning algorithm.
+Auto Encoders can be used for Feature Detection. Once we have encoded our data, the Hidden Nodes also called Encoder Nodes, will be represent certain features which are important in ur data.</description>
     </item>
     
   </channel>

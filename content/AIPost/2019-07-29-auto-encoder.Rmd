@@ -14,4 +14,77 @@ body {
 text-align: justify}
 </style>
 
-Auto Encoder is an
+It encodes itself using **Visible Input Nodes**, and the **Visible Output Nodes** are decoded using **Hidden Nodes**, in order to be identical to the Input Nodes. </br>
+It is not a pure **Unsupervised Deep Learning** algorithm, but it is a **Self-Supervised Deep Learning** algorithm.
+
+<center>
+![](/img/aenodesbmp.png){width=30%}
+</center>
+
+Auto Encoders can be used for **Feature Detection**. Once we have encoded our data, the Hidden Nodes also called **Encoder Nodes**, will be represent certain features which are important in ur data. For example, these features, founded via Auto Encoder, can be used to build a powerful Recommender System.
+
+From the figure below, we are using an auto encoder for movies. These are movies that person have watched and rated. </br>
+First, we have to train the Auto Encode, and from the figure above, we have to reduce four values (from movie 1 to movie 4) in a smaller space of the Hidden Layer (also known as Encoder Layer).
+
+<center>
+![](/img/aebwbmp.png){width=50%}
+</center>
+
+We colored the connections in **blue=multiplication by 1** and **black=multiplication by -1**.  </br>
+In reality the [**Hyperbolic Activation Tangent Function**](https://www.andreaperlato.com/aipost/the-activation-function/) is usually used in Auto Encoders. </br>
+
+In the figure above, we have in input **Movie1=1** and the **Other Movies=0**. In this case the **Hidden Nodes** are both to **1** because the blue connections are multiplied by 1, and the zeros always just add zero. </br>
+Now, having the Hidden Nodes, we can calculate the Output Nodes. The Top Right Output Node is 1+1=**2**, the Second Output Node is 1 -1=**0**. The same is for the Third Output Node. Last Output Node is -1-1=**-2**. </br>
+This is a preliminary output, because in the Auto Encoder we also have a [**Softmax Function**](https://www.andreaperlato.com/aipost/cnn-and-softmax/) on the end. </br>
+Basically the Softmax Function takes the highest value, in this case **2**, and it turns that into 1, and everything else into **0**. And as we can see from the figure below, after the Softmax Function, we have in Output the same result that we have in Input.
+
+<center>
+![](/img/aesoftmax.png){width=50%}
+</center>
+
+We can encode the Input into a small format where we just have **Two Hidden Values**. There are much more detail in the article: [**Neural Networks Are Impressively Good At Compression**](https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

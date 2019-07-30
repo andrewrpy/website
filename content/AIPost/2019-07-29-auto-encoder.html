@@ -15,4 +15,24 @@ tags:
 body {
 text-align: justify}
 </style>
-<p>Auto Encoder is an</p>
+<p>It encodes itself using <strong>Visible Input Nodes</strong>, and the <strong>Visible Output Nodes</strong> are decoded using <strong>Hidden Nodes</strong>, in order to be identical to the Input Nodes. </br>
+It is not a pure <strong>Unsupervised Deep Learning</strong> algorithm, but it is a <strong>Self-Supervised Deep Learning</strong> algorithm.</p>
+<center>
+<img src="/img/aenodesbmp.png" style="width:30.0%" />
+</center>
+<p>Auto Encoders can be used for <strong>Feature Detection</strong>. Once we have encoded our data, the Hidden Nodes also called <strong>Encoder Nodes</strong>, will be represent certain features which are important in ur data. For example, these features, founded via Auto Encoder, can be used to build a powerful Recommender System.</p>
+<p>From the figure below, we are using an auto encoder for movies. These are movies that person have watched and rated. </br>
+First, we have to train the Auto Encode, and from the figure above, we have to reduce four values (from movie 1 to movie 4) in a smaller space of the Hidden Layer (also known as Encoder Layer).</p>
+<center>
+<img src="/img/aebwbmp.png" style="width:50.0%" />
+</center>
+<p>We colored the connections in <strong>blue=multiplication by 1</strong> and <strong>black=multiplication by -1</strong>. </br>
+In reality the <a href="https://www.andreaperlato.com/aipost/the-activation-function/"><strong>Hyperbolic Activation Tangent Function</strong></a> is usually used in Auto Encoders. </br></p>
+<p>In the figure above, we have in input <strong>Movie1=1</strong> and the <strong>Other Movies=0</strong>. In this case the <strong>Hidden Nodes</strong> are both to <strong>1</strong> because the blue connections are multiplied by 1, and the zeros always just add zero. </br>
+Now, having the Hidden Nodes, we can calculate the Output Nodes. The Top Right Output Node is 1+1=<strong>2</strong>, the Second Output Node is 1 -1=<strong>0</strong>. The same is for the Third Output Node. Last Output Node is -1-1=<strong>-2</strong>. </br>
+This is a preliminary output, because in the Auto Encoder we also have a <a href="https://www.andreaperlato.com/aipost/cnn-and-softmax/"><strong>Softmax Function</strong></a> on the end. </br>
+Basically the Softmax Function takes the highest value, in this case <strong>2</strong>, and it turns that into 1, and everything else into <strong>0</strong>. And as we can see from the figure below, after the Softmax Function, we have in Output the same result that we have in Input.</p>
+<center>
+<img src="/img/aesoftmax.png" style="width:50.0%" />
+</center>
+<p>We can encode the Input into a small format where we just have <strong>Two Hidden Values</strong>. There are much more detail in the article: <a href="https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/"><strong>Neural Networks Are Impressively Good At Compression</strong></a>.</p>
