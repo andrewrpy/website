@@ -70,7 +70,31 @@ Now, RBM tries to **reconstruct** the visible nodes, even the empty nodes. In ou
 ![](/img/constractivedivergence.png){width=40%}
 </center>
 
-From the figure above, we can see in blue our input nodes, and using a**randomly selected weight** RBM is able to recognize a hidden node (colored in red in the figure above). After that, the hidden node is able to **reconstruct** the visible empty node (e.g. the move not seen The Fight Club). This process is called [**Gibbs Sampling**](https://en.wikipedia.org/wiki/Gibbs_sampling).
+From the figure above, we can see in blue our input nodes, and using a**randomly selected weight** RBM is able to recognize a hidden node (colored in red in the figure above). After that, the hidden node is able to **reconstruct** the visible empty node (e.g. the move not seen The Fight Club).
+This process is called [**Gibbs Sampling**](https://en.wikipedia.org/wiki/Gibbs_sampling). 
+
+Looking at the formula in the figure below, it is a gradient of the log probability of a certain state of our system, based on the weights. The formula says how changing the weights will change the log probability. </br>
+The visible layer is **vi** and hidden layer is **hi**. </br>
+
+<center>
+![](/img/rbmenergycurve.png){width=60%}
+</center>
+
+About the **Energy Curve** depicted on the figure above, we can say that weights dictate the shape of the energy curve. </br>
+The **green circle** on the curve is the **initial randomly selected weight**. </br>
+The **red circle**, is generated based on the training, and we try to end up to the lowest energy state possible. </br>
+Once we arrive to the very lower possible energy, if we subtract the value that we found with the initial randomly selected value, it says to us how adjusting our weights will affect the log probability.
+
+The process till now described is very long, but there is a **shortcut**: even if we take just the **first two steps** of the Contrastive Divergence, it is sufficient to understand how to adjust our curve to arrive at the end up (i.e. the lowest energy point).
+The important thing to keep in mind is the fact that the shape of the Energy Curve is governed by the weights in the system. The Energy Curve reflects the weights and using the **subtraction** in the formula, we can reach the minimum of the curve very fast. We don’t need to go to the very end of our sampling process.
+
+In its essence, we the Contrastive Divergence tries to adjust the Energy Curve by modifying the weights, in order to facilitate a system in the best way possible. We do that using the formula depicted in the figure above.
+There is a famous article about this called: [**A fast learning algorithm for deep belief nets**](https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf).
+
+
+
+
+
 
 
 
