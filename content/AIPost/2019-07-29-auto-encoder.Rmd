@@ -42,10 +42,75 @@ Basically the Softmax Function takes the highest value, in this case **2**, and 
 ![](/img/aesoftmax.png){width=50%}
 </center>
 
-We can encode the Input into a small format where we just have **Two Hidden Values**. There are much more detail in the article: [**Neural Networks Are Impressively Good At Compression**](https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/). 
+We can encode the Input into a small format where we just have **Two Hidden Values**. There are much more detail in the article: [**Neural Networks Are Impressively Good At Compression**](https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/). </br>
 
 
-Prova.
+
+**How to Train an Auto Encoder** </br>
+**STEP - 1** </br>
+We start with an array where the observations correspond to the users, and the features correspond to the movies with a rating from 1 to 5, and 0 if no rating. </br>
+**STEP - 2** </br>
+We put all rating per user in a **vector x**, and we encode it into a **vector z** of lower dimensions  by mapping function. </br>
+**STEP - 3** </br>
+The **vector z** is decoded into the **output vector y** of same dimensions as **vector x**. </br>
+**STEP - 4** </br>
+The reconstruction error d(x, y)=||x-y|| is computed in order to minimize it. </br>
+**STEP - 5** </br>
+The error is back-propagated, and weights are updated accordingly on how much they are responsible for the error. </br>
+Then, when the whole training set passed through the ANN, that makes an [**Epoch**](https://www.andreaperlato.com/aipost/backpropagation/).
+
+
+
+**Overcomplete Hidden Layer** </br>
+There are lots of variations in Auto Encoder,and Overcomplete hidden Layer is one of the most variations of Auto Encoder. It consists to have more nodes in the Hidden Layer, and this is especially used when we have to extract more features. </br>
+This is a great idea but there is a problem because if we have for example four inputs, having a Hidden Layer greater of the Input Layer, we have extra nodes that are not being used.
+In order to solve this problem, there are two different approaches: </br> 
+1 - Sparse Autoencoders. </br>
+2 - Denoising Autoencoders. </br>
+
+
+**Sparse Autoencoders** </br>
+As explained above, we are going to create an Autoencoder with a Hidden Layer with more nodes than the Input Layer. The reason for that is we want to extract more features. </br>
+Sparse Autoencoder is used a lot, and it is an Autoencoder where a **Regularization** technique is used . More precisely, it introduces *sparsity** in order to prevent overfitting. It introduces a **penalty** on the **Loss Function** that doesn’t allow the autoencoder to use all the nodes in its Hidden Layer every single time, but it can only use a certain number of Hidden Nodes. By doing that, we are extracting features but not at any given pass. </br>
+Additional reading is: [**Deep Learning Tutorial Sparse Autoencoder**](https://mccormickml.com/2014/05/30/deep-learning-tutorial-sparse-autoencoder/).
+
+
+**Denoising Autoencoders** </br>
+This is another **Regularization Technique**, to face the problem of when we have more nodes in the Hidden Layer than in the Input Layer and therefore the Autoencoder can lead us to overfitting.
+The Denoising Autoencoders remove the Input nodes and replace it with a new version of Input values. It takes there inputs and randomly, and turns some of them into zeros.
+
+<center>
+![](/img/denoisingae.png){width=50%}
+</center>
+
+Crucially, we calculate the Output based on the new Input Values (with zeros), but we compare the Output with the Original Input Values (without zeros). This helps to face the problem of overfitting. </br>
+This Autoencoder is called **Stochastic Autoencoder**, so basically it depends on this random selection of which values are going to be zero. </br>
+Additional reading is: [**Extracting and Composing Robust Features with Denoising Autoencoders**](https://www.cs.toronto.edu/~larocheh/publications/icml-2008-denoising-autoencoders.pdf).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

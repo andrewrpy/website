@@ -93,8 +93,38 @@ Basically the Softmax Function takes the highest value, in this case <strong>2</
 <center>
 <img src="/img/aesoftmax.png" style="width:50.0%" />
 </center>
-<p>We can encode the Input into a small format where we just have <strong>Two Hidden Values</strong>. There are much more detail in the article: <a href="https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/"><strong>Neural Networks Are Impressively Good At Compression</strong></a>.</p>
-<p>Prova.</p>
+<p>We can encode the Input into a small format where we just have <strong>Two Hidden Values</strong>. There are much more detail in the article: <a href="https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/"><strong>Neural Networks Are Impressively Good At Compression</strong></a>. </br></p>
+<p><strong>How to Train an Auto Encoder</strong> </br>
+<strong>STEP - 1</strong> </br>
+We start with an array where the observations correspond to the users, and the features correspond to the movies with a rating from 1 to 5, and 0 if no rating. </br>
+<strong>STEP - 2</strong> </br>
+We put all rating per user in a <strong>vector x</strong>, and we encode it into a <strong>vector z</strong> of lower dimensions by mapping function. </br>
+<strong>STEP - 3</strong> </br>
+The <strong>vector z</strong> is decoded into the <strong>output vector y</strong> of same dimensions as <strong>vector x</strong>. </br>
+<strong>STEP - 4</strong> </br>
+The reconstruction error d(x, y)=||x-y|| is computed in order to minimize it. </br>
+<strong>STEP - 5</strong> </br>
+The error is back-propagated, and weights are updated accordingly on how much they are responsible for the error. </br>
+Then, when the whole training set passed through the ANN, that makes an <a href="https://www.andreaperlato.com/aipost/backpropagation/"><strong>Epoch</strong></a>.</p>
+<p><strong>Overcomplete Hidden Layer</strong> </br>
+There are lots of variations in Auto Encoder,and Overcomplete hidden Layer is one of the most variations of Auto Encoder. It consists to have more nodes in the Hidden Layer, and this is especially used when we have to extract more features. </br>
+This is a great idea but there is a problem because if we have for example four inputs, having a Hidden Layer greater of the Input Layer, we have extra nodes that are not being used.
+In order to solve this problem, there are two different approaches: </br>
+1 - Sparse Autoencoders. </br>
+2 - Denoising Autoencoders. </br></p>
+<p><strong>Sparse Autoencoders</strong> </br>
+As explained above, we are going to create an Autoencoder with a Hidden Layer with more nodes than the Input Layer. The reason for that is we want to extract more features. </br>
+Sparse Autoencoder is used a lot, and it is an Autoencoder where a <strong>Regularization</strong> technique is used . More precisely, it introduces *sparsity<strong> in order to prevent overfitting. It introduces a </strong>penalty<strong> on the </strong>Loss Function** that doesn’t allow the autoencoder to use all the nodes in its Hidden Layer every single time, but it can only use a certain number of Hidden Nodes. By doing that, we are extracting features but not at any given pass. </br>
+Additional reading is: <a href="https://mccormickml.com/2014/05/30/deep-learning-tutorial-sparse-autoencoder/"><strong>Deep Learning Tutorial Sparse Autoencoder</strong></a>.</p>
+<p><strong>Denoising Autoencoders</strong> </br>
+This is another <strong>Regularization Technique</strong>, to face the problem of when we have more nodes in the Hidden Layer than in the Input Layer and therefore the Autoencoder can lead us to overfitting.
+The Denoising Autoencoders remove the Input nodes and replace it with a new version of Input values. It takes there inputs and randomly, and turns some of them into zeros.</p>
+<center>
+<img src="/img/denoisingae.png" style="width:50.0%" />
+</center>
+<p>Crucially, we calculate the Output based on the new Input Values (with zeros), but we compare the Output with the Original Input Values (without zeros). This helps to face the problem of overfitting. </br>
+This Autoencoder is called <strong>Stochastic Autoencoder</strong>, so basically it depends on this random selection of which values are going to be zero. </br>
+Additional reading is: <a href="https://www.cs.toronto.edu/~larocheh/publications/icml-2008-denoising-autoencoders.pdf"><strong>Extracting and Composing Robust Features with Denoising Autoencoders</strong></a>.</p>
 
     </div>
   </article>
