@@ -45,6 +45,8 @@ Basically the Softmax Function takes the highest value, in this case **2**, and 
 We can encode the Input into a small format where we just have **Two Hidden Values**. There are much more detail in the article: [**Neural Networks Are Impressively Good At Compression**](https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/). 
 
 
+Prova.
+
 
 
 
