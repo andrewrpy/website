@@ -44,6 +44,66 @@ For example, the gas molecules in a room are uniformly distributed, and the prob
 **Restricted Boltzmann Machine RBM** </br> 
 It is complicated to implement a complete Boltzmann Machine, because as we increase the number of nodes, the number of connections between them grows exponentially. That is why Restricted Boltzmann Machine RBM is preferred.
 
+<center>
+![](/img/rbmmovie.png){width=40%}
+</center>
+
+The restriction is that hidden nodes cannot be connected to each other, and visible nodes cannot connect to each other. Other than that, everything is the same. In the example above, we are considering to build a recommender system for movies. RBM is able to auto generate the states of the system, and it is able to identify what kind of features are important to use as recommender. </br> 
+All people have preferences, so, the data we have to deal with are related to the preferences of each person.
+Now, from the preferences of the movies, we can establish the related features that all movies have in common (e.g. Actor X, Award Y, Direct Z), that make people to like them. This session is called **Training Machine on Features**. </br>   
+
+<center>
+![](/img/rbmexemple.png){width=40%}
+
+</center>
+
+As we can see from the figure above, the hidden nodes are colored in green if the feature is **1=like the movie** and in red if the feature is **0=don't like the movie** or **empty=movie not seen**.
+Now, RBM tries to reconstruct the empy nodes.
+
+
+**Contrastive Divergence** </br> 
+This is the algorithm that allows RBM to learn. It is related to how RBM adjust its weights.
+In others ANN, we had **gradient descent process** which allowed us to **backpropagate the error** through the network, and therefore adjust the weight accordingly. In RBM we don’t have directed network but an **undirected** network. </br> 
+Now, RBM tries to **reconstruct** the visible nodes, even the empty nodes. In our example, it reconstruct the movie **Fight Club** and **The Departed**, based on what it learned from the training we made before.
+
+<center>
+![](/img/constractivedivergence.png){width=40%}
+</center>
+
+From the figure above, we can see in blue our input nodes, and using a**randomly selected weight** RBM is able to recognize a hidden node (colored in red in the figure above). After that, the hidden node is able to **reconstruct** the visible empty node (e.g. the move not seen The Fight Club). This process is called [**Gibbs Sampling**](https://en.wikipedia.org/wiki/Gibbs_sampling).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
 
 
 

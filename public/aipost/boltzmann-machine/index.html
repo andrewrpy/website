@@ -94,6 +94,25 @@ So, the probability <strong>pi</strong> is inversely related to the energy. </br
 For example, the gas molecules in a room are uniformly distributed, and the probability to have all the molecules in a corner is low. In fact, in the case the molecules are in the corner the energy is very high. This example explains the equation above.</p>
 <p><strong>Restricted Boltzmann Machine RBM</strong> </br>
 It is complicated to implement a complete Boltzmann Machine, because as we increase the number of nodes, the number of connections between them grows exponentially. That is why Restricted Boltzmann Machine RBM is preferred.</p>
+<center>
+<img src="/img/rbmmovie.png" style="width:40.0%" />
+</center>
+<p>The restriction is that hidden nodes cannot be connected to each other, and visible nodes cannot connect to each other. Other than that, everything is the same. In the example above, we are considering to build a recommender system for movies. RBM is able to auto generate the states of the system, and it is able to identify what kind of features are important to use as recommender. </br>
+All people have preferences, so, the data we have to deal with are related to the preferences of each person.
+Now, from the preferences of the movies, we can establish the related features that all movies have in common (e.g. Actor X, Award Y, Direct Z), that make people to like them. This session is called <strong>Training Machine on Features</strong>. </br></p>
+<center>
+<p><img src="/img/rbmexemple.png" style="width:40.0%" /></p>
+</center>
+<p>As we can see from the figure above, the hidden nodes are colored in green if the feature is <strong>1=like the movie</strong> and in red if the feature is <strong>0=don’t like the movie</strong> or <strong>empty=movie not seen</strong>.
+Now, RBM tries to reconstruct the empy nodes.</p>
+<p><strong>Contrastive Divergence</strong> </br>
+This is the algorithm that allows RBM to learn. It is related to how RBM adjust its weights.
+In others ANN, we had <strong>gradient descent process</strong> which allowed us to <strong>backpropagate the error</strong> through the network, and therefore adjust the weight accordingly. In RBM we don’t have directed network but an <strong>undirected</strong> network. </br>
+Now, RBM tries to <strong>reconstruct</strong> the visible nodes, even the empty nodes. In our example, it reconstruct the movie <strong>Fight Club</strong> and <strong>The Departed</strong>, based on what it learned from the training we made before.</p>
+<center>
+<img src="/img/constractivedivergence.png" style="width:40.0%" />
+</center>
+<p>From the figure above, we can see in blue our input nodes, and using a<strong>randomly selected weight</strong> RBM is able to recognize a hidden node (colored in red in the figure above). After that, the hidden node is able to <strong>reconstruct</strong> the visible empty node (e.g. the move not seen The Fight Club). This process is called <a href="https://en.wikipedia.org/wiki/Gibbs_sampling"><strong>Gibbs Sampling</strong></a>.</p>
 
     </div>
   </article>
