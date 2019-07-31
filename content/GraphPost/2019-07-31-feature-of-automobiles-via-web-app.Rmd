@@ -16,6 +16,9 @@ body {
 text-align: justify}
 </style>
 
+This is an iteractive web applicatioin created in [**shiny**](https://shiny.rstudio.com/). </br>
+It is an interactive approach to telling data story. Here below, an example using feaure of cars from the [**Mtcars**](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html) dataset.
+
 
 <iframe width="1000" height="900" scrolling="no" frameborder="no"  src="https://andrea-perlato.shinyapps.io/TechnicalCars/"> </iframe>
 
