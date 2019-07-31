@@ -90,6 +90,13 @@ Additional reading is: [**Extracting and Composing Robust Features with Denoisin
 
 
 
+<iframe width="450" height="400" scrolling="no" frameborder="no"  src="https://andrea-perlato.shinyapps.io/TechnicalCars/"> </iframe>
+
+
+
+
+
+
 
 
 
