@@ -2,6 +2,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.andreaperlato.com/categories/</loc>
+    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/graphpost/feature-of-automobiles-via-web-app/</loc>
+    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/graphpost/</loc>
+    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/</loc>
+    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/graph/</loc>
+    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/shiny/</loc>
+    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/web-app/</loc>
+    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/aipost/</loc>
     <lastmod>2019-07-29T00:00:00+00:00</lastmod>
      <priority>0</priority>
@@ -10,18 +51,6 @@
   <url>
     <loc>https://www.andreaperlato.com/aipost/auto-encoder/</loc>
     <lastmod>2019-07-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/categories/</loc>
-    <lastmod>2019-07-29T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/</loc>
-    <lastmod>2019-07-29T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
@@ -291,20 +320,8 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/graphpost/</loc>
-    <lastmod>2019-06-07T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.andreaperlato.com/graphpost/how-to-create-3d-and-4d-plot/</loc>
     <lastmod>2019-06-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/categories/graph/</loc>
-    <lastmod>2019-06-07T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
@@ -363,13 +380,13 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -545,12 +562,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/polynomial-regression/</loc>
-    <lastmod>2019-03-27T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/shiny/</loc>
     <lastmod>2019-03-27T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>

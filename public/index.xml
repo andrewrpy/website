@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Feature of Automobiles via Web App</title>
+      <link>/graphpost/feature-of-automobiles-via-web-app/</link>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/graphpost/feature-of-automobiles-via-web-app/</guid>
+      <description>body {text-align: justify}In this example we have a dropdown menu on the left dynamically populated from the data. For each feature inside the dropdown menu we have a count of the unique values per each features. We also have a second dropdown menu where we can choose between three types of metrics (height, mass, birth_year). At the bottom of the dashboard we have a data table, where we can use a filter by specific columns.</description>
+    </item>
+    
+    <item>
       <title>Auto Encoder</title>
       <link>/aipost/auto-encoder/</link>
       <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>

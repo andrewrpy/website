@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>shiny on Andrea Perlato</title>
-    <link>/tags/shiny/</link>
-    <description>Recent content in shiny on Andrea Perlato</description>
+    <title>web app on Andrea Perlato</title>
+    <link>/tags/web-app/</link>
+    <description>Recent content in web app on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/web-app/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>/graphpost/feature-of-automobiles-via-web-app/</guid>
       <description>body {text-align: justify}In this example we have a dropdown menu on the left dynamically populated from the data. For each feature inside the dropdown menu we have a count of the unique values per each features. We also have a second dropdown menu where we can choose between three types of metrics (height, mass, birth_year). At the bottom of the dashboard we have a data table, where we can use a filter by specific columns.</description>
-    </item>
-    
-    <item>
-      <title>Interactive Dashboard</title>
-      <link>/graphpost/interactive-dashboard/</link>
-      <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/graphpost/interactive-dashboard/</guid>
-      <description>body {text-align: justify}A lot of the times when dashboards are implemented they are with a very specific dataset. The problem with this is that we have to rebuild them from scratch every time. The advantage to use shiny is the possibility to create interactive dashboard or webapp without, and reusing the code already wirtten we can adapt it with new data. Here below, there are some examples of interactive dashboards.</description>
     </item>
     
   </channel>
