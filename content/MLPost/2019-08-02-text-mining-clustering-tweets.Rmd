@@ -1,0 +1,29 @@
+---
+title: Text Mining Clustering Tweets
+author: andrea perlato
+date: '2019-08-02'
+slug: text-mining-clustering-tweets
+categories:
+  - text mining
+tags:
+  - clustering
+  - hierarchical clustering
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+We can use Unsupervised Classification (clustering) to learn more about text that we have to analyze. More specifically, we use [**Hierarchical clustering**](https://www.andreaperlato.com/theorypost/introduction-to-k-means-and-hierarchical-clustering/) to cluster our text into groups that are the propensity to occur together. In this example, text are some tweet about [**Catalan Independence Referendum**](https://en.wikipedia.org/wiki/2017_Catalan_independence_referendum).
+
+```{r, echo=FALSE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+setwd("C:/07 - R Website/dataset/ML")
+d=read.csv("Catalan.csv")
+
+```
+
+
+
+
+

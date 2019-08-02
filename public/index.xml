@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Text Mining Clustering Tweets</title>
+      <link>/mlpost/text-mining-clustering-tweets/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/mlpost/text-mining-clustering-tweets/</guid>
+      <description>body {text-align: justify}We can use Unsupervised Classification (clustering) to learn more about text that we have to analyze. More specifically, we use Hierarchical clustering to cluster our text into groups that are the propensity to occur together. In this example, text are some tweet about Catalan Independence Referendum.</description>
+    </item>
+    
+    <item>
       <title>Feature of Automobiles via Web App</title>
       <link>/graphpost/feature-of-automobiles-via-web-app/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>

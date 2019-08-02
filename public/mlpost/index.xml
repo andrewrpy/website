@@ -6,10 +6,19 @@
     <description>Recent content in MLPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/mlpost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Text Mining Clustering Tweets</title>
+      <link>/mlpost/text-mining-clustering-tweets/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/mlpost/text-mining-clustering-tweets/</guid>
+      <description>body {text-align: justify}We can use Unsupervised Classification (clustering) to learn more about text that we have to analyze. More specifically, we use Hierarchical clustering to cluster our text into groups that are the propensity to occur together. In this example, text are some tweet about Catalan Independence Referendum.</description>
+    </item>
     
     <item>
       <title>Linear Discriminant Analysis</title>
