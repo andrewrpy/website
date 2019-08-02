@@ -1,0 +1,103 @@
+---
+title: Introduction to K-Means and Hierarchical clustering
+author: andrea perlato
+date: '2019-08-02'
+slug: introduction-to-k-means-and-hierarchical-clustering
+categories:
+  - machine learning
+tags:
+  - clustering
+  - kmeans
+  - hierarchical clustering
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+**K-Means Clustering** </br>
+This is a popular unsupervised machine learning algorithms. The objective of K-means is simple: group similar data points together and discover underlying patterns. </br>
+The **Step - 1** is to identify the number of clusters. </br>
+Suppose we have K=3, the **Step - 2** is to select randomly 3 data points and these are our **Initial Cluster Points**. </br>
+The **Step - 3** consists to calculate the **Euclidian Distance** between the observations and the **Initial Cluster Points**. </br>
+
+<center>
+![](/img/kmeanseuclidian.png){width=50%}
+</center>
+
+The **Step - 4** is assign the observations to the nearest cluster. </br>
+The **Step - 5** calculate the **Mean** of each cluster. Now we have to asses the right cluster by adding-up the **Variation** within each cluster. We don’t know the best clustering, and so, we can only try again to select randomly the Initial Cluster Points and compare the Variation with the previous attempt. And we do this over again with different starting points.
+
+<center>
+![](/img/kmeansvariation.png){width=50%}
+</center>
+
+With this approach, we can find the **Best Initial Cluster Points** that have the lowest variation, but we still we don’t know if that variation is the lowest overall. To solve this question, could be very useful to find a method to identify the **Best Numebr of K**. Essentially, each time we add a new cluster, the **Total Variation** within each cluster is smaller than before.
+
+<center>
+![](/img/kemanelbowplot.png){width=40%}
+</center>
+
+The goal is to stop the number of K when the variatioin stops to decrease, that is why this method is called **Elbow**. The [**Elbow Plot**](https://en.wikipedia.org/wiki/Elbow_method_(clustering)) helps us to find when the variation is stabilized based on the number of K.
+
+
+**Hierarchical Clustering** </br>
+This approach is often associated with [**Heatmaps**](https://en.wikipedia.org/wiki/Heat_map). </br>
+Heatmaps often come with [**Dendrograms**](https://en.wikipedia.org/wiki/Dendrogram) that indicates the similarity and the cluster of membership, and the order the clusters are formed.
+
+<center>
+![](/img/hierendrogram.png){width=40%}
+</center>
+
+Cluster with more similarity have shorter dendrogram branch. </br>
+The defined method for determining similarity is the **Euclidean Distance** between Observations, we can also use the **Manhattan Distance** that is the absolute value of the differences, as shown below.
+
+<center>
+![](/img/hiermanatthan.png){width=40%}
+</center>
+
+Now, to assign new observations to a cluster based on the **Center Point**, we have to explore all the possible methods that are: </br> 
+**1 - Centroid**: the average of each cluster. </br>
+**2 - Single Linkage**: the closest point in each cluster. </br>
+**3 - Complete Linkage**: the furthest point in each cluster. </br>
+The ultimate goal is to find the best method able to gives more insight into our data. 
+
+
+
+**How is K-Means clustering different from Hierarchical clustering?** </br>
+The **K-Means clustering** specifically tries to put the data into the number of clusters we tell it to. </br>
+The **Hierarchical clustering** just tells us, pairwise, what two things are most similar. </br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

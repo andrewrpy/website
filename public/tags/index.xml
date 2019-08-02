@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>clustering</title>
+      <link>/tags/clustering/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hierarchical clustering</title>
+      <link>/tags/hierarchical-clustering/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hierarchical-clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kmeans</title>
+      <link>/tags/kmeans/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/kmeans/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>shiny</title>
@@ -332,15 +359,6 @@
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/time-series-classification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>clustering</title>
-      <link>/tags/clustering/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/clustering/</guid>
       <description></description>
     </item>
     

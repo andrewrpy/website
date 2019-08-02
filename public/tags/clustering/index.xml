@@ -6,10 +6,19 @@
     <description>Recent content in clustering on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to K-Means and Hierarchical clustering</title>
+      <link>/theorypost/introduction-to-k-means-and-hierarchical-clustering/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/introduction-to-k-means-and-hierarchical-clustering/</guid>
+      <description>body {text-align: justify}K-Means Clustering This is a popular unsupervised machine learning algorithms. The objective of K-means is simple: group similar data points together and discover underlying patterns. The Step - 1 is to identify the number of clusters. Suppose we have K=3, the Step - 2 is to select randomly 3 data points and these are our Initial Cluster Points. The Step - 3 consists to calculate the Euclidian Distance between the observations and the Initial Cluster Points.</description>
+    </item>
     
     <item>
       <title>Time Series Clustering</title>

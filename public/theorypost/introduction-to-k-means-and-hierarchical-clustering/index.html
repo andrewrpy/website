@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Introduction to K-Means and Hierarchical clustering - Andrea Perlato</title>
+<meta property="og:title" content="Introduction to K-Means and Hierarchical clustering - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Introduction to K-Means and Hierarchical clustering</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p><strong>K-Means Clustering</strong> </br>
+This is a popular unsupervised machine learning algorithms. The objective of K-means is simple: group similar data points together and discover underlying patterns. </br>
+The <strong>Step - 1</strong> is to identify the number of clusters. </br>
+Suppose we have K=3, the <strong>Step - 2</strong> is to select randomly 3 data points and these are our <strong>Initial Cluster Points</strong>. </br>
+The <strong>Step - 3</strong> consists to calculate the <strong>Euclidian Distance</strong> between the observations and the <strong>Initial Cluster Points</strong>. </br></p>
+<center>
+<img src="/img/kmeanseuclidian.png" style="width:50.0%" />
+</center>
+<p>The <strong>Step - 4</strong> is assign the observations to the nearest cluster. </br>
+The <strong>Step - 5</strong> calculate the <strong>Mean</strong> of each cluster. Now we have to asses the right cluster by adding-up the <strong>Variation</strong> within each cluster. We don’t know the best clustering, and so, we can only try again to select randomly the Initial Cluster Points and compare the Variation with the previous attempt. And we do this over again with different starting points.</p>
+<center>
+<img src="/img/kmeansvariation.png" style="width:50.0%" />
+</center>
+<p>With this approach, we can find the <strong>Best Initial Cluster Points</strong> that have the lowest variation, but we still we don’t know if that variation is the lowest overall. To solve this question, could be very useful to find a method to identify the <strong>Best Numebr of K</strong>. Essentially, each time we add a new cluster, the <strong>Total Variation</strong> within each cluster is smaller than before.</p>
+<center>
+<img src="/img/kemanelbowplot.png" style="width:40.0%" />
+</center>
+<p>The goal is to stop the number of K when the variatioin stops to decrease, that is why this method is called <strong>Elbow</strong>. The <a href="https://en.wikipedia.org/wiki/Elbow_method_(clustering)"><strong>Elbow Plot</strong></a> helps us to find when the variation is stabilized based on the number of K.</p>
+<p><strong>Hierarchical Clustering</strong> </br>
+This approach is often associated with <a href="https://en.wikipedia.org/wiki/Heat_map"><strong>Heatmaps</strong></a>. </br>
+Heatmaps often come with <a href="https://en.wikipedia.org/wiki/Dendrogram"><strong>Dendrograms</strong></a> that indicates the similarity and the cluster of membership, and the order the clusters are formed.</p>
+<center>
+<img src="/img/hierendrogram.png" style="width:40.0%" />
+</center>
+<p>Cluster with more similarity have shorter dendrogram branch. </br>
+The defined method for determining similarity is the <strong>Euclidean Distance</strong> between Observations, we can also use the <strong>Manhattan Distance</strong> that is the absolute value of the differences, as shown below.</p>
+<center>
+<img src="/img/hiermanatthan.png" style="width:40.0%" />
+</center>
+<p>Now, to assign new observations to a cluster based on the <strong>Center Point</strong>, we have to explore all the possible methods that are: </br>
+<strong>1 - Centroid</strong>: the average of each cluster. </br>
+<strong>2 - Single Linkage</strong>: the closest point in each cluster. </br>
+<strong>3 - Complete Linkage</strong>: the furthest point in each cluster. </br>
+The ultimate goal is to find the best method able to gives more insight into our data.</p>
+<p><strong>How is K-Means clustering different from Hierarchical clustering?</strong> </br>
+The <strong>K-Means clustering</strong> specifically tries to put the data into the number of clusters we tell it to. </br>
+The <strong>Hierarchical clustering</strong> just tells us, pairwise, what two things are most similar. </br></p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51254710-89', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+
