@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Identify Smap Emails - Andrea Perlato</title>
+<meta property="og:title" content="Identify Smap Emails - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Identify Smap Emails</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>We want to differentiate between spam (called spam) and non-spam (called ham) email based on the content. We use a training set of textual data that are already labeled spam/non-spam email.</p>
+<p>We start removing empy columns, and we call our columns <strong>label</strong> and <strong>text</strong>.
+We also create a corpus, remove punctuation, transform everything into lowercase, remove numbers, and stop words. Then, we have to stamming the document, and finally we have a corpus of terms. with out sparse terms. </br>
+Finally, we can convert the corpus into a data frame, and add the dependent variable <strong>label</strong>. </br>
+Now, we can split the data between Training and Test set.</p>
+<pre class="r"><code>library(caTools)
+library(e1071)
+library(rpart)
+library(rpart.plot)
+library(wordcloud)
+library(tm)
+library(SnowballC)
+library(ROCR)
+library(RColorBrewer)
+library(stringr)
+
+# Remove empty columns
+spam$X = NULL
+spam$X.1 &lt;- NULL
+spam$X.2 &lt;- NULL
+names(spam) &lt;- c(&quot;label&quot;,&quot;text&quot;)
+levels(as.factor(spam$label))</code></pre>
+<pre><code>[1] &quot;ham&quot;  &quot;spam&quot;</code></pre>
+<pre class="r"><code># Clean the text
+corpus &lt;- Corpus(VectorSource(spam$text))
+corpus &lt;- tm_map(corpus, removePunctuation)
+corpus &lt;- tm_map(corpus, content_transformer(tolower))
+corpus &lt;- tm_map(corpus, removeNumbers)
+corpus &lt;- tm_map(corpus, stripWhitespace)
+corpus &lt;- tm_map(corpus, removeWords, stopwords(&#39;english&#39;))
+corpus &lt;- tm_map(corpus, stemDocument)
+
+# Obtain document term matrix
+myDtm &lt;- DocumentTermMatrix(corpus)
+# findFreqTerms(myDtm, lowfreq=100)
+
+sparse = removeSparseTerms(myDtm, 0.995) # remove words not appear 99.5% of the time
+
+# Convert to a data frame
+emailSparse = as.data.frame(as.matrix(sparse))
+emailSparse$label=spam$label
+
+# Add dependent variable
+library(caTools)
+set.seed(123)
+
+n = nrow(emailSparse)
+idx &lt;- sample(n, n * .75) # split data to testing and train set
+train = emailSparse[idx,]
+test = emailSparse[-idx,]</code></pre>
+<p>Now, we can create a <a href="https://en.wikipedia.org/wiki/Recursive_partitioning"><strong>Recursive Partitioning And Regression Trees Model</strong></a>.
+This is a statistical method for Multivariable Analysis that is able to create a Decision Tree that try to classify terms by splitting it by dichotomous dependent variable, in this case label=ham (non-spam), label=spam. The method is called <strong>Recursive</strong> because each subpopulation may be splitted many number of times until a specific criteria is reached. The <strong>Advantages</strong> of Recursive Partitioning is that is an intuitive model which does not require a lot of calculations. The <strong>Disadvantage</strong> is that it can not work well with continuous variable because it may overfit data.</p>
+<pre class="r"><code>library(rpart)
+library(rpart.plot)
+
+# Recursive Partitioning And Regression Trees Model
+emailCART = rpart(label ~ ., data=train, method=&quot;class&quot;)
+# summary(emailCART)
+
+prp(emailCART) # plot the tree</code></pre>
+<p><img src="/MLPost/2019-08-02-identify-smap-emails_files/figure-html/unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>As we can see from the graph above, if the word <strong>call</strong> is less than 0.5 of probability and <strong>claim</strong> or <strong>mobil</strong> is less than 0.5, the email is a spam.</p>
+<pre class="r"><code># Evaluate the performance of the model
+predictCART = predict(emailCART, newdata=test, type=&quot;class&quot;)
+table(test$label, predictCART)</code></pre>
+<pre><code>      predictCART
+        ham spam
+  ham  1180   26
+  spam   60  127</code></pre>
+<pre class="r"><code># Overall accuracy
+(1193+119)/(1193+119+68+13)</code></pre>
+<pre><code>[1] 0.9418521</code></pre>
+<p>The results above show the Confusion Matrix and the relative Accuracy (94%).
+Based on a very simple Decision Trees Model we can identify email with a 94% of Accuracy. We are also able thanks to the graph above to see which predictors had an important role to identify if the email was spam or not.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51254710-89', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+

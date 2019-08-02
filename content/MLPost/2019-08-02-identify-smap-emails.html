@@ -1,0 +1,92 @@
+---
+title: Identify Smap Emails
+author: andrea perlato
+date: '2019-08-02'
+slug: identify-smap-emails
+categories:
+  - machine learning
+  - text mining
+tags:
+  - supervised classification
+---
+
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>We want to differentiate between spam (called spam) and non-spam (called ham) email based on the content. We use a training set of textual data that are already labeled spam/non-spam email.</p>
+<p>We start removing empy columns, and we call our columns <strong>label</strong> and <strong>text</strong>.
+We also create a corpus, remove punctuation, transform everything into lowercase, remove numbers, and stop words. Then, we have to stamming the document, and finally we have a corpus of terms. with out sparse terms. </br>
+Finally, we can convert the corpus into a data frame, and add the dependent variable <strong>label</strong>. </br>
+Now, we can split the data between Training and Test set.</p>
+<pre class="r"><code>library(caTools)
+library(e1071)
+library(rpart)
+library(rpart.plot)
+library(wordcloud)
+library(tm)
+library(SnowballC)
+library(ROCR)
+library(RColorBrewer)
+library(stringr)
+
+# Remove empty columns
+spam$X = NULL
+spam$X.1 &lt;- NULL
+spam$X.2 &lt;- NULL
+names(spam) &lt;- c(&quot;label&quot;,&quot;text&quot;)
+levels(as.factor(spam$label))</code></pre>
+<pre><code>[1] &quot;ham&quot;  &quot;spam&quot;</code></pre>
+<pre class="r"><code># Clean the text
+corpus &lt;- Corpus(VectorSource(spam$text))
+corpus &lt;- tm_map(corpus, removePunctuation)
+corpus &lt;- tm_map(corpus, content_transformer(tolower))
+corpus &lt;- tm_map(corpus, removeNumbers)
+corpus &lt;- tm_map(corpus, stripWhitespace)
+corpus &lt;- tm_map(corpus, removeWords, stopwords(&#39;english&#39;))
+corpus &lt;- tm_map(corpus, stemDocument)
+
+# Obtain document term matrix
+myDtm &lt;- DocumentTermMatrix(corpus)
+# findFreqTerms(myDtm, lowfreq=100)
+
+sparse = removeSparseTerms(myDtm, 0.995) # remove words not appear 99.5% of the time
+
+# Convert to a data frame
+emailSparse = as.data.frame(as.matrix(sparse))
+emailSparse$label=spam$label
+
+# Add dependent variable
+library(caTools)
+set.seed(123)
+
+n = nrow(emailSparse)
+idx &lt;- sample(n, n * .75) # split data to testing and train set
+train = emailSparse[idx,]
+test = emailSparse[-idx,]</code></pre>
+<p>Now, we can create a <a href="https://en.wikipedia.org/wiki/Recursive_partitioning"><strong>Recursive Partitioning And Regression Trees Model</strong></a>.
+This is a statistical method for Multivariable Analysis that is able to create a Decision Tree that try to classify terms by splitting it by dichotomous dependent variable, in this case label=ham (non-spam), label=spam. The method is called <strong>Recursive</strong> because each subpopulation may be splitted many number of times until a specific criteria is reached. The <strong>Advantages</strong> of Recursive Partitioning is that is an intuitive model which does not require a lot of calculations. The <strong>Disadvantage</strong> is that it can not work well with continuous variable because it may overfit data.</p>
+<pre class="r"><code>library(rpart)
+library(rpart.plot)
+
+# Recursive Partitioning And Regression Trees Model
+emailCART = rpart(label ~ ., data=train, method=&quot;class&quot;)
+# summary(emailCART)
+
+prp(emailCART) # plot the tree</code></pre>
+<p><img src="/MLPost/2019-08-02-identify-smap-emails_files/figure-html/unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>As we can see from the graph above, if the word <strong>call</strong> is less than 0.5 of probability and <strong>claim</strong> or <strong>mobil</strong> is less than 0.5, the email is a spam.</p>
+<pre class="r"><code># Evaluate the performance of the model
+predictCART = predict(emailCART, newdata=test, type=&quot;class&quot;)
+table(test$label, predictCART)</code></pre>
+<pre><code>      predictCART
+        ham spam
+  ham  1180   26
+  spam   60  127</code></pre>
+<pre class="r"><code># Overall accuracy
+(1193+119)/(1193+119+68+13)</code></pre>
+<pre><code>[1] 0.9418521</code></pre>
+<p>The results above show the Confusion Matrix and the relative Accuracy (94%).
+Based on a very simple Decision Trees Model we can identify email with a 94% of Accuracy. We are also able thanks to the graph above to see which predictors had an important role to identify if the email was spam or not.</p>

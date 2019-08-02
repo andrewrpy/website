@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/mlpost/identify-smap-emails/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/theorypost/introduction-to-k-means-and-hierarchical-clustering/</loc>
     <lastmod>2019-08-02T00:00:00+00:00</lastmod>
   </url>
@@ -55,6 +60,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/categories/machine-learning/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/supervised-classification/</loc>
     <lastmod>2019-08-02T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -420,13 +431,13 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>

@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Identify Smap Emails</title>
+      <link>/mlpost/identify-smap-emails/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/mlpost/identify-smap-emails/</guid>
+      <description>body {text-align: justify}We want to differentiate between spam (called spam) and non-spam (called ham) email based on the content. We use a training set of textual data that are already labeled spam/non-spam email.
+We start removing empy columns, and we call our columns label and text.We also create a corpus, remove punctuation, transform everything into lowercase, remove numbers, and stop words. Then, we have to stamming the document, and finally we have a corpus of terms.</description>
+    </item>
+    
+    <item>
       <title>Introduction to K-Means and Hierarchical clustering</title>
       <link>/theorypost/introduction-to-k-means-and-hierarchical-clustering/</link>
       <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
