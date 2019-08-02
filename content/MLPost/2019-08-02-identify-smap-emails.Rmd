@@ -1,13 +1,13 @@
 ---
-title: Identify Smap Emails
+title: Identify Spam Emails
 author: andrea perlato
 date: '2019-08-02'
-slug: identify-smap-emails
 categories:
   - machine learning
   - text mining
 tags:
   - supervised classification
+slug: identify-smap-emails
 ---
 
 <style>
