@@ -16,5 +16,31 @@ tags:
 body {
 text-align: justify}
 </style>
-<p><strong>What is DOC2VEC</strong>
-It is a deep learning algorithm that draws context from phrases. Every textual document is represented in the form of a <strong>vector</strong>, and that is done through <a href="https://en.wikipedia.org/wiki/Vector_space_model"><strong>Vector Space Modelling (VSM)</strong></a>.</p>
+<p><strong>What is Word2Vec and Doc2Vec</strong>
+It is a deep learning algorithm that draws context from phrases. Every textual document is represented in the form of a <strong>vector</strong>, and that is done through <a href="https://en.wikipedia.org/wiki/Vector_space_model"><strong>Vector Space Modelling (VSM)</strong></a>. We can convert our text using <a href="https://en.wikipedia.org/wiki/One-hot"><strong>One Hot Encoding</strong></a>. For example, having three words we can make a vector in a three dimentional space.</p>
+<center>
+<img src="/img/onehot%20encode.png" style="width:70.0%" />
+</center>
+<p>The problem with One Hot Encoding is that it doesn’t help us to find similarities. In fact, from the graph above, every distance is same from each other, and we cannot find similarities using for example Euclidian Distance. That is why <strong>Word2Vec</strong> data generatiioin also known as <a href="https://en.wikipedia.org/wiki/Word2vec"><strong>Skipgram</strong></a> is used. The Word2Vec is a <a href="https://en.wikipedia.org/wiki/Word_embedding"><strong>Word Embedding</strong></a> where similarities come from neighbor words.</p>
+<center>
+<img src="/img/neighborencoding.png" style="width:50.0%" />
+</center>
+<p>From the example above, we converted the words in a One Hot Encoding, and we also codified the Neighbor One Hot Encoding.
+The architecture of the Word2Vec is as described below.</p>
+<center>
+<img src="/img/skipgramann.png" style="width:50.0%" />
+</center>
+<p>The example described by the figure above, try to train the word <strong>king</strong> as input and <strong>brave</strong> as neighbor using gradient descent as optimizer.
+During Backpropagation we have an update of the Weights in the Hidden layer for each combination of words, and the inputs are multiplied with the updated weights. The Weights continue to be aìupdated during each combination of words based on the context of each phrase. The <a href="https://www.andreaperlato.com/aipost/cnn-and-softmax/"><strong>Softmax Function</strong></a> create the probability distribution, and <a href="https://www.andreaperlato.com/theorypost/gradient-descent-step-by-step/"><strong>Gradient Descent</strong></a> is used as optimizer. </br>
+There is an interesting simulation <a href="https://ronxin.github.io/wevi/"><strong>here</strong></a> where we can simulate to train a ANN and see how it developes.</p>
+<p>The crucial point is to be able to predict the <strong>Context Word</strong> from the <strong>Focus Word</strong>, namely the word in the sentence.</p>
+<p><span class="math display">\[
+\log p(c | w ; \theta)=\frac{\exp v_{c} \cdot v_{w}}{\sum_{c^{\prime} \in C} \exp v_{c^{\prime}} \cdot v_{w}}
+\]</span></p>
+<p>From the function above, we are going to take the <strong>probability of the context word</strong> given the <strong>focus word</strong> as the product between the contex word <strong>vc</strong> and the focus word <strong>vw</strong>. The formula remind us the <a href="https://www.andreaperlato.com/aipost/the-activation-function/"><strong>Sigmoid Function</strong></a> of the <strong>Logistic Regression</strong>. </br>
+One important detail of Word2Vec is related to the distributioin of the probability of the context word.
+In fact, the robability of words is typically <strong>raise to the power of 3/4</strong> called <a href="https://www.quora.com/What-is-negative-sampling"><strong>Negative Sampling Distributin</strong></a>.</p>
+<center>
+<img src="/img/negativesamplingdistributiion.png" style="width:40.0%" />
+</center>
+<p>As we can see from the figure above, <strong>raisig to the power of 3/4</strong> is able to <strong>bring down frequnt terms</strong>, and <strong>bring up infrequent terms</strong>. As a result, we are focusing only on super frequent words, but alsowe are considering words that are in the middle range of our distribution and we can explore more at the long tail of the distributiion. The <strong>Negative Sampling Distributin with a power of 3/4</strong> makes the distribution a little bit faltter and longer.</p>
