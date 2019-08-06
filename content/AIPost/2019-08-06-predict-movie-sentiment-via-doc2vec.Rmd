@@ -15,12 +15,7 @@ body {
 text-align: justify}
 </style>
 
-In order to have an introduction of the Word2Vec **look at this post**.
-
-
-
-
-
+In order to have an introduction of the Word2Vec [**look at this post**](https://www.andreaperlato.com/theorypost/introduction-to-word2vec/).
 
 
 
