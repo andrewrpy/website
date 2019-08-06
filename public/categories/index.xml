@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>artificial intelligence</title>
+      <link>/categories/artificial-intelligence/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/artificial-intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text mining</title>
+      <link>/categories/text-mining/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/text-mining/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>machine learning</title>
@@ -21,29 +39,11 @@
     </item>
     
     <item>
-      <title>text mining</title>
-      <link>/categories/text-mining/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/text-mining/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>graph</title>
       <link>/categories/graph/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/graph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>artificial intelligence</title>
-      <link>/categories/artificial-intelligence/</link>
-      <pubDate>Mon, 29 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/artificial-intelligence/</guid>
       <description></description>
     </item>
     

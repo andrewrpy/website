@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Predict Movie Sentiment via DOC2VEC</title>
+      <link>/aipost/predict-movie-sentiment-via-doc2vec/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/predict-movie-sentiment-via-doc2vec/</guid>
+      <description>body {text-align: justify}What is DOC2VECIt is a deep learning algorithm that draws context from phrases. Every textual document is represented in the form of a vector, and that is done through Vector Space Modelling (VSM).</description>
+    </item>
+    
+    <item>
       <title>Identify Spam Emails</title>
       <link>/mlpost/identify-smap-emails/</link>
       <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
