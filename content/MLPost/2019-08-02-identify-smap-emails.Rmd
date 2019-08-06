@@ -101,12 +101,12 @@ predictCART = predict(emailCART, newdata=test, type="class")
 table(test$label, predictCART)
 
 # Overall accuracy
-(1193+119)/(1193+119+68+13)
+(1180+127)/(1180+127+60 +26)
 
 ```
 
-The results above show the Confusion Matrix and the relative Accuracy (94%).
-Based on a very simple Decision Trees Model we can identify email with a 94% of Accuracy. We are also able thanks to the graph above to see which predictors had an important role to identify if the email was spam or not.
+The results above show the Confusion Matrix and the relative Accuracy (93%).
+Based on a very simple Decision Trees Model we can identify email with a 93% of Accuracy. We are also able thanks to the graph above to see which predictors had an important role to identify if the email was spam or not.
 
 
 
