@@ -101,7 +101,7 @@ predictCART = predict(emailCART, newdata=test, type="class")
 table(test$label, predictCART)
 
 # Overall accuracy
-(1180+127)/(1180+127+60 +26)
+(1180+127)/(1180+127+60+26)
 
 ```
 
