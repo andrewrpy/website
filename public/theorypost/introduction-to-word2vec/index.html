@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Introduction to Word2Vec - Andrea Perlato</title>
+<meta property="og:title" content="Introduction to Word2Vec - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Introduction to Word2Vec</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>The Word2Vec is a deep learning algorithm that draws context from phrases. Every textual document is represented in the form of a <strong>vector</strong>, and that is done through <a href="https://en.wikipedia.org/wiki/Vector_space_model"><strong>Vector Space Modelling (VSM)</strong></a>. We can convert our text using <a href="https://en.wikipedia.org/wiki/One-hot"><strong>One Hot Encoding</strong></a>. For example, having three words we can make a vector in a three dimentional space.</p>
+<center>
+<p><img src="/img/onehot%20encode.png" style="width:70.0%" /></p>
+</center>
+<p>The problem with One Hot Encoding is that it doesn’t help us to find similarities. In fact, from the graph above, every distance is same from each other, and we cannot find similarities using for example Euclidian Distance. That is why <strong>Word2Vec</strong> data generatiioin also known as <a href="https://en.wikipedia.org/wiki/Word2vec"><strong>Skipgram</strong></a> is used. The Word2Vec is a <a href="https://en.wikipedia.org/wiki/Word_embedding"><strong>Word Embedding</strong></a> where similarities come from neighbor words.</p>
+<center>
+<p><img src="/img/neighborencoding.png" style="width:50.0%" /></p>
+</center>
+<p>From the example above, we converted the words in a One Hot Encoding, and we also codified the Neighbor One Hot Encoding.
+The architecture of the Word2Vec is as described below.</p>
+<center>
+<p><img src="/img/skipgramann.png" style="width:50.0%" /></p>
+</center>
+<p>The example described by the figure above, try to train the word <strong>king</strong> as input and <strong>brave</strong> as neighbor using gradient descent as optimizer.
+During Backpropagation we have an update of the Weights in the Hidden layer for each combination of words, and the inputs are multiplied with the updated weights. The Weights continue to be aìupdated during each combination of words based on the context of each phrase. The <a href="https://www.andreaperlato.com/aipost/cnn-and-softmax/"><strong>Softmax Function</strong></a> create the probability distribution, and <a href="https://www.andreaperlato.com/theorypost/gradient-descent-step-by-step/"><strong>Gradient Descent</strong></a> is used as optimizer. </br>
+There is an interesting simulation <a href="https://ronxin.github.io/wevi/"><strong>here</strong></a> where we can simulate to train a ANN and see how it developes.</p>
+<p>The crucial point is to be able to predict the <strong>Context Word</strong> from the <strong>Focus Word</strong>, namely the word in the sentence.</p>
+<p><span class="math display">\[
+\log p(c | w ; \theta)=\frac{\exp v_{c} \cdot v_{w}}{\sum_{c^{\prime} \in C} \exp v_{c^{\prime}} \cdot v_{w}}
+\]</span></p>
+<p>From the function above, we are going to take the <strong>probability of the context word</strong> given the <strong>focus word</strong> as the product between the contex word <strong>vc</strong> and the focus word <strong>vw</strong>. The formula remind us the <a href="https://www.andreaperlato.com/aipost/the-activation-function/"><strong>Sigmoid Function</strong></a> of the <strong>Logistic Regression</strong>. </br>
+One important detail of Word2Vec is related to the distributioin of the probability of the context word.
+In fact, the robability of words is typically <strong>raise to the power of 3/4</strong> called <a href="https://www.quora.com/What-is-negative-sampling"><strong>Negative Sampling Distributin</strong></a>.</p>
+<center>
+<img src="/img/negativesamplingdistributiion.png" style="width:40.0%" />
+</center>
+<p>As we can see from the figure above, <strong>raisig to the power of 3/4</strong> is able to <strong>bring down frequnt terms</strong>, and <strong>bring up infrequent terms</strong>. As a result, we are focusing only on super frequent words, but alsowe are considering words that are in the middle range of our distribution and we can explore more at the long tail of the distributiion. The <strong>Negative Sampling Distributin with a power of 3/4</strong> makes the distribution a little bit faltter and longer.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51254710-89', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+

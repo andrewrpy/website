@@ -15,45 +15,7 @@ body {
 text-align: justify}
 </style>
 
-**What is Word2Vec and Doc2Vec** </br>
-It is a deep learning algorithm that draws context from phrases. Every textual document is represented in the form of a **vector**, and that is done through [**Vector Space Modelling (VSM)**](https://en.wikipedia.org/wiki/Vector_space_model). We can convert our text using [**One Hot Encoding**](https://en.wikipedia.org/wiki/One-hot). For example, having three words we can make a vector in a three dimentional space.
-
-<center>
-![](/img/onehot encode.png){width=70%}
-</center>
-
-The problem with One Hot Encoding is that it doesn't help us to find similarities. In fact, from the graph above, every distance is same from each other, and we cannot find similarities using for example Euclidian Distance. That is why **Word2Vec** data generatiioin also known as [**Skipgram**](https://en.wikipedia.org/wiki/Word2vec) is used. The Word2Vec is a [**Word Embedding**](https://en.wikipedia.org/wiki/Word_embedding) where similarities come from neighbor words.
-
-<center>
-![](/img/neighborencoding.png){width=50%}
-</center>
-
-From the example above, we converted the words in a One Hot Encoding, and we also codified the Neighbor One Hot Encoding.
-The architecture of the Word2Vec is as described below.
-
-<center>
-![](/img/skipgramann.png){width=50%}
-</center>
-
-The example described by the figure above, try to train the word **king** as input and **brave** as neighbor using gradient descent as optimizer.
-During Backpropagation we have an update of the Weights in the Hidden layer for each combination of words, and the inputs are multiplied with the updated weights. The Weights continue to be aìupdated during each combination of words based on the context of each phrase. The [**Softmax Function**](https://www.andreaperlato.com/aipost/cnn-and-softmax/) create the probability distribution, and [**Gradient Descent**](https://www.andreaperlato.com/theorypost/gradient-descent-step-by-step/) is used as optimizer. </br>
-There is an interesting simulation [**here**](https://ronxin.github.io/wevi/) where we can simulate to train a ANN and see how it developes.
-
-The crucial point is to be able to predict the **Context Word** from the **Focus Word**, namely the word in the sentence.
-
-$$
-\log p(c | w ; \theta)=\frac{\exp v_{c} \cdot v_{w}}{\sum_{c^{\prime} \in C} \exp v_{c^{\prime}} \cdot v_{w}}
-$$
-
-From the function above, we are going to take the **probability of the context word** given the **focus word** as the product between the contex word **vc** and the focus word **vw**. The formula remind us the [**Sigmoid Function**](https://www.andreaperlato.com/aipost/the-activation-function/) of the **Logistic Regression**. </br>
-One important detail of Word2Vec is related to the distributioin of the probability of the context word.
-In fact, the robability of words is typically **raise to the power of 3/4** called [**Negative Sampling Distributin**](https://www.quora.com/What-is-negative-sampling).
-
-<center>
-![](/img/negativesamplingdistributiion.png){width=40%}
-</center>
-
-As we can see from the figure above, **raisig to the power of 3/4** is able to **bring down frequnt terms**, and **bring up infrequent terms**. As a result, we are focusing only on super frequent words, but alsowe are considering words that are in the middle range of our distribution and we can explore more at the long tail of the distributiion. The **Negative Sampling Distributin with a power of 3/4** makes the distribution a little bit faltter and longer.
+In order to have an introduction of the Word2Vec **look at this post**.
 
 
 

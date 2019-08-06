@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>word2vec on Andrea Perlato</title>
+    <link>/tags/word2vec/</link>
+    <description>Recent content in word2vec on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/word2vec/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction to Word2Vec</title>
+      <link>/theorypost/introduction-to-word2vec/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/introduction-to-word2vec/</guid>
+      <description>body {text-align: justify}The Word2Vec is a deep learning algorithm that draws context from phrases. Every textual document is represented in the form of a vector, and that is done through Vector Space Modelling (VSM). We can convert our text using One Hot Encoding. For example, having three words we can make a vector in a three dimentional space.
+The problem with One Hot Encoding is that it doesn’t help us to find similarities.</description>
+    </item>
+    
+  </channel>
+</rss>

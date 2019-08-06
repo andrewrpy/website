@@ -14,12 +14,23 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/theorypost/introduction-to-word2vec/</loc>
+    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/aipost/predict-movie-sentiment-via-doc2vec/</loc>
     <lastmod>2019-08-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.andreaperlato.com/tags/</loc>
+    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/theorypost/</loc>
     <lastmod>2019-08-06T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -43,6 +54,12 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/tags/word2vec/</loc>
+    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/mlpost/identify-smap-emails/</loc>
     <lastmod>2019-08-02T00:00:00+00:00</lastmod>
   </url>
@@ -61,12 +78,6 @@
   <url>
     <loc>https://www.andreaperlato.com/mlpost/text-mining-clustering-tweets/</loc>
     <lastmod>2019-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/theorypost/</loc>
-    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
@@ -442,13 +453,13 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>

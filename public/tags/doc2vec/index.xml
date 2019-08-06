@@ -17,8 +17,7 @@
       <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/aipost/predict-movie-sentiment-via-doc2vec/</guid>
-      <description>body {text-align: justify}What is Word2Vec and Doc2Vec It is a deep learning algorithm that draws context from phrases. Every textual document is represented in the form of a vector, and that is done through Vector Space Modelling (VSM). We can convert our text using One Hot Encoding. For example, having three words we can make a vector in a three dimentional space.
-The problem with One Hot Encoding is that it doesn’t help us to find similarities.</description>
+      <description>body {text-align: justify}In order to have an introduction of the Word2Vec look at this post.</description>
     </item>
     
   </channel>

@@ -6,10 +6,20 @@
     <description>Recent content in TheoryPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/theorypost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to Word2Vec</title>
+      <link>/theorypost/introduction-to-word2vec/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/introduction-to-word2vec/</guid>
+      <description>body {text-align: justify}The Word2Vec is a deep learning algorithm that draws context from phrases. Every textual document is represented in the form of a vector, and that is done through Vector Space Modelling (VSM). We can convert our text using One Hot Encoding. For example, having three words we can make a vector in a three dimentional space.
+The problem with One Hot Encoding is that it doesn’t help us to find similarities.</description>
+    </item>
     
     <item>
       <title>Introduction to K-Means and Hierarchical clustering</title>
