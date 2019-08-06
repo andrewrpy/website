@@ -73,7 +73,7 @@
 body {
 text-align: justify}
 </style>
-<p>It is a Probability Classifier. Naïve Bayes is the first algorithm that should be considered for solving <strong>Text Classification Problem</strong>* which involves High Dimensional training Dataset. A few examples are: Sentiment Analysis and Classifying Topics on Social Media. </br>
+<p>It is a Probability Classifier. Naïve Bayes is the first algorithm that should be considered for solving <strong>Text Classification Problem</strong> which involves High Dimensional training Dataset. A few examples are: Sentiment Analysis and Classifying Topics on Social Media. </br>
 It also refers to the Bayes’ Theorem also known as Bayes’ Law that give us a method to calculate the <strong>Conditional Probability</strong>: that is the probability of an event, based on previous knowledge available on the events.</p>
 <p>Consider for example to have two features: <strong>Salary</strong> and <strong>Age</strong>. Some <strong>Walks</strong> to go at work and other <strong>Drive</strong> at work.</p>
 <p><span class="math display">\[
@@ -81,8 +81,31 @@ P(W a l k s | X)=\frac{P(X | \text { Walks }) * P(\text { Walks })}{P(X)}
 \]</span></p>
 <p>The <strong>X</strong> represent the features (Salary or Age) of a specific person. </br></p>
 <p><strong>What is the probability that the person goes to work on foot based on X (Salary and Age)?</strong>
-P(Walks) = <strong>Prior probability</strong>, P(X) = <strong>Marginal likelihood</strong>, P(X|Walks) = <strong>Likelihood</strong>. The result of this calculation is P(Walks|X) = <strong>Posterior probability</strong>.
-Now, the same have to be made for Drive:</p>
+P(Walks) = <strong>Prior probability</strong>, P(X) = <strong>Marginal likelihood</strong>, P(X|Walks) = <strong>Likelihood</strong>. The result of this calculation is P(Walks|X) = <strong>Posterior probability</strong>. Now, the same have to be made for Drive.</p>
+<center>
+<img src="/img/posteriorbayes.png" style="width:50.0%" />
+</center>
+<p>Finally, we have to compare P(Walks|X) vs. P(Drives|X), and from there we can decide in which class we have to put our new observatioin.</p>
+<p><strong>Prior Probability</strong> </br>
+In our example is the <strong>Probability that somebody Walks at work</strong> without knowing about hisAge or Salary. Looking at the figure below, we have to calculate the number of red observations and devide it by the overall number.</p>
+<center>
+<img src="/img/priorprobability.png" style="width:50.0%" />
+</center>
+<p><strong>Marginal Likelihood</strong> </br>
+We select a circle around our point (person) that we have to estimate. Then, we calculate the probability of Similar Features (walks, drives) that this person has with the other observations (person). So, Marginal Likelihood says to us what is the likelihood of any new random variable that we have fully inside the circle that we defined.</p>
+<center>
+<img src="/img/marginallikelihood.png" style="width:50.0%" />
+</center>
+<p><strong>Likelihood</strong> </br>
+It answer the following question: <strong>what is the probability of a randomly selected observations to be similar to the observations that we selected by the circle?</strong>
+In our example, this means that we take into consideration only the red points (i.e. people that work at work). We are asking what is the likelihood that a randomly selected data point is someone that exhibit features similar to the people selected in the random circle.</p>
+<center>
+<img src="/img/likeliprob.png" style="width:50.0%" />
+</center>
+<p><strong>Naive Bayes in Machine Learning</strong> </br>
+In a Machine Learning classification problem where there are multiple features and classes, the aim of the Naïve Bayes is to calculate the conditional probability of an object with the feature vector x1, x2, xn. So, it is able to calculate the probability of a particular class <strong>Ci</strong> given <strong>N</strong> number of features. </br>
+Naive Bayes is an effective and commonly-used, machine learning classifier. It is a probabilistic classifier that makes classifications using the Maximum A Posteriori decision rule in a Bayesian setting. It can also be represented using a very simple Bayesian network. Naive Bayes classifiers have been especially popular for text classification, and are a traditional solution for problems such as <strong>Spam Detection</strong>. </br></p>
+<p>An intuitive explanation for the <strong>Maximum A Posteriori Probability MAP</strong> is to think probabilities as degrees of belief. For example, how likely are we vote for a candidate depends on our prior belief. We can modify our stand based on the evidence. Our final decision, based on evidence, is the posterior belief, which is what happens after we sifted through the evidence. <strong>MPA</strong> is simply the maximum posterior belief: after going through all the debates, what is your most likely decision?</p>
 
     </div>
   </article>
