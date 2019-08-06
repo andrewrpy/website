@@ -53,9 +53,14 @@ In fact, the robability of words is typically **raise to the power of 3/4** call
 
 <center>
 ![](/img/negativesamplingdistributiion.png){width=40%}
+
 </center>
 
-As we can see from the figure above, **raisig to the power of 3/4** is able to **bring down frequnt terms**, and **bring up infrequent terms**. As a result, we are focusing only on super frequent words, but alsowe are considering words that are in the middle range of our distribution and we can explore more at the long tail of the distributiion. The **Negative Sampling Distributin with a power of 3/4** makes the distribution a little bit faltter and longer.
+As we can see from the figure above, **raising to the power of 3/4** is able to **bring down frequent terms**, and **bring up infrequent terms**. As a result, we are focusing only on super frequent words, but also we are considering words that are in the middle range of our distribution and we can explore more at the long tail of the distribution. The **Negative Sampling Distribution with a power of 3/4** makes the distribution a little bit fatter and longer.
+
+There is an interesting simulation [**here**](https://ronxin.github.io/wevi/) where we can simulate to train an ANN and see how it develops.
+And [**here**](https://www.youtube.com/watch?v=D-ekE-Wlcds) the related theory.
+
 
 
 

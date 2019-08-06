@@ -40,6 +40,8 @@ There is an interesting simulation <a href="https://ronxin.github.io/wevi/"><str
 One important detail of Word2Vec is related to the distributioin of the probability of the context word.
 In fact, the robability of words is typically <strong>raise to the power of 3/4</strong> called <a href="https://www.quora.com/What-is-negative-sampling"><strong>Negative Sampling Distributin</strong></a>.</p>
 <center>
-<img src="/img/negativesamplingdistributiion.png" style="width:40.0%" />
+<p><img src="/img/negativesamplingdistributiion.png" style="width:40.0%" /></p>
 </center>
-<p>As we can see from the figure above, <strong>raisig to the power of 3/4</strong> is able to <strong>bring down frequnt terms</strong>, and <strong>bring up infrequent terms</strong>. As a result, we are focusing only on super frequent words, but alsowe are considering words that are in the middle range of our distribution and we can explore more at the long tail of the distributiion. The <strong>Negative Sampling Distributin with a power of 3/4</strong> makes the distribution a little bit faltter and longer.</p>
+<p>As we can see from the figure above, <strong>raising to the power of 3/4</strong> is able to <strong>bring down frequent terms</strong>, and <strong>bring up infrequent terms</strong>. As a result, we are focusing only on super frequent words, but also we are considering words that are in the middle range of our distribution and we can explore more at the long tail of the distribution. The <strong>Negative Sampling Distribution with a power of 3/4</strong> makes the distribution a little bit fatter and longer.</p>
+<p>There is an interesting simulation <a href="https://ronxin.github.io/wevi/"><strong>here</strong></a> where we can simulate to train an ANN and see how it develops.
+And <a href="https://www.youtube.com/watch?v=D-ekE-Wlcds"><strong>here</strong></a> the related theory.</p>
