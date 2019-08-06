@@ -1,0 +1,28 @@
+---
+title: Introduction to Naive Bayes
+author: andrea perlato
+date: '2019-08-06'
+slug: introduction-to-naive-bayes
+categories:
+  - machine learning
+  - text mining
+tags:
+  - naive bayes
+---
+
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>It is a Probability Classifier. Naïve Bayes is the first algorithm that should be considered for solving <strong>Text Classification Problem</strong>* which involves High Dimensional training Dataset. A few examples are: Sentiment Analysis and Classifying Topics on Social Media. </br>
+It also refers to the Bayes’ Theorem also known as Bayes’ Law that give us a method to calculate the <strong>Conditional Probability</strong>: that is the probability of an event, based on previous knowledge available on the events.</p>
+<p>Consider for example to have two features: <strong>Salary</strong> and <strong>Age</strong>. Some <strong>Walks</strong> to go at work and other <strong>Drive</strong> at work.</p>
+<p><span class="math display">\[
+P(W a l k s | X)=\frac{P(X | \text { Walks }) * P(\text { Walks })}{P(X)}
+\]</span></p>
+<p>The <strong>X</strong> represent the features (Salary or Age) of a specific person. </br></p>
+<p><strong>What is the probability that the person goes to work on foot based on X (Salary and Age)?</strong>
+P(Walks) = <strong>Prior probability</strong>, P(X) = <strong>Marginal likelihood</strong>, P(X|Walks) = <strong>Likelihood</strong>. The result of this calculation is P(Walks|X) = <strong>Posterior probability</strong>.
+Now, the same have to be made for Drive:</p>

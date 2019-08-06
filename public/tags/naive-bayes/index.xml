@@ -6,10 +6,19 @@
     <description>Recent content in naive bayes on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/naive-bayes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to Naive Bayes</title>
+      <link>/theorypost/introduction-to-naive-bayes/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/introduction-to-naive-bayes/</guid>
+      <description>body {text-align: justify}It is a Probability Classifier. Naïve Bayes is the first algorithm that should be considered for solving Text Classification Problem* which involves High Dimensional training Dataset. A few examples are: Sentiment Analysis and Classifying Topics on Social Media. It also refers to the Bayes’ Theorem also known as Bayes’ Law that give us a method to calculate the Conditional Probability: that is the probability of an event, based on previous knowledge available on the events.</description>
+    </item>
     
     <item>
       <title>Naive Bayes Classification</title>
