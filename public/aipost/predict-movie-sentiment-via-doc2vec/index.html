@@ -131,7 +131,42 @@ The tf-idf can be also represented as follow:</p>
 <p><span class="math display">\[
 i d f(t, D)=\log \left(\frac{N}{|\{d \in D : t \in d\}|}\right)
 \]</span>
-The tf-idf is the log of the total number of documents N divided by the number of documents that contain the term that we are taking into consideration.</p>
+The <strong>tf-idf</strong> is the log of the <strong>total number of documents N</strong> divided by the <strong>number of documents that contain the term that we are taking into consideration</strong>.</p>
+<pre class="r"><code># Get tf-idf 
+# It quantify importance of a term in a document
+# Increase the weight of terms which are specific to a single document decrease the weight for terms used in most documents
+
+tfidf &lt;- TfIdf$new() # define tfidf model
+
+# Implement the tfidf model to the training and test set
+dtm_train_tfidf &lt;- fit_transform(dtm_train, tfidf)
+dtm_test_tfidf &lt;- fit_transform(dtm_test, tfidf)</code></pre>
+<p>Now, we are ready to use the <a href="http://www.mathtube.org/lecture/video/sparse-linear-models"><strong>Sparse Linear Model</strong></a> with the R package <strong>glmnet</strong> that works quite well when we have to deal with binary response variable.
+In <strong>Document Classification</strong> we might have a lange number of variables per observation. We cannot fit the data using standard approaches since <strong>p&gt;&gt;N</strong>, where p=features and N=document samples. </br>
+The <strong>Sparse Linear Model</strong> tries to optimize each parameter separately holding all the other parameters fixed, and it does it on a <strong>grid of lambda</strong>.
+For an exhaustive explanation of <strong>Sparse Linear Model</strong> there is a great lesson that you can find <a href="https://www.youtube.com/watch?v=BU2gjoLPfDc"><strong>here</strong></a>.</p>
+<pre class="r"><code># GLMNET model
+library(glmnet)
+
+glmnet_classifier =cv.glmnet(x = dtm_train_tfidf, y = train[[&#39;sentiment&#39;]], # predict sentiment
+                             family = &#39;binomial&#39;,  # because we are dealing with a binary responce variable
+                             alpha = 1,            # L1 penalty
+                             type.measure = &quot;auc&quot;, # area under ROC curve
+                             nfolds = 5,           # 5-fold cross-validation
+                             thresh = 1e-3,        # convergence threshold for coordinate descent, high value is less accurate, but has faster training
+                             maxit = 1e3)          # limit the maximum number of variables in the model, we use lower number of iterations for faster training
+
+plot(glmnet_classifier)</code></pre>
+<p><img src="/AIPost/2019-08-06-predict-movie-sentiment-via-doc2vec_files/figure-html/unnamed-chunk-4-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>print(paste(&quot;max AUC =&quot;, round(max(glmnet_classifier$cvm), 4)))</code></pre>
+<pre><code>[1] &quot;max AUC = 0.9108&quot;</code></pre>
+<pre class="r"><code># Predict on unseen data
+preds &lt;- predict(glmnet_classifier, dtm_test_tfidf, type= &#39;response&#39;)[, 1]
+glmnet:::auc(as.numeric(test$sentiment), preds)</code></pre>
+<pre><code>[1] 0.8922888</code></pre>
+<pre class="r"><code># How accurately can the sentiments be identified from text</code></pre>
+<p>As we can see from the graph above, we can determine the best value of <strong>lambda</strong> in order to have the best <strong>AUC</strong>.
+We also obtained a very high AUC aroud <strong>90%</strong> in the Train Set, which is comparable to the Testing Set AUC <strong>91%</strong>. This says to use that the model we created can predict the reviews of the unseen movie with a high level of Accuracy.</p>
 
     </div>
   </article>
