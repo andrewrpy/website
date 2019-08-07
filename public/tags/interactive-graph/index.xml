@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>The Beauty of Animation</title>
+      <link>/graphpost/the-beauty-of-animation/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/graphpost/the-beauty-of-animation/</guid>
+      <description>body {text-align: justify}Graphs are a common method to visually illustrate relationships in the data,and they give a clear and compact idea and knowledge of matter contained in, at first sight. Graphs are extremely important and in data analysis they are considered the first statistics to perform.In this post we descrie the R package gganimate an extension of the ggplot2 package for creating animated ggplots.</description>
+    </item>
+    
+    <item>
       <title>Interactive Graphs</title>
       <link>/graphpost/interactive-graphs/</link>
       <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
