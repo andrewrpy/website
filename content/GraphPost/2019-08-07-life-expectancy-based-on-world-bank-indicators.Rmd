@@ -15,7 +15,7 @@ body {
 text-align: justify}
 </style>
 
-We used the data from the [**World Bank Indicators Portal**](https://data.worldbank.org/indicator/all) which is an icredibl rich resource to make an animation of the [**Life Expectancy**](https://data.worldbank.org/indicator/SP.DYN.LE00.IN) as a function of [**Gross Domestic Product per capita**](https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD). More precisely, this is the value of all final goods and services produced within a nation in a given year, converted at market exchange rates to current U.S. dollars, divided by the average population for the same year.
+We used the data from the [**World Bank Indicators Portal**](https://data.worldbank.org/indicator/all) which is an incredibly rich resource to make an animation of the [**Life Expectancy**](https://data.worldbank.org/indicator/SP.DYN.LE00.IN) as a function of [**Gross Domestic Product per capita**](https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD). More precisely, this is the value of all final goods and services produced within a nation in a given year, converted at market exchange rates to current U.S. dollars, divided by the average population for the same year.
 
 All the points in the graph moved smoothly, rather than jolting from year to year. It is possible to achieve this effect, using an R package called **tweenr**, which can interpolate data provide the missing values for an animation with more frames.
 
