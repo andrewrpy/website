@@ -16,6 +16,74 @@ text-align: justify}
 </style>
 
 In order to have an introduction of the Word2Vec [**look at this post**](https://www.andreaperlato.com/theorypost/introduction-to-word2vec/).
+Using this method we try to predict the movie sentiment (positive vs. negative) using text data as predictor. We use the movie review data set, and we use the power of **Doc2Vec** to transform our data into predictors.
+
+```{r, echo=TRUE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+library(text2vec)
+library(tm)
+
+data(movie_review)
+names(movie_review)
+
+```
+
+The data set contain an **id**, **sentiment** (0=negative, 1=positive), and **review** that contains the text if people like the movie or not.
+We start creating the Training and Test set, and we have also to collect unique terms from the document using the function **create_vocabulary()**.
+
+
+
+
+```{r, echo=TRUE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+library(caret)
+Train = createDataPartition(movie_review$sentiment, p=0.75, list=FALSE, times = 1) # function to devide training and test set
+
+# Define training control
+# train_control =trainControl(method="cv", number=10)
+train = movie_review[Train, ] # 75% training
+test = movie_review[-Train, ] # 25% test
+
+# TRAINING-SET
+# Vocabulary-based DTM
+# We collect unique terms from all documents and mark each of them with a unique ID using the create_vocabulary() function
+it = itoken(train$review, preprocessor = tolower, # transform text to lowercase
+            tokenizer = word_tokenizer,           # create a token
+            ids = train$id)                       # assign id
+
+
+# Iterator over tokens with the itoken() function
+v = create_vocabulary(it)
+
+# Represent documents in vector space
+vectorizer = vocab_vectorizer(v)
+
+
+
+
+# TEST-SET
+it2 = itoken(test$review, preprocessor = tolower,
+             tokenizer = word_tokenizer,
+             ids = test$id)
+# v2 = create_vocabulary(it2)
+# pruned_vocab2 = prune_vocabulary(v2, term_count_min = 10, doc_proportion_max = 0.5, doc_proportion_min = 0.001)
+# vectorizer2 = vocab_vectorizer(v2)
+
+# Document term matrix (vocab based)
+dtm_train = create_dtm(it, vectorizer) # training set
+dtm_test = create_dtm(it2, vectorizer) # test set
+
+```
+
+Now, we have to get the [**tf-idf**](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) matrix from the [**bag of words**](https://en.wikipedia.org/wiki/Bag-of-words_model). </br>
+The **bag of words** is used to extract features. We simply count the number of occurrences for each word, this process in also called **CountVectorizer**. </br>
+To make the CountVectorizer more comparable, we scale it using the **Term Frequency Transformation (tf)** and in order to boost the most important features we use the **Inverse Document Frequency (IDF)**, this calculate how often a word occurs in the corpus.  The combination of both is called **tf-idf = tf * idf**.
+The tf-idf can be also represented as follow:
+
+$$
+i d f(t, D)=\log \left(\frac{N}{|\{d \in D : t \in d\}|}\right)
+$$
+The tf-idf is the log of the total number of documents N divided by the number of documents that contain the term that we are taking into consideration.
+
+
 
 
 

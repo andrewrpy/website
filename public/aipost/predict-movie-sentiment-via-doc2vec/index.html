@@ -19,6 +19,11 @@
 
 
 
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
 <link rel="stylesheet" href="/css/fonts.css" media="all">
 <link rel="stylesheet" href="/css/main.css" media="all">
 
@@ -73,7 +78,60 @@
 body {
 text-align: justify}
 </style>
-<p>In order to have an introduction of the Word2Vec <a href="https://www.andreaperlato.com/theorypost/introduction-to-word2vec/"><strong>look at this post</strong></a>.</p>
+<p>In order to have an introduction of the Word2Vec <a href="https://www.andreaperlato.com/theorypost/introduction-to-word2vec/"><strong>look at this post</strong></a>.
+Using this method we try to predict the movie sentiment (positive vs. negative) using text data as predictor. We use the movie review data set, and we use the power of <strong>Doc2Vec</strong> to transform our data into predictors.</p>
+<pre class="r"><code>library(text2vec)
+library(tm)
+
+data(movie_review)
+names(movie_review)</code></pre>
+<pre><code>[1] &quot;id&quot;        &quot;sentiment&quot; &quot;review&quot;   </code></pre>
+<p>The data set contain an <strong>id</strong>, <strong>sentiment</strong> (0=negative, 1=positive), and <strong>review</strong> that contains the text if people like the movie or not.
+We start creating the Training and Test set, and we have also to collect unique terms from the document using the function <strong>create_vocabulary()</strong>.</p>
+<pre class="r"><code>library(caret)
+Train = createDataPartition(movie_review$sentiment, p=0.75, list=FALSE, times = 1) # function to devide training and test set
+
+# Define training control
+# train_control =trainControl(method=&quot;cv&quot;, number=10)
+train = movie_review[Train, ] # 75% training
+test = movie_review[-Train, ] # 25% test
+
+# TRAINING-SET
+# Vocabulary-based DTM
+# We collect unique terms from all documents and mark each of them with a unique ID using the create_vocabulary() function
+it = itoken(train$review, preprocessor = tolower, # transform text to lowercase
+            tokenizer = word_tokenizer,           # create a token
+            ids = train$id)                       # assign id
+
+
+# Iterator over tokens with the itoken() function
+v = create_vocabulary(it)
+
+# Represent documents in vector space
+vectorizer = vocab_vectorizer(v)
+
+
+
+
+# TEST-SET
+it2 = itoken(test$review, preprocessor = tolower,
+             tokenizer = word_tokenizer,
+             ids = test$id)
+# v2 = create_vocabulary(it2)
+# pruned_vocab2 = prune_vocabulary(v2, term_count_min = 10, doc_proportion_max = 0.5, doc_proportion_min = 0.001)
+# vectorizer2 = vocab_vectorizer(v2)
+
+# Document term matrix (vocab based)
+dtm_train = create_dtm(it, vectorizer) # training set
+dtm_test = create_dtm(it2, vectorizer) # test set</code></pre>
+<p>Now, we have to get the <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf"><strong>tf-idf</strong></a> matrix from the <a href="https://en.wikipedia.org/wiki/Bag-of-words_model"><strong>bag of words</strong></a>. </br>
+The <strong>bag of words</strong> is used to extract features. We simply count the number of occurrences for each word, this process in also called <strong>CountVectorizer</strong>. </br>
+To make the CountVectorizer more comparable, we scale it using the <strong>Term Frequency Transformation (tf)</strong> and in order to boost the most important features we use the <strong>Inverse Document Frequency (IDF)</strong>, this calculate how often a word occurs in the corpus. The combination of both is called <strong>tf-idf = tf * idf</strong>.
+The tf-idf can be also represented as follow:</p>
+<p><span class="math display">\[
+i d f(t, D)=\log \left(\frac{N}{|\{d \in D : t \in d\}|}\right)
+\]</span>
+The tf-idf is the log of the total number of documents N divided by the number of documents that contain the term that we are taking into consideration.</p>
 
     </div>
   </article>
@@ -97,7 +155,22 @@ text-align: justify}
     </div>
     
 
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
     
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 <script type="application/javascript">
