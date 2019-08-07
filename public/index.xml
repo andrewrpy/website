@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Life Expectancy based on World Bank Indicators</title>
+      <link>/graphpost/life-expectancy-based-on-world-bank-indicators/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/graphpost/life-expectancy-based-on-world-bank-indicators/</guid>
+      <description>body {text-align: justify}We used the data from the World Bank Indicators Portal which is an icredibl rich resource to make an animation of the Life Expectancy as a function of Gross Domestic Product per capita. More precisely, this is the value of all final goods and services produced within a nation in a given year, converted at market exchange rates to current U.S. dollars, divided by the average population for the same year.</description>
+    </item>
+    
+    <item>
       <title>Introduction to Naive Bayes</title>
       <link>/theorypost/introduction-to-naive-bayes/</link>
       <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>

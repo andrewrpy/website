@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Life Expectancy based on World Bank Indicators - Andrea Perlato</title>
+<meta property="og:title" content="Life Expectancy based on World Bank Indicators - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Life Expectancy based on World Bank Indicators</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>We used the data from the <a href="https://data.worldbank.org/indicator/all"><strong>World Bank Indicators Portal</strong></a> which is an icredibl rich resource to make an animation of the <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN"><strong>Life Expectancy</strong></a> as a function of <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD"><strong>Gross Domestic Product per capita</strong></a>. More precisely, this is the value of all final goods and services produced within a nation in a given year, converted at market exchange rates to current U.S. dollars, divided by the average population for the same year.</p>
+<p>All the points in the graph moved smoothly, rather than jolting from year to year. It is possible to achieve this effect, using an R package called <strong>tweenr</strong>, which can interpolate data provide the missing values for an animation with more frames.</p>
+<center>
+<p><img src="/img/nations.gif" style="width:80.0%" /></p>
+</center>
+<p>Now let’s see the code to generate this animated graph.</p>
+<p>First we have to prepare our data and define the acceleration of the graphucal animation.</p>
+<pre class="r"><code># Prepare nations data
+nations_edit &lt;- nations %&gt;%
+  arrange(country, year) %&gt;%
+  select(gdp_percap,life_expect,year,country) %&gt;%
+  rename(x=gdp_percap,y=life_expect,time=year,id=country) %&gt;%
+  mutate(ease=&quot;linear&quot;) # define acceleration of the animation
+
+# Use tween
+nations_tween &lt;- tween_elements(nations_edit, &quot;time&quot;, &quot;id&quot;, &quot;ease&quot;, nframes = 300)
+
+# Create year and country fields, for join
+nations_tween &lt;- nations_tween %&gt;%
+  mutate(year = round(time),
+         country = .group)
+
+# Join
+nations_tween &lt;- inner_join(nations_tween,nations)</code></pre>
+<p>The function <strong>tween_elements()</strong> used above creates new variables called .frame, one for each of the specified number of frames, and .group, which corresponds to the id in the previous data frame, in our case the country names. It calculates new x, y, and time values for each frame.
+Now we can make the animated chart using <strong>gganimate</strong>.</p>
+<pre class="r"><code># Make animated chart
+nations_tween_chart &lt;- ggplot(nations_tween, aes(x = x, y = y, frame = .frame)) +
+  xlab(&quot;GDP per capita&quot;) +
+  ylab(&quot;Life expectancy at birth&quot;) +
+  theme_minimal(base_size = 16, base_family = &quot;Georgia&quot;) +
+  geom_point(aes(size = population, color = region), alpha = 0.7) +
+  scale_size_area(guide = FALSE, max_size = 20) +
+  scale_x_continuous(labels = dollar) +
+  scale_color_brewer(name = &quot;&quot;, palette = &quot;Set2&quot;) +
+  theme(legend.position=c(0.8,0.4))
+
+
+# # Run in the viewer
+# gg_animate(nations_tween_chart, title_frame = FALSE, interval = 0.05)</code></pre>
+<center>
+<img src="/img/nations.gif" style="width:80.0%" />
+</center>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51254710-89', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+
