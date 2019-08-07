@@ -16,7 +16,62 @@ text-align: justify}
 </style>
 
 Graphs are a common method to visually illustrate relationships in the data,and they give a clear and compact idea and knowledge of matter contained in, at first sight. Graphs are extremely important and in data analysis they are considered **the first statistics** to perform. 
-In this post we descrie the R package [**gganimate**](https://cran.r-project.org/web/packages/gganimate/index.html) an extension of the [**ggplot2**](https://ggplot2.tidyverse.org/) package for creating animated ggplots.
+In this post we descrie the R package [**gganimate**](https://cran.r-project.org/web/packages/gganimate/index.html) an extension of the [**ggplot2**](https://ggplot2.tidyverse.org/) package for creating animated ggplots. It provides a range of new functionality that can be added to the plot object in order to customize how it should change with time. The key features of gganimate are: </br>
+1 - **transitions**: data to change </br>
+2 - **views**: viewpoint to change </br>
+3 - **shadows**: nimation to have memory </br>
+We use as an example the [**gapminder**](https://www.gapminder.org/data/) data set. 
+
+```{r, echo=FALSE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+library(ggplot2)
+library(gganimate)
+theme_set(theme_bw()) # set the default ggplot2 theme to theme_bw
+
+# Data set
+library(gapminder)
+head(gapminder)
+
+```
+
+First example is the relationship between the **Life Expectancy** as a function of **Gross Domestic Product per capita**.
+The animation present the disctict states in time using the function **transition_time()**. The transition length between the states will be set to correspond to the actual time difference between them.
+
+```{r, echo=FALSE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+# Static plot
+p <- ggplot(
+  gapminder, 
+  aes(x = gdpPercap, y=lifeExp, size = pop, colour = country)
+  ) +
+  geom_point(show.legend = FALSE, alpha = 0.7) +
+  scale_color_viridis_d() +
+  scale_size(range = c(2, 12)) +
+  scale_x_log10() +
+  labs(x = "GDP per capita", y = "Life expectancy")
+
+# Animation
+p + transition_time(year) +
+  labs(title = "Year: {frame_time}")
+
+```
+
+We can also create facets by continent.
+
+```{r, echo=FALSE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+p + facet_wrap(~continent) +
+  transition_time(year) +
+  labs(title = "Year: {frame_time}")
+
+```
+
+Moreover, we can show preceding frames with gradual falloff.</br>
+This shadow is meant to draw a small wake after data by showing the latest frames up to the current. We can choose to gradually diminish the size and/or opacity of the shadow. The length of the wake is not given in absolute frames as that would make the animation susceptible to changes in the framerate. Instead it is given as a proportion of the total length of the animation.
+
+```{r, echo=FALSE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+p + transition_time(year) +
+  labs(title = "Year: {frame_time}") +
+  shadow_wake(wake_length = 0.1, alpha = FALSE)
+
+```
 
 
 

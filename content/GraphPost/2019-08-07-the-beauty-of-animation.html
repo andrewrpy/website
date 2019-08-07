@@ -17,4 +17,25 @@ body {
 text-align: justify}
 </style>
 <p>Graphs are a common method to visually illustrate relationships in the data,and they give a clear and compact idea and knowledge of matter contained in, at first sight. Graphs are extremely important and in data analysis they are considered <strong>the first statistics</strong> to perform.
-In this post we descrie the R package <a href="https://cran.r-project.org/web/packages/gganimate/index.html"><strong>gganimate</strong></a> an extension of the <a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a> package for creating animated ggplots.</p>
+In this post we descrie the R package <a href="https://cran.r-project.org/web/packages/gganimate/index.html"><strong>gganimate</strong></a> an extension of the <a href="https://ggplot2.tidyverse.org/"><strong>ggplot2</strong></a> package for creating animated ggplots. It provides a range of new functionality that can be added to the plot object in order to customize how it should change with time. The key features of gganimate are: </br>
+1 - <strong>transitions</strong>: data to change </br>
+2 - <strong>views</strong>: viewpoint to change </br>
+3 - <strong>shadows</strong>: nimation to have memory </br>
+We use as an example the <a href="https://www.gapminder.org/data/"><strong>gapminder</strong></a> data set.</p>
+<pre><code># A tibble: 6 x 6
+  country     continent  year lifeExp      pop gdpPercap
+  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+1 Afghanistan Asia       1952    28.8  8425333      779.
+2 Afghanistan Asia       1957    30.3  9240934      821.
+3 Afghanistan Asia       1962    32.0 10267083      853.
+4 Afghanistan Asia       1967    34.0 11537966      836.
+5 Afghanistan Asia       1972    36.1 13079460      740.
+6 Afghanistan Asia       1977    38.4 14880372      786.</code></pre>
+<p>First example is the relationship between the <strong>Life Expectancy</strong> as a function of <strong>Gross Domestic Product per capita</strong>.
+The animation present the disctict states in time using the function <strong>transition_time()</strong>. The transition length between the states will be set to correspond to the actual time difference between them.</p>
+<p><img src="/GraphPost/2019-08-07-the-beauty-of-animation_files/figure-html/unnamed-chunk-2-1.gif" width="100%" style="display: block; margin: auto;" /></p>
+<p>We can also create facets by continent.</p>
+<p><img src="/GraphPost/2019-08-07-the-beauty-of-animation_files/figure-html/unnamed-chunk-3-1.gif" width="100%" style="display: block; margin: auto;" /></p>
+<p>Moreover, we can show preceding frames with gradual falloff.</br>
+This shadow is meant to draw a small wake after data by showing the latest frames up to the current. We can choose to gradually diminish the size and/or opacity of the shadow. The length of the wake is not given in absolute frames as that would make the animation susceptible to changes in the framerate. Instead it is given as a proportion of the total length of the animation.</p>
+<p><img src="/GraphPost/2019-08-07-the-beauty-of-animation_files/figure-html/unnamed-chunk-4-1.gif" width="100%" style="display: block; margin: auto;" /></p>

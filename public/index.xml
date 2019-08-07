@@ -26,7 +26,7 @@
       <pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/graphpost/the-beauty-of-animation/</guid>
-      <description>body {text-align: justify}Graphs are a common method to visually illustrate relationships in the data,and they give a clear and compact idea and knowledge of matter contained in, at first sight. Graphs are extremely important and in data analysis they are considered the first statistics to perform.In this post we descrie the R package gganimate an extension of the ggplot2 package for creating animated ggplots.</description>
+      <description>body {text-align: justify}Graphs are a common method to visually illustrate relationships in the data,and they give a clear and compact idea and knowledge of matter contained in, at first sight. Graphs are extremely important and in data analysis they are considered the first statistics to perform.In this post we descrie the R package gganimate an extension of the ggplot2 package for creating animated ggplots. It provides a range of new functionality that can be added to the plot object in order to customize how it should change with time.</description>
     </item>
     
     <item>
