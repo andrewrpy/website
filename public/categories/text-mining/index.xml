@@ -6,10 +6,19 @@
     <description>Recent content in text mining on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/text-mining/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to Topic Model</title>
+      <link>/theorypost/introduction-to-topic-model/</link>
+      <pubDate>Thu, 08 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/introduction-to-topic-model/</guid>
+      <description>body {text-align: justify}The Topic Model is a type of statistical model to find the topics that occur in a collection of documents.It is a frequently used text-mining tool for discovery of hidden semantic structures in a text body. For example, image to have some articles or a series of social media messages and we want to understand what is going on inside of them. A common tool to face this problem is via Unsupervised Machine Learning model.</description>
+    </item>
     
     <item>
       <title>Introduction to Naive Bayes</title>

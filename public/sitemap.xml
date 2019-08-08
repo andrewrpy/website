@@ -3,7 +3,36 @@
   
   <url>
     <loc>https://www.andreaperlato.com/categories/</loc>
-    <lastmod>2019-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-08T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/theorypost/introduction-to-topic-model/</loc>
+    <lastmod>2019-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/</loc>
+    <lastmod>2019-08-08T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/theorypost/</loc>
+    <lastmod>2019-08-08T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/text-mining/</loc>
+    <lastmod>2019-08-08T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/topic-model/</loc>
+    <lastmod>2019-08-08T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
@@ -16,12 +45,6 @@
   <url>
     <loc>https://www.andreaperlato.com/graphpost/life-expectancy-based-on-world-bank-indicators/</loc>
     <lastmod>2019-08-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/</loc>
-    <lastmod>2019-08-07T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
@@ -69,12 +92,6 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/theorypost/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.andreaperlato.com/categories/artificial-intelligence/</loc>
     <lastmod>2019-08-06T00:00:00+00:00</lastmod>
      <priority>0</priority>
@@ -94,12 +111,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/naive-bayes/</loc>
-    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/categories/text-mining/</loc>
     <lastmod>2019-08-06T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
