@@ -40,11 +40,13 @@ P(\boldsymbol{p} | \alpha \boldsymbol{m})=\frac{\Gamma\left(\sum_{k} \alpha m_{k
 <center>
 <img src="/img/uniformlda.png" style="width:40.0%" />
 </center>
-<p>As described in the figure above, when we have a <strong>uniform mean</strong> (1/3), and an <strong>variance</strong> (alpha) of three, when we molltiply them togheter, out <strong>LDA=1</strong>.
+<p>As described in the figure above, when we have a <strong>uniform mean</strong> (1/3), and an <strong>variance</strong> (alpha) of three, when we molltiply them togheter, the <strong>LDA=1</strong>, and so each topic is equally likely.
 But when the <strong>variance</strong> is larger and larged the LDA is concentrating the distribution around the mean (the dark circle in the middle of the triangle). </br></p>
 <p>There are other ways to parametrize the LDA distribution. </br>
 For example, we can have mean in a differnt location (see the left and center figure below). </br>
-Or, we can have the <strong>variance parameter alpha</strong> smaller of the outcome of the multinomial distribution. In this case we push the probability mass to the edges of the simplex (see the right figure below). This says to use that we don’t know which outcome to prefer.</p>
+We can also have the <strong>variance parameter alpha</strong> smaller than <strong>1</strong>. In this case we push the probability mass to the edges of the simplex (see the right figure below). In this case, with <strong>alpha&lt;1</strong> we have a preference for the multinomial distribution which is far avay for the center.
+To be <strong>far away from the center</strong> means we have not a precise topic to assign to our word. It is similar to how people write document where many things are inside a concept.
+In other words, the Dirichlet Distribution give us a distribution over all the places where the Multinomila Distribution can land.</p>
 <center>
 <img src="/img/nonuniformlda.png" style="width:40.0%" />
 </center>
@@ -52,3 +54,10 @@ Or, we can have the <strong>variance parameter alpha</strong> smaller of the out
 For each topic <strong>K</strong>, we have a multinomial distribution <strong>Betak</strong>, called <strong>Topic Distribution</strong> from a Dirichlet Distribution with parameter <strong>lambda</strong>.
 The next step is to draw a <strong>multinomial distribution over topics</strong> represented by <strong>Өd</strong>. Once we have it, we can draw for each word the so called <strong>Topic Assignment</strong> represented in the figure below by <strong>Zn</strong>.
 Till now, we don’t know what the word is. We have to look at the <strong>Topic Distribution Betak</strong> in order to generate the word that comes from the multinomial distribution.</p>
+<center>
+<img src="/img/ldaplatenotation.png" style="width:40.0%" />
+</center>
+<p>The graph above is a representation of the probabilistic model, also called <a href="https://en.wikipedia.org/wiki/Plate_notation"><strong>Plate Notation</strong></a>. </br>
+As we can see we have in the Plate Notation <strong>K</strong> topics in <strong>M</strong> documents, and <strong>N</strong> words in each document. </br>
+Crucially, the only thing that we observe are the <strong>words</strong>, and our task is to figure out what topic to assign <strong>Zn</strong>.</p>
+<p>Ideally, once we have the collection of words per topic, is the topic is interpretable, people will consistently choose true <strong>Intruder</strong>, or define the words that didn’t belong.</p>

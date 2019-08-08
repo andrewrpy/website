@@ -50,12 +50,14 @@ Here above, we have the Dirichlet Distribution Equation, where **alpha** is the 
 ![](/img/uniformlda.png){width=40%}
 </center>
 
-As described in the figure above, when we have a **uniform mean** (1/3), and an **variance** (alpha) of three, when we molltiply them togheter, out **LDA=1**.
+As described in the figure above, when we have a **uniform mean** (1/3), and an **variance** (alpha) of three, when we molltiply them togheter, the **LDA=1**, and so each topic is equally likely.
 But when the **variance** is larger and larged the LDA is concentrating the distribution around the mean (the dark circle in the middle of the triangle). </br>
 
 There are other ways to parametrize the LDA distribution. </br>
 For example, we can have mean in a differnt location (see the left and center figure below). </br> 
-Or, we can have the **variance parameter alpha** smaller of the outcome of the multinomial distribution. In this case we push the probability mass to the edges of the simplex (see the right figure below). This says to use that we don't know which outcome to prefer.
+We can also have the **variance parameter alpha** smaller than **1**. In this case we push the probability mass to the edges of the simplex (see the right figure below). In this case, with **alpha<1** we have a preference for the multinomial distribution which is far avay for the center.
+To be **far away from the center** means we have not a precise topic to assign to our word. It is similar to how people write document where many things are inside a concept.
+In other words, the Dirichlet Distribution give us a distribution over all the places where the Multinomila Distribution can land.
 
 <center>
 ![](/img/nonuniformlda.png){width=40%}
@@ -65,6 +67,16 @@ The **Dirichlet Distribution** can be used to isolate which document is about a 
 For each topic **K**, we have a multinomial distribution **Betak**, called **Topic Distribution** from a Dirichlet Distribution with parameter **lambda**.
 The next step is to draw a **multinomial distribution over topics** represented by **Өd**. Once we have it, we can draw for each word the so called **Topic Assignment** represented in the figure below by **Zn**.
 Till now, we don't know what the word is. We have to look at the **Topic Distribution Betak** in order to generate the word that comes from the multinomial distribution.
+
+<center>
+![](/img/ldaplatenotation.png){width=40%}
+</center>
+
+The graph above is a representation of the probabilistic model, also called [**Plate Notation**](https://en.wikipedia.org/wiki/Plate_notation). </br> 
+As we can see we have in the Plate Notation **K** topics in **M** documents, and **N** words in each document. </br> 
+Crucially, the only thing that we observe are the **words**, and our task is to figure out what topic to assign **Zn**.
+
+Ideally, once we have the collection of words per topic, is the topic is interpretable, people will consistently choose true **Intruder**, or define the words that didn't belong.
 
 
 
