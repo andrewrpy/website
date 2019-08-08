@@ -16,5 +16,20 @@ body {
 text-align: justify}
 </style>
 <p>The <a href="https://en.wikipedia.org/wiki/Topic_model"><strong>Topic Model</strong></a> is a type of statistical model to find the topics that occur in a collection of documents.
-It is a frequently used text-mining tool for discovery of hidden semantic structures in a text body. For example, image to have some articles or a series of social media messages and we want to understand what is going on inside of them. A common tool to face this problem is via <strong>Unsupervised Machine Learning model</strong>. </br>
+It is a frequently used text-mining tool for discovery of hidden semantic structures in a text body. For example, image to have some articles or a series of social media messages and we want to understand what is going on inside of them. A common tool to face this problem is via <strong>Unsupervised Machine Learning model</strong>.
 From a high level perspective, having a bunch of documents, and like in <a href="https://www.andreaperlato.com/theorypost/introduction-to-k-means-and-hierarchical-clustering/"><strong>K-Mean Clustering</strong></a> we want to find the <strong>K</strong> number of topics that best describe our corpus of text.</p>
+<center>
+<img src="/img/topics.png" style="width:40.0%" />
+</center>
+<p>From the figure above, we have three different topics: technology (yellow), business(orange), and arts(blue).
+In addition to those topics, we also have an association to the documents to topics. In fact, a document can be entirely a technology topic (i.e. red light, green light, 2-tone led, simplify screen), but also a document that is a sort of mixture of two or more topic (see the grey text in the figure below).</p>
+<center>
+<img src="/img/mixturetopics.png" style="width:50.0%" />
+</center>
+<p>Topic Modelcan be seen as a <strong>Matrix Factorization Problem</strong>, where <strong>K</strong> is the number of topics, <strong>M</strong> is the number of documents, and <strong>V</strong> is the size of the vocabulary.</p>
+<center>
+<img src="/img/matrixfactorization.png" style="width:50.0%" />
+</center>
+<p>The <strong>MxV</strong> matrix corrisponds to the distribution of the words for each of the topics,and to find this the <a href="https://en.wikipedia.org/wiki/Latent_semantic_analysis"><strong>Latent Semantic Analysis</strong></a> is widely used.</p>
+<p>An alternative of the <strong>Matrix Factorization Problem</strong> is the <a href="https://en.wikipedia.org/wiki/Generative_model"><strong>Generative Model</strong></a>. </br>
+More particularly, the <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation"><strong>Latent Dirichlet Allocation</strong></a> is commonly used in topic modelling.</p>
