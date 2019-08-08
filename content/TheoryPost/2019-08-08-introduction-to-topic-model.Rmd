@@ -35,10 +35,84 @@ Topic Modelcan be seen as a **Matrix Factorization Problem**, where **K** is the
 ![](/img/matrixfactorization.png){width=50%}
 </center>
 
-The **MxV** matrix corrisponds to the distribution of the words for each of the topics,and to find this the [**Latent Semantic Analysis**](https://en.wikipedia.org/wiki/Latent_semantic_analysis) is widely used.
+The **MxV** matrix corresponds to the distribution of the words for each of the topics,and to find this the [**Latent Semantic Analysis**](https://en.wikipedia.org/wiki/Latent_semantic_analysis) is widely used.
 
 An alternative of the **Matrix Factorization Problem** is the [**Generative Model**](https://en.wikipedia.org/wiki/Generative_model). </br>
 More particularly, the [**Latent Dirichlet Allocation**](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) is commonly used in topic modelling.
+
+$$
+P(\boldsymbol{p} | \alpha \boldsymbol{m})=\frac{\Gamma\left(\sum_{k} \alpha m_{k}\right)}{\prod_{k} \Gamma\left(\alpha m_{k}\right)} \prod_{k} p_{k}^{\alpha m_{k}-1}
+$$
+
+Here above, we have the Dirichlet Distribution Equation, where **alpha** is the variance, and **m** is the mean. 
+
+<center>
+![](/img/uniformlda.png){width=40%}
+</center>
+
+As described in the figure above, when we have a **uniform mean** (1/3), and an **variance** (alpha) of three, when we molltiply them togheter, out **LDA=1**.
+But when the **variance** is larger and larged the LDA is concentrating the distribution around the mean (the dark circle in the middle of the triangle). </br>
+
+There are other ways to parametrize the LDA distribution. </br>
+For example, we can have mean in a differnt location (see the left and center figure below). </br> 
+Or, we can have the **variance parameter alpha** smaller of the outcome of the multinomial distribution. In this case we push the probability mass to the edges of the simplex (see the right figure below). This says to use that we don't know which outcome to prefer.
+
+<center>
+![](/img/nonuniformlda.png){width=40%}
+</center>
+
+The **Dirichlet Distribution** can be used to isolate which document is about a specific topic.
+For each topic **K**, we have a multinomial distribution **Betak**, called **Topic Distribution** from a Dirichlet Distribution with parameter **lambda**.
+The next step is to draw a **multinomial distribution over topics** represented by **Өd**. Once we have it, we can draw for each word the so called **Topic Assignment** represented in the figure below by **Zn**.
+Till now, we don't know what the word is. We have to look at the **Topic Distribution Betak** in order to generate the word that comes from the multinomial distribution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -88,9 +88,28 @@ In addition to those topics, we also have an association to the documents to top
 <center>
 <img src="/img/matrixfactorization.png" style="width:50.0%" />
 </center>
-<p>The <strong>MxV</strong> matrix corrisponds to the distribution of the words for each of the topics,and to find this the <a href="https://en.wikipedia.org/wiki/Latent_semantic_analysis"><strong>Latent Semantic Analysis</strong></a> is widely used.</p>
+<p>The <strong>MxV</strong> matrix corresponds to the distribution of the words for each of the topics,and to find this the <a href="https://en.wikipedia.org/wiki/Latent_semantic_analysis"><strong>Latent Semantic Analysis</strong></a> is widely used.</p>
 <p>An alternative of the <strong>Matrix Factorization Problem</strong> is the <a href="https://en.wikipedia.org/wiki/Generative_model"><strong>Generative Model</strong></a>. </br>
 More particularly, the <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation"><strong>Latent Dirichlet Allocation</strong></a> is commonly used in topic modelling.</p>
+<p><span class="math display">\[
+P(\boldsymbol{p} | \alpha \boldsymbol{m})=\frac{\Gamma\left(\sum_{k} \alpha m_{k}\right)}{\prod_{k} \Gamma\left(\alpha m_{k}\right)} \prod_{k} p_{k}^{\alpha m_{k}-1}
+\]</span></p>
+<p>Here above, we have the Dirichlet Distribution Equation, where <strong>alpha</strong> is the variance, and <strong>m</strong> is the mean.</p>
+<center>
+<img src="/img/uniformlda.png" style="width:40.0%" />
+</center>
+<p>As described in the figure above, when we have a <strong>uniform mean</strong> (1/3), and an <strong>variance</strong> (alpha) of three, when we molltiply them togheter, out <strong>LDA=1</strong>.
+But when the <strong>variance</strong> is larger and larged the LDA is concentrating the distribution around the mean (the dark circle in the middle of the triangle). </br></p>
+<p>There are other ways to parametrize the LDA distribution. </br>
+For example, we can have mean in a differnt location (see the left and center figure below). </br>
+Or, we can have the <strong>variance parameter alpha</strong> smaller of the outcome of the multinomial distribution. In this case we push the probability mass to the edges of the simplex (see the right figure below). This says to use that we don’t know which outcome to prefer.</p>
+<center>
+<img src="/img/nonuniformlda.png" style="width:40.0%" />
+</center>
+<p>The <strong>Dirichlet Distribution</strong> can be used to isolate which document is about a specific topic.
+For each topic <strong>K</strong>, we have a multinomial distribution <strong>Betak</strong>, called <strong>Topic Distribution</strong> from a Dirichlet Distribution with parameter <strong>lambda</strong>.
+The next step is to draw a <strong>multinomial distribution over topics</strong> represented by <strong>Өd</strong>. Once we have it, we can draw for each word the so called <strong>Topic Assignment</strong> represented in the figure below by <strong>Zn</strong>.
+Till now, we don’t know what the word is. We have to look at the <strong>Topic Distribution Betak</strong> in order to generate the word that comes from the multinomial distribution.</p>
 
     </div>
   </article>
@@ -115,6 +134,9 @@ More particularly, the <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_a
     
 
     
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 <script type="application/javascript">
