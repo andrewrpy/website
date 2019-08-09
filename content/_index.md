@@ -14,10 +14,10 @@ Moreover, there is a specific session dedicated to **Time Series**, and a specif
 
 The website is entirely built in [**R**](https://www.r-project.org/) with [**blogdown**](https://bookdown.org/yihui/blogdown/).
 R is the best data specific programming language focused around data analyst and data scientist kind of process.
-It is also one of the faster ways to build dashboards and web apps. </br>
+It is also one of the faster ways to build dashboards and [**web apps**](https://www.andreaperlato.com/graphpost/feature-of-automobiles-via-web-app/). </br>
 
 <p style='text-align: right;'>   
-[**Andrea Perlato**](https://www.linkedin.com/in/andreaperlato/)
+[**Andrea Perlato**](https://www.linkedin.com/in/andreaperlato/) 
 
 
 
