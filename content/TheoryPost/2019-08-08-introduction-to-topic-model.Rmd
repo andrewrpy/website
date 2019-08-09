@@ -76,7 +76,9 @@ The graph above is a representation of the probabilistic model, also called [**P
 As we can see we have in the Plate Notation **K** topics in **M** documents, and **N** words in each document. </br> 
 Crucially, the only thing that we observe are the **words**, and our task is to figure out what topic to assign **Zn**.
 
-Ideally, once we have the collection of words per topic, is the topic is interpretable, people will consistently choose true **Intruder**, or define the words that didn't belong.
+Ideally, once we have the collection of words per topic, is the topic is interpretable, people will consistently choose true **Intruder**, or define the words that didn't belong. </br> 
+To learn more about LDA please check out this [**link**](http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf).
+
 
 
 
