@@ -17,7 +17,7 @@
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/graphpost/feature-of-automobiles-via-web-app/</guid>
-      <description>body {text-align: justify}This is an iteractive web applicatioin created in shiny. It is an interactive approach to telling data story. Here below, an example using feaure of cars from the Mtcars dataset.
+      <description>body {text-align: justify}This is an iteractive web applicatioin created in shiny. It is an interactive approach to telling data story. Here below, an example using feaure of cars from the Mtcars dataset. The Web App need about 15 sec to be loaded here below, please wait :-)
 In this example we have a dropdown menu on the left dynamically populated from the data. For each feature inside the dropdown menu we have a count of the unique values per each features.</description>
     </item>
     
