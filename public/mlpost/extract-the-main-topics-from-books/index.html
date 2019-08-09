@@ -19,6 +19,11 @@
 
 
 
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
 <link rel="stylesheet" href="/css/fonts.css" media="all">
 <link rel="stylesheet" href="/css/main.css" media="all">
 
@@ -73,8 +78,91 @@
 body {
 text-align: justify}
 </style>
-<p>LDA is used to classify text in a document to a particular topic. It builds a topic per document model and words per topic model, modeled as Dirichlet distributions.
-For an introductin to Topic Model and LDA please check out this <a href="https://www.andreaperlato.com/theorypost/introduction-to-topic-model/"><strong>link</strong></a>.</p>
+<p>Topic modeling is the process of identifying topics in a set of documents. This can be useful for search engines, customer service automation, and any other instance where knowing the topics of documents is important. There are multiple methods of going about doing this. The most commonly used is <strong>Latent Dirichlet Allocation</strong>.
+The <strong>LDA</strong> builds a topic per document model and words per topic model, modeled as Dirichlet distributions.
+For an introduction to Topic Model and LDA please check out this <a href="https://www.andreaperlato.com/theorypost/introduction-to-topic-model/"><strong>link</strong></a>.</p>
+<p>We use the LDA algorithm to correctly distinguish between four groups presented in four different books: </br>
+<a href="https://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Sea"><strong>Twenty Thousand Leagues Under the Sea</strong></a> </br>
+<a href="https://en.wikipedia.org/wiki/The_War_of_the_Worlds"><strong>The War of the World</strong></a> </br>
+<a href="https://en.wikipedia.org/wiki/Pride_and_Prejudice"><strong>Pride and Prejudice</strong></a> </br>
+<a href="https://en.wikipedia.org/wiki/Wuthering_Heights"><strong>Wuthering Heights</strong></a> </br></p>
+<p>All these books can be obtained using the R library <strong>gutenbergr</strong> which is able to search and download public domain text, as explained in the code below.</p>
+<pre class="r"><code>library(gutenbergr)
+library(tidytext)
+library(stringr)
+library(topicmodels)
+library(dplyr)
+library(tidyr)
+
+titles &lt;- c(&quot;Twenty Thousand Leagues under the Sea&quot;, &quot;The War of the Worlds&quot;,
+            &quot;Pride and Prejudice&quot;, &quot;Wuthering Heights&quot;)
+
+books &lt;- gutenberg_works(title %in% titles) %&gt;%
+         gutenberg_download(meta_fields = &quot;title&quot;) # download the metafiles associated to the titles</code></pre>
+<p>Now that we downloaded the boooks we can read them in different chapters.</p>
+<pre class="r"><code># Different chapters
+by_chapter = books %&gt;%
+  group_by(title) %&gt;%
+  mutate(chapter = cumsum(str_detect(text, regex(&quot;^chapter &quot;, ignore_case = TRUE)))) %&gt;% # ignore the word chapter
+  ungroup() %&gt;%
+  filter(chapter &gt; 0) %&gt;%
+  unite(document, title, chapter) # merge documents by chapter
+
+# Use unnest_tokens() to separate chapters into words, then remove stop_words and split chapters into words
+by_chapter_word = by_chapter %&gt;%
+  unnest_tokens(word, text)
+
+# Find document-word counts per chapter
+word_counts = by_chapter_word %&gt;%
+  anti_join(stop_words) %&gt;%
+  count(document, word, sort = TRUE) %&gt;%
+  ungroup()
+
+# Create a Document Term Matrix(dtm) of word count
+chapters_dtm &lt;- word_counts %&gt;%
+  cast_dtm(document, word, n)</code></pre>
+<p>Now, we are ready to implement the LDA algorithm, and we use <strong>K=4</strong> in order to find the four most important topics. From the <strong>chapters_dtm</strong> above we can see that we are dealing with 168 documents and 17373 terms with a sparcity of 97%.</p>
+<pre class="r"><code># We use k=4 as we have 4 books thus 4 distinct themes
+chapters_lda &lt;- LDA(chapters_dtm, k = 4, control = list(seed = 1234))
+
+# Examine per-topic-per-word probabilities.
+chapter_topics &lt;- tidy(chapters_lda, matrix = &quot;beta&quot;)
+
+# Find top 10 terms for each topic
+top_terms &lt;- chapter_topics %&gt;%
+  group_by(topic) %&gt;%
+  top_n(10, beta) %&gt;%
+  ungroup() %&gt;%
+  arrange(topic, -beta)</code></pre>
+<p>At this point, having the top 10 terms per topic we can plot them.</p>
+<pre class="r"><code>library(ggplot2)
+top_terms %&gt;%
+  mutate(term = reorder(term, beta)) %&gt;%
+  ggplot(aes(term, beta, fill = factor(topic))) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~ topic, scales = &quot;free&quot;) +
+  coord_flip()</code></pre>
+<p><img src="/MLPost/2019-08-09-extract-the-main-topics-from-books_files/figure-html/unnamed-chunk-4-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>As we can see from the figure above, the <strong>Topic 3</strong> contains lots of words related to the book <strong>Twenty Thousand Leagues Under the Sea</strong>.
+We can conclude the same for <strong>Topic 4</strong> which contains words strongly related to the book <strong>Pride and Prejudice</strong>.
+The <strong>Topic 2</strong> has words related to the book <strong>The War of the World</strong>.
+Finally, the <strong>Topic 1</strong> is strongly related to the book <strong>Wuthering Heights</strong>.</p>
+<p>This result tells us that LDA was able to find four distinct topics that reflect the character of the books examined.
+In order to have a better understanding of the reliability of the LDA we can calculate the association (gamma) of the topic with each document.</p>
+<pre class="r"><code># Which topics are associated with each document
+chapters_gamma = tidy(chapters_lda, matrix = &quot;gamma&quot;)
+
+chapters_gamma = chapters_gamma %&gt;%
+  separate(document, c(&quot;title&quot;, &quot;chapter&quot;), sep = &quot;_&quot;, convert = TRUE)
+
+chapters_gamma %&gt;%
+  mutate(title = reorder(title, gamma * topic)) %&gt;%
+  ggplot(aes(factor(topic), gamma)) +
+  geom_boxplot() +
+  facet_wrap(~ title)</code></pre>
+<p><img src="/MLPost/2019-08-09-extract-the-main-topics-from-books_files/figure-html/unnamed-chunk-5-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>This assessment assures us that the four books were uniquely identified as a single topic.
+In fact, all the four books (and their related chapters) are uniquely identified by a single and distinct topic,as we can see from the figure above.</p>
 
     </div>
   </article>
@@ -97,6 +185,18 @@ For an introductin to Topic Model and LDA please check out this <a href="https:/
 
     </div>
     
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
     
 

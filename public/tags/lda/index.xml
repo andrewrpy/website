@@ -17,7 +17,7 @@
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/mlpost/extract-the-main-topics-from-books/</guid>
-      <description>body {text-align: justify}LDA is used to classify text in a document to a particular topic. It builds a topic per document model and words per topic model, modeled as Dirichlet distributions.For an introductin to Topic Model and LDA please check out this link.</description>
+      <description>body {text-align: justify}Topic modeling is the process of identifying topics in a set of documents. This can be useful for search engines, customer service automation, and any other instance where knowing the topics of documents is important. There are multiple methods of going about doing this. The most commonly used is Latent Dirichlet Allocation.The LDA builds a topic per document model and words per topic model, modeled as Dirichlet distributions.</description>
     </item>
     
   </channel>
