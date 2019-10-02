@@ -73,7 +73,7 @@
 body {
 text-align: justify}
 </style>
-<p>We use as an example the measurement of the mass of mice (g). The red dots in the figure below represent mice that are not obese and the green dots represent mice obese. Based on this observation, we can pick a threshold, and when we have a new observation that has less mass than the threshold we can classify it as not obese. And when we have a new observation with more mass than the threshold we can classify it as obese. However, when we have a new observation just above the threshold we classify it as obese, but it doesn’t make a lot of sense, because the observation is much closer to the not obese observations, as depicted in the figure here below. So, this threshold is pretty lame.</p>
+<p>We use as an example the measurement of the <strong>Mass of mice (g)</strong>. The red dots in the figure below represent mice that are not obese and the green dots represent mice obese. Based on this observation, we can pick a threshold, and when we have a new observation that has less mass than the threshold we can classify it as not obese. And when we have a new observation with more mass than the threshold we can classify it as obese. However, when we have a new observation just above the threshold we classify it as obese, but it doesn’t make a lot of sense, because the observation is much closer to the not obese observations, as depicted in the figure here below. So, this threshold is pretty lame.</p>
 <center>
 <img src="/img/svm1.png" style="width:60.0%" />
 </center>
@@ -81,11 +81,13 @@ text-align: justify}
 <center>
 <img src="/img/svm2.png" style="width:60.0%" />
 </center>
-<p>But actually, the <strong>Maximal Margin Classifier</strong> is not the best solution to classify our mice. If fact we could have an <strong>outlier</strong> observation that was classified as not obese (i.e. big mouse not obese), but was much closer to the obese observation. In this case the Maximal Margin Classifier would be super close to the obese observation and relly far from the majority ot yhe not obese mice. So, Maximal Margin Classifier is super sensitive to <strong>outliers</strong>. See figure below.</p>
+<p>But actually, the <strong>Maximal Margin Classifier</strong> is not the best solution to classify our mice. If fact we could have an <strong>outlier</strong> observation that was classified as not obese (i.e. big mouse not obese), but was much closer to the obese observation. In this case the Maximal Margin Classifier would be super close to the obese observation and relly far from the majority ot the not obese mice. So, Maximal Margin Classifier is super sensitive to <strong>outliers</strong>. See figure below.</p>
 <center>
 <p><img src="/img/svm3.png" style="width:60.0%" /></p>
 </center>
-<p>To make a threshold that is not so sensitive to the outliers <strong>we must allow misclassification</strong>.</p>
+<p>To make a threshold that is not so sensitive to the outliers <strong>we must allow misclassification</strong>. Choosing a threshold that allows misclassifications (we not take in consideration outliers) is an example of <strong>Bias/Variance Tradeoff</strong> that plagues all of machine learning.
+When we allow misclassification, the distance between the observations and the threshold is called a <strong>Soft Margin</strong>. To find the best Soft Margin we use <strong>Cross Validation</strong> to determine how many misclassifications (outliers) and observations to allow inside the Soft Margin to get the best classification.
+When we use a Soft Margin to determine the location of a threshold, then we are using a <strong>Soft Margin Classifier</strong> aka a <strong>Support Vector Classifier</strong> to classify observations.</p>
 
     </div>
   </article>
