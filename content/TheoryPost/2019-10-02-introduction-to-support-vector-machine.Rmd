@@ -9,4 +9,17 @@ tags:
   - suppor vector machine
 ---
 
-We use as an example the measurement of the mass of mice. Ciao.
+<style>
+body {
+text-align: justify}
+</style>
+
+We use as an example the measurement of the mass of mice (g). The red dots in the figure below represent mice that are not obese and the green dots represent mice obese. Based on this observation, we can pick a threshold, and when we have a new observation that has less mass than the threshold we can classify it as not obese. And when we have a new observation with more mass than the threshold we can classify it as obese. However, when we have a new observation just above the threshold we classify it as obese, but it doesn’t make a lot of sense, because the observation is much closer to the not obese observations, as depicted in the figure here below. So, this threshold is pretty lame.
+
+<center>
+![](/img/svm1.png){width=60%}
+</center>
+
+To solve this problem, we can focus on the observations on the edges of each cluster and use the midpoint between them as the threshold.
+
+

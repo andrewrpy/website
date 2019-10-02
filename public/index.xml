@@ -17,7 +17,7 @@
       <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/theorypost/introduction-to-support-vector-machine/</guid>
-      <description>We use as an example the measurement of the mass of mice. Ciao.</description>
+      <description>body {text-align: justify}We use as an example the measurement of the mass of mice (g). The red dots in the figure below represent mice that are not obese and the green dots represent mice obese. Based on this observation, we can pick a threshold, and when we have a new observation that has less mass than the threshold we can classify it as not obese. And when we have a new observation with more mass than the threshold we can classify it as obese.</description>
     </item>
     
     <item>
