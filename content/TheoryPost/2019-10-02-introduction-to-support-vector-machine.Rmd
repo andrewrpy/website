@@ -20,6 +20,58 @@ We use as an example the measurement of the mass of mice (g). The red dots in th
 ![](/img/svm1.png){width=60%}
 </center>
 
-To solve this problem, we can focus on the observations on the edges of each cluster and use the midpoint between them as the threshold.
+To solve this problem, we can focus on the observations on the edges of each cluster and use the midpoint between them as the threshold called **Maximal Margin Classifier**. Now, with this method, the same observation we considered before is closer to the not obese mice than iti is to the obese mice. So, it makes sense to classify this observation as not obese.
+
+<center>
+![](/img/svm2.png){width=60%}
+</center>
+
+But actually, the **Maximal Margin Classifier** is not the best solution to classify our mice. If fact we could have an **outlier** observation that was classified as not obese (i.e. big mouse not obese), but was much closer to the obese observation. In this case the Maximal Margin Classifier would be super close to the obese observation and relly far from the majority ot yhe not obese mice. So, Maximal Margin Classifier is super sensitive to **outliers**. See figure below.
+
+<center>
+![](/img/svm3.png){width=60%}
+
+</center>
+
+To make a threshold that is not so sensitive to the outliers **we must allow misclassification**. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
