@@ -1,0 +1,12 @@
+---
+title: Introduction to Support Vector Machine
+author: andrea perlato
+date: '2019-10-02'
+slug: introduction-to-support-vector-machine
+categories:
+  - machine learning
+tags:
+  - suppor vector machine
+---
+
+We use as an example the measurement of the mass of mice.
