@@ -6,10 +6,19 @@
     <description>Recent content in machine learning on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to Support Vector Machine</title>
+      <link>/theorypost/introduction-to-support-vector-machine/</link>
+      <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/introduction-to-support-vector-machine/</guid>
+      <description>We use as an example the measurement of the mass of mice. Ciao.</description>
+    </item>
     
     <item>
       <title>Extract the Main Topics from Books</title>
