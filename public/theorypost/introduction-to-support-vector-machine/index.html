@@ -83,16 +83,30 @@ text-align: justify}
 </center>
 <p>But actually, the <strong>Maximal Margin Classifier</strong> is not the best solution to classify our mice. If fact we could have an <strong>outlier</strong> observation that was classified as not obese (i.e. big mouse not obese), but was much closer to the obese observation. In this case the Maximal Margin Classifier would be super close to the obese observation and relly far from the majority ot the not obese mice. So, Maximal Margin Classifier is super sensitive to <strong>outliers</strong>. See figure below.</p>
 <center>
-<p><img src="/img/svm3.png" style="width:40.0%" /></p>
+<p><img src="/img/svm3.png" style="width:60.0%" /></p>
 </center>
 <p>To make a threshold that is not so sensitive to the outliers <strong>we must allow misclassification</strong>. Choosing a threshold that allows misclassifications (we not take in consideration outliers) is an example of <strong>Bias/Variance Tradeoff</strong> that plagues all of machine learning.
 When we allow misclassification, the distance between the observations and the threshold is called a <strong>Soft Margin</strong>. To find the best Soft Margin we use <strong>Cross Validation</strong> to determine how many misclassifications (outliers) and observations to allow inside the Soft Margin to get the best classification.
 When we use a Soft Margin to determine the location of a threshold, then we are using a <strong>Soft Margin Classifier</strong> aka a <strong>Support Vector Classifier</strong> to classify observations.</p>
 <p>The name Support Vector Classifier comes from the fact that the observations on the edge and within the Soft Margin are called <strong>Support Vectors</strong>.</p>
-<p>Now, if each observation has not only the <strong>Mass (g)</strong> measurement but also the <strong>Height (cm)</strong> measurement, then the data would be two-dimensional; in this case the Support Vector Classifier is a <strong>line</strong>. The blue parallel lines in the figure below give us a sense of all of the other points are in relation of the Soft Margin (i.e. we have one not obese observation inside the soft margin and it is missclassified). Jus like before, we use Cross Validation that allow us to find better classification.</p>
+<p>Now, if each observation has not only the <strong>Mass (g)</strong> measurement but also the <strong>Height (cm)</strong> measurement, then the data would be two-dimensional; in this case the Support Vector Classifier is a <strong>line</strong>. The <strong>blue parallel lines</strong> in the figure below give us a sense of all of the other points are in relation of the Soft Margin (i.e. we have one not obese observation inside the soft margin and it is missclassified). Just like before, we use Cross Validation that allow us to find better classification.
+In mathematics jargon, a line is a <strong>Flat affine 1-Dimensional subspace</strong>.</p>
 <center>
-<img src="/img/svm4.png" style="width:60.0%" />
+<img src="/img/svm4.png" style="width:40.0%" />
 </center>
+<p>From the figure above we can see that we have one observation inside the soft margins and it is misclassified.
+Just like before, we use Cross Validation that allow us to find better classification for the misclassified observation.
+Moreover, if we have three dimensions the <strong>support vector classifier</strong> is a <strong>plane</strong> instead of a line. And we classify new observations by determining which side of the plane they are on.
+In mathematics jargon, a line is a <strong>Flat affine 2-Dimensional subspace</strong>.
+When the data are in 4 or more dimensions, the Support Vector Classifier is a <strong>Hyperplane</strong>, and in mathematics jargon a hyperplane is a <strong>Flat affine subspace</strong>.</p>
+<p><strong>Very High Overlapping: Support Vector Machine</strong>
+Support Vector Classifier seems very good because it can handle <strong>outliers</strong> and <strong>overlapping classifications</strong>. <strong>But what can happen when we have tons of overlapping?</strong>
+For example, consider that we are looking at <strong>Drug Dosages</strong> where red dots in the figure below are people not cured and in green dot people cured.</p>
+<center>
+<img src="/img/svm5.png" style="width:60.0%" />
+</center>
+<p>With the high overlapping depicted above, no matter where we put the classifier because will always make a lot of misclassifications. So, <strong>Support Vector Classifiers</strong> don’t perform well with this type of data.
+The solution is to use the <strong>Support Vector Machines</strong>.</p>
 
     </div>
   </article>

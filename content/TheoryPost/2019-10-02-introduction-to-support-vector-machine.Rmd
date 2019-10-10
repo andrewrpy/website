@@ -29,7 +29,7 @@ To solve this problem, we can focus on the observations on the edges of each clu
 But actually, the **Maximal Margin Classifier** is not the best solution to classify our mice. If fact we could have an **outlier** observation that was classified as not obese (i.e. big mouse not obese), but was much closer to the obese observation. In this case the Maximal Margin Classifier would be super close to the obese observation and relly far from the majority ot the not obese mice. So, Maximal Margin Classifier is super sensitive to **outliers**. See figure below.
 
 <center>
-![](/img/svm3.png){width=40%}
+![](/img/svm3.png){width=60%}
 
 </center>
 
@@ -39,12 +39,29 @@ When we use a Soft Margin to determine the location of a threshold, then we are 
 
 The name Support Vector Classifier comes from the fact that the observations on the edge and within the Soft Margin are called **Support Vectors**.
 
-Now, if each observation has not only the **Mass (g)** measurement but also the **Height (cm)** measurement, then the data would be two-dimensional; in this case the Support Vector Classifier is a **line**. The blue parallel lines in the figure below give us a sense of all of the other points are in relation of the Soft Margin (i.e. we have one not obese observation inside the soft margin and it is missclassified). Jus like before, we use Cross Validation that allow us to find better classification.
+Now, if each observation has not only the **Mass (g)** measurement but also the **Height (cm)** measurement, then the data would be two-dimensional; in this case the Support Vector Classifier is a **line**. The **blue parallel lines** in the figure below give us a sense of all of the other points are in relation of the Soft Margin (i.e. we have one not obese observation inside the soft margin and it is missclassified). Just like before, we use Cross Validation that allow us to find better classification.
+In mathematics jargon, a line is a **Flat affine 1-Dimensional subspace**.
 
 <center>
-![](/img/svm4.png){width=60%}
+![](/img/svm4.png){width=40%}
 </center>
 
+From the figure above we can see that we have one observation inside the soft margins and it is misclassified.
+Just like before, we use Cross Validation that allow us to find better classification for the misclassified observation.
+Moreover, if we have three dimensions the **support vector classifier** is a **plane** instead of a line. And we classify new observations by determining which side of the plane they are on. 
+In mathematics jargon, a line is a **Flat affine 2-Dimensional subspace**.
+When the data are in 4 or more dimensions, the Support Vector Classifier is a **Hyperplane**, and in mathematics jargon a hyperplane is a **Flat affine subspace**.
+
+**Very High Overlapping: Support Vector Machine**
+Support Vector Classifier seems very good because it can handle **outliers** and **overlapping classifications**. **But what can happen when we have tons of overlapping?**
+For example, consider that we are looking at **Drug Dosages** where red dots in the figure below are people not cured and in green dot people cured.
+
+<center>
+![](/img/svm5.png){width=60%}
+</center>
+
+With the high overlapping depicted above, no matter where we put the classifier because will always make a lot of misclassifications. So, **Support Vector Classifiers** don’t perform well with this type of data.
+The solution is to use the **Support Vector Machines**.
 
 
 
