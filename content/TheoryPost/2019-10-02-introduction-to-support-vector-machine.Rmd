@@ -52,7 +52,7 @@ Moreover, if we have three dimensions the **support vector classifier** is a **p
 In mathematics jargon, a line is a **Flat affine 2-Dimensional subspace**.
 When the data are in 4 or more dimensions, the Support Vector Classifier is a **Hyperplane**, and in mathematics jargon a hyperplane is a **Flat affine subspace**.
 
-**Very High Overlapping: Support Vector Machine**
+**Very High Overlapping - Support Vector Machine** </br>
 Support Vector Classifier seems very good because it can handle **outliers** and **overlapping classifications**. **But what can happen when we have tons of overlapping?**
 For example, consider that we are looking at **Drug Dosages** where red dots in the figure below are people not cured and in green dot people cured.
 
@@ -60,8 +60,36 @@ For example, consider that we are looking at **Drug Dosages** where red dots in 
 ![](/img/svm5.png){width=60%}
 </center>
 
-With the high overlapping depicted above, no matter where we put the classifier because will always make a lot of misclassifications. So, **Support Vector Classifiers** don’t perform well with this type of data.
-The solution is to use the **Support Vector Machines**.
+With the high overlapping depicted above, no matter where we put the classifier because will always make a lot of misclassifications. So, **Support Vector Classifiers** don’t perform well with this type of data. </br>
+The solution is to use the **Support Vector Machines**. </br>
+We use the x-axis which represent the dosages we observed, but we also add an y-axis that will be the **square of the dosages**.
+
+<center>
+![](/img/svm6.png){width=60%}
+</center>
+
+The main idea behind Support Vector Machines are: </br>
+1 - start with data in a relatively low dimension (in this example one dimension dosage in mg) </br>
+2 - move the data into a higher dimension (in this example from one to two dimensions) </br>
+3 - find a Support Vector Classifier that separates the higher dimensional data into two groups </br>
+
+**Kernel Function** </br>
+How do we decide how to transform the data in the y-axis?
+In order to make the mathematics possible, Support Vector Machines use something called **Kernel Function** to systematically find Support Vector Classifiers in higher dimensions.
+In our example we use the **Polynomial Kernel**, which has a parameter **d** which stands for the **degree** of the polynomial, and this polynomial is used to find the Support Vector Classifier.
+When we have **d=3** we would get a 3rd dimension based on dosage that result in a plane, again used to find the Support Vector Classifier.
+In summary, the **Polynomial Kernel** increases dimensions by setting **d** as the degree of the polynomial.
+We can use **Cross Validation** to find the best value of **d**.
+
+A very commonly used **Kernel** is the **Radial Kernel**, also known as the [**Radial Basis Function Kernel - RBF**](https://www.youtube.com/watch?v=Z2_yh2sice8).
+The closest observations (aka the nearest neighbors) have a lot of influence on how we classify the new observation, and observations that are further away have relatively little influence on the classification.
+
+<center>
+![](/img/svm7.png){width=60%}
+</center>
+
+The **Kernel Functions** only calculate the relationships between every pair of points as if are in the higher dimensions. This **trick**, calculating the high-dimensional relationships without actually transforming the data to the higher dimension, is called **The Kernel Trick**. </br>
+The Kernel Trick reduces the amount of computation required for Support Vector Machine by avoiding the math that transforms the data from low to high dimensions.
 
 
 

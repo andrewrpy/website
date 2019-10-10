@@ -41,11 +41,33 @@ Just like before, we use Cross Validation that allow us to find better classific
 Moreover, if we have three dimensions the <strong>support vector classifier</strong> is a <strong>plane</strong> instead of a line. And we classify new observations by determining which side of the plane they are on.
 In mathematics jargon, a line is a <strong>Flat affine 2-Dimensional subspace</strong>.
 When the data are in 4 or more dimensions, the Support Vector Classifier is a <strong>Hyperplane</strong>, and in mathematics jargon a hyperplane is a <strong>Flat affine subspace</strong>.</p>
-<p><strong>Very High Overlapping: Support Vector Machine</strong>
+<p><strong>Very High Overlapping - Support Vector Machine</strong> </br>
 Support Vector Classifier seems very good because it can handle <strong>outliers</strong> and <strong>overlapping classifications</strong>. <strong>But what can happen when we have tons of overlapping?</strong>
 For example, consider that we are looking at <strong>Drug Dosages</strong> where red dots in the figure below are people not cured and in green dot people cured.</p>
 <center>
 <img src="/img/svm5.png" style="width:60.0%" />
 </center>
-<p>With the high overlapping depicted above, no matter where we put the classifier because will always make a lot of misclassifications. So, <strong>Support Vector Classifiers</strong> don’t perform well with this type of data.
-The solution is to use the <strong>Support Vector Machines</strong>.</p>
+<p>With the high overlapping depicted above, no matter where we put the classifier because will always make a lot of misclassifications. So, <strong>Support Vector Classifiers</strong> don’t perform well with this type of data. </br>
+The solution is to use the <strong>Support Vector Machines</strong>. </br>
+We use the x-axis which represent the dosages we observed, but we also add an y-axis that will be the <strong>square of the dosages</strong>.</p>
+<center>
+<img src="/img/svm6.png" style="width:60.0%" />
+</center>
+<p>The main idea behind Support Vector Machines are: </br>
+1 - start with data in a relatively low dimension (in this example one dimension dosage in mg) </br>
+2 - move the data into a higher dimension (in this example from one to two dimensions) </br>
+3 - find a Support Vector Classifier that separates the higher dimensional data into two groups </br></p>
+<p><strong>Kernel Function</strong> </br>
+How do we decide how to transform the data in the y-axis?
+In order to make the mathematics possible, Support Vector Machines use something called <strong>Kernel Function</strong> to systematically find Support Vector Classifiers in higher dimensions.
+In our example we use the <strong>Polynomial Kernel</strong>, which has a parameter <strong>d</strong> which stands for the <strong>degree</strong> of the polynomial, and this polynomial is used to find the Support Vector Classifier.
+When we have <strong>d=3</strong> we would get a 3rd dimension based on dosage that result in a plane, again used to find the Support Vector Classifier.
+In summary, the <strong>Polynomial Kernel</strong> increases dimensions by setting <strong>d</strong> as the degree of the polynomial.
+We can use <strong>Cross Validation</strong> to find the best value of <strong>d</strong>.</p>
+<p>A very commonly used <strong>Kernel</strong> is the <strong>Radial Kernel</strong>, also known as the <a href="https://www.youtube.com/watch?v=Z2_yh2sice8"><strong>Radial Basis Function Kernel - RBF</strong></a>.
+The closest observations (aka the nearest neighbors) have a lot of influence on how we classify the new observation, and observations that are further away have relatively little influence on the classification.</p>
+<center>
+<img src="/img/svm7.png" style="width:60.0%" />
+</center>
+<p>The <strong>Kernel Functions</strong> only calculate the relationships between every pair of points as if are in the higher dimensions. This <strong>trick</strong>, calculating the high-dimensional relationships without actually transforming the data to the higher dimension, is called <strong>The Kernel Trick</strong>. </br>
+The Kernel Trick reduces the amount of computation required for Support Vector Machine by avoiding the math that transforms the data from low to high dimensions.</p>
