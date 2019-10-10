@@ -29,13 +29,24 @@ To solve this problem, we can focus on the observations on the edges of each clu
 But actually, the **Maximal Margin Classifier** is not the best solution to classify our mice. If fact we could have an **outlier** observation that was classified as not obese (i.e. big mouse not obese), but was much closer to the obese observation. In this case the Maximal Margin Classifier would be super close to the obese observation and relly far from the majority ot the not obese mice. So, Maximal Margin Classifier is super sensitive to **outliers**. See figure below.
 
 <center>
-![](/img/svm3.png){width=60%}
+![](/img/svm3.png){width=40%}
 
 </center>
 
 To make a threshold that is not so sensitive to the outliers **we must allow misclassification**. Choosing a threshold that allows misclassifications (we not take in consideration outliers) is an example of **Bias/Variance Tradeoff** that plagues all of machine learning.
 When we allow misclassification, the distance between the observations and the threshold is called a **Soft Margin**.  To find the best Soft Margin we use **Cross Validation** to determine how many misclassifications (outliers) and observations to allow inside the Soft Margin to get the best classification.
 When we use a Soft Margin to determine the location of a threshold, then we are using a **Soft Margin Classifier** aka a **Support Vector Classifier** to classify observations.
+
+The name Support Vector Classifier comes from the fact that the observations on the edge and within the Soft Margin are called **Support Vectors**.
+
+Now, if each observation has not only the **Mass (g)** measurement but also the **Height (cm)** measurement, then the data would be two-dimensional; in this case the Support Vector Classifier is a **line**. The blue parallel lines in the figure below give us a sense of all of the other points are in relation of the Soft Margin (i.e. we have one not obese observation inside the soft margin and it is missclassified). Jus like before, we use Cross Validation that allow us to find better classification.
+
+<center>
+![](/img/svm4.png){width=60%}
+</center>
+
+
+
 
 
 
