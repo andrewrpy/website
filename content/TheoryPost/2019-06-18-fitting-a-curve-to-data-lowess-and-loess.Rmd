@@ -18,8 +18,6 @@ text-align: justify}
 This article is a summary of the [**StatQuest**](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) video made by **Josh Starmer**. </br> 
 Click [**here**](https://www.youtube.com/watch?v=Vf7oJ6z2LCc) to see the video explained by Josh Starmer. </br>
 
-To fit a line to data we use the [**Least Squares**](https://en.wikipedia.org/wiki/Least_squares) to find the line with the minimal squared distance from the data points. </br>
-
 **Locally weighted regression scatterplot smoothing - LOWESS** </br>
 The main idea to fit a curve to data point is to use a type of sliding window to divide the data into smaller blobs. The second main idea is that each data point use the least squares to fit a line.
 
