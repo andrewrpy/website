@@ -17,6 +17,9 @@ body {
 text-align: justify}
 </style>
 
+This article is a summary of the [**StatQuest**](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) video made by **Josh Starmer**. </br> 
+Click [**here**](https://www.youtube.com/watch?v=Q81RR3yKn30&t=911s) to see the video on Ridge Regression explained by Josh Starmer. </br>
+Click [**here**](https://www.youtube.com/watch?v=NGf0voTMlcs) to see the video on Lasso Regression explained by Josh Starmer. </br>
 
 **Overfitting** </br>
 In statistics, overfitting is the production of an analysis that corresponds too closely or exactly to a particular set of data, and may therefore fail to fit additional data or predict future observations reliably. An overfitted model is a statistical model that contains more parameters than can be justified by the data. </br>
