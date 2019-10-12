@@ -15,6 +15,10 @@ body {
 text-align: justify}
 </style>
 
+This article is a summary of the [**StatQuest**](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) video made by **Josh Starmer**. </br> 
+Click [**here**](https://www.youtube.com/watch?v=4b5d3muPQmA&t=2s) to see the video on K-Mean explained by Josh Starmer. </br>
+Click [**here**](https://www.youtube.com/watch?v=7xHsRkOdVwo&t=381s) to see the video on Hierarchical Clustering explained by Josh Starmer. </br>
+
 Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters). </br>
 Cluster analysis itself is not one specific algorithm, but the general task to be solved. It can be achieved by various algorithms that differ significantly in their understanding of what constitutes a cluster and how to efficiently find them.
 

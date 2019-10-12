@@ -73,21 +73,32 @@
 body {
 text-align: justify}
 </style>
-<p>Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters). </br> Cluster analysis itself is not one specific algorithm, but the general task to be solved. It can be achieved by various algorithms that differ significantly in their understanding of what constitutes a cluster and how to efficiently find them.</p>
-<p><strong>K-Means Clustering</strong> </br> The main question in K-Means Clustering is: can we identify certain groups among all variables? The <strong>STEP 1</strong> is to identify the number of clusters K. Suppose we have K=3, the <strong>STEP 2</strong> is to select randomly 3 data points, and these are our <strong>Initial Cluster Points</strong>. The <strong>STEP 3</strong> consists to calculate the <strong>Euclidian Distance</strong> between the observations and the <strong>Initial Cluster Points</strong>.</p>
+<p>This article is a summary of the <a href="https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw"><strong>StatQuest</strong></a> video made by <strong>Josh Starmer</strong>. </br>
+Click <a href="https://www.youtube.com/watch?v=4b5d3muPQmA&amp;t=2s"><strong>here</strong></a> to see the video on K-Mean explained by Josh Starmer. </br>
+Click <a href="https://www.youtube.com/watch?v=7xHsRkOdVwo&amp;t=381s"><strong>here</strong></a> to see the video on Hierarchical Clustering explained by Josh Starmer. </br></p>
+<p>Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters). </br>
+Cluster analysis itself is not one specific algorithm, but the general task to be solved. It can be achieved by various algorithms that differ significantly in their understanding of what constitutes a cluster and how to efficiently find them.</p>
+<p><strong>K-Means Clustering</strong> </br>
+The main question in K-Means Clustering is: can we identify certain groups among all variables?
+The <strong>STEP 1</strong> is to identify the number of clusters K. Suppose we have K=3, the <strong>STEP 2</strong> is to select randomly 3 data points, and these are our <strong>Initial Cluster Points</strong>. The <strong>STEP 3</strong> consists to calculate the <strong>Euclidian Distance</strong> between the observations and the <strong>Initial Cluster Points</strong>.</p>
 <center>
 <img src="/img/kmeanspointstheory.png" style="width:50.0%" />
 </center>
-<p>The <strong>STEP 4</strong> consist to assign the observations to the nearest cluster. Then, the <strong>STEP 5</strong> calculate the average of each cluster. Now, we have to asses the right cluster by adding-up the variation within each cluster. We don’t know the best clustering, and so we can only try again to select randomly the initial cluster points and compare the variation with the previous attempt. And we do this over again with different starting point.</p>
+<p>The <strong>STEP 4</strong> consist to assign the observations to the nearest cluster.
+Then, the <strong>STEP 5</strong> calculate the average of each cluster. Now, we have to asses the right cluster by adding-up the variation within each cluster. We don’t know the best clustering, and so we can only try again to select randomly the initial cluster points and compare the variation with the previous attempt. And we do this over again with different starting point.</p>
 <center>
 <img src="/img/clustervariationtheory.png" style="width:50.0%" />
 </center>
-<p>With this approach, we can find the best Initial Cluster Point that have the lowest variation, but we still we don’t know if that variation is the lowest overall. To solve this question, could be very useful to find a method to identify the <strong>Best Number of K</strong>. </br> The <strong>Elbow Plot </strong> helps us to find when the variation is stabilized based on the number of K.</p>
+<p>With this approach, we can find the best Initial Cluster Point that have the lowest variation, but we still we don’t know if that variation is the lowest overall. To solve this question, could be very useful to find a method to identify the <strong>Best Number of K</strong>. </br>
+The <strong>Elbow Plot </strong> helps us to find when the variation is stabilized based on the number of K.</p>
 <center>
 <img src="/img/elbowplot.png" style="width:35.0%" />
 </center>
-<p>Essentially, each time we add a new cluster, the total variation within each cluster is smaller than before. The goal is to stop the number of K when the variation stops to decrease, that is why is called elbow.</p>
-<p><strong>Hierarchical Clustering</strong> </br> It always refers to heatmap plot. The columns represent different samples, rows represent measurements from different variables. The Hierarchical Clustering orders the rows and the columns based on similarity. This makes it easy to see correlations in the data. </br> Heatmaps often come with dendrograms that indicates the similarity and the cluster of membership. Cluster with more similarity have shorter dendrogram branch as we can see from the fgure below.</p>
+<p>Essentially, each time we add a new cluster, the total variation within each cluster is smaller than before.
+The goal is to stop the number of K when the variation stops to decrease, that is why is called elbow.</p>
+<p><strong>Hierarchical Clustering</strong> </br>
+It always refers to heatmap plot. The columns represent different samples, rows represent measurements from different variables. The Hierarchical Clustering orders the rows and the columns based on similarity. This makes it easy to see correlations in the data. </br>
+Heatmaps often come with dendrograms that indicates the similarity and the cluster of membership. Cluster with more similarity have shorter dendrogram branch as we can see from the fgure below.</p>
 <center>
 <img src="/img/hierarchicaldendrogram.png" style="width:45.0%" />
 </center>
@@ -95,7 +106,11 @@ text-align: justify}
 <center>
 <img src="/img/hierarchicaleuclidian.png" style="width:55.0%" />
 </center>
-<p>Now, to assign new observations to a cluster based on the <strong>Center Point</strong>, we have to explore all the possible methods that are: </br> <strong>Centroid</strong>: the average of each cluster. </br> <strong>Single-Linkage</strong>: the closest point in each cluster. </br> <strong>Complete-Linkage</strong>: the furthest point in each cluster. </br> The ultimate goal is to find the best method able to gives more insight into our data. </br></p>
+<p>Now, to assign new observations to a cluster based on the <strong>Center Point</strong>, we have to explore all the possible methods that are: </br>
+<strong>Centroid</strong>: the average of each cluster. </br>
+<strong>Single-Linkage</strong>: the closest point in each cluster. </br>
+<strong>Complete-Linkage</strong>: the furthest point in each cluster. </br>
+The ultimate goal is to find the best method able to gives more insight into our data. </br></p>
 <p>Summarizing, in Hierarchical Clustering clusters are formed based on some notion of similarity, and we have to decide what that is. However, most programs have reasonable degaults. Once we have a sub-cluster, we have to decide how it should be compared to other sub-cluster.</p>
 
     </div>
