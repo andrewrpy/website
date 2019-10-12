@@ -75,7 +75,8 @@ Why Ensemble First of all, ensemble often have lower error than any individual 
       <pubDate>Fri, 26 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/theorypost/principal-component-analysis/</guid>
-      <description>body {text-align: justify}The Principal Component Analysis is a deterministic method (given an input will always produce the same output). It is always good to perform a PCA: Principal Components Analysis (PCA) is a data reduction technique that transforms a larger number of correlated variables into a much smaller set of uncorrelated variables called Principal Components. For example, we might use PCA to transform many correlated (and possibly redundant) variables into a less number of uncorrelated variables that retain as much information from the original set of variables.</description>
+      <description>body {text-align: justify}This article is a summary of the StatQuest video made by Josh Starmer. Click here to see the video explained by Josh Starmer. 
+The Principal Component Analysis is a deterministic method (given an input will always produce the same output). It is always good to perform a PCA: Principal Components Analysis (PCA) is a data reduction technique that transforms a larger number of correlated variables into a much smaller set of uncorrelated variables called Principal Components.</description>
     </item>
     
     <item>
