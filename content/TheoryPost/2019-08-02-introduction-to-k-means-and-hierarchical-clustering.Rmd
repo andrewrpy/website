@@ -16,6 +16,9 @@ body {
 text-align: justify}
 </style>
 
+This article is a summary of the [**StatQuest**](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) video made by **Josh Starmer**. </br> 
+Click [**here**](https://www.youtube.com/watch?v=4b5d3muPQmA) to see the video explained by Josh Starmer. </br>
+
 **K-Means Clustering** </br>
 This is a popular unsupervised machine learning algorithms. The objective of K-means is simple: group similar data points together and discover underlying patterns. </br>
 The **Step - 1** is to identify the number of clusters. </br>
