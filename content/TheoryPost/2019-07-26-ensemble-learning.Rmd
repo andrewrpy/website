@@ -14,6 +14,9 @@ body {
 text-align: justify}
 </style>
 
+This article is a summary of the [**StatQuest**](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) video made by **Josh Starmer**. </br> 
+Click [**here**](https://www.youtube.com/watch?v=LsK-xG1cLYA&t=819s) to see the video explained by Josh Starmer. </br>
+
 The [**Boosting**](https://en.wikipedia.org/wiki/Boosting_(machine_learning)) and [**Ensemble Learning**](https://en.wikipedia.org/wiki/Ensemble_learning) concepts can be applied to many Machine Learning models: it is a **Meta Algorithm** used to convert many weak learners into a strong learner in order to achieve good performance in supervised problems.
 
 
