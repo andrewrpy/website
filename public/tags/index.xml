@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>d3dj</title>
+      <link>/tags/d3dj/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/d3dj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sankey diagram</title>
+      <link>/tags/sankey-diagram/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sankey-diagram/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>suppor vector machine</title>

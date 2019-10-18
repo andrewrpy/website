@@ -1,0 +1,55 @@
+---
+title: Sankey Diagram with D3js
+author: andrea perlato
+date: '2019-10-18'
+slug: sankey-diagram-with-d3js
+categories:
+  - graph
+tags:
+  - d3dj
+  - sankey diagram
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+The [**Sankey diagram**](https://en.wikipedia.org/wiki/Sankey_diagram) is a way of visualizing the flow of data. A Sankey diagram consists of three sets of elements: the nodes, the links, and the instructions which determine their positions.
+The **node** is wherever the lines change direction. The second element is the **edge**, that connect the nodes together. These links have a value associated with them, which is represented by the thickness of the link.
+
+```{r, echo=FALSE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+URL <- paste0(
+        "https://cdn.rawgit.com/christophergandrud/networkD3/",
+        "master/JSONdata/energy.json")
+
+Energy <- jsonlite::fromJSON(URL) # convert json
+
+``` 
+
+Moreover, **instructions** specify where the nodes should appear in relation to each other. There are two strategies for positioning the nodes: </br>
+1 - give specific coordinates: the position of the nodes reflects places in countries such as Italy, UK, and Switzerland. </br>
+2 - he nodes can be placed automatically using an algorithm. Most commonly, a variant of the [**force-directed graph layout algorithm**](http://philogb.github.io/blog/2009/09/30/force-directed-layouts/) is used. </br>
+
+```{r, echo=TRUE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+library(networkD3)
+sankeyNetwork(Links = Energy$links, Nodes = Energy$nodes, Source = "source",
+            Target = "target", Value = "value", NodeID = "name",
+            units = "TWh", fontSize = 12, nodeWidth = 30)
+
+``` 
+
+The Sankey diagram is created using data from the [**UK's Department of Energy & Climate Change**](https://www.gov.uk/environment/energy-and-climate-change-evidence-and-analysis).
+
+
+
+
+
+
+
+
+
+
+
+
+

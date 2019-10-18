@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sankey diagram on Andrea Perlato</title>
+    <link>/tags/sankey-diagram/</link>
+    <description>Recent content in sankey diagram on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/sankey-diagram/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sankey Diagram with D3js</title>
+      <link>/graphpost/sankey-diagram-with-d3js/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/graphpost/sankey-diagram-with-d3js/</guid>
+      <description>body {text-align: justify}The Sankey diagram is a way of visualizing the flow of data. A Sankey diagram consists of three sets of elements: the nodes, the links, and the instructions which determine their positions.The node is wherever the lines change direction. The second element is the edge, that connect the nodes together. These links have a value associated with them, which is represented by the thickness of the link.</description>
+    </item>
+    
+  </channel>
+</rss>

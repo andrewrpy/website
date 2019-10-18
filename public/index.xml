@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Sankey Diagram with D3js</title>
+      <link>/graphpost/sankey-diagram-with-d3js/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/graphpost/sankey-diagram-with-d3js/</guid>
+      <description>body {text-align: justify}The Sankey diagram is a way of visualizing the flow of data. A Sankey diagram consists of three sets of elements: the nodes, the links, and the instructions which determine their positions.The node is wherever the lines change direction. The second element is the edge, that connect the nodes together. These links have a value associated with them, which is represented by the thickness of the link.</description>
+    </item>
+    
+    <item>
       <title>Introduction to Support Vector Machine</title>
       <link>/theorypost/introduction-to-support-vector-machine/</link>
       <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
