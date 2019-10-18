@@ -1,0 +1,89 @@
+---
+title: Vectorization in Python
+author: andrea perlato
+date: '2019-10-18'
+slug: vectorization-in-python
+categories:
+  - artificial intelligence
+tags:
+  - vectorization
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+In deep learing we often deal with large data sets. It is important to run the code quickly because otherwise the code might take a long time to get the results.
+That is why perform vectorization has become a key skill. 
+
+```{r setup, include=FALSE}
+# Sys.which("python") # check py path
+library(reticulate)
+use_python("C:/Users/Utente/Anaconda3/python.exe", required=TRUE)
+
+```
+
+For example in **logistic regression** we need to to compute  **w transpose x** in a non-vectorized implementation we can use the following code:
+
+$$
+\begin{array}{l}{\quad z=\underbrace{\omega^{\top} x}_{}+b} \\ {\text { Non-vectorized }} \\ {z=0} \\ {\text { for } i \text { in } \operatorname{range}(n-x) \text { : }} \\ {z+=\omega Ti] * x \ \text { Ti } } \\ {z+=b}\end{array}
+$$
+In contrast, a vectorized implementation can me made using **numpy** in python. This implementation is much faster to compute.
+
+```{python, include=TRUE}
+import numpy as np
+import time
+
+# Vectorized implementation
+a = np.random.rand(1000000) # million dimentional array
+b = np.random.rand(1000000)
+
+tic = time.time()
+c = np.dot(a,b) # both a and b are arrays
+toc = time.time()
+
+print("Vectorized version:" + str(1000*(toc-tic)) +"ms")
+
+
+# Non-vectorized implementation
+c = 0
+tic = time.time()
+for i in range(1000000):
+    c += a[i]*b[i]
+toc = time.time()
+
+print("For loop:" + str(1000*(toc-tic)) +"ms")
+    
+
+
+
+```
+
+As we can see from the code above, the Non-vectorized version (For loop) is much longer (462.32 ms) than the Vectorized version (8.13 ms).
+This means that when we implement a deep learning algorithm weget result back much faster if we vectorized our code.
+There is also another scalable implementation of deep learning using [**GPU**](https://en.wikipedia.org/wiki/Graphics_processing_unit) a **Graphics Processing Unit**, and both CPU and GPU have parallelization instructions called [**SIMD**](https://en.wikipedia.org/wiki/SIMD) that stands for **Single Instruction Multiple Data**. That means that if we use a built-in function such as the **np.dot()** the SIMD enables Python to take much better advantages of parallelism to do our computations much faster. This is true both on CPUs and GPUs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

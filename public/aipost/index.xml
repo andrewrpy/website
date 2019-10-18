@@ -6,10 +6,20 @@
     <description>Recent content in AIPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/aipost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vectorization in Python</title>
+      <link>/aipost/vectorization-in-python/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/vectorization-in-python/</guid>
+      <description>body {text-align: justify}In deep learing we often deal with large data sets. It is important to run the code quickly because otherwise the code might take a long time to get the results.That is why perform vectorization has become a key skill.
+For example in logistic regression we need to to compute w transpose x in a non-vectorized implementation we can use the following code:</description>
+    </item>
     
     <item>
       <title>Predict Movie Sentiment via DOC2VEC</title>

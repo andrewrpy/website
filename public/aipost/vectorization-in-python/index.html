@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Vectorization in Python - Andrea Perlato</title>
+<meta property="og:title" content="Vectorization in Python - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Vectorization in Python</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>In deep learing we often deal with large data sets. It is important to run the code quickly because otherwise the code might take a long time to get the results.
+That is why perform vectorization has become a key skill.</p>
+<p>For example in <strong>logistic regression</strong> we need to to compute <strong>w transpose x</strong> in a non-vectorized implementation we can use the following code:</p>
+<p><span class="math display">\[
+\begin{array}{l}{\quad z=\underbrace{\omega^{\top} x}_{}+b} \\ {\text { Non-vectorized }} \\ {z=0} \\ {\text { for } i \text { in } \operatorname{range}(n-x) \text { : }} \\ {z+=\omega Ti] * x \ \text { Ti } } \\ {z+=b}\end{array}
+\]</span>
+In contrast, a vectorized implementation can me made using <strong>numpy</strong> in python. This implementation is much faster to compute.</p>
+<pre class="python"><code>import numpy as np
+import time
+
+# Vectorized implementation
+a = np.random.rand(1000000) # million dimentional array
+b = np.random.rand(1000000)
+
+tic = time.time()
+c = np.dot(a,b) # both a and b are arrays
+toc = time.time()
+
+print(&quot;Vectorized version:&quot; + str(1000*(toc-tic)) +&quot;ms&quot;)
+
+
+# Non-vectorized implementation</code></pre>
+<pre><code>## Vectorized version:15.591144561767578ms</code></pre>
+<pre class="python"><code>c = 0
+tic = time.time()
+for i in range(1000000):
+    c += a[i]*b[i]
+toc = time.time()
+
+print(&quot;For loop:&quot; + str(1000*(toc-tic)) +&quot;ms&quot;)
+    
+</code></pre>
+<pre><code>## For loop:422.9731559753418ms</code></pre>
+<p>As we can see from the code above, the Non-vectorized version (For loop) is much longer (462.32 ms) than the Vectorized version (8.13 ms).
+This means that when we implement a deep learning algorithm weget result back much faster if we vectorized our code.
+There is also another scalable implementation of deep learning using <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit"><strong>GPU</strong></a> a <strong>Graphics Processing Unit</strong>, and both CPU and GPU have parallelization instructions called <a href="https://en.wikipedia.org/wiki/SIMD"><strong>SIMD</strong></a> that stands for <strong>Single Instruction Multiple Data</strong>. That means that if we use a built-in function such as the <strong>np.dot()</strong> the SIMD enables Python to take much better advantages of parallelism to do our computations much faster. This is true both on CPUs and GPUs.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51254710-89', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+

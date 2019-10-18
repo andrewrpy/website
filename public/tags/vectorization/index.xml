@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vectorization on Andrea Perlato</title>
+    <link>/tags/vectorization/</link>
+    <description>Recent content in vectorization on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/vectorization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vectorization in Python</title>
+      <link>/aipost/vectorization-in-python/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/vectorization-in-python/</guid>
+      <description>body {text-align: justify}In deep learing we often deal with large data sets. It is important to run the code quickly because otherwise the code might take a long time to get the results.That is why perform vectorization has become a key skill.
+For example in logistic regression we need to to compute w transpose x in a non-vectorized implementation we can use the following code:</description>
+    </item>
+    
+  </channel>
+</rss>
