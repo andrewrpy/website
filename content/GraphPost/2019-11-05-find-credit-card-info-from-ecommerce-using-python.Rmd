@@ -55,9 +55,36 @@ We can also calculate the 10 most common job titles of the Ecommerce customers f
 ecom['AM or PM'].value_counts()
 ecom['Job'].value_counts().head(10) # top job of customers
 
-
-
 ```
+
+We can also find the email of the person with a specific credit card number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
