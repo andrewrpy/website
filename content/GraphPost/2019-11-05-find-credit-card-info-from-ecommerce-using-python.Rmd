@@ -57,9 +57,15 @@ ecom['Job'].value_counts().head(10) # top job of customers
 
 ```
 
-We can also find the email of the person with a specific credit card number.
+We can also find the email of the person with a specific credit card number. Moreover we can find how many peole have an American Express as their credit card and made a purchase above $80. Moreover, how many people have a credit card that expired on 2020.
 
+```{python, include=TRUE}
+ecom[ecom['Credit Card']==4926535242672853]['Email']
+ecom[(ecom['CC Provider']=='American Express') & (ecom['Purchase Price']>80)].count()
 
+sum(ecom['CC Exp Date'].apply(lambda exp: exp[3:]== '20'))
+
+```
 
 
 

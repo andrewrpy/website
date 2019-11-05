@@ -125,15 +125,36 @@ We can also calculate the 10 most common job titles of the Ecommerce customers f
 <pre><code>## Interior and spatial designer        31
 ## Lawyer                               30
 ## Social researcher                    28
-## Purchasing manager                   27
-## Research officer, political party    27
 ## Designer, jewellery                  27
+## Research officer, political party    27
+## Purchasing manager                   27
 ## Designer, fashion/clothing           26
+## Social worker                        26
 ## Charity fundraiser                   26
 ## Dietitian                            26
-## Special educational needs teacher    26
 ## Name: Job, dtype: int64</code></pre>
-<p>We can also find the email of the person with a specific credit card number.</p>
+<p>We can also find the email of the person with a specific credit card number. Moreover we can find how many peole have an American Express as their credit card and made a purchase above $80. Moreover, how many people have a credit card that expired on 2020.</p>
+<pre class="python"><code>ecom[ecom[&#39;Credit Card&#39;]==4926535242672853][&#39;Email&#39;]</code></pre>
+<pre><code>## 1234    bondellen@williams-garza.com
+## Name: Email, dtype: object</code></pre>
+<pre class="python"><code>ecom[(ecom[&#39;CC Provider&#39;]==&#39;American Express&#39;) &amp; (ecom[&#39;Purchase Price&#39;]&gt;80)].count()</code></pre>
+<pre><code>## Address             174
+## Lot                 174
+## AM or PM            174
+## Browser Info        174
+## Company             174
+## Credit Card         174
+## CC Exp Date         174
+## CC Security Code    174
+## CC Provider         174
+## Email               174
+## Job                 174
+## IP Address          174
+## Language            174
+## Purchase Price      174
+## dtype: int64</code></pre>
+<pre class="python"><code>sum(ecom[&#39;CC Exp Date&#39;].apply(lambda exp: exp[3:]== &#39;20&#39;))</code></pre>
+<pre><code>## 988</code></pre>
 
     </div>
   </article>
