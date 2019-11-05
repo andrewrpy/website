@@ -1,0 +1,63 @@
+---
+title: Find Credit Card Info from Ecommerce using Python
+author: andrea perlato
+date: '2019-11-05'
+slug: find-credit-card-info-from-ecommerce-using-python
+categories:
+  - data sorting
+  - data munging
+tags:
+  - ecommerce
+  - credit card
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+This is an example of how to extract customer information, such as the credit card number from an Ecommerce using Python.
+
+```{r setup, include=FALSE}
+# Sys.which("python") # check py path
+library(reticulate)
+use_python("C:/Users/Utente/Anaconda3/python.exe", required=TRUE)
+
+```
+We start loading the data and showing the first 10 observations. We also can see the number of columns (14) and rows (10000) of the dataset.
+
+```{python, include=TRUE}
+import pandas as pd
+ecom = pd.read_csv('C:/07 - R Website/dataset/Graph/Ecommerce Purchases')
+ecom.head(10)
+ecom.columns
+len(ecom.columns) # give the number of columns
+len(ecom.index) # give the number of rows
+
+```
+
+Now we can calculate the average, highest and lowest purchase price from the Purchase Price variable iside the Ecommerce dataset.
+Moreover, we can find from the Language column how many customers came speak english.
+
+```{python, include=TRUE}
+ecom['Purchase Price'].mean()
+ecom['Purchase Price'].max()
+ecom['Purchase Price'].min()
+
+ecom[ecom['Language']=='en']['Language'].count()
+
+```
+
+Here, we calculate how manu people made a purchase both at AM and PM from the variable called AM or PM.
+We can also calculate the 10 most common job titles of the Ecommerce customers from the Job column.
+
+```{python, include=TRUE}
+ecom['AM or PM'].value_counts()
+ecom['Job'].value_counts().head(10) # top job of customers
+
+
+
+```
+
+
+

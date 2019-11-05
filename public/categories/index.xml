@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>data munging</title>
+      <link>/categories/data-munging/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/data-munging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data sorting</title>
+      <link>/categories/data-sorting/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/data-sorting/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>artificial intelligence</title>

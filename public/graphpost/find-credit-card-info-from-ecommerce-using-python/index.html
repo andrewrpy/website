@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Find Credit Card Info from Ecommerce using Python - Andrea Perlato</title>
+<meta property="og:title" content="Find Credit Card Info from Ecommerce using Python - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Find Credit Card Info from Ecommerce using Python</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>This is an example of how to extract customer information, such as the credit card number from an Ecommerce using Python.</p>
+<p>We start loading the data and showing the first 10 observations. We also can see the number of columns (14) and rows (10000) of the dataset.</p>
+<pre class="python"><code>import pandas as pd
+ecom = pd.read_csv(&#39;C:/07 - R Website/dataset/Graph/Ecommerce Purchases&#39;)
+ecom.head(10)</code></pre>
+<pre><code>##                                              Address  ... Purchase Price
+## 0  16629 Pace Camp Apt. 448\nAlexisborough, NE 77...  ...          98.14
+## 1  9374 Jasmine Spurs Suite 508\nSouth John, TN 8...  ...          70.73
+## 2                   Unit 0065 Box 5052\nDPO AP 27450  ...           0.95
+## 3              7780 Julia Fords\nNew Stacy, WA 45798  ...          78.04
+## 4  23012 Munoz Drive Suite 337\nNew Cynthia, TX 5...  ...          77.82
+## 5  7502 Powell Mission Apt. 768\nTravisland, VA 3...  ...          25.15
+## 6     93971 Conway Causeway\nAndersonburgh, AZ 75107  ...          88.56
+## 7  260 Rachel Plains Suite 366\nCastroberg, WV 24...  ...          44.25
+## 8            2129 Dylan Burg\nNew Michelle, ME 28650  ...          59.54
+## 9    3795 Dawson Extensions\nLake Tinafort, ID 88739  ...          95.63
+## 
+## [10 rows x 14 columns]</code></pre>
+<pre class="python"><code>ecom.columns</code></pre>
+<pre><code>## Index([&#39;Address&#39;, &#39;Lot&#39;, &#39;AM or PM&#39;, &#39;Browser Info&#39;, &#39;Company&#39;, &#39;Credit Card&#39;,
+##        &#39;CC Exp Date&#39;, &#39;CC Security Code&#39;, &#39;CC Provider&#39;, &#39;Email&#39;, &#39;Job&#39;,
+##        &#39;IP Address&#39;, &#39;Language&#39;, &#39;Purchase Price&#39;],
+##       dtype=&#39;object&#39;)</code></pre>
+<pre class="python"><code>len(ecom.columns) # give the number of columns</code></pre>
+<pre><code>## 14</code></pre>
+<pre class="python"><code>len(ecom.index) # give the number of rows</code></pre>
+<pre><code>## 10000</code></pre>
+<p>Now we can calculate the average, highest and lowest purchase price from the Purchase Price variable iside the Ecommerce dataset.
+Moreover, we can find from the Language column how many customers came speak english.</p>
+<pre class="python"><code>ecom[&#39;Purchase Price&#39;].mean()</code></pre>
+<pre><code>## 50.34730200000025</code></pre>
+<pre class="python"><code>ecom[&#39;Purchase Price&#39;].max()</code></pre>
+<pre><code>## 99.99</code></pre>
+<pre class="python"><code>ecom[&#39;Purchase Price&#39;].min()</code></pre>
+<pre><code>## 0.0</code></pre>
+<pre class="python"><code>ecom[ecom[&#39;Language&#39;]==&#39;en&#39;][&#39;Language&#39;].count()</code></pre>
+<pre><code>## 1098</code></pre>
+<p>Here, we calculate how manu people made a purchase both at AM and PM from the variable called AM or PM.
+We can also calculate the 10 most common job titles of the Ecommerce customers from the Job column.</p>
+<pre class="python"><code>ecom[&#39;AM or PM&#39;].value_counts()</code></pre>
+<pre><code>## PM    5068
+## AM    4932
+## Name: AM or PM, dtype: int64</code></pre>
+<pre class="python"><code>ecom[&#39;Job&#39;].value_counts().head(10) # top job of customers
+</code></pre>
+<pre><code>## Interior and spatial designer        31
+## Lawyer                               30
+## Social researcher                    28
+## Designer, jewellery                  27
+## Purchasing manager                   27
+## Research officer, political party    27
+## Designer, fashion/clothing           26
+## Social worker                        26
+## Dietitian                            26
+## Special educational needs teacher    26
+## Name: Job, dtype: int64</code></pre>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51254710-89', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+

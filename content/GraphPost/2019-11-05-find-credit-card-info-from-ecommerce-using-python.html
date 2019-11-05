@@ -1,0 +1,75 @@
+---
+title: Find Credit Card Info from Ecommerce using Python
+author: andrea perlato
+date: '2019-11-05'
+slug: find-credit-card-info-from-ecommerce-using-python
+categories:
+  - data sorting
+  - data munging
+tags:
+  - ecommerce
+  - credit card
+---
+
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>This is an example of how to extract customer information, such as the credit card number from an Ecommerce using Python.</p>
+<p>We start loading the data and showing the first 10 observations. We also can see the number of columns (14) and rows (10000) of the dataset.</p>
+<pre class="python"><code>import pandas as pd
+ecom = pd.read_csv(&#39;C:/07 - R Website/dataset/Graph/Ecommerce Purchases&#39;)
+ecom.head(10)</code></pre>
+<pre><code>##                                              Address  ... Purchase Price
+## 0  16629 Pace Camp Apt. 448\nAlexisborough, NE 77...  ...          98.14
+## 1  9374 Jasmine Spurs Suite 508\nSouth John, TN 8...  ...          70.73
+## 2                   Unit 0065 Box 5052\nDPO AP 27450  ...           0.95
+## 3              7780 Julia Fords\nNew Stacy, WA 45798  ...          78.04
+## 4  23012 Munoz Drive Suite 337\nNew Cynthia, TX 5...  ...          77.82
+## 5  7502 Powell Mission Apt. 768\nTravisland, VA 3...  ...          25.15
+## 6     93971 Conway Causeway\nAndersonburgh, AZ 75107  ...          88.56
+## 7  260 Rachel Plains Suite 366\nCastroberg, WV 24...  ...          44.25
+## 8            2129 Dylan Burg\nNew Michelle, ME 28650  ...          59.54
+## 9    3795 Dawson Extensions\nLake Tinafort, ID 88739  ...          95.63
+## 
+## [10 rows x 14 columns]</code></pre>
+<pre class="python"><code>ecom.columns</code></pre>
+<pre><code>## Index([&#39;Address&#39;, &#39;Lot&#39;, &#39;AM or PM&#39;, &#39;Browser Info&#39;, &#39;Company&#39;, &#39;Credit Card&#39;,
+##        &#39;CC Exp Date&#39;, &#39;CC Security Code&#39;, &#39;CC Provider&#39;, &#39;Email&#39;, &#39;Job&#39;,
+##        &#39;IP Address&#39;, &#39;Language&#39;, &#39;Purchase Price&#39;],
+##       dtype=&#39;object&#39;)</code></pre>
+<pre class="python"><code>len(ecom.columns) # give the number of columns</code></pre>
+<pre><code>## 14</code></pre>
+<pre class="python"><code>len(ecom.index) # give the number of rows</code></pre>
+<pre><code>## 10000</code></pre>
+<p>Now we can calculate the average, highest and lowest purchase price from the Purchase Price variable iside the Ecommerce dataset.
+Moreover, we can find from the Language column how many customers came speak english.</p>
+<pre class="python"><code>ecom[&#39;Purchase Price&#39;].mean()</code></pre>
+<pre><code>## 50.34730200000025</code></pre>
+<pre class="python"><code>ecom[&#39;Purchase Price&#39;].max()</code></pre>
+<pre><code>## 99.99</code></pre>
+<pre class="python"><code>ecom[&#39;Purchase Price&#39;].min()</code></pre>
+<pre><code>## 0.0</code></pre>
+<pre class="python"><code>ecom[ecom[&#39;Language&#39;]==&#39;en&#39;][&#39;Language&#39;].count()</code></pre>
+<pre><code>## 1098</code></pre>
+<p>Here, we calculate how manu people made a purchase both at AM and PM from the variable called AM or PM.
+We can also calculate the 10 most common job titles of the Ecommerce customers from the Job column.</p>
+<pre class="python"><code>ecom[&#39;AM or PM&#39;].value_counts()</code></pre>
+<pre><code>## PM    5068
+## AM    4932
+## Name: AM or PM, dtype: int64</code></pre>
+<pre class="python"><code>ecom[&#39;Job&#39;].value_counts().head(10) # top job of customers
+</code></pre>
+<pre><code>## Interior and spatial designer        31
+## Lawyer                               30
+## Social researcher                    28
+## Designer, jewellery                  27
+## Purchasing manager                   27
+## Research officer, political party    27
+## Designer, fashion/clothing           26
+## Social worker                        26
+## Dietitian                            26
+## Special educational needs teacher    26
+## Name: Job, dtype: int64</code></pre>

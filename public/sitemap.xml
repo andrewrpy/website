@@ -2,19 +2,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.andreaperlato.com/aipost/</loc>
-    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
+    <loc>https://www.andreaperlato.com/categories/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/categories/</loc>
-    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
+    <loc>https://www.andreaperlato.com/graphpost/find-credit-card-info-from-ecommerce-using-python/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.andreaperlato.com/graphpost/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/credit-card/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/data-munging/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/data-sorting/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/ecommerce/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/aipost/</loc>
     <lastmod>2019-10-18T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -22,12 +57,6 @@
   <url>
     <loc>https://www.andreaperlato.com/graphpost/sankey-diagram-with-d3js/</loc>
     <lastmod>2019-10-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/</loc>
-    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
