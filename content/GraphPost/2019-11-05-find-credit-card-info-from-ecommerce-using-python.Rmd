@@ -71,12 +71,14 @@ Now we are searching from the most popular, top 5, email provider used to log-in
 
 
 ```{python, include=TRUE}
-ecom['Email'].count()
+# email = ecom['Email'].iloc[0]
+# email.split('@')[1]
 
+ecom['Email'].apply(lambda emailnum: emailnum.split('@')[1]).value_counts().head(5)
 
 ```
 
-sads
+
 
 
 

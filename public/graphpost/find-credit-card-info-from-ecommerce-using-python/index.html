@@ -125,12 +125,12 @@ We can also calculate the 10 most common job titles of the Ecommerce customers f
 <pre><code>## Interior and spatial designer        31
 ## Lawyer                               30
 ## Social researcher                    28
-## Designer, jewellery                  27
 ## Purchasing manager                   27
 ## Research officer, political party    27
-## Special educational needs teacher    26
-## Social worker                        26
+## Designer, jewellery                  27
+## Dietitian                            26
 ## Designer, fashion/clothing           26
+## Social worker                        26
 ## Charity fundraiser                   26
 ## Name: Job, dtype: int64</code></pre>
 <p>We can also find the email of the person with a specific credit card number. Moreover we can find how many peole have an American Express as their credit card and made a purchase above $80. Moreover, how many people have a credit card that expired on 2020.</p>
@@ -156,10 +156,16 @@ We can also calculate the 10 most common job titles of the Ecommerce customers f
 <pre class="python"><code>sum(ecom[&#39;CC Exp Date&#39;].apply(lambda exp: exp[3:]== &#39;20&#39;))</code></pre>
 <pre><code>## 988</code></pre>
 <p>Now we are searching from the most popular, top 5, email provider used to log-in in the Ecommerce.</p>
-<pre class="python"><code>ecom[&#39;Email&#39;].count()
-</code></pre>
-<pre><code>## 10000</code></pre>
-<p>sads</p>
+<pre class="python"><code># email = ecom[&#39;Email&#39;].iloc[0]
+# email.split(&#39;@&#39;)[1]
+
+ecom[&#39;Email&#39;].apply(lambda emailnum: emailnum.split(&#39;@&#39;)[1]).value_counts().head(5)</code></pre>
+<pre><code>## hotmail.com     1638
+## yahoo.com       1616
+## gmail.com       1605
+## smith.com         42
+## williams.com      37
+## Name: Email, dtype: int64</code></pre>
 
     </div>
   </article>
