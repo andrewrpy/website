@@ -67,7 +67,16 @@ sum(ecom['CC Exp Date'].apply(lambda exp: exp[3:]== '20'))
 
 ```
 
+Now we are searching from the most popular, top 5, email provider used to log-in in the Ecommerce.
 
+
+```{python, include=TRUE}
+ecom['Email'].count()
+
+
+```
+
+sads
 
 
 
