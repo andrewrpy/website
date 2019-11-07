@@ -17,7 +17,8 @@
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/theorypost/bias-variance-trade-off/</guid>
-      <description>body {text-align: justify}The Bias Variance Trade-Off is used to understand the model’s performace.</description>
+      <description>body {text-align: justify}The Bias Variance Trade-Off is used to understand the model’s performace and evaluation. We we have a training error that goes down, nut test error starting to go up, the model we created begins to overfit.
+Image to have a Linear Regression ML, but is not accurate to replicate the curve of the true relationship between height and weight.The inability for an ML to capture the true relationship is called bias.</description>
     </item>
     
     <item>
