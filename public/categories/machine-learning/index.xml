@@ -6,10 +6,19 @@
     <description>Recent content in machine learning on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bias Variance Trade-Off</title>
+      <link>/theorypost/bias-variance-trade-off/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/bias-variance-trade-off/</guid>
+      <description>body {text-align: justify}The Bias Variance Trade-Off is used to understand the model’s performace.</description>
+    </item>
     
     <item>
       <title>Introduction to Support Vector Machine</title>

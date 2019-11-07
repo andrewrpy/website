@@ -1,0 +1,17 @@
+---
+title: Bias Variance Trade-Off
+author: andrea perlato
+date: '2019-11-07'
+slug: bias-variance-trade-off
+categories:
+  - machine learning
+tags:
+  - bias variance trade off
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+The Bias Variance Trade-Off is used to understand the model's performace. 

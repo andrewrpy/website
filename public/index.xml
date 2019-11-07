@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Bias Variance Trade-Off</title>
+      <link>/theorypost/bias-variance-trade-off/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/bias-variance-trade-off/</guid>
+      <description>body {text-align: justify}The Bias Variance Trade-Off is used to understand the model’s performace.</description>
+    </item>
+    
+    <item>
       <title>Find Credit Card Info from Ecommerce using Python</title>
       <link>/graphpost/find-credit-card-info-from-ecommerce-using-python/</link>
       <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
