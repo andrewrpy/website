@@ -73,7 +73,7 @@
 body {
 text-align: justify}
 </style>
-<p>The Bias Variance Trade-Off is used to understand the model’s performace and evaluation. We we have a training error that goes down, nut test error starting to go up, the model we created begins to overfit.</p>
+<p>The Bias Variance Trade-Off is used to understand the model’s performance and evaluation. We we have a training error that goes down, nut test error starting to go up, the model we created begins to overfit.</p>
 <p>Image to have a Linear Regression ML, but is not accurate to replicate the curve of the true relationship between height and weight.
 The inability for an ML to capture the true relationship is called <strong>bias</strong>.
 Now, another ML might fit a Squiggly Line to the training set, which is super-flexible to fit the training-set. But, when we calculate the Sum of the Squared Error in the Test-set, we probably find that the Linear Line is better than the Squiggly Line, and we call this <strong>overfitting</strong>.
@@ -81,13 +81,13 @@ In ML Lingo, the difference in fitting between Training and Testing is called <s
 <center>
 <img src="/img/bvtradeoff.png" style="width:80.0%" />
 </center>
-<p>The most left graph inthe figure above describes a model flexibility as a linear, quadratic and spline fit.
-In order to compare our models each other we have to do is to plot out the <strong>flexibility</strong> versus the <strong>Mean Squared Error</strong> as explainded in the middle graph above.
-The graph plot out the <strong>training data vs. the test data</strong>. We can see that we have high error for the linear model (in yellow). The error goes down for the quadratic model (in blue), The error star to increase again fo the spline model (in green), but crucially only in the test set, meandwhile for trainign set the error continues to decrease: this condition is called <strong>overfitting</strong>.</p>
+<p>The most left graph in the figure above describes a model flexibility as a linear, quadratic and spline fit.
+In order to compare our models each other we have to do is to plot out the <strong>flexibility</strong> versus the <strong>Mean Squared Error</strong> as explained in the middle graph above.
+The graph plot out the <strong>training data vs. the test data</strong>. We can see that we have high error for the linear model (in yellow). The error goes down for the quadratic model (in blue), The error stars to increase again for the spline model (in green), but crucially only in the test set, meanwhile for training set the error continues to decrease: this condition is called <strong>overfitting</strong>.</p>
 <center>
 <img src="/img/underoverfitting.png" style="width:55.0%" />
 </center>
-<p>The figure above shows the <strong>prediction error</strong> as a functioin of <strong>model complexity</strong>. As we move to the left, we have high bias but low variance = <strong>underfit the data</strong>. As we move to the right where there is a higher complexity, we get a lower bias but high varianc = <strong>overfit the data</strong>.</p>
+<p>The figure above shows the <strong>prediction error</strong> as a function of <strong>model complexity</strong>. As we move to the left, we have high bias but low variance = <strong>underfit the data</strong>. As we move to the right where there is a higher complexity, we get a lower bias but high variance = <strong>overfit the data</strong>.</p>
 
     </div>
   </article>

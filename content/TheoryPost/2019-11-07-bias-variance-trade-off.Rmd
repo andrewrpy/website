@@ -14,7 +14,7 @@ body {
 text-align: justify}
 </style>
 
-The Bias Variance Trade-Off is used to understand the model's performace and evaluation. We we have a training error that goes down, nut test error starting to go up, the model we created begins to overfit.
+The Bias Variance Trade-Off is used to understand the model's performance and evaluation. We we have a training error that goes down, nut test error starting to go up, the model we created begins to overfit.
 
 Image to have a Linear Regression ML, but is not accurate to replicate the curve of the true relationship between height and weight. 
 The inability for an ML to capture the true relationship is called **bias**.
@@ -25,15 +25,15 @@ In ML Lingo, the difference in fitting between Training and Testing is called **
 ![](/img/bvtradeoff.png){width=80%}
 </center>
 
-The most left graph inthe figure above describes a model flexibility as a linear, quadratic and spline fit.
-In order to compare our models each other we have to do is to plot out the **flexibility** versus the **Mean Squared Error** as explainded in the middle graph above.
-The graph plot out the **training data vs. the test data**. We can see that we have high error for the linear model (in yellow). The error goes down for the quadratic model (in blue), The error star to increase again fo the spline model (in green), but crucially only in the test set, meandwhile for trainign set the error continues to decrease: this condition is called **overfitting**.
+The most left graph in the figure above describes a model flexibility as a linear, quadratic and spline fit.
+In order to compare our models each other we have to do is to plot out the **flexibility** versus the **Mean Squared Error** as explained in the middle graph above.
+The graph plot out the **training data vs. the test data**. We can see that we have high error for the linear model (in yellow). The error goes down for the quadratic model (in blue), The error stars to increase again for the spline model (in green), but crucially only in the test set, meanwhile for training set the error continues to decrease: this condition is called **overfitting**.
 
 <center>
 ![](/img/underoverfitting.png){width=55%}
 </center>
 
-The figure above shows the **prediction error** as a functioin of **model complexity**. As we move to the left, we have high bias but low variance = **underfit the data**. As we move to the right where there is a higher complexity, we get a lower bias but high varianc = **overfit the data**. 
+The figure above shows the **prediction error** as a function of **model complexity**. As we move to the left, we have high bias but low variance = **underfit the data**. As we move to the right where there is a higher complexity, we get a lower bias but high variance = **overfit the data**. 
 
 
 
