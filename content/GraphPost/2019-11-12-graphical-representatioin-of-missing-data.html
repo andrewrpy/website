@@ -36,6 +36,15 @@ miss.head()</code></pre>
 <p>In the code above, we first transform our data in a <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4701517/"><strong>shadow matrix</strong></a>, where False is not missing and True is missing. Based on this shadow matrix we can create an heatmap, and in this case we switch to R code using ggplot.</p>
 <p><img src="/GraphPost/2019-11-12-graphical-representatioin-of-missing-data_files/figure-html/unnamed-chunk-4-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Now we switch back to Python to create a function <strong>impute_age</strong> that use the median values of Age as a function of the three levels of the passenger class Pclass (1, 2, 3) in order to replace missing values. So we are going to impute the median by Pclass to fill the missing values.</p>
+<pre class="python"><code># calculate the Age median by Pclass
+train.groupby(&#39;Pclass&#39;)[&#39;Age&#39;].median()
+
+# define the function</code></pre>
+<pre><code>## Pclass
+## 1    37.0
+## 2    29.0
+## 3    24.0
+## Name: Age, dtype: float64</code></pre>
 <pre class="python"><code>def impute_age(cols):
     Age = cols[0]       # create an inxed for apply
     Pclass = cols[1]    # create an inxed for apply

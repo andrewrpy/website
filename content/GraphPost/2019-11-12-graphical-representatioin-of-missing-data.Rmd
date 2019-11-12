@@ -66,6 +66,10 @@ vis_miss(df)
 Now we switch back to Python to create a function **impute_age** that use the median values of Age as a function of the three levels of the passenger class Pclass (1, 2, 3) in order to replace missing values. So we are going to impute the median by Pclass to fill the missing values.
 
 ```{python, include=TRUE}
+# calculate the Age median by Pclass
+train.groupby('Pclass')['Age'].median()
+
+# define the function
 def impute_age(cols):
     Age = cols[0]       # create an inxed for apply
     Pclass = cols[1]    # create an inxed for apply
@@ -86,7 +90,6 @@ train['Age'] = train[['Age', 'Pclass']].apply(impute_age, axis=1) # axis = 1 mea
 
 
 ```
-
 
 In the code above, we created a function that takes an argument and checks if the Age is null; if not return the age value. In case the Age is null the function checks the Pclass and replace the null with the median age of that specific Pclass. 
 
