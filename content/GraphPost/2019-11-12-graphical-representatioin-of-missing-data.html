@@ -20,5 +20,38 @@ text-align: justify}
 Statisticians typically classify missing data into one of three types. These types are usually described in probabilistic terms, but the underlying ideas are straightforward. </br>
 <strong>Missing completely at random</strong>. If the presence of missing data on a variable is unrelated to any other observed or unobserved variable, then the data are missing completely at random <strong>MCAR</strong>. </br>
 <strong>Missing at random</strong>. If the presence of missing data on a variable is related to other observed variables but not to its own unobserved value, the data is missing at random <strong>MAR</strong>. </br>
-<strong>Not missing at random</strong>. If the missing data for a variable is neither MCAR nor MAR, it is not missing at random <strong>NMAR</strong>. </br></p>
-<p>In this article we are going to use a graphical representation of missing data and a method to substitute the missing values using Python.</p>
+<strong>Not missing at random</strong>. If the missing data for a variable is neither MCAR nor MAR, it is not missing at random <strong>NMAR</strong>. </br>
+In this article we are going to use a graphical representation of missing data and a method to substitute the missing values using Python and R.</p>
+<p>Performing exploratory data analysis we can find the presence of missing data. We can create a <strong>Heatmap</strong> in order to have abetter undestanding of the volume and distribution of our missing data.</p>
+<pre class="python"><code>miss = train.isnull()
+miss.head()</code></pre>
+<pre><code>##    PassengerId  Survived  Pclass   Name  ...  Ticket   Fare  Cabin  Embarked
+## 0        False     False   False  False  ...   False  False   True     False
+## 1        False     False   False  False  ...   False  False  False     False
+## 2        False     False   False  False  ...   False  False   True     False
+## 3        False     False   False  False  ...   False  False  False     False
+## 4        False     False   False  False  ...   False  False   True     False
+## 
+## [5 rows x 12 columns]</code></pre>
+<p>In the code above, we first transform our data in a <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4701517/"><strong>shadow matrix</strong></a>, where False is not missing and True is missing. Based on this shadow matrix we can create an heatmap, and in this case we switch to R code using ggplot.</p>
+<p><img src="/GraphPost/2019-11-12-graphical-representatioin-of-missing-data_files/figure-html/unnamed-chunk-4-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Now we switch back to Python to create a function <strong>impute_age</strong> that use the median values of Age as a function of the three levels of the passenger class Pclass (1, 2, 3) in order to replace missing values. So we are going to impute the median by Pclass to fill the missing values.</p>
+<pre class="python"><code>def impute_age(cols):
+    Age = cols[0]       # create an inxed for apply
+    Pclass = cols[1]    # create an inxed for apply
+    
+    if pd.isnull(Age):
+        if Pclass == 1:
+            return 37    # median of Pclass 1
+        elif Pclass == 2:
+            return 29    # median of Pclass 2
+        else:
+            return 24    # median of Pclass 3
+            
+    else:
+        return Age
+      
+# pass the function to the dataset train
+train[&#39;Age&#39;] = train[[&#39;Age&#39;, &#39;Pclass&#39;]].apply(impute_age, axis=1) # axis = 1 means to apply to the column
+</code></pre>
+<p>In the code above, we created a function that takes an argument and checks if the Age is null; if not return the age value. In case the Age is null the function checks the Pclass and replace the null with the median age of that specific Pclass.</p>

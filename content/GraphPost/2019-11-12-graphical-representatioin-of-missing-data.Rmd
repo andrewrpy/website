@@ -20,8 +20,107 @@ Statisticians typically classify missing data into one of three types. These typ
 **Missing completely at random**. If the presence of missing data on a variable is unrelated to any other observed or unobserved variable, then the data are missing completely at random **MCAR**. </br>
 **Missing at random**. If the presence of missing data on a variable is related to other observed variables but not to its own unobserved value, the data is missing at random **MAR**. </br>
 **Not missing at random**. If the missing data for a variable is neither MCAR nor MAR, it is not missing at random **NMAR**. </br>
+In this article we are going to use a graphical representation of missing data and a method to substitute the missing values using Python and R.
 
-In this article we are going to use a graphical representation of missing data and a method to substitute the missing values using Python.
+```{r setup, include=FALSE}
+# Sys.which("python") # check py path
+library(reticulate)
+use_python("C:/Users/Utente/Anaconda3/python.exe", required=TRUE)
+
+```
+
+```{python, include=FALSE}
+import pandas as pd
+import numpy as np
+#import matplotlib.pyplot as plt
+#import seaborn as sns
+
+train = pd.read_csv('C:/07 - R Website/dataset/Graph/titanic_train.csv')
+train.head()
+
+```
+
+Performing exploratory data analysis we can find the presence of missing data. We can create a **Heatmap** in order to have abetter undestanding of the volume and distribution of our missing data.
+
+```{python, include=TRUE}
+miss = train.isnull()
+miss.head()
+
+```
+
+In the code above, we first transform our data in a [**shadow matrix**](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4701517/), where False is not missing and True is missing. Based on this shadow matrix we can create an heatmap, and in this case we switch to R code using ggplot.
+
+```{r, echo=FALSE, comment=NA, message=FALSE, warning=FALSE}
+df <- read.csv("C:/07 - R Website/dataset/Graph/titanic_train.csv")
+# head(df) 
+
+```
+
+```{r, echo=FALSE, comment=NA, message=FALSE, warning=FALSE, fig.align='center', out.width = '100%'}
+library(naniar)
+library(Hmisc)
+vis_miss(df)
+
+```
+
+Now we switch back to Python to create a function **impute_age** that use the median values of Age as a function of the three levels of the passenger class Pclass (1, 2, 3) in order to replace missing values. So we are going to impute the median by Pclass to fill the missing values.
+
+```{python, include=TRUE}
+def impute_age(cols):
+    Age = cols[0]       # create an inxed for apply
+    Pclass = cols[1]    # create an inxed for apply
+    
+    if pd.isnull(Age):
+        if Pclass == 1:
+            return 37    # median of Pclass 1
+        elif Pclass == 2:
+            return 29    # median of Pclass 2
+        else:
+            return 24    # median of Pclass 3
+            
+    else:
+        return Age
+      
+# pass the function to the dataset train
+train['Age'] = train[['Age', 'Pclass']].apply(impute_age, axis=1) # axis = 1 means to apply to the column
+
+
+```
+
+
+In the code above, we created a function that takes an argument and checks if the Age is null; if not return the age value. In case the Age is null the function checks the Pclass and replace the null with the median age of that specific Pclass. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
