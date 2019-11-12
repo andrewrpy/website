@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>missing at random</title>
+      <link>/tags/missing-at-random/</link>
+      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/missing-at-random/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>missing not at random</title>
+      <link>/tags/missing-not-at-random/</link>
+      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/missing-not-at-random/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>bias variance trade off</title>

@@ -1,0 +1,33 @@
+---
+title: Graphical Representatioin of Missing Data
+author: andrea perlato
+date: '2019-11-12'
+slug: graphical-representatioin-of-missing-data
+categories:
+  - missing data
+tags:
+  - missing at random
+  - missing not at random
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+Most statistical methods assume that you’re working with complete matrices, vectors, and data frames. In most cases, we have to eliminate missing data before we address the substantive questions that led us to collect the data. We can eliminate missing data by **removing cases with missing data**, or **replacing missing data with reasonable substitute values**. In either case, the end result is a dataset without missing values.
+Statisticians typically classify missing data into one of three types. These types are usually described in probabilistic terms, but the underlying ideas are straightforward. </br>
+**Missing completely at random**. If the presence of missing data on a variable is unrelated to any other observed or unobserved variable, then the data are missing completely at random **MCAR**. </br>
+**Missing at random**. If the presence of missing data on a variable is related to other observed variables but not to its own unobserved value, the data is missing at random **MAR**. </br>
+**Not missing at random**. If the missing data for a variable is neither MCAR nor MAR, it is not missing at random **NMAR**. </br>
+
+In this article we are going to use a graphical representation of missing data and a method to substitute the missing values using Python.
+
+
+
+
+
+
+
+
+

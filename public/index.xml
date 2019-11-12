@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Graphical Representatioin of Missing Data</title>
+      <link>/graphpost/graphical-representatioin-of-missing-data/</link>
+      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/graphpost/graphical-representatioin-of-missing-data/</guid>
+      <description>body {text-align: justify}Most statistical methods assume that you’re working with complete matrices, vectors, and data frames. In most cases, we have to eliminate missing data before we address the substantive questions that led us to collect the data. We can eliminate missing data by removing cases with missing data, or replacing missing data with reasonable substitute values. In either case, the end result is a dataset without missing values.</description>
+    </item>
+    
+    <item>
       <title>Bias Variance Trade-Off</title>
       <link>/theorypost/bias-variance-trade-off/</link>
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
