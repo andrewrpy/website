@@ -1,0 +1,64 @@
+---
+title: NLP Step by Step
+author: andrea perlato
+date: '2019-11-14'
+slug: nlp-step-by-step
+categories:
+  - text mining
+tags:
+  - NLP
+  - tf-idf
+  - naive bayes
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+This post has the aim to shows all the processes related to the NLP and how to use the Naive Bayes Classifier using Python and the **nltk** library.
+We use data from spam detection.
+
+```{r setup, include=FALSE}
+# Sys.which("python") # check py path
+library(reticulate)
+use_python("C:/Users/Utente/Anaconda3/python.exe", required=TRUE)
+
+```
+
+```{python, include=TRUE}
+import pandas as pd
+import numpy as np
+import nltk
+#import matplotlib.pyplot as plt
+#import seaborn as sns
+
+messages = pd.read_csv('C:/07 - R Website/dataset/PY/SMSSpamCollection', sep='\t', names=['label','message'])
+messages.head()
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

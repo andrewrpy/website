@@ -6,10 +6,20 @@
     <description>Recent content in naive bayes on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/naive-bayes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NLP Step by Step</title>
+      <link>/mlpost/nlp-step-by-step/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/mlpost/nlp-step-by-step/</guid>
+      <description>body {text-align: justify}This post has the aim to shows all the processes related to the NLP and how to use the Naive Bayes Classifier using Python and the nltk library.We use data from spam detection.
+import pandas as pdimport numpy as npimport nltk#import matplotlib.pyplot as plt#import seaborn as snsmessages = pd.read_csv(&amp;#39;C:/07 - R Website/dataset/PY/SMSSpamCollection&amp;#39;, sep=&amp;#39;\t&amp;#39;, names=[&amp;#39;label&amp;#39;,&amp;#39;message&amp;#39;])messages.head()## label message## 0 ham Go until jurong point, crazy.</description>
+    </item>
     
     <item>
       <title>Introduction to Naive Bayes</title>

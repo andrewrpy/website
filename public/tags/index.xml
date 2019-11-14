@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NLP</title>
+      <link>/tags/nlp/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>naive bayes</title>
+      <link>/tags/naive-bayes/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/naive-bayes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tf-idf</title>
+      <link>/tags/tf-idf/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tf-idf/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>missing at random</title>
@@ -134,15 +161,6 @@
       <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/doc2vec/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>naive bayes</title>
-      <link>/tags/naive-bayes/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/naive-bayes/</guid>
       <description></description>
     </item>
     
