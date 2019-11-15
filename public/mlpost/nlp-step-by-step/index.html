@@ -169,7 +169,65 @@ print(&#39;Shape of Sparse Matrix: &#39;, messages_bow.shape)</code></pre>
 <pre class="python"><code>sparsity = (100.0 * messages_bow.nnz / (messages_bow.shape[0] * messages_bow.shape[1]))
 print(&#39;sparsity: {}&#39;.format(sparsity))</code></pre>
 <pre><code>## sparsity: 0.07940295412668218</code></pre>
-<p>Now that we have an idea about the sparsity of of bag of word, we can</p>
+<p>Now that we have an idea about the sparsity of of bag of word, we can calculate the <strong>TF-IDF</strong>.
+<strong>TF</strong>: Term Frequency, which measures how frequently a term occurs in a document. Since every document is different in length, it is possible that a term would appear much more times in long documents than shorter ones. Thus, the term frequency is often divided by the document length (aka. the total number of terms in the document) as a way of normalization: TF(t) = (Number of times term t appears in a document) / (Total number of terms in the document).</p>
+<p><strong>IDF</strong>: Inverse Document Frequency, which measures how important a term is. While computing TF, all terms are considered equally important. However it is known that certain terms, such as “is”, “of”, and “that”, may appear a lot of times but have little importance. Thus we need to weigh down the frequent terms while scale up the rare ones, by computing the following: IDF(t) = log_e(Total number of documents / Number of documents with term t in it).</p>
+<pre class="python"><code>from sklearn.feature_extraction.text import TfidfTransformer
+
+tfidf_transformer = TfidfTransformer().fit(messages_bow) # inverse document frequency and term relationship frequency
+print(tfidf_transformer.idf_[bow_transformer.vocabulary_[&#39;u&#39;]]) # check the imprtance of u</code></pre>
+<pre><code>## 3.2800524267409408</code></pre>
+<pre class="python"><code>print(tfidf_transformer.idf_[bow_transformer.vocabulary_[&#39;university&#39;]])  # check the imprtance of the word university
+  </code></pre>
+<pre><code>## 8.527076498901426</code></pre>
+<p>Now we are ready to create the classifier model. Naive Bayes is a good baseline for text classification. In sentiment analysis, for example the target can be positive or negative. Naive Bayes is based on conditional independence assumption.</p>
+<p><span class="math display">\[
+P\left(d o c | v_{j}\right)=\prod_{i=1}^{l e n g t h(d o c)} P\left(a_{i}=w_{k} | v_{j}\right)
+\]</span></p>
+<p>Now, the probability of a document belonging to a certain class (let’s say positive) is: the length of the doc, multiplied to the probability that each word is classified as positive. The probability of a word given a positive outcome is the number of times the word k is present in positive cases divided by the total number of words of positive cases, plus the size of the vocabulary. We can classify the sentence based on the formula here below.</p>
+<p><span class="math display">\[
+V_{N B}=\underset{v \in V}{\operatorname{argmax}} P\left(v_{j}\right) \prod_{w \in \text { words }} P\left(w | v_{j}\right)
+\]</span></p>
+<p>The value of the Naive Bayes VBN is the value that gives me the highest number argmax when I compute the probability of each of the words given the positive case.
+The arguments of the <strong>maxima arg</strong> are the points, or elements, of the domain of some function at which the function values are maximized.
+We perform the Naive Bayes model using the <strong>pipeline</strong> function of Python that semplify the steps till now described.</p>
+<pre class="python"><code>from sklearn.naive_bayes import MultinomialNB
+from sklearn.pipeline import Pipeline
+
+pipeline = Pipeline([
+    (&#39;bow&#39;, CountVectorizer(analyzer=text_process)),  # strings to token integer counts
+    (&#39;tfidf&#39;, TfidfTransformer()),  # integer counts to weighted TF-IDF scores
+    (&#39;classifier&#39;, MultinomialNB()),  # train on TF-IDF vectors w/ Naive Bayes classifier
+])
+
+# Split the data in Test and Train and make Prediction
+from sklearn.model_selection import train_test_split
+msg_train, msg_test, label_train, label_test = train_test_split(messages[&#39;message&#39;], messages[&#39;label&#39;], test_size=0.2)
+pipeline.fit(msg_train,label_train)</code></pre>
+<pre><code>## Pipeline(memory=None,
+##      steps=[(&#39;bow&#39;, CountVectorizer(analyzer=&lt;function text_process at 0x000000002B2A3158&gt;,
+##         binary=False, decode_error=&#39;strict&#39;, dtype=&lt;class &#39;numpy.int64&#39;&gt;,
+##         encoding=&#39;utf-8&#39;, input=&#39;content&#39;, lowercase=True, max_df=1.0,
+##         max_features=None, min_df=1, ngram_range=(1, 1), preprocesso...f=False, use_idf=True)), (&#39;classifier&#39;, MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True))])</code></pre>
+<pre class="python"><code>predictions = pipeline.predict(msg_test)
+
+# Elavuate the Model
+from sklearn.metrics import classification_report
+print(classification_report(predictions,label_test))</code></pre>
+<pre><code>##               precision    recall  f1-score   support
+## 
+##          ham       1.00      0.94      0.97      1017
+##         spam       0.63      1.00      0.77        98
+## 
+##    micro avg       0.95      0.95      0.95      1115
+##    macro avg       0.81      0.97      0.87      1115
+## weighted avg       0.97      0.95      0.95      1115</code></pre>
+<p>We found a 96% of precision which is retty good considering that we are dealing with text data.
+To have a better undersanding about the <strong>Model Evaluation</strong> the figure below it is a good description of the metrics we are using.</p>
+<center>
+<img src="/img/evaluetionnlp.png" />{width35%}
+</center>
+<p>There are quite a few possible metrics for evaluating model performance. Which one is the most important depends on the task and the business effects of decisions based off of the model. For example, the cost of mis-predicting “spam” as “ham” is probably much lower than mis-predicting “ham” as “spam”.</p>
 
     </div>
   </article>
