@@ -35,4 +35,77 @@ Matematically we can use the expression reported here below.</p>
 <center>
 <p><img src="/img/tfidfnlp.png" style="width:40.0%" /></p>
 </center>
-<p>The expression above determ the word <strong>Wx</strong> in the document <strong>y</strong>. The formula above give us not only the conut, but also the notation of the importance of a word in the entire corpus of all documents.</p>
+<p>The expression above determ the word <strong>Wx</strong> in the document <strong>y</strong>. The formula above give us not only the conut, but also the notation of the importance of a word in the entire corpus of all documents. </br>
+Now we start with some explortatory data analysis and feature engineering using Python.</p>
+<pre class="python"><code>messages.groupby(&#39;label&#39;).describe() # most popular ham and spam messages</code></pre>
+<pre><code>##       message                                                               
+##         count unique                                                top freq
+## label                                                                       
+## ham      4825   4516                             Sorry, I&#39;ll call later   30
+## spam      747    653  Please call our customer service representativ...    4</code></pre>
+<pre class="python"><code>messages[&#39;length&#39;] = messages[&#39;message&#39;].apply(len) # length of the messages
+messages.head()</code></pre>
+<pre><code>##   label                                            message  length
+## 0   ham  Go until jurong point, crazy.. Available only ...     111
+## 1   ham                      Ok lar... Joking wif u oni...      29
+## 2  spam  Free entry in 2 a wkly comp to win FA Cup fina...     155
+## 3   ham  U dun say so early hor... U c already then say...      49
+## 4   ham  Nah I don&#39;t think he goes to usf, he lives aro...      61</code></pre>
+<pre class="python"><code>messages[&#39;length&#39;].describe()</code></pre>
+<pre><code>## count    5572.000000
+## mean       80.489950
+## std        59.942907
+## min         2.000000
+## 25%        36.000000
+## 50%        62.000000
+## 75%       122.000000
+## max       910.000000
+## Name: length, dtype: float64</code></pre>
+<p>From the code above we can see we have a etxt with 910 characters. Here below the text of the message.</p>
+<pre class="python"><code>messages[messages[&#39;length&#39;] == 910][&#39;message&#39;].iloc[0]</code></pre>
+<pre><code>## &quot;For me the love should start with attraction.i should feel that I need her every time around me.she should be the first thing which comes in my thoughts.I would start the day and end it with her.she should be there every time I dream.love will be then when my every breath has her name.my life should happen around her.my life will be named to her.I would cry for her.will give all my happiness and take all her sorrows.I will be ready to fight with anyone for her.I will be in love when I will be doing the craziest things for her.love will be when I don&#39;t have to proove anyone that my girl is the most beautiful lady on the whole planet.I will always be singing praises for her.love will be when I start up making chicken curry and end up makiing sambar.life will be the most beautiful then.will get every morning and thank god for the day because she is with me.I would like to say a lot..will tell later..&quot;</code></pre>
+<p>There are many methods to convert a corpus of strings to a vector format and the simplest way is usiing <strong>bag of words</strong> where each unique word in the text will represented by one vector. The first step is to remove punctuation, and stopwords.</p>
+<pre class="python"><code>import string
+from nltk.corpus import stopwords
+
+def text_process(mess):
+    &quot;&quot;&quot;
+    Takes in a string of text, then performs the following:
+    1. Remove all punctuation
+    2. Remove all stopwords
+    3. Returns a list of the cleaned text
+    &quot;&quot;&quot;
+    # Check characters to see if they are in punctuation
+    nopunc = [char for char in mess if char not in string.punctuation]
+
+    # Join the characters again to form the string.
+    nopunc = &#39;&#39;.join(nopunc)
+    
+    # Now just remove any stopwords
+    return [word for word in nopunc.split() if word.lower() not in stopwords.words(&#39;english&#39;)]
+    
+# Check it
+messages[&#39;message&#39;].head(5).apply(text_process)
+    </code></pre>
+<pre><code>## 0    [Go, jurong, point, crazy, Available, bugis, n...
+## 1                       [Ok, lar, Joking, wif, u, oni]
+## 2    [Free, entry, 2, wkly, comp, win, FA, Cup, fin...
+## 3        [U, dun, say, early, hor, U, c, already, say]
+## 4    [Nah, dont, think, goes, usf, lives, around, t...
+## Name: message, dtype: object</code></pre>
+<p>Now, we can focus on vectorization namely count how many times a word occur in a text, and this is called <strong>Term Frequency</strong>. We have also to <strong>normalize</strong> the vector to unit length. Since there are so many messages, we can expect lot of zeros. Because of this, we can use <strong>SciKit Learn</strong> to otput a <a href="https://en.wikipedia.org/wiki/Sparse_matrix"><strong>Sparse Matrix</strong></a>.</p>
+<pre class="python"><code>from sklearn.feature_extraction.text import CountVectorizer
+
+# Create bag of words
+bow_transformer = CountVectorizer(analyzer=text_process).fit(messages[&#39;message&#39;])
+
+# Check the sparsity
+messages_bow = bow_transformer.transform(messages[&#39;message&#39;])
+print(&#39;Shape of Sparse Matrix: &#39;, messages_bow.shape)</code></pre>
+<pre><code>## Shape of Sparse Matrix:  (5572, 11425)</code></pre>
+<pre class="python"><code>print(&#39;Amount of Non-Zero occurences: &#39;, messages_bow.nnz)</code></pre>
+<pre><code>## Amount of Non-Zero occurences:  50548</code></pre>
+<pre class="python"><code>sparsity = (100.0 * messages_bow.nnz / (messages_bow.shape[0] * messages_bow.shape[1]))
+print(&#39;sparsity: {}&#39;.format(sparsity))</code></pre>
+<pre><code>## sparsity: 0.07940295412668218</code></pre>
+<p>Now that we have an idea about the sparsity of of bag of word, we can</p>

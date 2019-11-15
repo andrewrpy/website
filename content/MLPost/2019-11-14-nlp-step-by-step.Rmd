@@ -34,7 +34,7 @@ import nltk
 #import seaborn as sns
 
 messages = pd.read_csv('C:/07 - R Website/dataset/PY/SMSSpamCollection', sep='\t', names=['label','message'])
-messages.head()
+# messages.head()
 
 ```
 
@@ -58,7 +58,77 @@ Matematically we can use the expression reported here below.
 
 </center>
 
-The expression above determ the word **Wx** in the document **y**. The formula above give us not only the conut, but also the notation of the importance of a word in the entire corpus of all documents.
+The expression above determ the word **Wx** in the document **y**. The formula above give us not only the conut, but also the notation of the importance of a word in the entire corpus of all documents. </br>
+Now we start with some explortatory data analysis and feature engineering using Python.
+
+```{python, include=TRUE}
+messages.groupby('label').describe() # most popular ham and spam messages
+
+messages['length'] = messages['message'].apply(len) # length of the messages
+messages.head()
+
+messages['length'].describe()
+
+```
+
+From the code above we can see we have a etxt with 910 characters. Here below the text of the message.
+
+```{python, include=TRUE}
+messages[messages['length'] == 910]['message'].iloc[0]
+
+```
+
+There are many methods to convert a corpus of strings to a vector format and the simplest way is usiing **bag of words** where each unique word in the text will represented by one vector. The first step is to remove punctuation, and stopwords.
+
+```{python, include=TRUE}
+import string
+from nltk.corpus import stopwords
+
+def text_process(mess):
+    """
+    Takes in a string of text, then performs the following:
+    1. Remove all punctuation
+    2. Remove all stopwords
+    3. Returns a list of the cleaned text
+    """
+    # Check characters to see if they are in punctuation
+    nopunc = [char for char in mess if char not in string.punctuation]
+
+    # Join the characters again to form the string.
+    nopunc = ''.join(nopunc)
+    
+    # Now just remove any stopwords
+    return [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
+    
+# Check it
+messages['message'].head(5).apply(text_process)
+    
+```
+
+Now, we can focus on vectorization namely count how many times a word occur in a text, and this is called **Term Frequency**. We have also to **normalize** the vector to unit length. Since there are so many messages, we can expect lot of zeros. Because of this, we can use **SciKit Learn** to otput a [**Sparse Matrix**](https://en.wikipedia.org/wiki/Sparse_matrix).
+
+```{python, include=TRUE}
+from sklearn.feature_extraction.text import CountVectorizer
+
+# Create bag of words
+bow_transformer = CountVectorizer(analyzer=text_process).fit(messages['message'])
+
+# Check the sparsity
+messages_bow = bow_transformer.transform(messages['message'])
+print('Shape of Sparse Matrix: ', messages_bow.shape)
+print('Amount of Non-Zero occurences: ', messages_bow.nnz)
+
+sparsity = (100.0 * messages_bow.nnz / (messages_bow.shape[0] * messages_bow.shape[1]))
+print('sparsity: {}'.format(sparsity))
+
+```
+
+Now that we have an idea about the sparsity of of bag of word, we can 
+
+
+
+
+
 
 
 
