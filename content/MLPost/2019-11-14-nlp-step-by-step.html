@@ -144,7 +144,7 @@ from sklearn.model_selection import train_test_split
 msg_train, msg_test, label_train, label_test = train_test_split(messages[&#39;message&#39;], messages[&#39;label&#39;], test_size=0.2)
 pipeline.fit(msg_train,label_train)</code></pre>
 <pre><code>## Pipeline(memory=None,
-##      steps=[(&#39;bow&#39;, CountVectorizer(analyzer=&lt;function text_process at 0x000000002B2A3158&gt;,
+##      steps=[(&#39;bow&#39;, CountVectorizer(analyzer=&lt;function text_process at 0x000000002B2A4158&gt;,
 ##         binary=False, decode_error=&#39;strict&#39;, dtype=&lt;class &#39;numpy.int64&#39;&gt;,
 ##         encoding=&#39;utf-8&#39;, input=&#39;content&#39;, lowercase=True, max_df=1.0,
 ##         max_features=None, min_df=1, ngram_range=(1, 1), preprocesso...f=False, use_idf=True)), (&#39;classifier&#39;, MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True))])</code></pre>
@@ -155,15 +155,15 @@ from sklearn.metrics import classification_report
 print(classification_report(predictions,label_test))</code></pre>
 <pre><code>##               precision    recall  f1-score   support
 ## 
-##          ham       1.00      0.94      0.97      1017
-##         spam       0.63      1.00      0.77        98
+##          ham       1.00      0.96      0.98      1004
+##         spam       0.74      1.00      0.85       111
 ## 
-##    micro avg       0.95      0.95      0.95      1115
-##    macro avg       0.81      0.97      0.87      1115
-## weighted avg       0.97      0.95      0.95      1115</code></pre>
+##    micro avg       0.96      0.96      0.96      1115
+##    macro avg       0.87      0.98      0.91      1115
+## weighted avg       0.97      0.96      0.97      1115</code></pre>
 <p>We found a 96% of precision which is retty good considering that we are dealing with text data.
 To have a better undersanding about the <strong>Model Evaluation</strong> the figure below it is a good description of the metrics we are using.</p>
 <center>
-<img src="/img/evaluetionnlp.png" />{width35%}
+<img src="/img/evaluetionnlp.png" style="width:40.0%" />
 </center>
 <p>There are quite a few possible metrics for evaluating model performance. Which one is the most important depends on the task and the business effects of decisions based off of the model. For example, the cost of mis-predicting “spam” as “ham” is probably much lower than mis-predicting “ham” as “spam”.</p>

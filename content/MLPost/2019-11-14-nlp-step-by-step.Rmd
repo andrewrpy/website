@@ -179,7 +179,7 @@ We found a 96% of precision which is retty good considering that we are dealing 
 To have a better undersanding about the **Model Evaluation** the figure below it is a good description of the metrics we are using.
 
 <center>
-![](/img/evaluetionnlp.png){width35%}
+![](/img/evaluetionnlp.png){width=40%}
 </center>
 
 There are quite a few possible metrics for evaluating model performance. Which one is the most important depends on the task and the business effects of decisions based off of the model. For example, the cost of mis-predicting "spam" as "ham" is probably much lower than mis-predicting "ham" as "spam".
