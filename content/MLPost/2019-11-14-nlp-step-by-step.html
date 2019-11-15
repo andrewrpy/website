@@ -19,17 +19,20 @@ text-align: justify}
 </style>
 <p>This post has the aim to shows all the processes related to the NLP and how to use the Naive Bayes Classifier using Python and the <strong>nltk</strong> library.
 We use data from spam detection.</p>
-<pre class="python"><code>import pandas as pd
-import numpy as np
-import nltk
-#import matplotlib.pyplot as plt
-#import seaborn as sns
-
-messages = pd.read_csv(&#39;C:/07 - R Website/dataset/PY/SMSSpamCollection&#39;, sep=&#39;\t&#39;, names=[&#39;label&#39;,&#39;message&#39;])
-messages.head()</code></pre>
-<pre><code>##   label                                            message
-## 0   ham  Go until jurong point, crazy.. Available only ...
-## 1   ham                      Ok lar... Joking wif u oni...
-## 2  spam  Free entry in 2 a wkly comp to win FA Cup fina...
-## 3   ham  U dun say so early hor... U c already then say...
-## 4   ham  Nah I don&#39;t think he goes to usf, he lives aro...</code></pre>
+<p>In NLP a large part of the processing is Feature Engeneering. Tipically the steps are: </br>
+<strong>Regular Expression</strong>: that is a formal language for specifying text strings: for example, we can have for the same word the s for plural, the capital first letter and any combination of those. We need a methodology to deal with this. </br>
+<strong>Word Tokenization</strong>: every language processing has to minimize the text in some way, and we have to start with segmentation also known as tokenization of the words.
+We have to find the <strong>lemma</strong> that is same <strong>stem</strong> or part of the word with the same root. Ones we tokenized our words we need to normalize that words, and also, we have to stem that word in order to reduce inflected words. Moreover, we have to reduce the uppercase in lowercase, with only some exceptions like: General Motors or FED for Federal Reserve Bank, that could be especially helpful in machine translation. </br>
+<strong>Minimum Edit Distance</strong>: is the way of solving string similarities. It is ery helpful to correct grammar errors. So, the Minimum Edit Distance between two strings is the minimum number of editing operations (insertion, deletion, substitution) that are needed to transform one string into the other. We often need to use the so called <strong>Backtrace Method</strong>: similar to <a href="https://en.wikipedia.org/wiki/Dynamic_time_warping"><strong>DTW</strong></a> to find the minimum distance between two words. </br>
+<strong>Object Standardization</strong>: in a text, are often present words or phrases which are not present in a standard lexiconsuch as acronyms, hashtags, colloquial slang. These are very present on social media. We can decide to include them in the stop words list. </br>
+<strong>Bag of words</strong>: is used to extract features. We simply count the number of occurrences for each word, this process also called <strong>CountVectorizer</strong>. To make the CountVectorizer more comparable, we scale it using the Term Frequency Transformation <strong>TF</strong>, and in order to boost the most important features we use the Inverse Document Frequency <strong>IDF</strong>, this calculate how often a word occurs in the corpus. The combination of both is called <strong>TFiDF</strong> = TF * IDF. </br></p>
+<p><span class="math display">\[
+\begin{aligned} t f \cdot d t(t, D) &amp;=t f(t, d) \cdot d f(t, D) \\ t f(t, d) &amp;=f_{t \mu} \\ i d f(t, D) &amp;=\log \left(\frac{N}{|\{d \in D: t \in A\}|}\right) \end{aligned}
+\]</span>
+<strong>TFiDF</strong> is the LOG of the total number of documents N divided by the number of documents that contain the term that we are taking into consideration.
+From the expression above, we have <strong>D</strong> the toal number of documents, and <strong>t</strong> number of documents with the term.
+Matematically we can use the expression reported here below.</p>
+<center>
+<p><img src="/img/tfidfnlp.png" style="width:40.0%" /></p>
+</center>
+<p>The expression above determ the word <strong>Wx</strong> in the document <strong>y</strong>. The formula above give us not only the conut, but also the notation of the importance of a word in the entire corpus of all documents.</p>

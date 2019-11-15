@@ -18,7 +18,7 @@
       
       <guid>/mlpost/nlp-step-by-step/</guid>
       <description>body {text-align: justify}This post has the aim to shows all the processes related to the NLP and how to use the Naive Bayes Classifier using Python and the nltk library.We use data from spam detection.
-import pandas as pdimport numpy as npimport nltk#import matplotlib.pyplot as plt#import seaborn as snsmessages = pd.read_csv(&amp;#39;C:/07 - R Website/dataset/PY/SMSSpamCollection&amp;#39;, sep=&amp;#39;\t&amp;#39;, names=[&amp;#39;label&amp;#39;,&amp;#39;message&amp;#39;])messages.head()## label message## 0 ham Go until jurong point, crazy.</description>
+In NLP a large part of the processing is Feature Engeneering. Tipically the steps are: Regular Expression: that is a formal language for specifying text strings: for example, we can have for the same word the s for plural, the capital first letter and any combination of those.</description>
     </item>
     
   </channel>

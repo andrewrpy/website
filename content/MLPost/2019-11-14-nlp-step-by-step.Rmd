@@ -26,7 +26,7 @@ use_python("C:/Users/Utente/Anaconda3/python.exe", required=TRUE)
 
 ```
 
-```{python, include=TRUE}
+```{python, include=FALSE}
 import pandas as pd
 import numpy as np
 import nltk
@@ -37,6 +37,29 @@ messages = pd.read_csv('C:/07 - R Website/dataset/PY/SMSSpamCollection', sep='\t
 messages.head()
 
 ```
+
+In NLP a large part of the processing is Feature Engeneering. Tipically the steps are: </br>
+**Regular Expression**: that is a formal language for specifying text strings: for example, we can have for the same word the s for plural, the capital first letter and any combination of those. We need a methodology to deal with this. </br>
+**Word Tokenization**: every language processing has to minimize the text in some way, and we have to start with segmentation also known as tokenization of the words. 
+We have to find the **lemma** that is same **stem** or part of the word with the same root. Ones we tokenized our words we need to normalize that words, and also, we have to stem that word in order to reduce inflected words. Moreover, we have to reduce the uppercase in lowercase, with only some exceptions like: General Motors or FED for Federal Reserve Bank, that could be especially helpful in machine translation. </br>
+**Minimum Edit Distance**: is the way of solving string similarities. It is ery helpful to correct grammar errors. So, the Minimum Edit Distance between two strings is the minimum number of editing operations (insertion, deletion, substitution) that are needed to transform one string into the other. We often need to use the so called **Backtrace Method**: similar to [**DTW**](https://en.wikipedia.org/wiki/Dynamic_time_warping) to find the minimum distance between two words. </br>
+**Object Standardization**: in a text, are often present words or phrases which are not present in a standard lexiconsuch as acronyms, hashtags, colloquial slang. These are very present on social media. We can decide to include them in the stop words list. </br>
+**Bag of words**: is used to extract features. We simply count the number of occurrences for each word, this process also called **CountVectorizer**. To make the CountVectorizer more comparable, we scale it using the Term Frequency Transformation **TF**, and in order to boost the most important features we use the Inverse Document Frequency **IDF**, this calculate how often a word occurs in the corpus. The combination of both is called **TFiDF** = TF * IDF.  </br>
+
+$$
+\begin{aligned} t f \cdot d t(t, D) &=t f(t, d) \cdot d f(t, D) \\ t f(t, d) &=f_{t \mu} \\ i d f(t, D) &=\log \left(\frac{N}{|\{d \in D: t \in A\}|}\right) \end{aligned}
+$$
+**TFiDF** is the LOG of the total number of documents N divided by the number of documents that contain the term that we are taking into consideration.
+From the expression above, we have **D** the toal number of documents, and **t** number of documents with the term.
+Matematically we can use the expression reported here below.
+
+<center>
+![](/img/tfidfnlp.png){width=40%}
+
+</center>
+
+The expression above determ the word **Wx** in the document **y**. The formula above give us not only the conut, but also the notation of the importance of a word in the entire corpus of all documents.
+
 
 
 
