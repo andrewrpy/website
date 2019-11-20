@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Azure Databricks and RStudio</title>
+      <link>/mlpost/azure-databricks-and-rstudio/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/mlpost/azure-databricks-and-rstudio/</guid>
+      <description>body {text-align: justify}In the analytics market Spark is taking off for ETL and Machine Learning.Azure Databircks is a managed version of Spark and very quickly a data scientst is able to start from zero and get to insights. Moreover, in addition it is intereget with Azure AD in order to use the same authentication model that is used for every other services of Azure.</description>
+    </item>
+    
+    <item>
       <title>NLP Step by Step</title>
       <link>/mlpost/nlp-step-by-step/</link>
       <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
