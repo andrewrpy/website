@@ -74,7 +74,19 @@ body {
 text-align: justify}
 </style>
 <p>In the analytics market Spark is taking off for ETL and Machine Learning.
-Azure Databircks is a managed version of Spark and very quickly a data scientst is able to start from zero and get to insights. Moreover, in addition it is intereget with <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis"><strong>Azure AD</strong></a> in order to use the same authentication model that is used for every other services of Azure.</p>
+Azure Databircks is a managed version of Spark and very quickly a data scientst is able to start from zero and get to insights. Moreover, in addition it is intereget with <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis"><strong>Azure AD</strong></a> in order to use the same authentication model that is used for every other services of Azure. A very interesting topic is the integration of <strong>RStudio</strong> with <strong>Azure Databricks</strong> and <strong>Spark</strong>. Spark allows to write code in Python, Java, Scala and R and to sclae it out to a cluster form factor. More precisely, a data scientist can take the code and run it on many machines in order to be able to analyze a big data set.
+Tipically, in Azure Databricks we starts with norebooks and we attach it to a cluster node, and the code run on these clusters.</p>
+<p><img src="/img/databricksrstudio.png" style="width:80.0%" /></p>
+<p>As we can see from the figure above, when we have a cluster we can click on it and we have an <strong>Apps</strong> on the top menu where RStudio is available with that cluster.
+This is a online version of RStudio connected to the Spark cluster. In the example below the <a href="https://www.kaggle.com/shivam2503/diamonds"><strong>diamonts data set</strong></a> is used. The goal is to use the <a href="https://www.andreaperlato.com/mlpost/estimate-the-sucess-of-a-new-product-with-logistic-regression/"><strong>KNN algorithm</strong></a> to figure out what is the most optimized version of parameter tuning in orer to predict price.
+<strong>K-Nearest Neighbors K-NN</strong> is an algorithm based on feature similarity. It is a non-linear classifier. It identifies the k nearest neighbors of a class that we want to estimate in its class. If we have k=3, the algorithm has to find the 3 nearest neighbors of the class. Choosing the <strong>right value of k</strong> is a process called <strong>parameter tuning</strong>, and is important to better accuracy. If the number of k is too low the bias is too small and we have a lot of noise. On the contrary, if the k is too big, then the process of estimation is too long. The solution is to use the <strong>square root of n where n is the total number of observations</strong>.</p>
+<p><img src="/img/azuredbknnfun.png" style="width:80.0%" /></p>
+<p>The function reported above just takes two parameters (number of neighbors and number of columns) and it fits the model.
+The code here below is a <strong>grid search</strong> in order to make all the possible permutations of both K and columns, using K from 1 to 15 and we have 10 columns. There are 7665 permetations of these values.</p>
+<p><img src="/img/azuredbgridsearch.png" style="width:60.0%" /></p>
+<p>We can now leverage the power of Spark using applied to the R code described above. The aim now is to have the error rate of all the 7665 permutation of the parameters to have which combination perform the better. That is impossible to obtain using a single machine. Here below is described the Spark session inside RStudio to obtain the graphical representation of the errors.</p>
+<p><img src="/img/azuredbggplot.png" style="width:60.0%" /></p>
+<p>The spark session representet by the code above is able to run all the 7665 permutation on the cluster nodes. We create 20 nodes cluster. Here below is shown the Azure Databricks enviroment that allow us to control the running computetions.</p>
 
     </div>
   </article>
