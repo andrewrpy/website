@@ -73,7 +73,7 @@
 body {
 text-align: justify}
 </style>
-<p>In the analytics market Spark is taking off for ETL and Machine Learning.
+<p>In the analytics market Spark is taking off for <a href="https://medium.com/datadriveninvestor/understanding-extract-transform-and-load-etl-and-its-necessity-in-data-analytics-world-with-an-64346016153d"><strong>ETL</strong></a> and Machine Learning.
 Azure Databircks is a managed version of Spark and very quickly a data scientst is able to start from zero and get to insights. Moreover, in addition it is intereget with <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis"><strong>Azure AD</strong></a> in order to use the same authentication model that is used for every other services of Azure. A very interesting topic is the integration of <strong>RStudio</strong> with <strong>Azure Databricks</strong> and <strong>Spark</strong>. Spark allows to write code in Python, Java, Scala and R and to sclae it out to a cluster form factor. More precisely, a data scientist can take the code and run it on many machines in order to be able to analyze a big data set.
 Tipically, in Azure Databricks we starts with norebooks and we attach it to a cluster node, and the code run on these clusters.</p>
 <p><img src="/img/databricksrstudio.png" style="width:80.0%" /></p>
@@ -82,11 +82,22 @@ This is a online version of RStudio connected to the Spark cluster. In the examp
 <strong>K-Nearest Neighbors K-NN</strong> is an algorithm based on feature similarity. It is a non-linear classifier. It identifies the k nearest neighbors of a class that we want to estimate in its class. If we have k=3, the algorithm has to find the 3 nearest neighbors of the class. Choosing the <strong>right value of k</strong> is a process called <strong>parameter tuning</strong>, and is important to better accuracy. If the number of k is too low the bias is too small and we have a lot of noise. On the contrary, if the k is too big, then the process of estimation is too long. The solution is to use the <strong>square root of n where n is the total number of observations</strong>.</p>
 <p><img src="/img/azuredbknnfun.png" style="width:80.0%" /></p>
 <p>The function reported above just takes two parameters (number of neighbors and number of columns) and it fits the model.
-The code here below is a <strong>grid search</strong> in order to make all the possible permutations of both K and columns, using K from 1 to 15 and we have 10 columns. There are 7665 permetations of these values.</p>
+The code here below is a <strong>grid search</strong> in order to make all the possible permutations of both K and columns, using <strong>K from 1 to 15</strong> and we have <strong>9 columns</strong>. There are 7665 permetations of these values.</p>
 <p><img src="/img/azuredbgridsearch.png" style="width:60.0%" /></p>
 <p>We can now leverage the power of Spark using applied to the R code described above. The aim now is to have the error rate of all the 7665 permutation of the parameters to have which combination perform the better. That is impossible to obtain using a single machine. Here below is described the Spark session inside RStudio to obtain the graphical representation of the errors.</p>
 <p><img src="/img/azuredbggplot.png" style="width:60.0%" /></p>
 <p>The spark session representet by the code above is able to run all the 7665 permutation on the cluster nodes. We create 20 nodes cluster. Here below is shown the Azure Databricks enviroment that allow us to control the running computetions.</p>
+<p><img src="/img/azuredbclusters.png" style="width:100.0%" /></p>
+<p>From the figure above, we can see that we have 20 nodes (Max Workers) and there are 381 jobs running in parallel with a Virtual Machine of 20 Cores. It is like to have a data center at our office. In a locacl machine we probably have 8 cores. Moreover, we have real data ready to use on the cloud where the data already resides. We have one unique enviroment where all of our data resides. So, data preprocessing and data stream processing tasks are in the same pipeline in the Azure Databicks environment.</p>
+<p>We can see that we have three jobs still running. Once there jons are completed we can see results inside RStudio using ggplot that represent the plot of the error rate for all the permutations. Here below the resulting graph.</p>
+<center>
+<img src="/img/azuredberrorrate.png" style="width:70.0%" />
+</center>
+<p>On the x-axis we have the number of <strong>k</strong> considered from 1 to 15, and <strong>n</strong> is the number of columns.
+We can see a trend: </br>
+1 - the more columns we have, the lower is the error rate. Having 6, 7 or 8 columns or even lower number of columns (independent variables) probably reduce the error rate. </br>
+2 - increasing k the error rate goes down, but at a certain point it start to incease again. </br></p>
+<p>We started with no hypothesis about the factors that are governing the price (responce variables) and we were able to create a certain model and execute it against a large data set in Azure Databricks and we were able to find the optimal number k and columns. We can also find which are the columns (independent variables) that coverning the price.</p>
 
     </div>
   </article>

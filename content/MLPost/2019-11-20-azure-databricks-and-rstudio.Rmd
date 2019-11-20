@@ -16,7 +16,7 @@ body {
 text-align: justify}
 </style>
 
-In the analytics market Spark is taking off for ETL and Machine Learning. 
+In the analytics market Spark is taking off for [**ETL**](https://medium.com/datadriveninvestor/understanding-extract-transform-and-load-etl-and-its-necessity-in-data-analytics-world-with-an-64346016153d) and Machine Learning. 
 Azure Databircks is a managed version of Spark and very quickly a data scientst is able to start from zero and get to insights. Moreover, in addition it is intereget with [**Azure AD**](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis) in order to use the same authentication model that is used for every other services of Azure. A very interesting topic is the integration of **RStudio** with **Azure Databricks** and **Spark**. Spark allows to write code in Python, Java, Scala and R and to sclae it out to a cluster form factor. More precisely, a data scientist can take the code and run it on many machines in order to be able to analyze a big data set.
 Tipically, in Azure Databricks we starts with norebooks and we attach it to a cluster node, and the code run on these clusters.
 
@@ -29,7 +29,7 @@ This is a online version of RStudio connected to the Spark cluster. In the examp
 ![](/img/azuredbknnfun.png){width=80%}
 
 The function reported above just takes two parameters (number of neighbors and number of columns) and it fits the model.
-The code here below is a **grid search** in order to make all the possible permutations of both K and columns, using K from 1 to 15 and we have 10 columns. There are 7665 permetations of these values.
+The code here below is a **grid search** in order to make all the possible permutations of both K and columns, using **K from 1 to 15** and we have **9 columns**. There are 7665 permetations of these values.
 
 ![](/img/azuredbgridsearch.png){width=60%}
 
@@ -40,11 +40,22 @@ We can now leverage the power of Spark using applied to the R code described abo
 
 The spark session representet by the code above is able to run all the 7665 permutation on the cluster nodes. We create 20 nodes cluster. Here below is shown the Azure Databricks enviroment that allow us to control the running computetions.
 
+![](/img/azuredbclusters.png){width=100%}
 
+From the figure above, we can see that we have 20 nodes (Max Workers) and there are 381 jobs running in parallel with a Virtual Machine of 20 Cores. It is like to have a data center at our office. In a locacl machine we probably have 8 cores. Moreover, we have real data ready to use on the cloud where the data already resides. We have one unique enviroment where all of our data resides. So, data preprocessing and data stream processing tasks are in the same pipeline in the Azure Databicks environment.
 
+We can see that we have three jobs still running. Once there jons are completed we can see results inside RStudio using ggplot that represent the plot of the error rate for all the permutations. Here below the resulting graph.
 
+<center>
+![](/img/azuredberrorrate.png){width=70%}
+</center>
 
+On the x-axis we have the number of **k** considered from 1 to 15, and **n** is the number of columns. 
+We can see a trend: </br>
+1 - the more columns we have, the lower is the error rate. Having 6, 7 or 8 columns or even lower number of columns (independent variables) probably reduce the error rate. </br>
+2 - increasing k the error rate goes down, but at a certain point it start to incease again. </br>
 
+We started with no hypothesis about the factors that are governing the price (responce variables) and we were able to create a certain model and execute it against a large data set in Azure Databricks and we were able to find the optimal number k and columns. We can also find which are the columns (independent variables) that coverning the price.
 
 
 
