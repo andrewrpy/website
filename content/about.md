@@ -6,10 +6,26 @@ date: "2016-05-05T21:48:51-07:00"
 <style>
 body {
 text-align: justify}
+.rwd-video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+.rwd-video iframe,
+.rwd-video object,
+.rwd-video embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 </style>
 
-<p align="center">
-<iframe width="auto" height="auto" src="https://www.youtube.com/embed/Eg6GBI76zBA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div class="rwd-video">
+<iframe width="auto" height="auto" src="https://www.youtube.com/embed/Eg6GBI76zBA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 I started my career as a Data Scientist for more than 10 years ago in the field of Neuroscience at the University of Verona - School of Medicine, Italy. As point person in data analysis, I studied the single and multi-unit recordings from behaving non human primates. Moreover, I have been conducting psychophysical experiments on human subjects to investigate the brain plasticity in drug addicts. </br>
 [**Find out more**](http://www.attention-lab.net).
