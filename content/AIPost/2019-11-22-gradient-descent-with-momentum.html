@@ -16,4 +16,16 @@ tags:
 body {
 text-align: justify}
 </style>
-<p>Gradient Descent with momentum or just Momentum is an advanced optimization algorithm that speeds up the optimization of the cost function J. It makes use of the <strong>moving average</strong> to update the trainable parameters of the neural network.</p>
+<p>Gradient Descent with momentum or just Momentum is an advanced optimization algorithm that <strong>speeds up the optimization of the cost function J</strong>. It makes use of the <strong>moving average</strong> to update the trainable parameters of the neural network. Moving average is the average calculated over n successive values rather than the whole set of values. Mathematically, it is denoted as follow:</p>
+<p><span class="math display">\[
+A_{t}=\beta A_{t-1}+(1-\beta) X_{t}
+\]</span></p>
+<p>Here, A[i] represents the moving average at the i data point for the value X[i]. The parameter β controls the value n over which average is calculated. </br>
+While training a neural network, the goal is to optimize the cost function J and minimize its value. A traditional gradient descent optimizer follows the blue path, whereas the momentum optimizer follows the green path to reach the minimum.</p>
+<center>
+<img src="/img/momentum.png" style="width:40.0%" />
+</center>
+<p>As we can see from the figure above, we want to minimize the oscillation on the y-axis, and on the x-axis we want faster learning. The momentum smooth out the steps of gradient descent as represented by the green oscillation of the figure above. It represent the velocity to reach the minimum and has two hyperparameters: </br>
+1 - the learning rate alpha </br>
+2 - the parameter beta that control the exponentially weighted average. </br>
+The most common parameter for <strong>beta</strong> is <strong>0.9</strong> which appears to be a very robust value.</p>

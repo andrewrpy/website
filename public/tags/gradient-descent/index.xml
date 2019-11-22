@@ -27,7 +27,8 @@
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/aipost/gradient-descent-with-momentum/</guid>
-      <description>body {text-align: justify}Gradient Descent with momentum or just Momentum is an advanced optimization algorithm that speeds up the optimization of the cost function J. It makes use of the moving average to update the trainable parameters of the neural network.</description>
+      <description>body {text-align: justify}Gradient Descent with momentum or just Momentum is an advanced optimization algorithm that speeds up the optimization of the cost function J. It makes use of the moving average to update the trainable parameters of the neural network. Moving average is the average calculated over n successive values rather than the whole set of values. Mathematically, it is denoted as follow:
+\[A_{t}=\beta A_{t-1}+(1-\beta) X_{t}\]</description>
     </item>
     
     <item>
