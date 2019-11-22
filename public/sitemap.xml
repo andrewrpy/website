@@ -19,6 +19,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/aipost/gradient-descent-with-momentum/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/aipost/mini-batch-gradient-descent/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
@@ -48,6 +53,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/gradient-descent/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/momentum/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>

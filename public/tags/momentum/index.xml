@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>momentum on Andrea Perlato</title>
+    <link>/tags/momentum/</link>
+    <description>Recent content in momentum on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/momentum/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gradient Descent with Momentum</title>
+      <link>/aipost/gradient-descent-with-momentum/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/gradient-descent-with-momentum/</guid>
+      <description>body {text-align: justify}Gradient Descent with momentum or just Momentum is an advanced optimization algorithm that speeds up the optimization of the cost function J. It makes use of the moving average to update the trainable parameters of the neural network.</description>
+    </item>
+    
+  </channel>
+</rss>
