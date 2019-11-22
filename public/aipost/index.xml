@@ -17,7 +17,8 @@
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/aipost/vanishing-gradient/</guid>
-      <description>body {text-align: justify}One of the problems of training a deep neural network is the vanishing and exploding gradient: when we train a deep network the derivatives or the slope can get very big or very small or exponentially small and this makes training difficult. We have to choose very carefully the random weight initialization in order to avoid this problem.</description>
+      <description>body {text-align: justify}One of the problems of training a deep neural network is the vanishing and exploding gradient: when we train a deep network the derivatives or the slope can get very big or very small or exponentially small and this makes training difficult. We have to choose very carefully the random weight initialization in order to avoid this problem.
+\[\omega^{[l]}=\left[\begin{array}{cc}{1.5} &amp;amp; {0} \\ {0} &amp;amp; {1.</description>
     </item>
     
     <item>

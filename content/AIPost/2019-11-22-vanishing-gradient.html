@@ -17,3 +17,13 @@ body {
 text-align: justify}
 </style>
 <p>One of the problems of training a deep neural network is the vanishing and exploding gradient: when we train a deep network the derivatives or the slope can get very big or very small or exponentially small and this makes training difficult. We have to choose very carefully the random weight initialization in order to avoid this problem.</p>
+<p><span class="math display">\[
+\omega^{[l]}=\left[\begin{array}{cc}{1.5} &amp; {0} \\ {0} &amp; {1.5}\end{array}\right] \quad \hat{y}=\omega^{[l]}\left[\begin{array}{ll}{1.5} &amp; {0} \\ {0} &amp; {1.5}\end{array}\right]^{L-1} x
+\]</span>
+Considering to have a weight of <strong>1.5</strong> the <strong>estimation of y</strong> tends to explode along the neural network. On the contrary if the weight is <strong>0.5</strong> the estimation of y tends to vanish. In the formula above ^<sup>L</sup>^ is the number of layers, and as a consequence if the number of hidden layers is large the y estimate will explode when weight is high or will vanish when weight is small. Expecially when weight is to small, the gradient descent will take time to learn.</p>
+<p>A partial solution is to initialize correctly the weight of a single neuron and then generalize it for the rest of the deep network.</p>
+<p><span class="math display">\[
+\begin{array}{l}{z=\omega_{1} x_{1}+\omega_{2} x_{2}+\cdots \cdot v_{n} x_{n}} \\ {\quad {Large_ n} \rightarrow s_{smaller} \omega_{i}} \\ {\operatorname{Var}\left(\omega_{i}\right)=\frac{1}{n}}\end{array}
+\]</span>
+The solutioin is given by the formula above where for a large number of hidden layers we select the variance <strong>weight wi</strong> as the ratio of 1 divided by the number of input features <strong>1/n</strong>. If we use a <a href="https://www.andreaperlato.com/aipost/the-activation-function/"><strong>ReLu activation function</strong></a>, <strong>2/n</strong> is used instead. where <strong>n</strong> again is the number of input features.
+When we use the <a href="https://www.andreaperlato.com/aipost/the-activation-function/"><strong>tanh activation function</strong></a> the <strong>Xavier initialization</strong> is used which is the <strong>sqrt(1/n)</strong>.</p>
