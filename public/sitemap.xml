@@ -2,24 +2,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.andreaperlato.com/mlpost/azure-databricks-and-rstudio/</loc>
-    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/categories/</loc>
-    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+    <loc>https://www.andreaperlato.com/aipost/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/mlpost/</loc>
-    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+    <loc>https://www.andreaperlato.com/categories/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.andreaperlato.com/tags/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/aipost/vanishing-gradient/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/artificial-intelligence/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/gradient-descent/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/vanishing-gradient/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/mlpost/azure-databricks-and-rstudio/</loc>
+    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/mlpost/</loc>
     <lastmod>2019-11-20T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -153,12 +182,6 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/aipost/</loc>
-    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.andreaperlato.com/graphpost/sankey-diagram-with-d3js/</loc>
     <lastmod>2019-10-18T00:00:00+00:00</lastmod>
   </url>
@@ -166,12 +189,6 @@
   <url>
     <loc>https://www.andreaperlato.com/aipost/vectorization-in-python/</loc>
     <lastmod>2019-10-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/categories/artificial-intelligence/</loc>
-    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
@@ -968,12 +985,6 @@
   <url>
     <loc>https://www.andreaperlato.com/theorypost/gradient-descent-step-by-step/</loc>
     <lastmod>2019-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/gradient-descent/</loc>
-    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>

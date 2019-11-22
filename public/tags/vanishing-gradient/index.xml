@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vanishing gradient on Andrea Perlato</title>
+    <link>/tags/vanishing-gradient/</link>
+    <description>Recent content in vanishing gradient on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/vanishing-gradient/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vanishing Gradient</title>
+      <link>/aipost/vanishing-gradient/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/vanishing-gradient/</guid>
+      <description>body {text-align: justify}One of the problems of training a deep neural network is the vanishing and exploding gradient: when we train a deep network the derivatives or the slope can get very big or very small or exponentially small and this makes training difficult. We have to choose very carefully the random weight initialization in order to avoid this problem.</description>
+    </item>
+    
+  </channel>
+</rss>

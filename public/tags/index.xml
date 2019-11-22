@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>gradient descent</title>
+      <link>/tags/gradient-descent/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gradient-descent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vanishing gradient</title>
+      <link>/tags/vanishing-gradient/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/vanishing-gradient/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>big data</title>
@@ -764,15 +782,6 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gradient descent</title>
-      <link>/tags/gradient-descent/</link>
-      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/gradient-descent/</guid>
       <description></description>
     </item>
     
