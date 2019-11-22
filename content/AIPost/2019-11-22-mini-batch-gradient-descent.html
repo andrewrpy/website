@@ -1,0 +1,24 @@
+---
+title: Mini-batch Gradient Descent
+author: andrea perlato
+date: '2019-11-22'
+slug: mini-batch-gradient-descent
+categories:
+  - artificial intelligence
+tags:
+  - gradient descent
+---
+
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>In <strong>Batch Gradient Descent</strong> on every interation we go through the entire training set.
+From the figure below we can see the <strong>cost function J</strong> on the left a batch gradient descent that decrease every single interation. On the right we have the <strong>cost function J</strong> of a mini-batch gradient descent where in every interatin our processing in training on a different train-set; that is why the loss function J is going to be a little noisier.</p>
+<center>
+<img src="/img/minibatchgraddesc.png" style="width:60.0%" />
+</center>
+<p>The most important parameter we have to choose is the <strong>size of the mini-batch</strong> called <strong>m</strong>.
+What works best is to use something between Mini-batch size not to big or too small in order to have fatser learing. Moreover, we have more vectorization and we make progress without needing to wait to process the entire training-set.</p>

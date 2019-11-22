@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>Mini-batch Gradient Descent</title>
+      <link>/aipost/mini-batch-gradient-descent/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/mini-batch-gradient-descent/</guid>
+      <description>body {text-align: justify}In Batch Gradient Descent on every interation we go through the entire training set.From the figure below we can see the cost function J on the left a batch gradient descent that decrease every single interation. On the right we have the cost function J of a mini-batch gradient descent where in every interatin our processing in training on a different train-set; that is why the loss function J is going to be a little noisier.</description>
+    </item>
+    
+    <item>
       <title>Vanishing Gradient</title>
       <link>/aipost/vanishing-gradient/</link>
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
