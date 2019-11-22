@@ -17,3 +17,18 @@ body {
 text-align: justify}
 </style>
 <p>When we implement <a href="https://www.andreaperlato.com/aipost/backpropagation/"><strong>backpropagation</strong></a> there is a test called <strong>Gradient Checking</strong> that helps to make sure that the implementation of backpropagation is correct.</p>
+<center>
+<img src="/img/checkgradientfunc.png" style="width:40.0%" />
+</center>
+<p>Looking at the figure above we can get much better estimate of gradient if we use a larger approximation of the derivative using a double triangle.
+The hiight of the triagle in the figure can be seen as follow:</p>
+<p><span class="math display">\[
+\begin{array}{l}{\frac{f(\theta+\epsilon)-f(\theta-\epsilon)}{2 \varepsilon} \approx g(\theta)} \\ {\frac{(1.01)^{3}-(0.99)^{3}}{2(0.01)}=3.0001} \\ {g(\theta)=3 \theta^{2}=3}\end{array}
+\]</span>
+From the calculation above, we havean approximation error of 0.0001 extremely colose to 3. </br>
+This method is called <strong>Two Side Approxicamtion</strong> of epsilon. </br>
+It is important to remeber that: </br>
+1 - this method is not used during the training of the neural network but only to debug </br>
+2 - when we have the theta function very far from the real function, remember to use regularization </br>
+3 - it doesn’t work with dropout, because in this case the cost function J is very difficult to compute </br>
+4 - run at random initialization: it is not impossible that the implementation of gradient descent is correct when weights are close to zero.</p>
