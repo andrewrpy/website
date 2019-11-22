@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>backpropagation</title>
+      <link>/tags/backpropagation/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/backpropagation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>gradient descent</title>
       <link>/tags/gradient-descent/</link>
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
@@ -440,15 +449,6 @@
       <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/ridge-regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>backpropagation</title>
-      <link>/tags/backpropagation/</link>
-      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/backpropagation/</guid>
       <description></description>
     </item>
     
