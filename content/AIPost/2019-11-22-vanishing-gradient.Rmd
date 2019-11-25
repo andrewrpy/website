@@ -31,6 +31,8 @@ $$
 The solutioin is given by the formula above where for a large number of hidden layers we select the variance **weight wi** as the ratio of 1 divided by the number of input features **1/n**. If we use a [**ReLu activation function**](https://www.andreaperlato.com/aipost/the-activation-function/), **2/n** is used instead. where **n** again is the number of input features.
 When we use the [**tanh activation function**](https://www.andreaperlato.com/aipost/the-activation-function/) the **Xavier initialization** is used which is the **sqrt(1/n)**.
 
+Reference: [**coursera deep neural network course**](https://www.coursera.org/learn/deep-neural-network/home/welcome)
+
 
 
 

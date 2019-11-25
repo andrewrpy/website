@@ -31,6 +31,10 @@ Some guidelines in choosing the size of the in-between Mini-batch size are: </br
 
 The size of **in-between Mini-batch size** is an **hyperparameter** and it is common to try few different powers of 2 between the range that goes from 64 to 512 and then pick one that makes out gradient descent as efficient as possible.
 
+Reference: [**coursera deep neural network course**](https://www.coursera.org/learn/deep-neural-network/home/welcome)
+
+
+
 
 
 
