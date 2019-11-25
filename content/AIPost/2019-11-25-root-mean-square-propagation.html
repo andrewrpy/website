@@ -1,0 +1,28 @@
+---
+title: Root Mean Square Propagation
+author: andrea perlato
+date: '2019-11-25'
+slug: root-mean-square-propagation
+categories:
+  - artificial intelligence
+tags:
+  - root mean square propagatin
+---
+
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>The Root Mean Square Propagation <strong>RMS Prop</strong> is similar to <strong>Momentum</strong>, it is a technique to dampen out the motion in the y-axis and speed up gradient descent.
+For better understanding, let us denote the Y-axis as the bias <strong>b</strong> and the X-axis as the weight <strong>W</strong>.</p>
+<center>
+<img src="/img/rmsprop.png" style="width:60.0%" />
+</center>
+<p>The intuition is that when we divide a large number by another number, the result becomes small. In our case, the first large number is db and the second large number that we use is the weighted average of db². We introduce two new variables Sdb and SdW, to keep track of the weighted average of db² and dW². The division of db and Sdb results in a smaller value which dampens out the movement in the y-axis. The Ⲉ is introduced to avoid the division by 0 error.</p>
+<p><span class="math display">\[
+\begin{aligned} S_{d W} &amp;=\beta S_{d W}+(1-\beta) d W^{2} \\ S_{d b} &amp;=\beta S_{d b}+(1-\beta) d b^{2} \\ W &amp;=W-\alpha \cdot \frac{d W}{\sqrt{S_{d W}}}+\epsilon \\ b &amp;=b-\alpha \cdot \frac{d b}{\sqrt{S_{d b}}+\epsilon} \end{aligned}
+\]</span></p>
+<p>The idea is to slow down the learning on the y-axis direction and speed up the learning on the x-axis direction.
+On each interatioin the derivatives <strong>dw</strong> and <strong>db</strong> are computed.</p>
