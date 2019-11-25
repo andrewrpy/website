@@ -1,0 +1,31 @@
+---
+title: Adaptive Momentum
+author: andrea perlato
+date: '2019-11-25'
+slug: adaptive-momentum
+categories:
+  - artificial intelligence
+tags:
+  - adaptive momentum
+---
+
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>Teh Adaptive Momentum <strong>AdaM</strong> stands for Adaptive Momentum. It combines the Momentum and RMS prop in a single approach making AdaM a very powerful and fast optimizer.</p>
+<p><span class="math display">\[
+\begin{aligned} V_{d W}=\beta_{1} V_{d b}+\left(1-\beta_{1}\right) d W ; V_{d b} &amp;=\beta_{1} V_{d b}+\left(1-\beta_{1}\right) d b \\ V_{d W}^{c o r r e c t e d}=&amp; \frac{V_{d W}}{1-\beta_{1}^{i}} ; V_{d b}^{c o r r e c t e d}=\frac{V_{d b}}{1-\beta_{1}^{i}} \\ S_{d W}=\beta_{2} S_{d W}+\left(1-\beta_{2}\right) d W^{2} ; S_{d b} &amp;=\beta_{2} S_{d b}+\left(1-\beta_{2}\right) d b^{2} \\ S_{d W}=\beta_{2} S_{d W}+\left(1-\beta_{2}\right) d W^{2} ; S_{d b} &amp;=\beta_{2} S_{d b}+\left(1-\beta_{2}\right) d b^{2} \\ S_{d W}^{c o r r e c t e d}=\frac{S_{d W}}{1-\beta_{2}^{i}} ; S_{d b}^{c o r r e c t e d} \\ W=W-\alpha \cdot \frac{V_{d V}}{\sqrt{S_{d r r e c t e d}}^{c o r r e c t e d}}+\epsilon \\ b=b-\alpha \cdot \frac{V_{d b}^{c o r r e c t e d}}{\sqrt{S_{d b}^{c o r r e c t e d}}}+\epsilon \end{aligned}
+\]</span></p>
+<p>At the starting point the Vdw, Sdw and Vdb, Sdb are initialized at zero. At each interation <strong>t</strong> we compute the derivatives dw and db usng the current mini-batch. At this poin the calculate the <strong>exponentially weighted momentum Vdb and Vdw</strong>.
+The tipical AdaM a <strong>Scorrected</strong> is made to correct the bias and weigths. At the end the weight and bias update is perfomed.
+In practice, this algorithm combines the effect of gradient descent with momentum with gradient descent with root mean square propagation. This aogorithm has a variety of hyperparameters: </br>
+1 - the learning rate alpha needs to be tuned </br>
+2 - the default choise for the momentum parameter beta1 is 0.9 </br>
+3 - the beta2 AdaM parameter is 0.999 </br>
+4 - the choise of epsilon is recommended at 10^-8 </br></p>
+<p>AdaM means Adaptive <strong>Moment Estimation</strong> and <strong>beta1</strong> is computing the mean of the derivatives <strong>dw</strong> and it is called the <strong>first moment</strong>.
+The parameter <strong>beta2</strong> compute the <strong>dw^2</strong> and is called the <strong>second moment</strong>.</p>
+<p>Reference: <a href="https://www.coursera.org/learn/deep-neural-network/home/welcome"><strong>coursera deep neural network course</strong></a></p>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>adaptive momentum on Andrea Perlato</title>
+    <link>/tags/adaptive-momentum/</link>
+    <description>Recent content in adaptive momentum on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/adaptive-momentum/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adaptive Momentum</title>
+      <link>/aipost/adaptive-momentum/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/adaptive-momentum/</guid>
+      <description>body {text-align: justify}Teh Adaptive Momentum AdaM stands for Adaptive Momentum. It combines the Momentum and RMS prop in a single approach making AdaM a very powerful and fast optimizer.
+\[\begin{aligned} V_{d W}=\beta_{1} V_{d b}+\left(1-\beta_{1}\right) d W ; V_{d b} &amp;amp;=\beta_{1} V_{d b}+\left(1-\beta_{1}\right) d b \\ V_{d W}^{c o r r e c t e d}=&amp;amp; \frac{V_{d W}}{1-\beta_{1}^{i}} ; V_{d b}^{c o r r e c t e d}=\frac{V_{d b}}{1-\beta_{1}^{i}} \\ S_{d W}=\beta_{2} S_{d W}+\left(1-\beta_{2}\right) d W^{2} ; S_{d b} &amp;amp;=\beta_{2} S_{d b}+\left(1-\beta_{2}\right) d b^{2} \\ S_{d W}=\beta_{2} S_{d W}+\left(1-\beta_{2}\right) d W^{2} ; S_{d b} &amp;amp;=\beta_{2} S_{d b}+\left(1-\beta_{2}\right) d b^{2} \\ S_{d W}^{c o r r e c t e d}=\frac{S_{d W}}{1-\beta_{2}^{i}} ; S_{d b}^{c o r r e c t e d} \\ W=W-\alpha \cdot \frac{V_{d V}}{\sqrt{S_{d r r e c t e d}}^{c o r r e c t e d}}+\epsilon \\ b=b-\alpha \cdot \frac{V_{d b}^{c o r r e c t e d}}{\sqrt{S_{d b}^{c o r r e c t e d}}}+\epsilon \end{aligned}\]</description>
+    </item>
+    
+  </channel>
+</rss>

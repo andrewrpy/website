@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Adaptive Momentum - Andrea Perlato</title>
+<meta property="og:title" content="Adaptive Momentum - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Adaptive Momentum</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>Teh Adaptive Momentum <strong>AdaM</strong> stands for Adaptive Momentum. It combines the Momentum and RMS prop in a single approach making AdaM a very powerful and fast optimizer.</p>
+<p><span class="math display">\[
+\begin{aligned} V_{d W}=\beta_{1} V_{d b}+\left(1-\beta_{1}\right) d W ; V_{d b} &amp;=\beta_{1} V_{d b}+\left(1-\beta_{1}\right) d b \\ V_{d W}^{c o r r e c t e d}=&amp; \frac{V_{d W}}{1-\beta_{1}^{i}} ; V_{d b}^{c o r r e c t e d}=\frac{V_{d b}}{1-\beta_{1}^{i}} \\ S_{d W}=\beta_{2} S_{d W}+\left(1-\beta_{2}\right) d W^{2} ; S_{d b} &amp;=\beta_{2} S_{d b}+\left(1-\beta_{2}\right) d b^{2} \\ S_{d W}=\beta_{2} S_{d W}+\left(1-\beta_{2}\right) d W^{2} ; S_{d b} &amp;=\beta_{2} S_{d b}+\left(1-\beta_{2}\right) d b^{2} \\ S_{d W}^{c o r r e c t e d}=\frac{S_{d W}}{1-\beta_{2}^{i}} ; S_{d b}^{c o r r e c t e d} \\ W=W-\alpha \cdot \frac{V_{d V}}{\sqrt{S_{d r r e c t e d}}^{c o r r e c t e d}}+\epsilon \\ b=b-\alpha \cdot \frac{V_{d b}^{c o r r e c t e d}}{\sqrt{S_{d b}^{c o r r e c t e d}}}+\epsilon \end{aligned}
+\]</span></p>
+<p>At the starting point the Vdw, Sdw and Vdb, Sdb are initialized at zero. At each interation <strong>t</strong> we compute the derivatives dw and db usng the current mini-batch. At this poin the calculate the <strong>exponentially weighted momentum Vdb and Vdw</strong>.
+The tipical AdaM a <strong>Scorrected</strong> is made to correct the bias and weigths. At the end the weight and bias update is perfomed.
+In practice, this algorithm combines the effect of gradient descent with momentum with gradient descent with root mean square propagation. This aogorithm has a variety of hyperparameters: </br>
+1 - the learning rate alpha needs to be tuned </br>
+2 - the default choise for the momentum parameter beta1 is 0.9 </br>
+3 - the beta2 AdaM parameter is 0.999 </br>
+4 - the choise of epsilon is recommended at 10^-8 </br></p>
+<p>AdaM means Adaptive <strong>Moment Estimation</strong> and <strong>beta1</strong> is computing the mean of the derivatives <strong>dw</strong> and it is called the <strong>first moment</strong>.
+The parameter <strong>beta2</strong> compute the <strong>dw^2</strong> and is called the <strong>second moment</strong>.</p>
+<p>Reference: <a href="https://www.coursera.org/learn/deep-neural-network/home/welcome"><strong>coursera deep neural network course</strong></a></p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51254710-89', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+
