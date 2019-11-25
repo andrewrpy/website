@@ -74,7 +74,8 @@ body {
 text-align: justify}
 </style>
 <p>The Root Mean Square Propagation <strong>RMS Prop</strong> is similar to <strong>Momentum</strong>, it is a technique to dampen out the motion in the y-axis and speed up gradient descent.
-For better understanding, let us denote the Y-axis as the bias <strong>b</strong> and the X-axis as the weight <strong>W</strong>.</p>
+For better understanding, let us denote the Y-axis as the bias <strong>b</strong> and the X-axis as the weight <strong>W</strong>.
+It is called Root Mean Square because we square the derivatioves of both w and b parameters.</p>
 <center>
 <img src="/img/rmsprop.png" style="width:60.0%" />
 </center>
@@ -83,7 +84,11 @@ For better understanding, let us denote the Y-axis as the bias <strong>b</strong
 \begin{aligned} S_{d W} &amp;=\beta S_{d W}+(1-\beta) d W^{2} \\ S_{d b} &amp;=\beta S_{d b}+(1-\beta) d b^{2} \\ W &amp;=W-\alpha \cdot \frac{d W}{\sqrt{S_{d W}}}+\epsilon \\ b &amp;=b-\alpha \cdot \frac{d b}{\sqrt{S_{d b}}+\epsilon} \end{aligned}
 \]</span></p>
 <p>The idea is to slow down the learning on the y-axis direction and speed up the learning on the x-axis direction.
-On each interatioin the derivatives <strong>dw</strong> and <strong>db</strong> are computed.</p>
+On each interatioin <strong>t</strong> the derivatives <strong>dw</strong> and <strong>db</strong> are computed on the current <strong>mini-batch</strong>.
+It is also perfomed the <strong>exponentially weighted average</strong> called <strong>SdW</strong> and <strong>Sdb</strong>.
+Now, the exponentially weighted average parameter <strong>SdW</strong> is relatively small and so we are deviding by a small number to obtain the weight. The <strong>alpha</strong> parameter is the learning rate and the <strong>Ⲉ</strong> is introduced to avoid the division by 0 error.
+On the contrary, <strong>Sdb</strong> is relatively large and it helps to slow down the updates vertical dimention b. In fact looking at the figure above, the derivative in the orizontal dimenstion is aways small and the derivative on the vertical dimention is large. The net effect is to speed up the veritical learing and at the same time slow down the vertical learning. The result is the green line of th figure above.</p>
+<p>Reference: <a href="https://www.coursera.org/learn/deep-neural-network/home/welcome"><strong>coursera deep neural network course</strong></a></p>
 
     </div>
   </article>

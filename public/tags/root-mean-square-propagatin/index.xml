@@ -17,8 +17,7 @@
       <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/aipost/root-mean-square-propagation/</guid>
-      <description>body {text-align: justify}The Root Mean Square Propagation RMS Prop is similar to Momentum, it is a technique to dampen out the motion in the y-axis and speed up gradient descent.For better understanding, let us denote the Y-axis as the bias b and the X-axis as the weight W.
-The intuition is that when we divide a large number by another number, the result becomes small.</description>
+      <description>body {text-align: justify}The Root Mean Square Propagation RMS Prop is similar to Momentum, it is a technique to dampen out the motion in the y-axis and speed up gradient descent.For better understanding, let us denote the Y-axis as the bias b and the X-axis as the weight W.It is called Root Mean Square because we square the derivatioves of both w and b parameters.</description>
     </item>
     
   </channel>
