@@ -30,6 +30,35 @@ The calculation is: **aipha=0.95^epoch-num * alpha0** </br>
 2 - there is also the **discrete stair-case**. The calculation is: **alpha=k/sqrt(epoch-num) * alpha0** </br>
 3 - some people also use the **manual decay**. Here we just check the time for training our model and we stop if the process is too long. At this point, we manually descease the alpha hyperparameter to speed up the process. Of course, this is feasible only if we are dealing with a small training-set.
 
+**The problem of local optima** </br>
+Looking at the figure here below on the left, it is quite common to get stuck to a local minimum rather than find the way to a global optimum.
+In reality, most of the points of zero gradient are not local optima like in the figure on the left, but instead most points of zero gradient are in a so called **saddle points** as pictured on the right figure.
+
+<center>
+![](/img/plateau.png){width=80%}
+</center>
+
+The **saddle point** has derivatives equal to zero and we have the **Problem of Plateaus** which is a region where the derivative is close to zero foor a long time.
+The **Plateau** can really slow down the learnind. The plateau is represented by the red arrow on the right figure. In fact, the process takes long time before realize to follow the green path in order to reach the minimum. </br>
+This is the scenario where more sophisticated observation algorithms, such as AdaM, can actually speed up the learning-rate. 
+
+Reference: [**coursera deep neural network course**](https://www.coursera.org/learn/deep-neural-network/home/welcome)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
