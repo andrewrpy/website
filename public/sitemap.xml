@@ -19,6 +19,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/aipost/learning-rate-decay-and-local-optima/</loc>
+    <lastmod>2019-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/aipost/root-mean-square-propagation/</loc>
     <lastmod>2019-11-25T00:00:00+00:00</lastmod>
   </url>
@@ -37,6 +42,18 @@
   
   <url>
     <loc>https://www.andreaperlato.com/categories/artificial-intelligence/</loc>
+    <lastmod>2019-11-25T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/learning-rate-decay/</loc>
+    <lastmod>2019-11-25T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/local-minimum/</loc>
     <lastmod>2019-11-25T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>

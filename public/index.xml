@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>Learning Rate Decay and Local Optima</title>
+      <link>/aipost/learning-rate-decay-and-local-optima/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/learning-rate-decay-and-local-optima/</guid>
+      <description>body {text-align: justify}Supposing we are implementing a mini-batch gradient descent of just 64 or 128 examples. During the interation we can occur to the problem to not converge to the minimum. That is expecially true when we use fixed values of alpha learning rate. On the contrary, when we slowly reduce the learning rate alpha we are able to end up oscillating in the region around the minimum.</description>
+    </item>
+    
+    <item>
       <title>Root Mean Square Propagation</title>
       <link>/aipost/root-mean-square-propagation/</link>
       <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>

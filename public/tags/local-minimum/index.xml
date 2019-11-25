@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>local minimum on Andrea Perlato</title>
+    <link>/tags/local-minimum/</link>
+    <description>Recent content in local minimum on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/local-minimum/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning Rate Decay and Local Optima</title>
+      <link>/aipost/learning-rate-decay-and-local-optima/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/learning-rate-decay-and-local-optima/</guid>
+      <description>body {text-align: justify}Supposing we are implementing a mini-batch gradient descent of just 64 or 128 examples. During the interation we can occur to the problem to not converge to the minimum. That is expecially true when we use fixed values of alpha learning rate. On the contrary, when we slowly reduce the learning rate alpha we are able to end up oscillating in the region around the minimum.</description>
+    </item>
+    
+  </channel>
+</rss>

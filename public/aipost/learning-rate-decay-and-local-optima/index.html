@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Learning Rate Decay and Local Optima - Andrea Perlato</title>
+<meta property="og:title" content="Learning Rate Decay and Local Optima - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Learning Rate Decay and Local Optima</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>Supposing we are implementing a mini-batch gradient descent of just 64 or 128 examples. During the interation we can occur to the problem to not converge to the minimum. That is expecially true when we use fixed values of alpha learning rate. On the contrary, when we slowly reduce the learning rate alpha we are able to end up oscillating in the region around the minimum.</p>
+<p>First, we have to remember that <strong>one epoch</strong> is one pass through the training set.</p>
+<p><span class="math display">\[
+\alpha=\frac{1}{1+d_{\text {decay-rate}} * \text { epoch-num }} \alpha_{0}
+\]</span>
+Where <strong>decay-rate</strong> is an hyperparameter that we need to tune, and <strong>apha0</strong> is the initial learning rate.
+If we start with a alha0=0.2 and a decay-rate=1 and using the formula above, then the alpha tends to decrease over the epochs. So, to use learning rate decay we can try a variety of both hyperparameters alpha0 and decay-rate.
+We can also use other method: </br>
+1 - the so called <strong>exponential decay</strong> where alpha is some numbers less than 1. </br>
+The calculation is: <strong>aipha=0.95^epoch-num * alpha0</strong> </br>
+2 - there is also the <strong>discrete stair-case</strong>. The calculation is: <strong>alpha=k/sqrt(epoch-num) * alpha0</strong> </br>
+3 - some people also use the <strong>manual decay</strong>. Here we just check the time for training our model and we stop if the process is too long. At this point, we manually descease the alpha hyperparameter to speed up the process. Of course, this is feasible only if we are dealing with a small training-set.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51254710-89', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+
