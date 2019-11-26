@@ -43,7 +43,7 @@ From the figure above we are trying to tune just two parameters: alpha and epsil
 In contrast, the random grid search give back 25 learning rate of both alpha and epsilon. </br>
 We have to consider also that in reality, we have to tune more than two hyperparameters, and using grid search at random give a more richy exploring set of possible values.
 
-It is also use the so called **Coarse to fine** method. </br>
+**Coarse to fine method** </br>
 We can find that there are specific points that work the best and we can zoom-in to this smaller area of values as depicted in the figure below.
 
 <center>
@@ -52,6 +52,13 @@ We can find that there are specific points that work the best and we can zoom-in
 
 After we defined the new square region, we can try to use more values (colored in red). 
 Now, we have amore density with in the most promising area of bes values to use in our model. that are again at random, but we are focused more resources on searching within a area that is suspecting that the best setting of parameters is in this region.
+
+
+**How to choose the appropiate scale** </br>
+Sampling using grid search at random, over the range of hyperparameters, can allow us to search over the space of hyperparameters more efficiently. On the contrary, sampling at random doesn't mean sampling uniformly at random over the range of valid values. Instead, it is important to pick the appropriate scale on which to explore the hyperparameters.
+For example, if we have to choose the number of layers, we can consider a range from 2 to 6 and in this case grid reach could be a reasonable method.
+Anothe example is when we are seareching for the approproate learning rate alpha that goes from 0.0001 to 1. A sample value uniformly at random over this range could be to use the 90% of the resorces between 0.1 to 1 and 10% of resources between 0.0001 to 0.1. A good alternative is to use the **linear scale** where we use random sample from 0.0001 to 0.001 and again random from 0.001 to 0.01, and from 0.01 to 0.1, and again random from 01. to 1. Using the linear scale method we have more serouces dedicated between fixed ranges. 
+
 
 
 
