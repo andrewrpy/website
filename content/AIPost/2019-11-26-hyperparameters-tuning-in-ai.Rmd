@@ -57,7 +57,7 @@ Now, we have amore density with in the most promising area of bes values to use 
 **How to choose the appropiate scale** </br>
 Sampling using grid search at random, over the range of hyperparameters, can allow us to search over the space of hyperparameters more efficiently. On the contrary, sampling at random doesn't mean sampling uniformly at random over the range of valid values. Instead, it is important to pick the appropriate scale on which to explore the hyperparameters.
 For example, if we have to choose the number of layers, we can consider a range from 2 to 6 and in this case grid reach could be a reasonable method.
-Anothe example is when we are seareching for the approproate learning rate alpha that goes from 0.0001 to 1. A sample value uniformly at random over this range could be to use the 90% of the resorces between 0.1 to 1 and 10% of resources between 0.0001 to 0.1. A good alternative is to use the **linear scale** where we use random sample from 0.0001 to 0.001 and again random from 0.001 to 0.01, and from 0.01 to 0.1, and again random from 01. to 1. Using the linear scale method we have more serouces dedicated between fixed ranges. 
+Anothe example is when we are seareching for the approproate learning rate alpha that goes from 0.0001 to 1. A sample value uniformly at random over this range could be to use the 90% of the resorces between 0.1 to 1 and 10% of resources between 0.0001 to 0.1. A good alternative is to use the **linear scale** where we use random sample from 0.0001 to 0.001 and again random from 0.001 to 0.01, and from 0.01 to 0.1, and again random from 01. to 1. Using the linear scale method we have more resources dedicated between fixed ranges. 
 
 
 
