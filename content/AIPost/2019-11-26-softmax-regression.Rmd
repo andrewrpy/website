@@ -36,6 +36,10 @@ The formula above assumes that we have 4 layers L on the output y as depicted in
 </center>
 
 In the figure above we have z^(L) set to (5, 2, -1, 3), and from these values we can compute the activation function t suing the formula represented in the calculation we made before. Having the value of **t**, we can calculate the activation function **a** for the output **y**.
+From the example above, the output with **level_0=0.842** is the most likely to categorize what we received in input. </br>
+The categorization is called **hard max** and gives **1** to level_0 and 0 to the other output values. On the contray, the value **0.842** is called **soft max**.
+
+
 
 
 

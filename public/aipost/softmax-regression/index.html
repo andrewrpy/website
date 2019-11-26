@@ -88,7 +88,9 @@ The formula above assumes that we have 4 layers L on the output y as depicted in
 <center>
 <img src="/img/softmaxregression.png" style="width:80.0%" />
 </center>
-<p>In the figure above we have z^(L) set to (5, 2, -1, 3), and from these values we can compute the activation function t suing the formula represented in the calculation we made before. Having the value of <strong>t</strong>, we can calculate the activation function <strong>a</strong> for the output <strong>y</strong>.</p>
+<p>In the figure above we have z^(L) set to (5, 2, -1, 3), and from these values we can compute the activation function t suing the formula represented in the calculation we made before. Having the value of <strong>t</strong>, we can calculate the activation function <strong>a</strong> for the output <strong>y</strong>.
+From the example above, the output with <strong>level_0=0.842</strong> is the most likely to categorize what we received in input. </br>
+The categorization is called <strong>hard max</strong> and gives <strong>1</strong> to level_0 and 0 to the other output values. On the contray, the value <strong>0.842</strong> is called <strong>soft max</strong>.</p>
 
     </div>
   </article>
