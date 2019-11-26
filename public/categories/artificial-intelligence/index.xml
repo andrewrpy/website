@@ -22,6 +22,16 @@ Some of these paramters reported above, are more impotant than others.</descript
     </item>
     
     <item>
+      <title>Softmax Regression</title>
+      <link>/aipost/softmax-regression/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/softmax-regression/</guid>
+      <description>body {text-align: justify}When we have to deal with a classification with more than 2 possible levels, we use a generalization of the logistic regression function called softmax regression; a logistic regression class for multi-class classification tasks. In Softmax Regression, we replace the sigmoid logistic function by the so-called softmax function.
+\[\begin{array}{l}{\qquad P\left(y=j | z^{(i)}\right)=\phi_{\text {softmax}}\left(z^{(i)}\right)=\frac{e^{z^{(i)}}}{\sum_{j=0}^{k} e^{z_{k}^{(i)}}}} \\ {\text { where we define the net input } z \text { as }} \\ {\qquad z=w_{1} x_{1}+\ldots+w_{m} x_{m}+b=\sum_{l=1}^{m} w_{l} x_{l}+b=\mathbf{w}^{T} \mathbf{x}+b}\end{array}\]</description>
+    </item>
+    
+    <item>
       <title>Adaptive Momentum</title>
       <link>/aipost/adaptive-momentum/</link>
       <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>

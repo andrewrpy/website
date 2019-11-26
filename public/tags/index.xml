@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>softmax</title>
+      <link>/tags/softmax/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/softmax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>adaptive momentum</title>
       <link>/tags/adaptive-momentum/</link>
       <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
@@ -386,15 +395,6 @@
       <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/self-organizaed-maps/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>softmax</title>
-      <link>/tags/softmax/</link>
-      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/softmax/</guid>
       <description></description>
     </item>
     

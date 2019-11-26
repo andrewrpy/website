@@ -25,6 +25,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/aipost/softmax-regression/</loc>
+    <lastmod>2019-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/tags/</loc>
     <lastmod>2019-11-26T00:00:00+00:00</lastmod>
      <priority>0</priority>
@@ -32,6 +37,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/categories/artificial-intelligence/</loc>
+    <lastmod>2019-11-26T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/softmax/</loc>
     <lastmod>2019-11-26T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -492,12 +503,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/self-organizaed-maps/</loc>
-    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/softmax/</loc>
     <lastmod>2019-07-23T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
