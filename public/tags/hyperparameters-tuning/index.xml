@@ -6,10 +6,20 @@
     <description>Recent content in Hyperparameters Tuning on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/hyperparameters-tuning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hyperparameters Tuning in AI</title>
+      <link>/aipost/hyperparameters-tuning-in-ai/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/hyperparameters-tuning-in-ai/</guid>
+      <description>body {text-align: justify}The tuning process is a painful process in deep learning because we have many paramters: 1 - alpha learning rate 2 - the momentum beta 3 - beta1, beta2, epsilon in AdaM 4 - number of layers L 5 - number of hidden units 6 - learning rate decay parameters 7 - mini-batch size 
+Some of these paramters reported above, are more impotant than others.</description>
+    </item>
     
     <item>
       <title>Random Forest Hyperparameters Tuning</title>

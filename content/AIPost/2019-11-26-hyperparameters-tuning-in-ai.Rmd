@@ -1,0 +1,92 @@
+---
+title: Hyperparameters Tuning in AI
+author: andrea perlato
+date: '2019-11-26'
+slug: hyperparameters-tuning-in-ai
+categories:
+  - artificial intelligence
+tags:
+  - Hyperparameters Tuning
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+The tuning process is a painful process in deep learning because we have many paramters: </br>
+1 - alpha [**learning rate**](https://machinelearningmastery.com/learning-rate-for-deep-learning-neural-networks/) </br>
+2 - the momentum beta </br>
+3 - beta1, beta2, epsilon in AdaM </br>
+4 - number of layers L </br>
+5 - number of hidden units </br>
+6 - learning rate decay parameters </br>
+7 - mini-batch size </br>
+
+Some of these paramters reported above, are more impotant than others. The learning rate alpha is the most important parameter to tune.
+
+First just remind what is the **learning rate**: </br>
+Stochastic gradient descent is an optimization algorithm that estimates the error gradient for the current state of the model using examples from the training dataset, then updates the weights of the model using the back-propagation of errors algorithm, referred to as simply backpropagation.
+The amount that the weights are updated during training is referred to as the step size or the **learning rate**.
+Specifically, the learning rate is a configurable hyperparameter used in the training of neural networks that has a small positive value, often in the range between **0.0** and **1** .
+
+The second important parameters are beta for momentum, mini-batch size and the number of hidden units.
+The thrid most important are learning rate decay and the number of layers.
+
+It is a common pratice to sample the parameters at random using **grid search**, and systematically explore the values. This is good in machine learning, but when we have to deal with high number of hyperparameters it is recommended to choose the points in **grid search at random**. In fact, it is overly complex to know in advance which hyperparameters ae going to be the most important for our problem.
+
+<center>
+![](/img/tunegrid.png){width=80%}
+</center>
+
+From the figure above we are trying to tune just two parameters: alpha and epsilon. It is quite evident the advantage to use the random grid search. In fact, using grid searchwe are using five values of alpha and all the different values of epsilon give back the same answer; we trained 25 models and only 5 values of epsilon. </br>
+In contrast, the random grid search give back 25 learning rate of both alpha and epsilon. </br>
+We have to consider also that in reality, we have to tune more than two hyperparameters, and using grid search at random give a more richy exploring set of possible values.
+
+It is also use the so called **Coarse to fine** method. </br>
+We can find that there are specific points that work the best and we can zoom-in to this smaller area of values as depicted in the figure below.
+
+<center>
+![](/img/coarsegrid.png){width=40%}
+</center>
+
+After we defined the new square region, we can try to use more values (colored in red). 
+Now, we have amore density with in the most promising area of bes values to use in our model. that are again at random, but we are focused more resources on searching within a area that is suspecting that the best setting of parameters is in this region.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
