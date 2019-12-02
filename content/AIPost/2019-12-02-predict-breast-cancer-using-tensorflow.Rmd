@@ -1,0 +1,55 @@
+---
+title: Predict Breast Cancer using TensorFlow
+author: andrea perlato
+date: '2019-12-02'
+slug: predict-breast-cancer-using-tensorflow
+categories:
+  - artificial intelligence
+tags:
+  - tensorflow
+  - cancer
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+In this article we try to predict if a patient's diagnosis of breast tissue is malignant or bening. From the code below, using the **feature_names** function we can explore the name of all the predictors involved in the breast cancer such as for example: mean radius, mean perimeter and so forth. Moreover, using the funtion **target_names** we have the two level of the response variable (malignant, benign).
+To have a better understanding of the dataset here the [**link**](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html).
+
+```{r setup, include=FALSE}
+# Sys.which("python") # check py path
+library(reticulate)
+use_python("C:/Users/Utente/Anaconda3/python.exe", required=TRUE)
+
+```
+
+```{python, include=TRUE}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import nltk
+import tensorflow as tf
+
+from sklearn.datasets import load_breast_cancer 
+data = load_breast_cancer()
+list(data.feature_names) # predictors
+list(data.target_names) # response variable
+
+```
+
+Now, we can use the function **train_test_split** from **sklearn** and calling this function we can split the model with  a test set of 33% of the original data set.
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+---
+title: Predict Breast Cancer using TensorFlow
+author: andrea perlato
+date: '2019-12-02'
+slug: predict-breast-cancer-using-tensorflow
+categories:
+  - artificial intelligence
+tags:
+  - tensorflow
+  - cancer
+---
+
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>In this article we try to predict if a patient’s diagnosis of breast tissue is malignant or bening. From the code below, using the <strong>feature_names</strong> function we can explore the name of all the predictors involved in the breast cancer such as for example: mean radius, mean perimeter and so forth. Moreover, using the funtion <strong>target_names</strong> we have the two level of the response variable (malignant, benign).
+To have a better understanding of the dataset here the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html"><strong>link</strong></a>.</p>
+<pre class="python"><code>import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import nltk
+import tensorflow as tf
+
+from sklearn.datasets import load_breast_cancer 
+data = load_breast_cancer()
+list(data.feature_names) # predictors</code></pre>
+<pre><code>## [&#39;mean radius&#39;, &#39;mean texture&#39;, &#39;mean perimeter&#39;, &#39;mean area&#39;, &#39;mean smoothness&#39;, &#39;mean compactness&#39;, &#39;mean concavity&#39;, &#39;mean concave points&#39;, &#39;mean symmetry&#39;, &#39;mean fractal dimension&#39;, &#39;radius error&#39;, &#39;texture error&#39;, &#39;perimeter error&#39;, &#39;area error&#39;, &#39;smoothness error&#39;, &#39;compactness error&#39;, &#39;concavity error&#39;, &#39;concave points error&#39;, &#39;symmetry error&#39;, &#39;fractal dimension error&#39;, &#39;worst radius&#39;, &#39;worst texture&#39;, &#39;worst perimeter&#39;, &#39;worst area&#39;, &#39;worst smoothness&#39;, &#39;worst compactness&#39;, &#39;worst concavity&#39;, &#39;worst concave points&#39;, &#39;worst symmetry&#39;, &#39;worst fractal dimension&#39;]</code></pre>
+<pre class="python"><code>list(data.target_names) # response variable</code></pre>
+<pre><code>## [&#39;malignant&#39;, &#39;benign&#39;]</code></pre>
+<p>Now, we can use the function <strong>train_test_split</strong> from <strong>sklearn</strong> and calling this function we can split the model with a test set of 33% of the original data set.</p>

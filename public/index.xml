@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Predict Breast Cancer using TensorFlow</title>
+      <link>/aipost/predict-breast-cancer-using-tensorflow/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/predict-breast-cancer-using-tensorflow/</guid>
+      <description>body {text-align: justify}In this article we try to predict if a patient’s diagnosis of breast tissue is malignant or bening. From the code below, using the feature_names function we can explore the name of all the predictors involved in the breast cancer such as for example: mean radius, mean perimeter and so forth. Moreover, using the funtion target_names we have the two level of the response variable (malignant, benign).</description>
+    </item>
+    
+    <item>
       <title>Hyperparameters Tuning in AI</title>
       <link>/aipost/hyperparameters-tuning-in-ai/</link>
       <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
