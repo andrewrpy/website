@@ -77,7 +77,24 @@ text-align: justify}
 <center>
 <img src="/img/multiregweight.png" style="width:40.0%" />
 </center>
-<p>rom the multipe linear regression above, we converted the beta coefficients in weights <strong>w</strong>.</p>
+<p>From the multipe linear regression above, we converted the beta coefficients in weights <strong>w1, w2</strong> and trhey are essentially the slope for each of the individual inputs x1 and x2. Another way to think of the weights is that thay tell us how important each input to predict the output.</p>
+<center>
+<img src="/img/neuronschema.png" style="width:60.0%" />
+</center>
+<p>In fact, the mleft figure above shows us three input neuron where the first in green has a large positive impact on the activation, the second neuron has less impact, and the third in red has large negative impact; exactely the same of the <a href="https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-identify-the-most-important-predictor-variables-in-regression-models"><strong>relative importance weights</strong></a> that we use to find the most important independent variables in a multiple regression. This could be related to neurons where the dendrites are our inputs. Fr example when our eyes see something an electrical signal goes alonf the nerves in out eyes and travel to the brain. The same is when we hear or smell something or touch something.
+Now, the neuron has to decide if it is going to pass this signal on to outgoing neurons. The neuron do that in a very simila way to the linear and logistic regression: it sums up all the incoming signals and this summation becomes the outgoing signal.
+Some input connections are strong but others are weak. Moreover, some connections exite the receiving neuron while other connections inhibit the receiving neurons: this is just like the weights of a regressino model.</p>
+<p><strong>Action Potential</strong> </br>
+The signal that gets passed along the neurons has a special name: <strong>active potential</strong>: basically it is a spike in electrical potential. If we measure the electrical potential over time at a particular pointin the neuron we would see a signal as shown in the figure below.</p>
+<center>
+<img src="/img/actionpotential.png" style="width:90.0%" />
+</center>
+<p>The neuron is more like a logistic regression than a linear regression. </br>
+Basically we are going to sum up all the influences from all the incoming neurons, and if the <strong>electrical potential of the sum</strong> is grater than some <strong>threshold</strong>, then an <strong>action potential</strong> will <strong>propagate</strong> through the <strong>receiving neuron</strong>. This is like a binary classificatiion where we make prediction of 0 and 1, and in biology that is called <strong>All or None Principle</strong>.</p>
+<center>
+<img src="/img/neuronlogistic.png" style="width:60.0%" />
+</center>
+<p>Each <strong>xi</strong> represent the inputs, and <strong>w</strong> is a weight that tells us how strong is the connection with <strong>xi</strong> in a positive or negative influence of the activation potential. The weighted sum of each <strong>xi</strong> is then added to the <strong>bias ter</strong> or <strong>threshold</strong> and then passed to the <strong>sigmoind function</strong> taht tell us wheter or not an action potential should occur.</p>
 
     </div>
   </article>
