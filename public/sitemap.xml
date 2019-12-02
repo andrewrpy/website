@@ -14,6 +14,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/aipost/logistic-regression-as-a-neuron/</loc>
+    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/aipost/predict-breast-cancer-using-tensorflow/</loc>
     <lastmod>2019-12-02T00:00:00+00:00</lastmod>
   </url>
@@ -32,6 +37,18 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/cancer/</loc>
+    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/logistic-regression/</loc>
+    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/neuron/</loc>
     <lastmod>2019-12-02T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -1179,12 +1196,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/k-nearest-neighbors/</loc>
-    <lastmod>2019-01-10T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/logistic-regression/</loc>
     <lastmod>2019-01-10T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>

@@ -21,6 +21,24 @@
     </item>
     
     <item>
+      <title>logistic regression</title>
+      <link>/tags/logistic-regression/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/logistic-regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neuron</title>
+      <link>/tags/neuron/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/neuron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>tensorflow</title>
       <link>/tags/tensorflow/</link>
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
@@ -926,15 +944,6 @@
       <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/k-nearest-neighbors/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>logistic regression</title>
-      <link>/tags/logistic-regression/</link>
-      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/logistic-regression/</guid>
       <description></description>
     </item>
     

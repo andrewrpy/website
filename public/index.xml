@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Logistic Regression as a Neuron</title>
+      <link>/aipost/logistic-regression-as-a-neuron/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/aipost/logistic-regression-as-a-neuron/</guid>
+      <description>body {text-align: justify}Deep Learning is the study of neural network that are networks of neurons that are the fundamental unit of computation.
+rom the multipe linear regression above, we converted the beta coefficients in weights w.</description>
+    </item>
+    
+    <item>
       <title>Predict Breast Cancer using TensorFlow</title>
       <link>/aipost/predict-breast-cancer-using-tensorflow/</link>
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
