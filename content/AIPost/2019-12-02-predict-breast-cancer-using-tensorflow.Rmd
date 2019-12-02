@@ -28,9 +28,6 @@ use_python("C:/Users/Utente/Anaconda3/python.exe", required=TRUE)
 ```{python, include=TRUE}
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import nltk
 import tensorflow as tf
 
 from sklearn.datasets import load_breast_cancer 
@@ -40,7 +37,96 @@ list(data.target_names) # response variable
 
 ```
 
-Now, we can use the function **train_test_split** from **sklearn** and calling this function we can split the model with  a test set of 33% of the original data set.
+Now, we can use the function **train_test_split** from **sklearn** and calling this function we can split the model with  a test set of 30% of the original data set.
+
+```{python, include=TRUE}
+# Select how the model wwill perform in the future
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.3)
+N, D = X_train.shape # number of observation and variables
+
+# Scale the data
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+```
+
+In the code above, we also scaled the data, the basic idea is that because the output is a linear combination of the input we don't want to have one or more input with a very large range and other inputs with a very small range. If this happens, then the weights will be too sensitive when the input has large range and not sensitive when input has small range. We can do that using the [**z points**](https://en.wikipedia.org/wiki/Standard_score). In python we can transform the data in z points using the **StandarScaler** function used above.
+
+Now, we can use TensorFlow, and first we have to build a model object which is an object of type sequential. This takes it in a list of two objects called **input** and **dense**. </br>
+The **input** jusy specify the size of the input and is called **D** (see the code above X_train_shape). </br>
+The **dense** layer is instead where the real work happens: it takes the input and does a linear transformation to get an output of size 1. The linear transformation we want to apply is the [**sigmoid activation function**](https://www.andreaperlato.com/aipost/the-activation-function/) so that in output we are in a range of 0 and 1.
+
+```{python, include=TRUE}
+# Build the model in TensorFlow
+model = tf.keras.models.Sequential([
+  tf.keras.layers.Input(shape=(D,)),
+  tf.keras.layers.Dense(1, activation='sigmoid') # use sigmoid function for every epochs
+])
+
+model.compile(optimizer='adam', # use adaptive momentum
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+              
+# Train the Model
+r = model.fit(X_train, y_train, validation_data=(X_test, y_test))
+
+# Evaluate the model
+print("Train score:", model.evaluate(X_train, y_train)) # evaluate returns loss and accuracy
+print("Test score:", model.evaluate(X_test, y_test)) # evaluate returns loss and accuracy
+
+```
+
+From the code above we used the [**AdaM adaptive momentum**](https://www.andreaperlato.com/aipost/adaptive-momentum/) as optimizer for the gradient descent using [**mini-batch**](https://www.andreaperlato.com/aipost/mini-batch-gradient-descent/). We apply the sigmoid function for every epochs.
+The results say that we have 56% of accuracy on both trin and test set. </br>
+We can also plot the **loss per iteration** using the code below.
+
+```{python, include=TRUE}
+import matplotlib.pyplot as plt
+# plt.plot(r.history['loss'], label='loss')
+# plt.plot(r.history['val_loss'], label='val_loss')
+# plt.legend()
+# plt.show()
+
+```
+
+<center>
+![](/img/cancerloss.png){width=40%}
+</center>
+
+The graph above shows the **loss per iteration**. From the code above we can see that the **training loss** is stored in a key called **loss**, while the **validatin loss** is stored in a key called **val_loss**. From the graph, there is anice decrease in the last iterationas expected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
