@@ -96,7 +96,7 @@ import matplotlib.pyplot as plt
 ![](/img/cancerloss.png){width=40%}
 </center>
 
-The graph above shows the **loss per iteration**. From the code above we can see that the **training loss** is stored in a key called **loss**, while the **validatin loss** is stored in a key called **val_loss**. From the graph, there is anice decrease in the last iterationas expected.
+The graph above shows the **loss per iteration**. From the code above we can see that the **training loss** is stored in a key called **loss**, while the **validatin loss** is stored in a key called **val_loss**. From the graph, there is a nice decrease in the last iterationas expected.
 
 
 
