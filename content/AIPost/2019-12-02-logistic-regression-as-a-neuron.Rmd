@@ -21,13 +21,13 @@ Deep Learning is the study of neural network that are networks of neurons that a
 ![](/img/multiregweight.png){width=40%}
 </center>
 
-From the multipe linear regression above, we converted the beta coefficients in weights **w1, w2** and trhey are essentially the slope for each of the individual inputs x1 and x2. Another way to think of the weights is that thay tell us how important each input to predict the output.
+From the multiple linear regression above, we converted the beta coefficients in weights **w1, w2** and they are essentially the slope for each of the individual inputs x1 and x2. Another way to think of the weights is that thay tell us how important each input to predict the output.
 
 <center>
 ![](/img/neuronschema.png){width=60%}
 </center>
 
-In fact, the mleft figure above shows us three input neuron where the first in green has a large positive impact on the activation, the second neuron has less impact, and the third in red has large negative impact; exactely the same of the [**relative importance weights**](https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-identify-the-most-important-predictor-variables-in-regression-models) that we use to find the most important independent variables in a multiple regression. This could be related to neurons where the dendrites are our inputs.  Fr example when our eyes see something an electrical signal goes alonf the nerves in out eyes and travel to the brain. The same is when we hear or smell something or touch something.
+In fact, the left figure above shows us three input neurons where the first in green has a large positive impact on the activation, the second neuron has less impact, and the third in red has large negative impact; exactely the same of the [**relative importance weights**](https://blog.minitab.com/blog/adventures-in-statistics-2/how-to-identify-the-most-important-predictor-variables-in-regression-models) that we use to find the most important independent variables in a multiple regression. This could be related to neurons where the **dendrites** are our inputs.  Fr example when our eyes see something an electrical signal goes alonf the nerves in out eyes and travel to the brain. The same is when we hear or smell something or touch something.
 Now, the neuron has to decide if it is going to pass this signal on to outgoing neurons. The neuron do that in a very simila way to the linear and logistic regression: it sums up all the incoming signals and this summation becomes the outgoing signal. 
 Some input connections are strong but others are weak. Moreover, some connections exite the receiving neuron while other connections inhibit the receiving neurons: this is just like the weights of a regressino model.
 
@@ -45,7 +45,8 @@ Basically we are going to sum up all the influences from all the incoming neuron
 ![](/img/neuronlogistic.png){width=60%}
 </center>
 
-Each **xi** represent the inputs, and **w** is a weight that tells us how strong is the connection with **xi** in a positive or negative influence of the activation potential. The weighted sum of each **xi** is then added to the **bias ter** or **threshold** and then passed to the **sigmoind function** taht tell us wheter or not an action potential should occur.
+Each **xi** represent the inputs, and **w** is a weight that tells us how strong is the connection with **xi** in a positive or negative influence of the activation potential. The weighted sum of each **xi** is then added to the **bias ter** or **threshold** and then passed to the **sigmoind function** taht tell us wheter or not an action potential should occur. 
+
 
 
 

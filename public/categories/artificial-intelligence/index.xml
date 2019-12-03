@@ -18,7 +18,7 @@
       
       <guid>/aipost/logistic-regression-as-a-neuron/</guid>
       <description>body {text-align: justify}Deep Learning is the study of neural network that are networks of neurons that are the fundamental unit of computation.
-From the multipe linear regression above, we converted the beta coefficients in weights w1, w2 and trhey are essentially the slope for each of the individual inputs x1 and x2. Another way to think of the weights is that thay tell us how important each input to predict the output.</description>
+From the multiple linear regression above, we converted the beta coefficients in weights w1, w2 and they are essentially the slope for each of the individual inputs x1 and x2. Another way to think of the weights is that thay tell us how important each input to predict the output.</description>
     </item>
     
     <item>
