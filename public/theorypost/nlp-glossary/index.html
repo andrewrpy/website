@@ -75,6 +75,28 @@ text-align: justify}
 </style>
 <p><strong>Text Similarity using Vector Space Model</strong> </br>
 The idea is to find common words within text. The figure below shows an example with a text with common words “”house” and “white”. It represents all texts with common words, calculating the frequency of each word.</p>
+<center>
+<img src="/img/vectrspacemodel.png" style="width:40.0%" />
+</center>
+<p>For example, looking at the red point (2,7), 2 is the number of times that the word “white” appears in the text and 7 is the number of times that the word “house” appears in the same text. The blue and yellow points are examples in other texts. Looking at all the points, we have the representation of all text based on their frequency of common words. Now, if we want to evaluate how similar are the text, we can use two different metrics: </br>
+1 - Euclidean Distance </br>
+2 - Cosine Similarity </br>
+The cosine similarity is the angle theta between two points. If the theta angle is little, means that the two points are close and as a consequence the two texts are closely related. On the contrary, if the angle is very large, the two texts are not similar. In the formula above, <strong>A</strong> and <strong>B</strong> are the vectors (where they start at 0 and arrive to the colored point).
+The cosine similarity equation will result in a value between 0 and 1. The smaller cosine angle results in a bigger cosine value, indicating higher similarity. In this case Euclidean distance will be zero.</p>
+<p><strong>Stemming vs. Lemmatization</strong> </br>
+Stemming is the process of transforming words in their root word, for example: “carefully”, “cared”, “cares” can be considered as ”care” instead of separate words. </br>
+Lemmatization: we need to have the inflected form of the word. For example the lemmatization of the word “ate” is “eat”. </br>
+Stemming and Lemmatization both generate the root form of inflected words. The difference is that stem might not be an actual word whereas, lemma is an actual language word.
+Stemming follows an algorithm with steps to perform on the words which makes it faster. Whereas, in lemmatization, you used WordNet corpus and a corpus for stop words as well to produce lemma which makes it slower than stemming. You also had to define a part-of-speech to obtain the correct lemma.</p>
+<p><strong>Minimum edit distance &amp; Backrace method</strong> </br>
+Minimum edit distance allows us to assess how similar two strings are. It is the minimum number of editing operations such as insertion, deletion and substitution that are needed to transform one into the other. As shown above, in order to turn “intention” to “execution” we need to do few edition. If each operation has a <strong>cost</strong> of 1, the distance between the word “intention” and “execution” is 5.
+There are lots of distinct paths that wind up at the same state and we don’t have to keep track of all of them. We just need to keep track of the shortest path to each of those revised path. For this reason we can use the Backtrace method.</p>
+<center>
+<img src="/img/minimumeditdistance.png" style="width:40.0%" />
+</center>
+<p>We often need to align each character of the two strings to each other by keeping a <strong>backtrace</strong>. Every time we enter a cell, we need to remember where we came from and when we reach the end, trace back the path from the upper right corner to read off the alignment. The arrows in the graph below (starting from the upper right corner) allows you to trace back the path. For example, to go from “inte” to “e”, we could remove all 4 characters and insert a letter “e” but that would cost us a distance of 5. Alternatively, we could just remove “int” and get the remainder character “e”, costing us a distance of 3. </br>
+It is the way to correct grammar errors; maybe not necessary if we are working for example with scientific articles. </br></p>
+<p><strong>Frequency filtering &amp; Part of speech tag filter</strong> </br></p>
 
     </div>
   </article>
