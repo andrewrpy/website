@@ -75,3 +75,29 @@ p(\theta | x)=\frac{p(x | \theta) p(\theta | \alpha)}{p(x | \alpha)} \Longleftri
 \]</span>
 The alpha parameter in he formula above is our initial belief about this distribution, and is the parameter of the prior distribution. Usually this is chosen in such a way that will have a <strong>conjugate prior</strong> (so the distribution of the posterior is the same with the distribution of the prior) and often to encode some knowledge if you have one or to have maximum entropy if you know nothing.
 The parameters of the prior are called hyperparameters. In LDA, both topic distributions, over documents and over words have also correspondent priors, which are denoted usually with <strong>alpha</strong> and <strong>beta</strong>, and because are the parameters of the prior distributions are called hyperparameters.</p>
+<p><strong>Recommender system in text mining</strong> </br>
+Recommender system is designed to predict the user preference and how to recommend the right items in order to create a user personalization experience.
+There are two types of recommender system: </br>
+1 - Content based filtering: focused on the similarity attributes of the itens to give recommendations. </br>
+2 - Collaborative filtering: focused on the similarity attribute of the users finding people with similar tastes based on a similarity measure: <strong>memory based</strong> and <strong>model based</strong>.</p>
+<center>
+<img src="/img/recsys.png" style="width:40.0%" />
+</center>
+<p>From the figure above, the content based filtering is able to find similar items of the favorite items of the user, such as the mouse and the printer based on the keybord and the joystick. The recommendation is based on the similarity.
+On the contrary, in the collaborative filtering is focused on the similarity attributes of the users, finding peole with similar traits based on a similarity measure. There are two measures: memory based and model based.</p>
+<p>The <strong>memory based recommendation</strong> is looking items liked by similar people in order to create a ranked list of recommendations.. We can sort the ranked list to recommend the top n items to the user.
+The Person correlation and cosine similarity are used.
+Here the Pearson correlation formula:</p>
+<p><span class="math display">\[
+\operatorname{simil}(x, y)=\frac{\sum_{i \in I_{y}}\left(r_{z, i}-\bar{r}_{z}\right)\left(r_{y, i}-\bar{r}_{y}\right)}{\sqrt{\sum_{i \in I_{y}}\left(r_{z, i}-\bar{r}_{z}\right)^{2}} \sqrt{\sum_{i \in I_{y}, i}}\left(r_{y, i}-\bar{r}_{y}\right)^{2}}
+\]</span></p>
+<p>and the cosine similarity formula:</p>
+<p><span class="math display">\[
+\operatorname{simil}(z, y)=\cos (\vec{x}, \vec{y})=\frac{\vec{x} \cdot \vec{y}}{|\vec{x}||\times| \vec{y}||}=\frac{\sum_{i \in I_{y}} r_{z, i} r_{y, i}}{\sqrt{\sum_{i \in l_{z}} r_{z, i}^{2}} \sqrt{\sum_{i \in l_{y}} r_{y, i}^{2}}}
+\]</span>
+The cosine similiarity formula (see on top of this article) makes sure how to separate two terms where each term is represented by a vector and we are interested in the angle between these two vectors. If the cosine similarity is close to 1, both terms are very similar.
+In the memory based recommendation the <strong>similarity matrix is used</strong>.</p>
+<center>
+<img src="/img/similaritymatrix.png" style="width:60.0%" />
+</center>
+<p>From the figure above we can see on the left the <strong>item-item similarity</strong> which is calculated by looking into co-ranked items only. Form example, for the items <strong>i</strong> and <strong>j</strong> the similarity is computed by calculating similarity between rating the i and j columns (items) but only in the cells where we have a rate (blue rectangles). Another approach is to use the <strong>user-item similarity</strong>, on the right of the figure above. This approach is looking into correlated items only in rows (users).</p>

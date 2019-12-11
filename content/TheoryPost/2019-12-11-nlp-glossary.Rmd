@@ -87,6 +87,52 @@ The alpha parameter in he formula above is our initial belief about this distrib
 The parameters of the prior are called hyperparameters. In LDA, both topic distributions, over documents and over words have also correspondent priors, which are denoted usually with **alpha** and **beta**, and because are the parameters of the prior distributions are called hyperparameters.
 
 
+**Recommender system in text mining** </br>
+Recommender system is designed to predict the user preference and how to recommend the right items in order to create a user personalization experience.
+There are two types of recommender system: </br>
+1 - Content based filtering: focused on the similarity attributes of the itens to give recommendations. </br>
+2 - Collaborative filtering: focused on the similarity attribute of the users finding people with similar tastes based on a similarity measure: **memory based** and **model based**. 
+
+<center>
+![](/img/recsys.png){width=40%}
+</center>
+
+From the figure above, the content based filtering is able to find similar items of the favorite items of the user, such as the mouse and the printer based on the keybord and the joystick. The recommendation is based on the similarity.
+On the contrary, in the collaborative filtering is focused on the similarity attributes of the users, finding peole with similar traits based on a similarity measure. There are two measures: memory based and model based. 
+
+The **memory based recommendation** is looking items liked by similar people in order to create a ranked list of recommendations.. We can sort the ranked list to recommend the top n items to the user. 
+The Person correlation and cosine similarity are used.
+Here the Pearson correlation formula:
+
+$$
+\operatorname{simil}(x, y)=\frac{\sum_{i \in I_{y}}\left(r_{z, i}-\bar{r}_{z}\right)\left(r_{y, i}-\bar{r}_{y}\right)}{\sqrt{\sum_{i \in I_{y}}\left(r_{z, i}-\bar{r}_{z}\right)^{2}} \sqrt{\sum_{i \in I_{y}, i}}\left(r_{y, i}-\bar{r}_{y}\right)^{2}}
+$$
+
+and the cosine similarity formula:
+
+$$
+\operatorname{simil}(z, y)=\cos (\vec{x}, \vec{y})=\frac{\vec{x} \cdot \vec{y}}{|\vec{x}||\times| \vec{y}||}=\frac{\sum_{i \in I_{y}} r_{z, i} r_{y, i}}{\sqrt{\sum_{i \in l_{z}} r_{z, i}^{2}} \sqrt{\sum_{i \in l_{y}} r_{y, i}^{2}}}
+$$
+The cosine similiarity formula (see on top of this article) makes sure how to separate two terms where each term is represented by a vector and we are interested in the angle between these two vectors. If the cosine similarity is close to 1, both terms are very similar.
+In the memory based recommendation the **similarity matrix is used**.
+
+<center>
+![](/img/similaritymatrix.png){width=60%}
+</center>
+
+From the figure above we can see on the left the **item-item similarity** which is calculated by looking into co-ranked items only. Form example, for the items **i** and **j** the similarity is computed by calculating similarity between rating the i and j columns (items) but only in the cells where we have a rate (blue rectangles). Another approach is to use the **user-item similarity**, on the right of the figure above. This approach is looking into correlated items only in rows (users).
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
