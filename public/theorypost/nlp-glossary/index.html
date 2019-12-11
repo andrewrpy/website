@@ -94,9 +94,44 @@ There are lots of distinct paths that wind up at the same state and we don’t h
 <center>
 <img src="/img/minimumeditdistance.png" style="width:40.0%" />
 </center>
-<p>We often need to align each character of the two strings to each other by keeping a <strong>backtrace</strong>. Every time we enter a cell, we need to remember where we came from and when we reach the end, trace back the path from the upper right corner to read off the alignment. The arrows in the graph below (starting from the upper right corner) allows you to trace back the path. For example, to go from “inte” to “e”, we could remove all 4 characters and insert a letter “e” but that would cost us a distance of 5. Alternatively, we could just remove “int” and get the remainder character “e”, costing us a distance of 3. </br>
+<p>We often need to align each character of the two strings to each other by keeping a <strong>backtrace</strong>. Every time we enter a cell, we need to remember where we came from and when we reach the end, trace back the path from the upper right corner to read off the alignment. The arrows in the graph below (starting from the upper right corner) allows you to trace back the path. For example, to go from “inte” to “e”, we could remove all 4 characters and insert a letter “e” but that would cost us a distance of 5. Alternatively, we could just remove “int” and get the remainder character “e”, costing us a distance of 3.
 It is the way to correct grammar errors; maybe not necessary if we are working for example with scientific articles. </br></p>
-<p><strong>Frequency filtering &amp; Part of speech tag filter</strong> </br></p>
+<p><strong>Part of speech tag filter - POS</strong> </br>
+In the world of Natural Language Processing (NLP), the most basic models are based on Bag of Words. But such models fail to capture the syntactic relations between words. For example, suppose we build a sentiment analyser based on only Bag of Words. Such a model will not be able to capture the difference between “I like you”, where “like” is a verb with a positive sentiment, and “I am like you”, where “like”" is a preposition with a neutral sentiment. </br>
+POS tagging is the process of marking up a word in a corpus to a corresponding part of a speech tag, based on its context and definition. For example, in the sentence “Give me your answer”, answer is a Noun, but in the sentence “Answer the question”, answer is a verb. </br>
+There are different techniques for POS Tagging: </br>
+1 - Lexical Based Methods: assigns the POS tag the most frequently occurring in the training corpus. </br>
+2 - Rule Based Methods: e.g. the “ed” or “ing” must be assigned to a verb. </br>
+3 - Rule Based Method: RNN can be used to solve POS tagging. </br>
+4 - Probabilistic Method: assigns the POS tag based on the probability of a particular tag sequence.
+To have a description of POS look at this <a href="https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html"><strong>link</strong></a>.
+Every word is represented by a <strong>feature tag</strong>.</p>
+<p><strong>Topic Analysis and LDA Hyperparameters</strong> </br>
+One of he most popular topic algorithm is the <a href="https://www.andreaperlato.com/theorypost/introduction-to-topic-model/"><strong>LDA</strong></a>. It is of high importance to tune the hyperparameters: </br>
+1 - Number of iterations. </br>
+2 - Number of Topics: number of topics to be extracted using <a href="https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence"><strong>Kullback Leibler Divergence Score</strong></a>. </br>
+3 - Number of Topic Terms: number of terms composed in a single topic. </br>
+4 - Alpha hyperparameter: represents document-topic density. </br>
+5 - Beta hyperparameter: represent topic-word density. The alpha &amp; beta parameters are especially useful to find the right number of topics. </br>
+6 - Batch Wise LDA: another tip to improve the model is to use corpus divided into batches of fixed sizes. We perform LDA on these batches multiple times and we should obtain different results, but strikingly, the best topic terms are always present. </br></p>
+<p>It is often desirable to quantify the difference between probability distributions for a given random variable. The difference between two distribution is called:. <strong>statistical distance</strong>, but this can be challenging as it can be difficult to interpret the measure. ùin fact, it is more common to calculate a <strong>divergence</strong> between two probability distributions. Divergence is a scoring of how one distribution differs from another.
+Two commonly used <strong>divergence scores</strong> from information theory are <strong>Kullback-Leibler Divergence KL</strong> and Jensen-Shannon Divergence.
+The <strong>KL</strong> divergence between two distributions Q and P is often stated using the following notation: </br>
+KL(P || Q) </br>
+where the || operator indicates divergence of P from Q. </br>
+KL divergence can be calculated as the positive sum of probability of each event in P multiplied by the log of the probability of the event in Q over the probability of the event in P: </br>
+KL(P || Q) = – sum x in X P(x) * log(Q(x) / P(x)) </br>
+the value within the sum is the divergence for a given event. </br>
+The intuition for the KL divergence score is that when the probability for an event from P is large, but the probability for the same event in Q is small, there is a large divergence. When the probability from P is small and the probability from Q is large, there is also a large divergence, but not as large as the first case.</p>
+<p>LDA uses some constructs like: </br>
+1 - a document can have multiple topics (because of this multiplicity, we need the Dirichlet distribution); and there is a Dirichlet distribution which models this relation. </br>
+2 - words can also belong to multiple topics, when you consider them outside of a document; so here we need another Dirichlet to model this. </br>
+Now, in Bayesian inference you use the Bayes rule to infer the posterior probability. These distributions are hidden from data, this is why is called latent, or hidden.</p>
+<p><span class="math display">\[
+p(\theta | x)=\frac{p(x | \theta) p(\theta | \alpha)}{p(x | \alpha)} \Longleftrightarrow \text { posterior probability }=\frac{\text { likelihood } \times \text { prior probability }}{\text { marginal likelihood }}
+\]</span>
+The alpha parameter in he formula above is our initial belief about this distribution, and is the parameter of the prior distribution. Usually this is chosen in such a way that will have a <strong>conjugate prior</strong> (so the distribution of the posterior is the same with the distribution of the prior) and often to encode some knowledge if you have one or to have maximum entropy if you know nothing.
+The parameters of the prior are called hyperparameters. In LDA, both topic distributions, over documents and over words have also correspondent priors, which are denoted usually with <strong>alpha</strong> and <strong>beta</strong>, and because are the parameters of the prior distributions are called hyperparameters.</p>
 
     </div>
   </article>
@@ -121,6 +156,9 @@ It is the way to correct grammar errors; maybe not necessary if we are working f
     
 
     
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 <script type="application/javascript">
