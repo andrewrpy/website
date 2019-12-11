@@ -1,0 +1,19 @@
+---
+title: NLP Glossary
+author: andrea perlato
+date: '2019-12-11'
+slug: nlp-glossary
+categories:
+  - nlp
+tags:
+  - NLP
+  - text mining
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+**Text Similarity using Vector Space Model** </br>
+The idea is to find common words within text. The figure below shows an example with a text with common words “”house” and “white”. It represents all texts with common words, calculating the frequency of each word. 

@@ -2,13 +2,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.andreaperlato.com/aipost/</loc>
-    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
+    <loc>https://www.andreaperlato.com/categories/</loc>
+    <lastmod>2019-12-11T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/categories/</loc>
+    <loc>https://www.andreaperlato.com/tags/nlp/</loc>
+    <lastmod>2019-12-11T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/theorypost/nlp-glossary/</loc>
+    <lastmod>2019-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/</loc>
+    <lastmod>2019-12-11T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/theorypost/</loc>
+    <lastmod>2019-12-11T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/nlp/</loc>
+    <lastmod>2019-12-11T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/text-mining/</loc>
+    <lastmod>2019-12-11T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/aipost/</loc>
     <lastmod>2019-12-02T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -21,12 +56,6 @@
   <url>
     <loc>https://www.andreaperlato.com/aipost/predict-breast-cancer-using-tensorflow/</loc>
     <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/</loc>
-    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
@@ -200,12 +229,6 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/tags/nlp/</loc>
-    <lastmod>2019-11-14T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.andreaperlato.com/mlpost/nlp-step-by-step/</loc>
     <lastmod>2019-11-14T00:00:00+00:00</lastmod>
   </url>
@@ -260,12 +283,6 @@
   <url>
     <loc>https://www.andreaperlato.com/theorypost/bias-variance-trade-off/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/theorypost/</loc>
-    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
