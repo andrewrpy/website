@@ -15,6 +15,12 @@ body {
 text-align: justify}
 </style>
 
+The Word2Vec is a semantic learning framework that used a neural network to learn the representation of words or phrases in a text. It is usefull to understand the semantic meaning behind a term. This algorithm use two methods: </br>
+1 - CBOW </br>
+2 - SkipGram </br>
+In **Continuous bag of words CBOW** predicts the current word from a window of surrounding context words, or given a set of context words predicts the missing word that is likely to appear in that context. </br>
+The **SkipGram predicts** the surrounding window of context words using the current word of given a single word, predicts the probability of other words that are likely to appear near in tat context. SkipGram is known to show good results for both frequent and rare words. This process is similar to the NGram but now the window is applied also to the preavious words of the input word; the neuranl network is able to learn the combination between both preaviuos and posteriors words in a semantic way.
+
 The Word2Vec is a deep learning algorithm that draws context from phrases. Every textual document is represented in the form of a **vector**, and that is done through [**Vector Space Modelling (VSM)**](https://en.wikipedia.org/wiki/Vector_space_model). We can convert our text using [**One Hot Encoding**](https://en.wikipedia.org/wiki/One-hot). For example, having three words we can make a vector in a three dimentional space.
 
 <center>
