@@ -6,17 +6,35 @@
     <description>Recent content in Tags on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>ANN</title>
+      <link>/tags/ann/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ann/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>NLP</title>
       <link>/tags/nlp/</link>
-      <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scientific paper</title>
+      <link>/tags/scientific-paper/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/scientific-paper/</guid>
       <description></description>
     </item>
     
@@ -611,15 +629,6 @@
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/standardization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ANN</title>
-      <link>/tags/ann/</link>
-      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ann/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>recommender system on Andrea Perlato</title>
+    <link>/categories/recommender-system/</link>
+    <description>Recent content in recommender system on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/recommender-system/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recommender System of Scientific Paper</title>
+      <link>/theorypost/recommender-system-of-scientific-paper/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/recommender-system-of-scientific-paper/</guid>
+      <description>body {text-align: justify}Many scientists consider the search for related work as an extremely time-consuming part of their responsibilities. The enormity of time taken is partly caused bythe increasing number of publications, which grows exponentially at a yearly rate of 3.7%. Instead of entering just keywords, a user may provide entire documents, including reference lists as input and make implicit and explicit ratings to improve recommendations.</description>
+    </item>
+    
+  </channel>
+</rss>

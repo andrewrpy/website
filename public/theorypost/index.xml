@@ -6,10 +6,19 @@
     <description>Recent content in TheoryPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/theorypost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recommender System of Scientific Paper</title>
+      <link>/theorypost/recommender-system-of-scientific-paper/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/recommender-system-of-scientific-paper/</guid>
+      <description>body {text-align: justify}Many scientists consider the search for related work as an extremely time-consuming part of their responsibilities. The enormity of time taken is partly caused bythe increasing number of publications, which grows exponentially at a yearly rate of 3.7%. Instead of entering just keywords, a user may provide entire documents, including reference lists as input and make implicit and explicit ratings to improve recommendations.</description>
+    </item>
     
     <item>
       <title>NLP Glossary</title>
