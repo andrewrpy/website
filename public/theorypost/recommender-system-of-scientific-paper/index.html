@@ -139,6 +139,25 @@ We can use the code below to scale the difference in dates from zero to one.</p>
 To predict a rating for a given researcher and for a given topic can be made using a <a href="https://www.andreaperlato.com/mlpost/estimate-the-sucess-of-a-new-product-with-logistic-regression/"><strong>k nearest neighbors</strong></a>. The idea is to measure the similarity score between the article and all other article rates (e.g. number of cites). In this case <strong>nearest neighbors</strong> are the articles with the highest content-based similarity scores, and we can use the top 10 nearest articles to recommend to the users.</p>
 <p><strong>Collaborative filtering applied to scientific publications</strong> </br>
 <strong>Collaborative filtering</strong> focused on the similarity attribute of the users finding people with similar tastes based on a similarity measure.</p>
+<center>
+<img src="/img/researchsystem.png" style="width:50.0%" />
+</center>
+<p>In the figure above, we can see that we have the rating information (e.g. number of cites) made by other authors. We can also looking up other topics similar to the user topic to find our finat top recommended articles. A key role is played by the <strong>item similarity</strong> or <strong>similar users</strong>.</p>
+<center>
+<img src="/img/usersvstopics.png" style="width:70.0%" />
+</center>
+<p>From the table abov, we can see that we could have sparcity problem. Thayt is why collaborative filtering works well when we have large amount of data.
+Sparsity also introduces some computational challenges. In fact, we don’t want to store and processing missing data and <strong>sparse arrays</strong> are used to avoid empty space in the matrix.
+This remind us ther <strong>quantity</strong> and <strong>quality</strong> of the data it is often more important than the algorithm that we use.</p>
+<p><strong>Similarity Metrics</strong> </br>
+There is aprobem in scientific publicatioin which is related to the <a href="https://researchguides.uic.edu/if/impact"><strong>impact factor</strong></a> of the journal. In fact, there are journals such as <strong>Nature</strong> tha has a very high impact factor but that is due to the fact that it is multidisciplinary. On the contrary, other journal are more focus on a specific area of research, and as a consequence they have lower impact factor even if they have many readers. Therefore, we have different baseline for different journals.
+The <strong>adjusted cosine</strong> attempts to normalize these differences.</p>
+<p><span class="math display">\[
+\operatorname{cossim}(x, y)=\frac{\sum_{i}\left(\left(x_{i}-\bar{x}\right)\left(y_{i}-\bar{y}\right)\right)}{\sqrt{\sum_{i}\left(x_{i}-\bar{x}\right)^{2}} \sqrt{\sum_{i}\left(y_{i}-\bar{y}\right)^{2}}}
+\]</span></p>
+<p>From the furmula above, we can use x average and y average as the impact factor devided by the number of area of research the the journal contains.
+A slight twist on adjusted cosine is the <strong>pearson similarity</strong>; it looks at the difference between number of cites of an author and the average of cite of an article.
+We can think of <strong>person similarity</strong> as measuring the similarity between authors by how much they diverge from the topic rate.</p>
 
     </div>
   </article>

@@ -112,12 +112,31 @@ To predict a rating for a given researcher and for a given topic can be made usi
 **Collaborative filtering applied to scientific publications** </br>
 **Collaborative filtering** focused on the similarity attribute of the users finding people with similar tastes based on a similarity measure.
 
+<center>
+![](/img/researchsystem.png){width=50%}
+</center>
 
+In the figure above, we can see that we have the rating information (e.g. number of cites) made by other authors. We can also looking up other topics similar to the user topic to find our finat top recommended articles. A key role is played by the **item similarity** or **similar users**.
 
+<center>
+![](/img/usersvstopics.png){width=70%}
+</center>
 
+From the table abov, we can see that we could have sparcity problem. Thayt is why collaborative filtering works well when we have large amount of data.
+Sparsity also introduces some computational challenges. In fact, we don't want to store and processing missing data and **sparse arrays** are used to avoid empty space in the matrix.
+This remind us ther **quantity** and **quality** of the data it is often more important than the algorithm that we use.
 
+**Similarity Metrics** </br>
+There is aprobem in scientific publicatioin which is related to the [**impact factor**](https://researchguides.uic.edu/if/impact) of the journal. In fact, there are journals such as **Nature** tha has a very high impact factor but that is due to the fact that it is multidisciplinary. On the contrary, other journal are more focus on a specific area of research, and as a consequence they have lower impact factor even if they have many readers. Therefore, we have different baseline for different journals. 
+The **adjusted cosine** attempts to normalize these differences.
 
+$$
+\operatorname{cossim}(x, y)=\frac{\sum_{i}\left(\left(x_{i}-\bar{x}\right)\left(y_{i}-\bar{y}\right)\right)}{\sqrt{\sum_{i}\left(x_{i}-\bar{x}\right)^{2}} \sqrt{\sum_{i}\left(y_{i}-\bar{y}\right)^{2}}}
+$$
 
+From the furmula above, we can use x average and y average as the impact factor devided by the number of area of research the the journal contains.
+A slight twist on adjusted cosine is the **pearson similarity**; it looks at the difference between number of cites of an author and the average of cite of an article. 
+We can think of **person similarity** as measuring the similarity between authors by how much they diverge from the topic rate.
 
 
 
