@@ -6,10 +6,20 @@
     <description>Recent content in GraphPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/graphpost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Social Network Analysis on Romania Elections</title>
+      <link>/graphpost/social-network-analysis-on-romania-elections/</link>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/graphpost/social-network-analysis-on-romania-elections/</guid>
+      <description>body {text-align: justify}In Romania, the voters did not win the election. The sharers did. On November 16, 2014 Klaus Iohannis became the president of Romania and the most popular Romanian politician on internet, thanks to campaign mainly on Facebook.In order to shed more light on the dynamics of decision-making we analized more than 60 000 Romanian Facebook comments during the election period.
+A poem changed the course of historyThe first idea was to divide the comments according to whether they were in favor of one of the two presidential candidates (Klaus Iohannis vs.</description>
+    </item>
     
     <item>
       <title>Graphical Representatioin of Missing Data</title>

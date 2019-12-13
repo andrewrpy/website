@@ -14,6 +14,12 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/graphpost/</loc>
+    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/tags/nlp/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
@@ -21,6 +27,11 @@
   
   <url>
     <loc>https://www.andreaperlato.com/theorypost/recommender-system-of-scientific-paper/</loc>
+    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/graphpost/social-network-analysis-on-romania-elections/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -37,6 +48,12 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/tags/graph-theory/</loc>
+    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/categories/recommender-system/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
@@ -44,6 +61,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/scientific-paper/</loc>
+    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/social-network-analysis/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -271,12 +294,6 @@
   <url>
     <loc>https://www.andreaperlato.com/tags/tf-idf/</loc>
     <lastmod>2019-11-14T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/graphpost/</loc>
-    <lastmod>2019-11-12T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
