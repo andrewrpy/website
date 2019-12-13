@@ -78,14 +78,14 @@ The parameters of the prior are called hyperparameters. In LDA, both topic distr
 <p><strong>Recommender system in text mining</strong> </br>
 Recommender system is designed to predict the user preference and how to recommend the right items in order to create a user personalization experience.
 There are two types of recommender system: </br>
-1 - Content based filtering: focused on the similarity attributes of the itens to give recommendations. </br>
+1 - Content based filtering: focused on the similarity attributes of the items to give recommendations. </br>
 2 - Collaborative filtering: focused on the similarity attribute of the users finding people with similar tastes based on a similarity measure: <strong>memory based</strong> and <strong>model based</strong>.</p>
 <center>
 <img src="/img/recsys.png" style="width:40.0%" />
 </center>
 <p>From the figure above, the content based filtering is able to find similar items of the favorite items of the user, such as the mouse and the printer based on the keybord and the joystick. The recommendation is based on the similarity.
 On the contrary, in the collaborative filtering is focused on the similarity attributes of the users, finding peole with similar traits based on a similarity measure. There are two measures: memory based and model based.</p>
-<p>The <strong>memory based recommendation</strong> is looking items liked by similar people in order to create a ranked list of recommendations.. We can sort the ranked list to recommend the top n items to the user.
+<p>The <strong>memory based recommendation</strong> is looking items liked by similar people in order to create a ranked list of recommendations. We can sort the ranked list to recommend the top n items to the user.
 The Person correlation and cosine similarity are used.
 Here the Pearson correlation formula:</p>
 <p><span class="math display">\[
@@ -101,3 +101,9 @@ In the memory based recommendation the <strong>similarity matrix is used</strong
 <img src="/img/similaritymatrix.png" style="width:60.0%" />
 </center>
 <p>From the figure above we can see on the left the <strong>item-item similarity</strong> which is calculated by looking into co-ranked items only. Form example, for the items <strong>i</strong> and <strong>j</strong> the similarity is computed by calculating similarity between rating the i and j columns (items) but only in the cells where we have a rate (blue rectangles). Another approach is to use the <strong>user-item similarity</strong>, on the right of the figure above. This approach is looking into correlated items only in rows (users).</p>
+<p>A pratical application is about scientific publications. The amount of digital text data is growing exponentially and it is time consuming for researchers to find relevant information and the researched more connected to the same area of research. We can use the following variabels: </br>
+1 - user: the name of researchers </br>
+2 - topics: the specific area of research </br>
+3 - cites: number of quotes received by an article </br>
+4 - date: date of publication used as a cut-off to split the data between train and test set </br>
+Having there variables we can implement a ANN to find attribute of the users finding researchers with similar influence on a specific topic based on a similarity number of quotes (collaborative filtering).</p>
