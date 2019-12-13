@@ -19,11 +19,6 @@
 
 
 
-
-<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css' rel='stylesheet' type='text/css' />
-
-
-
 <link rel="stylesheet" href="/css/fonts.css" media="all">
 <link rel="stylesheet" href="/css/main.css" media="all">
 
@@ -163,37 +158,6 @@ In the memory based recommendation the <strong>similarity matrix is used</strong
 <img src="/img/similaritymatrix.png" style="width:60.0%" />
 </center>
 <p>From the figure above we can see on the left the <strong>item-item similarity</strong> which is calculated by looking into co-ranked items only. Form example, for the items <strong>i</strong> and <strong>j</strong> the similarity is computed by calculating similarity between rating the i and j columns (items) but only in the cells where we have a rate (blue rectangles). Another approach is to use the <strong>user-item similarity</strong>, on the right of the figure above. This approach is looking into correlated items only in rows (users).</p>
-<p>A pratical application is about scientific publications. The amount of digital text data is growing exponentially and it is time consuming for researchers to find relevant information and the researched more connected to the same area of research. We can use the following variabels: </br>
-1 - user: the name of researchers </br>
-2 - topics: the specific area of research </br>
-3 - cites: number of quotes received by an article </br>
-4 - date: date of publication used as a cut-off to split the data between train and test set </br>
-Having there variables we can implement a ANN to find attribute of the users finding researchers with similar influence on a specific topic based on a the number of quotes (collaborative filtering).
-We can also try to use a more simple approach: <strong>content based filtering</strong>. </br></p>
-<p><strong>Content based filtering applied to scientific publications</strong> </br>
-The content based filtering recommend items (scientific articles) based on the attributes of those items themselves.
-The figure below is an example of the <strong>cosine similarity</strong> to find similar articles.</p>
-<center>
-<p><img src="/img/cosinesim.png" style="width:80.0%" /></p>
-</center>
-<p>The article 1 (attentional bias in smokers) has a theta angle of 45 degree and this corrispond to a similarity of 0.7. This means that the article 1 is related to both the topic brain attention mechanisms and drug addiction. Bolow the formula to calculate the cosine similarity in amultidimentional space.</p>
-<p><span class="math display">\[
-\operatorname{cossim}(x, y)=\frac{\sum_{i} x_{i} y_{i}}{\sqrt{\sum_{i} x_{i}^{2}} \sqrt{\sum_{i} y_{i}^{2}}}
-\]</span></p>
-<p>The x and y in the formula above are topic1 and topic2 respectively. By taking the summation of each topic x and y and dividing by the square root of the summations squared, we end up with the cosine similarity score.
-We can also take in consideration the <strong>date of publication</strong> of the articles. The idea is that how far apart would two movies have to be for their date of publication, signify that they are sunstantially different. A decade shoudl be a reasonable starting point (e.g. an article about brain activity in the 80s are different the same article in the 90s).
-We can use the code below to scale the difference in dates from zero to one.</p>
-<pre class="python"><code>def computeYearSimilarity(self, topic1, topic2, years):
-       diff = abs(years[topic1] - years[topic2])
-       sim = math.exp(-diff / 10.0)
-       return sim
-       </code></pre>
-<p>From the code above we can see the <strong>exponential decay function</strong> is used. The similarity socre decays exponentially which is relly small after 10 years and almost nothing after 20 years as we can see from the figure below.</p>
-<center>
-<img src="/img/exponentialdecay.png" style="width:30.0%" />
-</center>
-<p>In the real world we can use test many variatins of this function to see what really produces the best recommendations with real articles.
-To predict a rating for a given researcher and for a given topic can be made using a <a href="https://www.andreaperlato.com/mlpost/estimate-the-sucess-of-a-new-product-with-logistic-regression/"><strong>k nearest neighbors</strong></a>. The idea is to measure the similarity score between the article and all other article rates (e.g. number of cites). In this case <strong>nearest neighbors</strong> are the articles with the highest content-based similarity scores, and we can use the top 10 nearest articles to recommend to the users.</p>
 
     </div>
   </article>
@@ -216,18 +180,6 @@ To predict a rating for a given researcher and for a given topic can be made usi
 
     </div>
     
-
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
-
-
 
     
 <script src="/js/math-code.js"></script>
