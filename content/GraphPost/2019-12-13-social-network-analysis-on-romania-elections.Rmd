@@ -26,3 +26,68 @@ The first idea was to divide the comments according to whether they were in favo
 </center>
 
 The figure above is the so called **Topic wheel** visualization: the inner ring represent frequently used terms and the outside ring provide a more granular look at terms and how they related to the topics of conversation.
+An emblematic phrase that emerged in the conversation and reported in the middle of the topic wheel is: </br>
+RO: Revolutia 2.0 Incepe pe Internet.  EN: The revolution 2.0 start on Internet. </br>
+The revolution in question is obviously the presidential vote. A deeper appreciation of word analysis prompted us to eliminate word pairs that did not dominate the conversation. The figure below (figure 2) describe the Semantic Network, a description of connections between words, or better the co-occurrence of words in a same post. It is quite evident here that a sort of circuit connects the words.
+
+<center>
+![](/img/wordpairs.png){width=60%}
+</center>
+
+The figure above represents the set of dominant word pairs during the election period. The size and opacity of the nodes is proportional to the betweenness centrality. The edge width is higher for the most used word pairs. In light blue the sequence of words that create a sentence. Surprisingly the pairs of most frequent words formed a meaningful sentence (see the pattern in light blue in figure 1): </br>
+
+RO: Priviti la acest video, este exemplul perfect ce ne demonstreaza adevarul depre tara noastra. Priviti si lasati parerea voastra.
+EN: Watch this video, is a perfect example of what is happening in our country. Look and leave a comment.
+
+After the word pairs Klaus-Iohannis, all the words that generate the sentence above have the highest value of betweenness centrality (nodes darker and larger) and this means that this phrase was able to trigger the largest number of conversations. A more detailed investigation revealed that the video often was referring to diaspora protest.
+Moreover, these words frequently connected to an emotionally loaded [**video**](https://www.facebook.com/video.php?v=729450420462528) that received more than 22000 views.
+
+The video is a historical lesson. A Romanian actor recites a poem about the sacrifices made by the people to his country, about great figures of the past and how the current administration is responsible for the decline in the country. The phrase that link to the video above is represented by the branch in light blue, and is closely related to another concept: the vote for Klaus Iohannis.
+
+**What a Facebook revolution looks like** </br>
+The virality of the  video is probably one of the major reasons for the rapid increase in the number of posts in favor of Iohannis starting on November 2 (day of the first round elections) as represented by the blue line in the graph below.
+
+<center>
+![](/img/trendiohannis.bmp){width=70%}
+</center>
+
+The grap above represents the number of Facebook posts as a function of period of estimation (from Oct 21 to Nov 16). In red the number of posts in favor of Ponta and in blue in favor of Iohannis. The gray line is the estimated trend (using 4 period moving average) for Iohannis, which forecast the week following the second round vote (form Nov 17 to Nov 23).
+The trend for the two candidates remained stationary up to what econometricians call the “break data” which clearly corresponds to November 2. The underestimation of this breakage point leads to inaccurate predictions. </br>
+Thanks to Facebook, the anti-government protests of citizens abroad increased the probability of dissemination of information in Romania and found solidarity in citizens at home. This, in turn, led to protests in the streets of major Romanian cities. This is a clear example of the contagion that can be produced by a social network. 
+
+**Beyond the tipping point: The revolution was just getting started** </br>
+The long-term effects of this phenomenon is quite evident if we consider the forecasted trend represented by the right most part of the grey line in figure 2 (from Nov 16 to Nov 23). More precisely, what we represent from Nov 16 to Nov 23 is not the real number of posts, but the moving average index we used to estimate the number of posts in the case of a No vote Nov 16. If the second round vote had taken place a week later, more than 35000 posts would supported Iohannis. Therefore, it is possible that Iohannis would have won the election with an even higher percentage.
+To have a better understanding to the nature of the contagion we report here below the network graph of the people that commented the same posts form the Iohannis Fan Page (figure 4). This graph is what we call **Commenter Network**.
+
+<center>
+![](/img/diasporavsromania.bmp){width=70%}
+
+</center>
+
+The graph above is a simplified version of the commenter network. The edges connect people that commented the same post. In blue, the people based in Romania and in red the diaspora. The size of the node is proportional to the betweenness centrality. In light blue, the network generated by the node (in green) that posted the [**viral video**](https://www.facebook.com/video.php?v=729450420462528) described previously.
+
+The processes of contagion is what we mean metaphorically with viral spread, but it is also important to introduce the notion of tipping phenomena in networks. This is the sudden mass of spread of contagion within a network and that is why also called threshold phenomena. Below that value, the spread is localized and above that value, we consistently get almost complete infection of the entire population.
+Many things, including the connectivity structure of the network, might influence the occurrence of this sudden mass of spread of contagion. 
+The commenter’s network above perfectly represent a model of viral spread (figure 3). The virus (e.g. comments in favor to Iohannis or protest links) spread deterministically to any neighbors.
+Connections in light blue show how the [**video**](https://www.facebook.com/video.php?v=729450420462528) helped the green node to obtained a great centrality. This node with the other central nodes (i.e. nodes with larger size) are able by themselves to generate the tipping or threshold phenomenon: the entire network is influenced with amazing speed from the information of those few people.
+
+**The new kingmakers** </br>
+Note how diaspora (nodes in red) and Romanians at home (in blue) communicate with each other. It must be stressed, in fact, that the number of shares between diaspora and citizens at home has been surprising. 
+The key ingredients of Iohannis success on Facebook are were comments with strong emotional content and more importantly a strong connected network. Probably this has greatly influenced the decision of many people, changing their voting choice. 
+Which raises the question: What is more valuable – a Facebook share or an actual vote?
+
+**Acknowledgements** </br>
+We gratefully acknowledge [**Oana Gabor**](https://www.linkedin.com/in/oana-m-g-111b597/) for her support with Romanian language.
+
+
+
+
+
+
+
+
+
+
+
+
+
