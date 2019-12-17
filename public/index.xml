@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Exploratory Data Analysis</title>
+      <link>/mlpost/exploratory-data-analysis/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/mlpost/exploratory-data-analysis/</guid>
+      <description>body {text-align: justify}Before the definition of the model it is always important to plot the distribution of our variable, finding unusual observation (points of leverage, hat value and outliers), missing data (understand if they are missing at random or not at random). Then, I always put the data in a multiple regression to see correlations and the presence of multicollinearity: is the phenomenon in which one predictor can be linearly predict from others with a substantial degree of accuracy.</description>
+    </item>
+    
+    <item>
       <title>The Learning Rate</title>
       <link>/theorypost/the-learning-rate/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>

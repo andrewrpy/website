@@ -8,6 +8,29 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/tags/eda/</loc>
+    <lastmod>2019-12-17T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/exploratory-data-analysis/</loc>
+    <lastmod>2019-12-17T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/mlpost/exploratory-data-analysis/</loc>
+    <lastmod>2019-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/mlpost/</loc>
+    <lastmod>2019-12-17T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/tags/</loc>
     <lastmod>2019-12-17T00:00:00+00:00</lastmod>
      <priority>0</priority>
@@ -32,6 +55,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/learinig-rate/</loc>
+    <lastmod>2019-12-17T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/machine-learning/</loc>
     <lastmod>2019-12-17T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -256,19 +285,7 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/mlpost/</loc>
-    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.andreaperlato.com/tags/big-data/</loc>
-    <lastmod>2019-11-20T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/categories/machine-learning/</loc>
     <lastmod>2019-11-20T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Exploratory Data Analysis - Andrea Perlato</title>
+<meta property="og:title" content="Exploratory Data Analysis - Andrea Perlato">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/graphpost/">Graph</a></li>
+    
+    <li><a href="/mlpost/">Machine Learning</a></li>
+    
+    <li><a href="/aipost/">Artificial Intelligence</a></li>
+    
+    <li><a href="/tspost/">Time Series</a></li>
+    
+    <li><a href="/theorypost/">Theory</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+
+    <h1 class="article-title">Exploratory Data Analysis</h1>
+
+    
+
+    <div class="article-content">
+      
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<p>Before the definition of the model it is always important to plot the distribution of our variable, finding unusual observation (points of leverage, hat value and outliers), missing data (understand if they are missing at random or not at random). Then, I always put the data in a multiple regression to see correlations and the presence of <a href="https://en.wikipedia.org/wiki/Multicollinearity"><strong>multicollinearity</strong></a>: is the phenomenon in which one predictor can be linearly predict from others with a substantial degree of accuracy. In this situation, the coefficients estimated may change erratically in response to small changes of the model. For this reason, I always test it using the <a href="https://en.wikipedia.org/wiki/Variance_inflation_factor"><strong>Variance Inflation Factor Analysis VIF</strong></a> that test the ratio of variance in the model with multiple terms, dividing by the variance of the model with one term alone: so, it tests the severity of multicollinearity.
+Then, we can reduce the predictors finding the best ones using the <a href="https://en.wikipedia.org/wiki/Stepwise_regression"><strong>Stepwise</strong></a> approach (comparing AIC and BIC index) and then the <a href="https://www.listendata.com/2015/05/relative-importance-weight-analysis.html"><strong>Relative Importance Weight</strong></a> Analysis: in multiple regression analysis, we are interested in determining the relative contribution of each predictor. The Relative Importance Weight Analysis, is a method by which we can partition the R-squared into pseudo-orthogonal portions. Each portion representing the relative contribution of one predictor variable.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://www.rstudio.com/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-51254710-89', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>
+
