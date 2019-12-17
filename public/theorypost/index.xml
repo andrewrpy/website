@@ -6,10 +6,20 @@
     <description>Recent content in TheoryPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/theorypost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Learning Rate</title>
+      <link>/theorypost/the-learning-rate/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/the-learning-rate/</guid>
+      <description>body {text-align: justify}Deep learning neural networks are trained using the stochastic gradient descent algorithm.Stochastic gradient descent is an optimization algorithm that estimates the error gradient for the current state of the model using examples from the training dataset, then updates the weights of the model using the backpropagation of errors algorithm.
+The amount that the weights are updated during training is referred to as the step size or the learning rate.</description>
+    </item>
     
     <item>
       <title>Recommender System of Scientific Paper</title>
