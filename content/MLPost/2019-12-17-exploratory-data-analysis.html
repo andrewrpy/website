@@ -18,3 +18,22 @@ text-align: justify}
 </style>
 <p>Before the definition of the model it is always important to plot the distribution of our variable, finding unusual observation (points of leverage, hat value and outliers), missing data (understand if they are missing at random or not at random). Then, I always put the data in a multiple regression to see correlations and the presence of <a href="https://en.wikipedia.org/wiki/Multicollinearity"><strong>multicollinearity</strong></a>: is the phenomenon in which one predictor can be linearly predict from others with a substantial degree of accuracy. In this situation, the coefficients estimated may change erratically in response to small changes of the model. For this reason, I always test it using the <a href="https://en.wikipedia.org/wiki/Variance_inflation_factor"><strong>Variance Inflation Factor Analysis VIF</strong></a> that test the ratio of variance in the model with multiple terms, dividing by the variance of the model with one term alone: so, it tests the severity of multicollinearity.
 Then, we can reduce the predictors finding the best ones using the <a href="https://en.wikipedia.org/wiki/Stepwise_regression"><strong>Stepwise</strong></a> approach (comparing AIC and BIC index) and then the <a href="https://www.listendata.com/2015/05/relative-importance-weight-analysis.html"><strong>Relative Importance Weight</strong></a> Analysis: in multiple regression analysis, we are interested in determining the relative contribution of each predictor. The Relative Importance Weight Analysis, is a method by which we can partition the R-squared into pseudo-orthogonal portions. Each portion representing the relative contribution of one predictor variable.</p>
+<p><strong>Scale</strong> </br>
+If we have to measure distances in KNN it is necessary to Scale the data. We can find opposite solution if we merely calculate distances without scaling. For example, we can use <strong>MixMax Scaler</strong>.</p>
+<p><span class="math display">\[
+X=(X-X \cdot \min ()) /(X \cdot \max ()-X \cdot \min ())
+\]</span>
+Another method is using the <strong>Z points</strong>, with mean=0 and standard deviation=1.</p>
+<p><span class="math display">\[
+X=(X-X . \text { mean }()) / X . s t d()
+\]</span></p>
+<p><strong>Outliers</strong> </br>
+Linear models are influenced by Outliers. An observation is an outlier if it falls more than 1.5 IQR above the upper quantile or if it falls more than 1.5 IQR below the lower quantile. IQR is the Interquartile Range, is a measure of statistical dispersion, and is the difference between 75th and 25th percentiles: Q3-Q1.</p>
+<p><strong>Log-Transformation</strong> </br>
+This move outliers closer to other values. For example, the log transformation drive outliers closer to the features’ average.</p>
+<p><strong>Feature Generation</strong> </br>
+It is a process of creating. We can use One-Hot Encoding OHE to reshape the data in order to have 1 when the feature is present and 0 when is not present.</p>
+<center>
+<img src="/img/onehotencoding.png" style="width:70.0%" />
+</center>
+<p>Crucially, One-Hot Encoding is by default already scaled. We can use the Sparse Matrix in order to exclude the 0s and work only when the feature is present, by doing that we save space in RAM. Note that we can use sparse matrix only if features with 0 are far less of all the values.</p>
