@@ -39,17 +39,22 @@ From the figure above, after two steps we find that node B has the highest PageR
 **What happens if we continue for another step?** </br>
 If we continue with more steps we might notice that the values change a little bit, but they still have the same order and B is sitll the highest PageRank node. 
 
-**Scaled PageRank** /br>
-The PageRank value of a node after k steps can be interpreted as the probability that a random walker lands on that node after taking k random steps.
+**Scaled PageRank** </br>
+The PageRank value of a node after k steps can be interpreted as the probability that a random walker lands on that node after taking k random steps. Random walk means we would start on a random node, and then we choose outgoing edges at random, and follow those edges to the next node. And then you're going to repeat this k times. We simply randomly choose edges and walk along in the network and the value of PageRank of each node is the probability that you would land on that node after k steps. If you repeat this for a lot of steps, say k equals infinity. These are the values that you can eventually approach, these are the values that you converges to.
 
+Lets make a small change to this network adding two nodes, F and G, where B points to both of those nodes, and then they point to each other as depicted in the figure below.
 
+<center>
+![](/img/sclaedpagerank.png){width=70%}
 
+</center>
 
+We want you to look at this network and try and figure out what the PageRank of each node is after taking a lot of PageRank **steps** for example **4k**. For large enough k, F and G are going to have a PageRank value of about one half. And all the other nodes are going to have a PageRank value of 0. That is due to the fact that whenever the random walk lands on F or G, then they're going to stock on F and G because there are no edges to go to. There is no way to get back from G and F to any of the other notes. </br>
+The way we fix this problem is by introducing a new parameter to the PageRank computation called this **damping** parameter **alpha** and we make the random woalk with the with probability **1- alpha** and by doing this we get unstuck whenever we actually choose a random node.
+Crucially, for most networks as k gets larger, the **Scaled PageRank** converges to a unique value. 
+Using Scaled PageRank now we have F and G still with a very high PageRank compared to the other notes. But the other nodes don't have a PageRank value of zero. It is important to note that this damping parameter works better for **large network**s like the **web** or very large **social networks**.
 
-
-
-
-
+Reference: [**Appied Social Network Analysis**](https://www.coursera.org/learn/python-social-network-analysis)
 
 
 
