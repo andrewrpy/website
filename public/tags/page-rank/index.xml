@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>page rank on Andrea Perlato</title>
+    <link>/tags/page-rank/</link>
+    <description>Recent content in page rank on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/page-rank/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Page Rank in Network Analysis</title>
+      <link>/graphpost/page-rank-in-network-analysis/</link>
+      <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/graphpost/page-rank-in-network-analysis/</guid>
+      <description>body {text-align: justify}The Social Network Analysis is simply a set of objects, which we call nodes, that have some relationships between each other, which we call edges.The first reason to study networks, is because networks are everywhere. In social networks the nodes are people, and the connections between the nodes represent some type relationship between the people in the network. There are many metrics to estimate the importance or better, the centrality od a node in a network such as Closeness centrality and Betweenness centrality.</description>
+    </item>
+    
+  </channel>
+</rss>

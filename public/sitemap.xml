@@ -3,7 +3,42 @@
   
   <url>
     <loc>https://www.andreaperlato.com/categories/</loc>
-    <lastmod>2019-12-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-18T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/graphpost/</loc>
+    <lastmod>2019-12-18T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/graphpost/page-rank-in-network-analysis/</loc>
+    <lastmod>2019-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/</loc>
+    <lastmod>2019-12-18T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/centrality-measurement/</loc>
+    <lastmod>2019-12-18T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/page-rank/</loc>
+    <lastmod>2019-12-18T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/social-network-analysis/</loc>
+    <lastmod>2019-12-18T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
@@ -26,12 +61,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/mlpost/</loc>
-    <lastmod>2019-12-17T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/</loc>
     <lastmod>2019-12-17T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -72,12 +101,6 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/graphpost/</loc>
-    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.andreaperlato.com/tags/nlp/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
@@ -107,12 +130,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/scientific-paper/</loc>
-    <lastmod>2019-12-13T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/categories/social-network-analysis/</loc>
     <lastmod>2019-12-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -856,13 +873,13 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>

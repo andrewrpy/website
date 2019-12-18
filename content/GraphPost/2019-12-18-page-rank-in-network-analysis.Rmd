@@ -1,0 +1,31 @@
+---
+title: Page Rank in Network Analysis
+author: andrea perlato
+date: '2019-12-18'
+slug: page-rank-in-network-analysis
+categories:
+  - social network analysis
+tags:
+  - page rank
+  - centrality measurement
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+The Social Network Analysis is simply a set of objects, which we call nodes, that have some relationships between each other, which we call edges.
+The first reason to study networks, is because networks are everywhere. In social networks the nodes are people, and the connections between the nodes represent some type relationship between the people in the network. There are many metrics to estimate the importance or better, the centrality od a node in a network such as [**Closeness centrality**](https://en.wikipedia.org/wiki/Closeness_centrality) and [**Betweenness centrality**](https://en.wikipedia.org/wiki/Betweenness_centrality). The page rank was developed by the Google founders when they were thinking about how to measure the importance of webpages using the hyperlink network structure of the web. And the basic idea, is that PageRank will assign a score of importance to every single node. And the assumption that it makes, is that important nodes are those that have many in-links from important pages or important other nodes.
+
+The Page Rank can be also used on any type of network, for example, the web or social networks, but it really works better for networks that have **directed edges**. In fact, the important pages are those that have many **in-links** from more important pages.
+
+
+
+
+
+
+
+
+
+
