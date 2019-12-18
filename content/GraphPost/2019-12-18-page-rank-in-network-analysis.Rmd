@@ -20,6 +20,56 @@ The first reason to study networks, is because networks are everywhere. In socia
 
 The Page Rank can be also used on any type of network, for example, the web or social networks, but it really works better for networks that have **directed edges**. In fact, the important pages are those that have many **in-links** from more important pages.
 
+**How it works** </br>
+At first, we start with every node having a PageRank value of 1/n. And then what we give all of its PageRank to all the nodes that it points to, and then we do this over and over again performing these **Basic PageRank Updating Rules** k times. And then, the new value of PageRank for every node is going to be simply the sum of all the PageRank that are received from all the nodes that point to it.
+
+<center>
+![](/img/pagerankrule.png){width=70%}
+</center>
+
+At this point, we assign every node a PageRank of 1/n. Looking at the figure above, every node will have a PageRank value of 1/5. And now we're going to start applying the Update Rule. So we're going to have to keep track of the old values of PageRank, and what the new value of PageRank of each node is. Let's start with node A. Nodes D and E point to node A, so A is going to get PageRank from D and E. Now let's think about how much **PageRank A** is going to receive from each one of those two nodes. So if we look at **D**, D has three edges, that points to three different nodes, C, A, and E. So A is going to receive 1/3 of the current page rank that D has. D currently has 1/ 5 PageRank, and so A is going to get 1/3 of that 1/5 PageRank that D has. Now A is also going to get PageRank from node **E**, and because E only points to A, then it's going to give all of its PageRank to node A. And so A is going to get 1/5 PageRank from node E. And so, in total, A is going to get 4/15 PageRank from those two nodes. And so the new value PageRank of node A is 4/15. Now, let's think of node B. We use the same approach for each nodes on the network. The figure above represents the **PageRank at Step 1**.
+
+Crucially, we do the exact same thing again to get the second step of PageRank, k equals 2 in order to obtain the **PageRank at Step 2** as shown in the figure below.
+
+<center>
+![](/img/pageranksteps.png){width=70%}
+</center>
+
+From the figure above, after two steps we find that node B has the highest PageRank (0.43), followed by node C, then node D, node A, and E. This point, this is suggesting that B is the most important node in this network. </br>
+**What happens if we continue for another step?** </br>
+If we continue with more steps we might notice that the values change a little bit, but they still have the same order and B is sitll the highest PageRank node. 
+
+**Scaled PageRank** /br>
+The PageRank value of a node after k steps can be interpreted as the probability that a random walker lands on that node after taking k random steps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
