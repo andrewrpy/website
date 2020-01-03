@@ -55,7 +55,8 @@ When the amount of say is **large**, the Stump did a good job in classifying sam
 **Advantages of Ensemble** </br>
 If the first two Principal Components of the PCA would not create a very accurate representation of the data, in this case could be better to use an Ensamble Approach.
 
-
+This article is a summary of the [**StatQuest**](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) video made by **Josh Starmer**. </br> 
+Click [**here**](https://www.youtube.com/watch?v=LsK-xG1cLYA&t=819s) to see the video explained by Josh Starmer. </br>
 
 
 
