@@ -82,7 +82,39 @@ We start considering to variable reported int he figure below, and we want to pr
 <img src="/img/grad1.png" style="width:30.0%" />
 </center>
 <p>Gradient Boost is similar with <a href="https://www.andreaperlato.com/theorypost/ensemble-learning/"><strong>AdaBoost</strong></a> that starts by building a very short tree called <strong>stump</strong> from the training data. The <strong>amount of say</strong> that the stump has on the final output is based on how well the stump compensated for those previous errors. Then the AdaBoost builds the next stump based on the errors that the preavious stump made. </br>
-In contrast, Gradient Boost starts by making a single <strong>leaf</strong> instead of a stump. The <strong>leaf</strong> is an initial guess for the weights of all the samples.</p>
+In contrast, Gradient Boost starts by making a single <strong>leaf</strong> instead of a stump. The <strong>leaf</strong> is an initial guess for the Weight of all the samples.
+The initial tree is the average value of the independent variable, in this case the average of Weight. </br>
+Unlike the AdaBoost, the initial tree is larger than a stump: in pratice we set the maximum number of leaves to be between <strong>8</strong> and <strong>32</strong>. So, like AdaBoost we have fixed sized trees, but unlike AdaBoost each tree can be larger than a stump. </br>
+Gradient Boost can be used in Regression and Classification.</p>
+<p><strong>Gradient Boost Regression Main Idea</strong> </br>
+The first step is to calculate the average of the independent variable (Weight): this is our first tree.
+Next, we build a tree baesd on the errors from the first tree (average of Weight) which is the difference betweeb the observed Weight (71.2) and the predicted Weights, and we call there differences <strong>Residuals</strong>. At this point, we can build the tree based on the dependent variables Height, Favorite Color and Gender.</p>
+<center>
+<img src="/img/grad2.png" style="width:90.0%" />
+</center>
+<p>From the figure above, we can see that we used 4 leaves, but is common to use between 8 and 32 leaves.
+Moreover, we replaced the <strong>double residuals</strong> by their average, for example: (-14.2-15.2)/2=-14.7 and (1.8+5.8)/2 as we can see from the figure above.
+The problem of this approach is that we have low <a href="https://www.andreaperlato.com/theorypost/bias-variance-trade-off/"><strong>Bias</strong></a> but a very high <a href="https://www.andreaperlato.com/theorypost/bias-variance-trade-off/"><strong>Variance</strong></a>. To deal with this problem Gradient Boost uses a <strong>Learning Rate</strong> to sclae the contributiion from the new tree. We use a Learning Rate of <strong>0.1</strong> and we do the calculation depicted in the figure below.</p>
+<center>
+<img src="/img/grad3.png" style="width:50.0%" />
+</center>
+<p>Now, we have a new prediction point of 72.8 for the observed Weith of 88: it is a bit far from the 88 but better than the 71.2 of the first tree made with the average weight.
+According with <strong>Jerome Friedman</strong> that invented Gradient Boost: taking lots of small steps in the right direction result in better prediction with the Test Set and this means to have lower Variance.</p>
+<p>At this point we can calculate again the <strong>Residuals</strong> but now using the predicted Weights obtained using the Learning Rate.
+As we cann see from the figure below, the new residuals are smaller than before.</p>
+<center>
+<img src="/img/grad4.png" style="width:65.0%" />
+</center>
+<p>Now, we can calculate the new tree using the new residuals and again with a Learning Rate of 0.1 as we made before.
+We can sum all the Weights obtained by these trees, and this is a new small step closer to the Observed Weight of 88 kg.
+As we can see from the figure below, the branches are the same (Gender=F, Height&gt;1.6, Color not Blue), but the leaves are different each time.</p>
+<center>
+<p><img src="/img/grad5.png" style="width:70.0%" /></p>
+</center>
+<p>From the figure above, we can see that the step now is to combine the initial avegare tree witht the second and third tree where we scaled the tree by a Learning rate of 0.1.
+Adding everything together we can predict a new value of Weight of <strong>74.4</strong> which is another step more closer to the Observed Weight of 88 kg.</p>
+<p>Crucially, each time we add a tree to the Prediction, the Residuals get smaller, and so we can take another small step (building new tree) towards making a better prediction.
+So, we keep making trees until we doesn’t significantly reduce the size of the Residuals.</p>
 
     </div>
   </article>
