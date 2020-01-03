@@ -19,4 +19,29 @@ It has also less overfitting leading us to a better performance in the test set.
 Each kind of learners that we might use has a sort of bias. Combining all of them, can reduce this bias. </br>
 
 **Gradient Boost vs. AdaBoost** </br>
-Gradient Boost is similar with [**AdaBoost**](https://www.andreaperlato.com/theorypost/ensemble-learning/) that starts by building a very short tree called **stump** from the training data. The **amount of say** that the stump has on the final output is based on how well the stump compensated for those previous errors.
+We start considering to variable reported int he figure below, and we want to predict weight from these variables using decision tree.
+
+<center>
+![](/img/grad1.png){width=30%}
+</center>
+
+Gradient Boost is similar with [**AdaBoost**](https://www.andreaperlato.com/theorypost/ensemble-learning/) that starts by building a very short tree called **stump** from the training data. The **amount of say** that the stump has on the final output is based on how well the stump compensated for those previous errors. Then the AdaBoost builds the next stump based on the errors that the preavious stump made. </br>
+In contrast, Gradient Boost starts by making a single **leaf** instead of a stump. The **leaf** is an initial guess for the weights of all the samples.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

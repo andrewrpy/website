@@ -18,7 +18,7 @@
       
       <guid>/theorypost/ensemble-learning-with-gradient-boosting/</guid>
       <description>body {text-align: justify}Ensemble often have lower error than any individual method by themselves.It has also less overfitting leading us to a better performance in the test set.Each kind of learners that we might use has a sort of bias. Combining all of them, can reduce this bias. 
-Gradient Boost vs. AdaBoost Gradient Boost is similar with AdaBoost that starts by building a very short tree called stump from the training data.</description>
+Gradient Boost vs. AdaBoost We start considering to variable reported int he figure below, and we want to predict weight from these variables using decision tree.</description>
     </item>
     
   </channel>
