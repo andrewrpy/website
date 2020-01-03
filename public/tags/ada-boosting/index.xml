@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ensemble learning on Andrea Perlato</title>
-    <link>/tags/ensemble-learning/</link>
-    <description>Recent content in ensemble learning on Andrea Perlato</description>
+    <title>ada boosting on Andrea Perlato</title>
+    <link>/tags/ada-boosting/</link>
+    <description>Recent content in ada boosting on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/ensemble-learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/ada-boosting/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>/theorypost/ensemble-learning-with-adaptive-boosting/</guid>
       <description>body {text-align: justify}Why Ensemble First of all, ensemble often have lower error than any individual method by themselves. It has also less overfitting leading us to a better performance in the test set. Each kind of learners that we might use has a sort of bias. Combining all of them, can reduce this bias. 
 Adaptive Boosting in Random Forest In a Forest of Trees made with ADA Boost the trees are usually just One Node with Two Leaves that are called Stump, so it is a Forest of Stump.</description>
-    </item>
-    
-    <item>
-      <title>Ensemble Learning</title>
-      <link>/theorypost/ensemble-learning/</link>
-      <pubDate>Fri, 26 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/theorypost/ensemble-learning/</guid>
-      <description>body {text-align: justify}This article is a summary of the StatQuest video made by Josh Starmer. Click here to see the video explained by Josh Starmer. 
-The Boosting and Ensemble Learning concepts can be applied to many Machine Learning models: it is a Meta Algorithm used to convert many weak learners into a strong learner in order to achieve good performance in supervised problems.</description>
     </item>
     
   </channel>

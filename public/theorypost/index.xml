@@ -6,10 +6,20 @@
     <description>Recent content in TheoryPosts on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/theorypost/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ensemble Learning with Adaptive Boosting</title>
+      <link>/theorypost/ensemble-learning-with-adaptive-boosting/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/ensemble-learning-with-adaptive-boosting/</guid>
+      <description>body {text-align: justify}Why Ensemble First of all, ensemble often have lower error than any individual method by themselves. It has also less overfitting leading us to a better performance in the test set. Each kind of learners that we might use has a sort of bias. Combining all of them, can reduce this bias. 
+Adaptive Boosting in Random Forest In a Forest of Trees made with ADA Boost the trees are usually just One Node with Two Leaves that are called Stump, so it is a Forest of Stump.</description>
+    </item>
     
     <item>
       <title>The Learning Rate</title>

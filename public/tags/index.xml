@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>ada boosting</title>
+      <link>/tags/ada-boosting/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ada-boosting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ensemble learning</title>
+      <link>/tags/ensemble-learning/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ensemble-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>sna</title>
       <link>/tags/sna/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
@@ -494,15 +512,6 @@
       <pubDate>Fri, 26 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/pca/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ensemble learning</title>
-      <link>/tags/ensemble-learning/</link>
-      <pubDate>Fri, 26 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ensemble-learning/</guid>
       <description></description>
     </item>
     

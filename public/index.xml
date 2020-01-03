@@ -22,6 +22,16 @@ How to tackle this problem to extract the topics: articles vs.</description>
     </item>
     
     <item>
+      <title>Ensemble Learning with Adaptive Boosting</title>
+      <link>/theorypost/ensemble-learning-with-adaptive-boosting/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/ensemble-learning-with-adaptive-boosting/</guid>
+      <description>body {text-align: justify}Why Ensemble First of all, ensemble often have lower error than any individual method by themselves. It has also less overfitting leading us to a better performance in the test set. Each kind of learners that we might use has a sort of bias. Combining all of them, can reduce this bias. 
+Adaptive Boosting in Random Forest In a Forest of Trees made with ADA Boost the trees are usually just One Node with Two Leaves that are called Stump, so it is a Forest of Stump.</description>
+    </item>
+    
+    <item>
       <title>Page Rank in Network Analysis</title>
       <link>/graphpost/page-rank-in-network-analysis/</link>
       <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
