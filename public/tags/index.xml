@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>sna</title>
+      <link>/tags/sna/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sna/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>topic model</title>
+      <link>/tags/topic-model/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/topic-model/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>centrality measurement</title>
@@ -359,15 +377,6 @@
       <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/lda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>topic model</title>
-      <link>/tags/topic-model/</link>
-      <pubDate>Fri, 09 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/topic-model/</guid>
       <description></description>
     </item>
     

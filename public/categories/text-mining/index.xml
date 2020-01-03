@@ -6,10 +6,20 @@
     <description>Recent content in text mining on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/text-mining/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Detect Scientific Topics using NLP</title>
+      <link>/mlpost/detect-scientific-topics-using-nlp/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/mlpost/detect-scientific-topics-using-nlp/</guid>
+      <description>body {text-align: justify}Studying related work within scientific literature is a crucial step in order to have a global overview about the scientific topics, but the amount of digital text data is growing exponentially and it is time consuming for researchers to find relevant information. Making scientific recommender systems smarter is crucial in order to help scientists in their bibliographical research phase. 
+How to tackle this problem to extract the topics: articles vs.</description>
+    </item>
     
     <item>
       <title>NLP Step by Step</title>

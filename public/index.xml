@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Detect Scientific Topics using NLP</title>
+      <link>/mlpost/detect-scientific-topics-using-nlp/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/mlpost/detect-scientific-topics-using-nlp/</guid>
+      <description>body {text-align: justify}Studying related work within scientific literature is a crucial step in order to have a global overview about the scientific topics, but the amount of digital text data is growing exponentially and it is time consuming for researchers to find relevant information. Making scientific recommender systems smarter is crucial in order to help scientists in their bibliographical research phase. 
+How to tackle this problem to extract the topics: articles vs.</description>
+    </item>
+    
+    <item>
       <title>Page Rank in Network Analysis</title>
       <link>/graphpost/page-rank-in-network-analysis/</link>
       <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>

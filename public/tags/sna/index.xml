@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sna on Andrea Perlato</title>
+    <link>/tags/sna/</link>
+    <description>Recent content in sna on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/sna/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Detect Scientific Topics using NLP</title>
+      <link>/mlpost/detect-scientific-topics-using-nlp/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/mlpost/detect-scientific-topics-using-nlp/</guid>
+      <description>body {text-align: justify}Studying related work within scientific literature is a crucial step in order to have a global overview about the scientific topics, but the amount of digital text data is growing exponentially and it is time consuming for researchers to find relevant information. Making scientific recommender systems smarter is crucial in order to help scientists in their bibliographical research phase. 
+How to tackle this problem to extract the topics: articles vs.</description>
+    </item>
+    
+  </channel>
+</rss>
