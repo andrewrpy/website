@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gradient boosting on Andrea Perlato</title>
+    <link>/tags/gradient-boosting/</link>
+    <description>Recent content in gradient boosting on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/gradient-boosting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ensemble Learning with Gradient Boosting</title>
+      <link>/theorypost/ensemble-learning-with-gradient-boosting/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/ensemble-learning-with-gradient-boosting/</guid>
+      <description>body {text-align: justify}Ensemble often have lower error than any individual method by themselves.It has also less overfitting leading us to a better performance in the test set.Each kind of learners that we might use has a sort of bias. Combining all of them, can reduce this bias. 
+Gradient Boost vs. AdaBoost Gradient Boost is similar with AdaBoost that starts by building a very short tree called stump from the training data.</description>
+    </item>
+    
+  </channel>
+</rss>

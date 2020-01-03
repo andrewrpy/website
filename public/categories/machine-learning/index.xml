@@ -22,6 +22,16 @@ Adaptive Boosting in Random Forest In a Forest of Trees made with ADA Boost the
     </item>
     
     <item>
+      <title>Ensemble Learning with Gradient Boosting</title>
+      <link>/theorypost/ensemble-learning-with-gradient-boosting/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/ensemble-learning-with-gradient-boosting/</guid>
+      <description>body {text-align: justify}Ensemble often have lower error than any individual method by themselves.It has also less overfitting leading us to a better performance in the test set.Each kind of learners that we might use has a sort of bias. Combining all of them, can reduce this bias. 
+Gradient Boost vs. AdaBoost Gradient Boost is similar with AdaBoost that starts by building a very short tree called stump from the training data.</description>
+    </item>
+    
+    <item>
       <title>Exploratory Data Analysis</title>
       <link>/mlpost/exploratory-data-analysis/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
