@@ -72,6 +72,9 @@ Adding everything together we can predict a new value of Weight of **74.4** whic
 Crucially, each time we add a tree to the Prediction, the Residuals get smaller, and so we can take another small step (building new tree) towards making a better prediction.
 So, we keep making trees until we doesn't significantly reduce the size of the Residuals.
 
+This article is a summary of the [**StatQuest**](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) video made by **Josh Starmer**. </br> 
+Click [**here**](https://www.youtube.com/watch?v=3CC4N4z3GJc&t=809s) to see the video explained by Josh Starmer. </br>
+
 
 
 
