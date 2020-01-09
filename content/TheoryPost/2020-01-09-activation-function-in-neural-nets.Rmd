@@ -121,6 +121,34 @@ Interestingly, some rsearchershave talked about the biological plausibility of t
 When we hear a very quiet sound, our neuros are only activated a little bit and we get some action potential but with a very low frequency as we can see from the spikes in the figure above. On the contrary, when we hear a very loud sound the neurons are getting lots of stimulation and the action potential is very frequent. This process in neuroscience is called **Frequency Coding**. In terms of the ReLU it can encoding the action potential frequency. That is why in ReLU we have zero as minimum value, because the less number of neuron spikes is zero. On the contrary, when the input into the neuron get larger, the receiving neuron also increase its frequency.
 From neuroscience we know that the relationship between the actionn potential frequency and stimulus intensity is nonlinear (e.g. log function or square root function). A good example is with the sound.
 
+**Multiclass Classification & Softmax Function** </br>
+Summarizing, we replaced sigmoid with ReLU in the hidden layers, but for outpu, sigmoid is still the right choice in the case of **binary classification** such as disease vs. no disease or fraud vs. not fraud, but in **multiple categorical outputs** we cannot use sigmoid.
+One example of **multiple classification** is handwriting recognition or speech recognitiion and image classification.
+We need the probability of **k** and the requirements are, first the probabilities must be non-negative(>=0), and second the probabilities for each output must sum to 1 as described below. Where **k** is the number of outputs/outcomes.
+
+$$
+\begin{aligned}
+&p(y=k | x) \geq 0\\
+&\sum_{k=1}^{K} p(y=k | x)=1
+\end{aligned}
+$$
+
+There is a function that accomplish both these requirements called **Sofmax Function**.
+
+$$
+\begin{aligned}
+p(y=k | x)=& \frac{\exp \left(a_{k}\right)}{\sum_{j=1}^{K} \exp \left(a_{j}\right)} \\
+\sum_{k=1}^{K} p(y=k | x)=\sum_{k=1}^{K} \frac{\exp \left(a_{k}\right)}{\sum_{j=1}^{K} \exp \left(a_{j}\right)}=\frac{\sum_{k=1}^{K} \exp \left(a_{k}\right)}{\sum_{j=1}^{K} \exp \left(a_{j}\right)} &=1
+\end{aligned}
+$$
+
+As we can see from the formulation above the numerator of exp(ak) is always positive and therefore each probabilities are non negative. The denominator is the sum of all possible values of the numerator and so we just get the sum and therefore we get the same sum on the top and on the bottom resulting to one.
+
+
+
+
+
+
 
 
 

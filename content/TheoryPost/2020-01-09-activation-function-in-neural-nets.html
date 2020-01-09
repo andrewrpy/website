@@ -90,3 +90,21 @@ Interestingly, some rsearchershave talked about the biological plausibility of t
 </center>
 <p>When we hear a very quiet sound, our neuros are only activated a little bit and we get some action potential but with a very low frequency as we can see from the spikes in the figure above. On the contrary, when we hear a very loud sound the neurons are getting lots of stimulation and the action potential is very frequent. This process in neuroscience is called <strong>Frequency Coding</strong>. In terms of the ReLU it can encoding the action potential frequency. That is why in ReLU we have zero as minimum value, because the less number of neuron spikes is zero. On the contrary, when the input into the neuron get larger, the receiving neuron also increase its frequency.
 From neuroscience we know that the relationship between the actionn potential frequency and stimulus intensity is nonlinear (e.g. log function or square root function). A good example is with the sound.</p>
+<p><strong>Multiclass Classification &amp; Softmax Function</strong> </br>
+Summarizing, we replaced sigmoid with ReLU in the hidden layers, but for outpu, sigmoid is still the right choice in the case of <strong>binary classification</strong> such as disease vs. no disease or fraud vs. not fraud, but in <strong>multiple categorical outputs</strong> we cannot use sigmoid.
+One example of <strong>multiple classification</strong> is handwriting recognition or speech recognitiion and image classification.
+We need the probability of <strong>k</strong> and the requirements are, first the probabilities must be non-negative(&gt;=0), and second the probabilities for each output must sum to 1 as described below. Where <strong>k</strong> is the number of outputs/outcomes.</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;p(y=k | x) \geq 0\\
+&amp;\sum_{k=1}^{K} p(y=k | x)=1
+\end{aligned}
+\]</span></p>
+<p>There is a function that accomplish both these requirements called <strong>Sofmax Function</strong>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(y=k | x)=&amp; \frac{\exp \left(a_{k}\right)}{\sum_{j=1}^{K} \exp \left(a_{j}\right)} \\
+\sum_{k=1}^{K} p(y=k | x)=\sum_{k=1}^{K} \frac{\exp \left(a_{k}\right)}{\sum_{j=1}^{K} \exp \left(a_{j}\right)}=\frac{\sum_{k=1}^{K} \exp \left(a_{k}\right)}{\sum_{j=1}^{K} \exp \left(a_{j}\right)} &amp;=1
+\end{aligned}
+\]</span></p>
+<p>As we can see from the formulation above the numerator of exp(ak) is always positive and therefore each probabilities are non negative. The denominator is the sum of all possible values of the numerator and so we just get the sum and therefore we get the same sum on the top and on the bottom resulting to one.</p>
