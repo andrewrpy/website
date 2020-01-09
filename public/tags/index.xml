@@ -6,10 +6,55 @@
     <description>Recent content in Tags on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>activation function</title>
+      <link>/tags/activation-function/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/activation-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rectifier</title>
+      <link>/tags/rectifier/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rectifier/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sigmoind</title>
+      <link>/tags/sigmoind/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sigmoind/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tanh</title>
+      <link>/tags/tanh/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tanh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>threshold</title>
+      <link>/tags/threshold/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/threshold/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ada boosting</title>
@@ -566,15 +611,6 @@
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/rnn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>activation function</title>
-      <link>/tags/activation-function/</link>
-      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/activation-function/</guid>
       <description></description>
     </item>
     

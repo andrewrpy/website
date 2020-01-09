@@ -6,10 +6,21 @@
     <description>Recent content in artificial intelligence on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Activation Function in Neural Nets</title>
+      <link>/theorypost/activation-function-in-neural-nets/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/activation-function-in-neural-nets/</guid>
+      <description>body {text-align: justify}What an artifical neuron do is to calculate a weighted sum of its input, adds a bias and then decides whether it should be “fired” or not.considering the following function:
+\[Y=\sum(\text {weight} * \text {input})+\text {bias}\]
+the value of Y can be anything ranging from -inf to +inf. The neuron really doesn’t know the bounds of the value. How do we decide whether the neuron should fire or not?</description>
+    </item>
     
     <item>
       <title>The Learning Rate</title>

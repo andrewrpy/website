@@ -1,0 +1,56 @@
+---
+title: Activation Function in Neural Nets
+author: andrea perlato
+date: '2020-01-09'
+slug: activation-function-in-neural-nets
+categories:
+  - artificial intelligence
+tags:
+  - activation function
+  - sigmoind
+  - threshold
+  - rectifier
+  - tanh
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+What an **artifical neuron** do is to calculate a **weighted sum** of its input, adds a bias and then decides whether it should be “fired” or not.
+considering the following function:
+
+$$
+Y=\sum(\text {weight} * \text {input})+\text {bias}
+$$
+
+the value of Y can be anything ranging from -inf to +inf. The neuron really doesn’t know the bounds of the value. How do we decide whether the neuron should fire or not? We use **activatioin functions** for this purpose.
+
+**Sigmoid Function** </br>
+We can consider the **sigmoid function** that maps the values from 0 to 1 and mimics the biological neuron.
+An important aspect to consider using the sigmoid function is that it makes the neural nework nonlinear, and we cannot reduce the NN into a simple linear equation.
+In modern NN there are some problems with sigmoid and is not longer used as often except in some specific cases.
+
+<center>
+![](/img/sigmoidfunction.png){width=40%}
+
+</center>
+
+**Standardization** </br>
+It is of high importance to standardize, because we don't want to have one rangein million and another range in millesimal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

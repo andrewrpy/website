@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Activation Function in Neural Nets</title>
+      <link>/theorypost/activation-function-in-neural-nets/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/activation-function-in-neural-nets/</guid>
+      <description>body {text-align: justify}What an artifical neuron do is to calculate a weighted sum of its input, adds a bias and then decides whether it should be “fired” or not.considering the following function:
+\[Y=\sum(\text {weight} * \text {input})+\text {bias}\]
+the value of Y can be anything ranging from -inf to +inf. The neuron really doesn’t know the bounds of the value. How do we decide whether the neuron should fire or not?</description>
+    </item>
+    
+    <item>
       <title>Detect Scientific Topics using NLP</title>
       <link>/mlpost/detect-scientific-topics-using-nlp/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>

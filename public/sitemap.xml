@@ -2,8 +2,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.andreaperlato.com/theorypost/activation-function-in-neural-nets/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/categories/</loc>
-    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/theorypost/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/activation-function/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/artificial-intelligence/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/rectifier/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/sigmoind/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/tanh/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/threshold/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
@@ -24,18 +77,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/mlpost/</loc>
-    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/</loc>
-    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/theorypost/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -131,12 +172,6 @@
   <url>
     <loc>https://www.andreaperlato.com/theorypost/the-learning-rate/</loc>
     <lastmod>2019-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/categories/artificial-intelligence/</loc>
-    <lastmod>2019-12-17T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
@@ -718,12 +753,6 @@
   <url>
     <loc>https://www.andreaperlato.com/aipost/the-activation-function/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/activation-function/</loc>
-    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
-     <priority>0</priority>
   </url>
   
   <url>
