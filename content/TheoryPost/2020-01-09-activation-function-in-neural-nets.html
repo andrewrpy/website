@@ -33,4 +33,53 @@ In modern NN there are some problems with sigmoid and is not longer used as ofte
 <p><img src="/img/sigmoidfunction.png" style="width:40.0%" /></p>
 </center>
 <p><strong>Standardization</strong> </br>
-It is of high importance to standardize, because we don’t want to have one rangein million and another range in millesimal.</p>
+It is of high importance to standardize, because we don’t want to have one rangein million and another range in millesimal; the <strong>sigmoid</strong> is problematic in this regard because it goes between 0 and 1 and the center is 0.5. As a conseguence, the output of a sigmoid can never be centerd around zero.
+This recall the concept of <strong>Uniformity</strong> of NN. </br>
+The solution for this is the <strong>Hyperbolic tangent Function</strong>.</p>
+<p><strong>Hyperbolic tangent Function</strong> </br>
+It has the same shape of the sigmoid but centered around zero.</p>
+<center>
+<p><img src="/img/hypebolicfunctio.png" style="width:40.0%" /></p>
+</center>
+<p>This function is also called the <strong>10 H</strong> which is short for hyperbolic tangent.
+There are hyperbolic versions for all the trigonometric functions: sin, cos, tan. So, we are using the <strong>tanh(x)=sinh(x)/cos(x)</strong> that is the hyperbolic sine over the hyerbolic cosine, that results in the following equation:</p>
+<p><span class="math display">\[
+\tanh (a)=\frac{\exp (2 a)-1}{\exp (2 a)+1}
+\]</span></p>
+<p>which is similar to the sigmoid function. The major difference between the sigmoid and the 10 H is that the sigmoid goes between 0 and 1 while the 10 H goes between -1 and +1.</p>
+<p>Although the 10 H is better than the sigmoid there are many other aspect to take in consideration.
+The major problem is the <a href="https://www.andreaperlato.com/aipost/vanishing-gradient/"><strong>Vanishing Gradient</strong></a>. We have to find the gradient of the cost with respect to the parameters, but when we have very deep NN our gradient has to propagate backwards throughout the NN. The deeper a NN is, the more terms have to be multiplied in the gradient due to the <strong>chain rule</strong> of the calculus. So, multiple functions become multiplication in the derivative as shown below:</p>
+<p><span class="math display">\[
+\frac{\partial J}{\partial W^{(1)}}=\frac{\partial J}{\partial z^{(L)}} \frac{\partial z^{(L)}}{\partial z^{(L-1)}} \ldots \frac{\partial z^{(2)}}{\partial z^{(1)}} \frac{\partial z^{(1)}}{\partial W^{(1)}}
+\]</span></p>
+<p>The problem with <strong>sigmoind</strong> ere is that its derivativeis very nearly zero, and only the center is non-zero as shown in the figure below, and the maximum value is only <strong>0.25</strong>. By conseguence, when we moltiply a numbers that are very smallwe obtain a smaller one; the further we go back in the NN the smaller the gradient becomes. We call this the <strong>Vanishing Gradient Problem</strong>.</p>
+<center>
+<img src="/img/vangrad.png" style="width:90.0%" />
+</center>
+<p>Looking at the graph on the right of the figure above, we can see the magnitute of the gradient at each ayer of the NN as it is trained. We notice that the futher we go back, the smaller the gradient gets. The end result is that the weights close to the input are almost not trained.
+The solution to train a very deep NN is to use the <strong>Rectifier Linear Unit Function - ReU</strong>.</p>
+<p><strong>Rectifier Linear Unit Function - ReU</strong> </br>
+The ReLUfunctioin has a corner at zero where the derivative is technically not defined.</p>
+<center>
+<p><img src="/img/rectifierfunction.png" style="width:40.0%" /></p>
+</center>
+<p>Having values grater than zero never have a zero gradient and this makes the training of the NN more efficient.
+The left half of the function has derivative that is exactly zero and so the function is already vanished. This is the so called phenomenon of the <strong>Dead Neuron</strong>.</p>
+<p><strong>Fixing Dead Neuron</strong> </br>
+Some researchers have tried to make modification to solve the dead neuron phenomenon. One alternative is the <strong>Leaky ReLU Function - LReLU</strong>. The LReLU has small positive slope for negative inputs (like for example 0.1). Using LReLU our derivatives will always be positive</p>
+<center>
+<img src="/img/LReLU.png" style="width:70.0%" />
+</center>
+<p>There are other optional function to solve the Dead Neuron such as the <strong>Exponential Linear UnitFunction - ELU</strong> which has a more steadly decreasing value on the left side of the fnction. This activation function speeds up learning and leads to higher accuracy than the LReLU.
+One interesting aspect of the ELU is that it allows its output to be negative and this goes to the idea to have the mean of the value close to zeor.
+Another option very similar to the ELU is the <strong>Softplus Function</strong>. </br>
+As we can see from the formula below it takes the log of the exponent and for this reason the function look very linear where the inputs are very large as depicted in the figure below.</p>
+<span class="math display">\[
+f(x)=\log \left(1+e^{x}\right)
+\]</span>
+<center>
+<img src="/img/softplus.png" style="width:40.0%" />
+</center>
+<p>For both <strong>Softplus</strong> and <strong>ELU</strong> there is thevanishing gradient on the left side but it is not so musch of a problem because the function works.
+Moreover they are in the range of of 0 and infinity and this means they are not centerd around zero.</p>
+<p>Despite all these alternatives for the ReLU function, most people still use the ReLU as a reasonable defautl choice. The suggestion is that NN is experimentation and we have to try also to use Softplus and ELU.</p>
