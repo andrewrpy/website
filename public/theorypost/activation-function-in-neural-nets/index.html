@@ -137,6 +137,13 @@ f(x)=\log \left(1+e^{x}\right)
 <p>For both <strong>Softplus</strong> and <strong>ELU</strong> there is thevanishing gradient on the left side but it is not so musch of a problem because the function works.
 Moreover they are in the range of of 0 and infinity and this means they are not centerd around zero.</p>
 <p>Despite all these alternatives for the ReLU function, most people still use the ReLU as a reasonable defautl choice. The suggestion is that NN is experimentation and we have to try also to use Softplus and ELU.</p>
+<p><strong>Biological Plausibility of the ReLU</strong> </br>
+Interestingly, some rsearchershave talked about the biological plausibility of the ReLU. In fact, the ReLUis more plausible than the sigmoid.</p>
+<center>
+<img src="/img/biolneur.png" style="width:40.0%" />
+</center>
+<p>When we hear a very quiet sound, our neuros are only activated a little bit and we get some action potential but with a very low frequency as we can see from the spikes in the figure above. On the contrary, when we hear a very loud sound the neurons are getting lots of stimulation and the action potential is very frequent. This process in neuroscience is called <strong>Frequency Coding</strong>. In terms of the ReLU it can encoding the action potential frequency. That is why in ReLU we have zero as minimum value, because the less number of neuron spikes is zero. On the contrary, when the input into the neuron get larger, the receiving neuron also increase its frequency.
+From neuroscience we know that the relationship between the actionn potential frequency and stimulus intensity is nonlinear (e.g. log function or square root function). A good example is with the sound.</p>
 
     </div>
   </article>
