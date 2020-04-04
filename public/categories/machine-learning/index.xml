@@ -6,10 +6,19 @@
     <description>Recent content in machine learning on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Machine Learning Pipeline Video Interview</title>
+      <link>/theorypost/machine-learning-pipeline-video-interview/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/machine-learning-pipeline-video-interview/</guid>
+      <description>body {text-align: justify}.rwd-video {height: 0;overflow: hidden;padding-bottom: 56.25%;padding-top: 30px;position: relative;}.rwd-video iframe,.rwd-video object,.rwd-video embed {height: 100%;left: 0;position: absolute;top: 0;width: 100%;}</description>
+    </item>
     
     <item>
       <title>Ensemble Learning with Adaptive Boosting</title>

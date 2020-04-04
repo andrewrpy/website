@@ -2,26 +2,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.andreaperlato.com/theorypost/activation-function-in-neural-nets/</loc>
-    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.andreaperlato.com/categories/</loc>
-    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/theorypost/machine-learning-pipeline-video-interview/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/tags/</loc>
-    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.andreaperlato.com/theorypost/</loc>
-    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/feature-engeneering/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/feature-selection/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/categories/machine-learning/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/pipeline/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/preprocessing/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/theorypost/activation-function-in-neural-nets/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -95,12 +130,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/gradient-boosting/</loc>
-    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/categories/machine-learning/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -1042,12 +1071,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/boruta-algorithm/</loc>
-    <lastmod>2019-04-02T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/feature-selection/</loc>
     <lastmod>2019-04-02T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
