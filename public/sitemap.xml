@@ -81,6 +81,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/theorypost/topic-model-video-interview/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/tags/algorithms/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
@@ -195,6 +200,12 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/tags/topic-model/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/theorypost/activation-function-in-neural-nets/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
   </url>
@@ -276,12 +287,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/categories/text-mining/</loc>
-    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/topic-model/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>

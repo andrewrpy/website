@@ -6,10 +6,19 @@
     <description>Recent content in topic model on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/topic-model/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Topic Model Video Interview</title>
+      <link>/theorypost/topic-model-video-interview/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/topic-model-video-interview/</guid>
+      <description>body {text-align: justify}.rwd-video {height: 0;overflow: hidden;padding-bottom: 56.25%;padding-top: 30px;position: relative;}.rwd-video iframe,.rwd-video object,.rwd-video embed {height: 100%;left: 0;position: absolute;top: 0;width: 100%;}</description>
+    </item>
     
     <item>
       <title>Detect Scientific Topics using NLP</title>
