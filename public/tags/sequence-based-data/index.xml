@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sequence based data on Andrea Perlato</title>
+    <link>/tags/sequence-based-data/</link>
+    <description>Recent content in sequence based data on Andrea Perlato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/sequence-based-data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sequence Based Daat</title>
+      <link>/theorypost/sequence-based-daat/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/sequence-based-daat/</guid>
+      <description>body {text-align: justify}.rwd-video {height: 0;overflow: hidden;padding-bottom: 56.25%;padding-top: 30px;position: relative;}.rwd-video iframe,.rwd-video object,.rwd-video embed {height: 100%;left: 0;position: absolute;top: 0;width: 100%;}</description>
+    </item>
+    
+  </channel>
+</rss>
