@@ -1,5 +1,5 @@
 ---
-title: Sequence Based Daat
+title: Sequence Based Data
 author: andrea perlato
 date: '2020-04-04'
 slug: sequence-based-daat
