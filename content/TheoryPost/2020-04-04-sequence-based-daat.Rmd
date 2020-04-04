@@ -1,5 +1,5 @@
 ---
-title: Sequence Based Data
+title: Sequence Based Data Video Interview
 author: andrea perlato
 date: '2020-04-04'
 slug: sequence-based-daat
