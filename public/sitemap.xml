@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/theorypost/cloud-servises-video-interview/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/theorypost/feature-engineering-video-interview/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
   </url>
@@ -67,6 +72,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/categories/artificial-intelligence/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/colud-services/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
