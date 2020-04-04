@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/theorypost/model-performance-video-interview/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/tags/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
@@ -64,19 +69,25 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/tags/machine-learning/</loc>
-    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.andreaperlato.com/categories/machine-learning/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/tags/machine-learning/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/tags/missing-data/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/model-performance/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -1015,13 +1026,13 @@
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.andreaperlato.com/categories/survival-analysis/</loc>
+    <loc>https://www.andreaperlato.com/tags/survival-analysis/</loc>
     <lastmod>2019-05-13T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
