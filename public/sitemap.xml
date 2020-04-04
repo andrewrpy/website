@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/theorypost/machine-learning-algorithms-video-interview/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/theorypost/machine-learning-pipeline-video-interview/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
   </url>
@@ -30,6 +35,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/theorypost/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/algorithms/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -48,6 +59,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/log-transformation/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/machine-learning/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
