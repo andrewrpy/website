@@ -6,19 +6,18 @@
     <description>Recent content in python on Andrea Perlato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>R Interface to Python</title>
-      <link>/theorypost/r-interface-to-python/</link>
-      <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
+      <title>R and Python Video Interview</title>
+      <link>/theorypost/r-and-python/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/theorypost/r-interface-to-python/</guid>
-      <description>body {text-align: justify}The reticulate package provides a comprehensive set of tools fot interoperability between Python and R.
-# Data Preprocessing Template# Importing the librariesimport numpy as npimport matplotlib.pyplot as pltimport pandas as pd# Importing the datasetdf = pd.read_csv(r&amp;quot;C:\07 - R Website\dataset\PY\Salary_Data.csv&amp;quot;) # load the datadf.head(10) # show firt 10 observations## YearsExperience Salary## 0 1.1 39343.0## 1 1.</description>
+      <guid>/theorypost/r-and-python/</guid>
+      <description>body {text-align: justify}.rwd-video {height: 0;overflow: hidden;padding-bottom: 56.25%;padding-top: 30px;position: relative;}.rwd-video iframe,.rwd-video object,.rwd-video embed {height: 100%;left: 0;position: absolute;top: 0;width: 100%;}</description>
     </item>
     
   </channel>
