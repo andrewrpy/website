@@ -75,6 +75,15 @@
     </item>
     
     <item>
+      <title>Natural Language Processing Video Interview</title>
+      <link>/theorypost/natural-language-processing-video-interview/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/theorypost/natural-language-processing-video-interview/</guid>
+      <description>body {text-align: justify}.rwd-video {height: 0;overflow: hidden;padding-bottom: 56.25%;padding-top: 30px;position: relative;}.rwd-video iframe,.rwd-video object,.rwd-video embed {height: 100%;left: 0;position: absolute;top: 0;width: 100%;}</description>
+    </item>
+    
+    <item>
       <title>R and Python Video Interview</title>
       <link>/theorypost/r-and-python/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>

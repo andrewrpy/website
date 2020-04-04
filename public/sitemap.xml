@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/theorypost/natural-language-processing-video-interview/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/theorypost/r-and-python/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
   </url>
@@ -126,6 +131,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/model-performance/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/natural-language-processing/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
