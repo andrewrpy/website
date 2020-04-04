@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>https://www.andreaperlato.com/theorypost/learning-rate-video-interview/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.andreaperlato.com/theorypost/machine-learning-algorithms-video-interview/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
   </url>
@@ -133,6 +138,12 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/gradient-descent/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
+     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.andreaperlato.com/tags/learning-rate-decay/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
@@ -500,12 +511,6 @@
   
   <url>
     <loc>https://www.andreaperlato.com/tags/adaptive-momentum/</loc>
-    <lastmod>2019-11-25T00:00:00+00:00</lastmod>
-     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.andreaperlato.com/tags/learning-rate-decay/</loc>
     <lastmod>2019-11-25T00:00:00+00:00</lastmod>
      <priority>0</priority>
   </url>
